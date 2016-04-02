@@ -13,3 +13,7 @@ places
 saves
 backups
 auto-save-list
+SessionDesktop.el
+eshell
+smex-items
+tramp
