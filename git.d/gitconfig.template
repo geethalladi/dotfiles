@@ -1,0 +1,49 @@
+[user]
+  name = ${GIT_USER}
+  email = ${GIT_USER_EMAIL}
+[core]
+  editor = emacs
+  pager = less -+F
+  autocrlf = input
+
+[color "diff"]
+  meta = blue black bold
+
+[merge]
+  tool = extMerge
+[mergetool "extMerge"]
+  cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+  trustExitCode = false
+
+[alias]
+  st = status
+  co = checkout
+  br = branch
+  d = diff
+  cm = commit
+  dc = diff --cached
+  lg = log --since=1.month --date=local --pretty=format:\"%h - %an, %ad : %s\"
+  dt = difftool
+  chp = cherry-pick
+  bd = branch -d
+  st = status
+  st = status
+[config]
+  d = diff
+  lg = --since=1.month --date=local --pretty=format:\"%h - %an, %ad : %s\"
+[push]
+  default = simple
+
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+[diff]
+  prompt = false
+  tool = extDiff
+#  external = extDiff
+
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
