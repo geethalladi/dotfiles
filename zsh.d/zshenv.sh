@@ -59,9 +59,11 @@ export LANG=en_US.UTF-8
 # Use bash shell in emacs
 export ESHELL=bash # Till I am comfortable with emacs-shell
 
+########################################################################################
+# Git Configuration
+
 ${EXTN_SCRIPTS_DIR}/git-config.sh 'work'
 export GIT_CONFIG=~/.gitconfig
-
 
 ########################################################################################
 # PATH Variable
@@ -82,7 +84,7 @@ export GRADLE_HOME=${INSTALL_DIR}gradle-2.3
 export CASK_PATH=~/.cask/bin
 export HASKELL_HOME=/Applications/Haskell.app/Contents
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export RUBY_SCRIPTS_HOME=~/projects/learn/ruby
+export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
 export CELLAR_PATH=/usr/local/Cellar
 export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 
