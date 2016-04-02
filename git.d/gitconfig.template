@@ -5,6 +5,7 @@
   editor = emacs
   pager = less -+F
   autocrlf = input
+  excludesfile = ~/dotfiles/git.d/gitignore
 
 [color "diff"]
   meta = blue black bold
