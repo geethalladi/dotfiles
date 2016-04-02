@@ -41,6 +41,7 @@ export GIT_EDITOR=emacsclient
 export DOTFILES=~/dotfiles
 export DOTFILE_DIR_GIT=${DOTFILES}/git.d
 export DOTFILE_DIR_AWS=${DOTFILES}/aws.d
+export DOTFILE_DIR_RVM=${DOTFILES}/rvm.d
 export DOTFILE_DIR_ZSH=${DOTFILES}/zsh.d
 export DOTFILE_DIR_EMACS=${DOTFILES}/emacs.d
 
@@ -89,13 +90,10 @@ export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 
 export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:${PATH}:/usr/local/sbin
 
-export PATH=${PATH}:$HOME/.rvm/bin
-
 # OPAM configuration (for OCaml)
 # . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
 ## For Terminal inside emacs
-
 if [ -n "$INSIDE_EMACS" ]; then
     export PS1="%{$fg[green]%}[%~]%{$reset_color%} "
     # USE emacsclient while inside emacs
@@ -106,7 +104,7 @@ fi
 
 function show() {
     echo "rvm: "`rvm-prompt`
-    echo "git branch:"`__git_ps1`
+    echo "git branch: "`git_current_branch`
 }
 alias shw='show'
 
@@ -118,4 +116,4 @@ source ${DOTFILE_DIR_AWS}/awsenv.sh
 source ${ZSHDIR}/macports.sh
 
 # RVM should be the final one
-source ${ZSHDIR}/rvm.sh
+source ${DOTFILE_DIR_RVM}/rvm.sh
