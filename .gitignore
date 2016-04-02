@@ -2,3 +2,14 @@ zsh-update
 work.*.sh
 gitconfig.work*
 gitconfig.hack
+.cask
+ac-comphist.dat
+*.eld
+.persistent-scratch
+ido.last
+TAGS
+\#*
+places
+saves
+backups
+auto-save-list
