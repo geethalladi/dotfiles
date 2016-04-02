@@ -24,7 +24,6 @@ alias e='ec'
 alias m='mvn -Dmaven.javadoc.skip=true'
 alias g='git'
 alias t='tree'
-alias chefdev='source chefenv.sh dev'
 alias pass='openssl rand -base64 16'
 alias rg='rvm gemset use'
 
@@ -106,11 +105,8 @@ fi
 # export RIPPER_TAGS_EMACS=1
 
 function show() {
-#    echo "pwd: ${PWD}"
     echo "rvm: "`rvm-prompt`
-#    echo "git branch:"`__git_ps1`
-    echo "chef_env: ${CHEF_ENV}"
-    echo "berks-config: ${BERKSHELF_CONFIG}"
+    echo "git branch:"`__git_ps1`
 }
 alias shw='show'
 
