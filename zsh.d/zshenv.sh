@@ -43,6 +43,7 @@ export DOTFILE_DIR_GIT=${DOTFILES}/git.d
 export DOTFILE_DIR_AWS=${DOTFILES}/aws.d
 export DOTFILE_DIR_RVM=${DOTFILES}/rvm.d
 export DOTFILE_DIR_ZSH=${DOTFILES}/zsh.d
+export DOTFILE_DIR_TMUX=${DOTFILES}/tmux.d
 export DOTFILE_DIR_EMACS=${DOTFILES}/emacs.d
 
 export INSTALL_DIR=~/installed.d
@@ -109,7 +110,7 @@ function show() {
 alias shw='show'
 
 # for tmuxinator
-# source ${ZSHDIR}/tmuxinator.zsh
+# source ${DOTFILE_DIR_TMUX}/tmuxinator.zsh
 
 source ${DOTFILE_DIR_AWS}/awsenv.sh
 
