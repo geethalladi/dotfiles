@@ -41,6 +41,7 @@ export GIT_EDITOR=emacsclient
 export DOTFILES=~/dotfiles
 export DOTFILE_DIR_GIT=${DOTFILES}/git.d
 export DOTFILE_DIR_AWS=${DOTFILES}/aws.d
+export DOTFILE_DIR_RVM=${DOTFILES}/rvm.d
 export DOTFILE_DIR_ZSH=${DOTFILES}/zsh.d
 export DOTFILE_DIR_EMACS=${DOTFILES}/emacs.d
 
@@ -118,4 +119,4 @@ source ${DOTFILE_DIR_AWS}/awsenv.sh
 source ${ZSHDIR}/macports.sh
 
 # RVM should be the final one
-source ${ZSHDIR}/rvm.sh
+source ${DOTFILE_DIR_RVM}/rvm.sh
