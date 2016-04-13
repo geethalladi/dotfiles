@@ -148,6 +148,7 @@
 
 ;; Loading js init script
 (load "~/.emacs.d/js-init.el")
+(load "~/.emacs.d/web-init.el")
 
 (load "~/.emacs.d/elixir-init.el")
 
