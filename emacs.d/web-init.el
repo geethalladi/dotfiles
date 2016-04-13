@@ -27,11 +27,3 @@
   (sp-local-tag "%" "<% "  " %>")
   (sp-local-tag "=" "<%= " " %>")
   (sp-local-tag "#" "<%# " " %>"))
-
-(eval-after-load 'web-mode
-  '(progn
-     (defun prelude-web-mode-defaults ())
-     (setq prelude-web-mode-hook 'prelude-web-mode-defaults)
-
-     (add-hook 'web-mode-hook (lambda ()
-                                (run-hooks 'prelude-web-mode-hook)))))
