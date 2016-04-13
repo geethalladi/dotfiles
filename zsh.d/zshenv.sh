@@ -74,6 +74,8 @@ export JDK_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Hom
 export JDK_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home
 export JAVA_HOME=${JDK_8_HOME}
 
+export SCALA_HOME=${INSTALL_DIR}/scala-2.11.8
+
 export MAVEN_HOME=${INSTALL_DIR}/apache-maven-3.2.3
 export M2_HOME=${MAVEN_HOME}
 
@@ -89,7 +91,7 @@ export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
 export CELLAR_PATH=/usr/local/Cellar
 export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 
-export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:${PATH}:/usr/local/sbin
+export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${SCALA_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:${PATH}:/usr/local/sbin
 
 # OPAM configuration (for OCaml)
 # . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true

@@ -146,6 +146,10 @@
 ;; Loading rb init script
 (load "~/.emacs.d/rb-init.el")
 
+;; Loading js init script
+(load "~/.emacs.d/js-init.el")
+(load "~/.emacs.d/web-init.el")
+
 (load "~/.emacs.d/elixir-init.el")
 
 ;; Start the emacs-server
@@ -192,7 +196,7 @@
 (setq visible-bell nil)
 
 ;; Enable menu-mar mode
-;; (menu-bar-mode 1)
+(menu-bar-mode 1)
 
 ;; Mod line mode
 (line-number-mode t)
