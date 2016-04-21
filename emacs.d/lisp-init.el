@@ -1,4 +1,6 @@
 (require 'slime)
+(require 'slime-scratch)
+
 (slime-setup)
 
 (setq inferior-lisp-program "/usr/local/bin/sbcl --noinform")
