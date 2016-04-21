@@ -101,6 +101,8 @@
  (depends-on "markdown-mode")
  (depends-on "maxframe")
  (depends-on "mew")
+ (depends-on "moz")
+ (depends-on "moz-controller")
  (depends-on "multi-term")
  (depends-on "multiple-cursors")
  (depends-on "neotree")
