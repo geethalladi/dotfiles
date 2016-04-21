@@ -8,16 +8,19 @@ export ZSH=~/repo/open-source/oh-my-zsh
 # time that oh-my-zsh is loaded.
 
 # export ZSH_THEME="robbyrussell"
+# export ZSH_THEME="gallois"
+
+# export ZSH_THEME="honukai"
+# export ZSH_THEME="robbyrussell"
+# export ZSH_THEME="bira"
 # export ZSH_THEME="simple"
 # export ZSH_THEME="gallois"
 
-
 if [ -n "$INSIDE_EMACS" ]; then
-    export ZSH_THEME="robbyrussell"
+    export ZSH_THEME="gnzh"
 else
     export ZSH_THEME="agnoster"
 fi
-
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -69,7 +72,6 @@ plugins=(git brew rails rvm ruby osx bundler)
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
 
-# set -x
 source ~/dotfiles/zsh.d/zshenv.sh
 
 # You may need to manually set your language environment

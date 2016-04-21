@@ -10,6 +10,7 @@
 # export CLICOLOR=1
 
 ########################################################################################
+
 # Alias definitions
 alias c='clear'
 alias l='ls -al'
@@ -98,7 +99,6 @@ export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${SCA
 
 ## For Terminal inside emacs
 if [ -n "$INSIDE_EMACS" ]; then
-    export PS1="%{$fg[green]%}[%~]%{$reset_color%} "
     # USE emacsclient while inside emacs
     export EDITOR=emacsclient
 fi
