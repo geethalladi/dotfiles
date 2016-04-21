@@ -1,5 +1,5 @@
 ;; ENABLE CASK
-(require 'cask "~/.emacs.d/.cask/24.5.1/elpa/cask-20150528.752/cask.el")
+(require 'cask "~/.emacs.d/.cask/24.5.1/elpa/cask-20151123.528/cask.el")
 (cask-initialize)
 
 ;; ENABLE PALLET
