@@ -10,9 +10,7 @@
 ;; (require 'dirtree) ;; FOR OPTIMIZATION
 (require 'neotree)
 
-;; HELM MODE
-(require 'helm)
-(require 'helm-config)
+(load "~/.emacs.d/helm-init.el")
 
 ;; Smartparens mode
 (require 'smartparens)
@@ -21,10 +19,10 @@
 ;; magit for GIT
 (require 'magit)
 
-(require 'ido)
-(ido-mode 1)
-(setq ido-everywhere t)
-(setq ido-enable-flex-matching t)
+;; (require 'ido)
+;; (ido-mode 1)
+;; (setq ido-everywhere t)
+;; (setq ido-enable-flex-matching t)
 
 ;; etags table
 ;; (require 'etags-table)
@@ -44,8 +42,8 @@
 (load "~/.emacs.d/multi-term.el")
 
 ;; autocompletion in M-x
-(require 'smex)
-(global-set-key (kbd "M-x") 'smex)
+;; (require 'smex)
+;; (global-set-key (kbd "M-x") 'smex)
 
 ;;;; ENABLING THE MOST USED MODES BY DEFAULT
 
@@ -87,13 +85,7 @@
 ;;                       (setq indent-tabs-mode nil
 ;;                             tab-width 2))))
 
-;; Projectile
-(projectile-global-mode)
-(setq projectile-enable-caching t)
-(setq projectile-completion-system 'helm)
-
-(helm-projectile-on)
-(setq helm-mode-fuzzy-match t)
+(load "~/.emacs.d/projectile-init.el")
 
 ;; TAB
 (setq-default indent-tabs-mode nil)
