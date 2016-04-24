@@ -19,10 +19,10 @@
 ;; magit for GIT
 (require 'magit)
 
-;; (require 'ido)
-;; (ido-mode 1)
-;; (setq ido-everywhere t)
-;; (setq ido-enable-flex-matching t)
+(require 'ido)
+(ido-mode 1)
+(setq ido-everywhere t)
+(setq ido-enable-flex-matching t)
 
 ;; etags table
 ;; (require 'etags-table)
@@ -42,8 +42,8 @@
 (load "~/.emacs.d/multi-term.el")
 
 ;; autocompletion in M-x
-;; (require 'smex)
-;; (global-set-key (kbd "M-x") 'smex)
+(require 'smex)
+(global-set-key (kbd "M-x") 'smex)
 
 ;;;; ENABLING THE MOST USED MODES BY DEFAULT
 
