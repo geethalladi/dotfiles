@@ -25,21 +25,6 @@
 ;;     (setq exec-path (split-string path-from-shell path-separator))))
 ;; (when window-system (set-exec-path-from-shell-PATH))
 
-;; ENABLE CLIPBOARD
-(setq x-select-enable-clipboard t)
-
-;; FOR INTEGRATING WITH CLIPBOARD
-(defun swap-and-kill ()
-  "Swap point and mark, then clipboard kill region"
-  (interactive)
-  (exchange-point-and-mark)
-  (clipboard-kill-region (region-beginning) (region-end))
-  (deactivate-mark))
-
-(global-set-key "\C-w" 'swap-and-kill)
-(global-set-key "\M-w" 'clipboard-kill-ring-save)
-(global-set-key "\C-y" 'clipboard-yank)
-
 ;; PACKAGE ARCHIVE
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
        ("marmalade" . "https://marmalade-repo.org/packages/")
@@ -48,14 +33,6 @@
 
 ;; POST INIT HOOK
 (add-hook 'after-init-hook (lambda () (load "~/.emacs.d/after-init.el")))
-(put 'erase-buffer 'disabled nil)
-
-;; (custom-set-faces
-;;  ;; custom-set-faces was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  )
 
 ;; EMACS MAXIMIZED
 (custom-set-variables
