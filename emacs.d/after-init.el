@@ -15,6 +15,8 @@
 ;; CLIPBOARD Customizations
 (load "~/.emacs.d/clipboard.el")
 
+(load "~/.emacs.d/font-init.el")
+
 ;; FIX THE PATH VARIABLE
 ;; (defun set-exec-path-from-shell-PATH ()
 ;;   (let ((path-from-shell (shell-command-to-string "TERM=vt100 $SHELL -i -c 'echo $PATH'")))
@@ -25,6 +27,8 @@
 ;; SAVE BACK TO TEMP FOLDER
 (setq backup-directory-alist '((".*" . "~/.emacs.d/saves")))
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
+
+(setq mac-shift-modifier 'meta)
 
 ;; Smartparens mode
 (require 'smartparens)
