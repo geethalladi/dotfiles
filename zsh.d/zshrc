@@ -64,7 +64,7 @@ fi
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew rails rvm ruby osx bundler)
+plugins=(git bower brew rails rvm osx bundler web-search)
 
 # User configuration
 
