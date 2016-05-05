@@ -25,3 +25,12 @@
 ;; TODO
 ;; (global-set-key [f5] 'slime-js-reload)
 (setq js2-basic-offset 2)
+
+;; JSON MODE
+(add-hook 'json-mode-hook
+    (lambda ()
+      (make-variable-buffer-local 'js-indent-level)
+      (setq js-indent-level 2)))
+(add-hook 'json-mode 'flymake-json-load)
+(add-hook 'json-mode-hook 'paredit-mode)
+(add-to-list 'auto-mode-alist '("\\.json" . json-mode))
