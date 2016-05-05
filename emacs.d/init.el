@@ -14,23 +14,6 @@
 ;; POP UP SCREEN DISABLED
 (setq ns-pop-up-frames nil)
 
-;; SAVE BACK TO TEMP FOLDER
-(setq backup-directory-alist '((".*" . "~/.emacs.d/saves")))
-(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
-
-;; FIX THE PATH VARIABLE
-;; (defun set-exec-path-from-shell-PATH ()
-;;   (let ((path-from-shell (shell-command-to-string "TERM=vt100 $SHELL -i -c 'echo $PATH'")))
-;;     (setenv "PATH" path-from-shell)
-;;     (setq exec-path (split-string path-from-shell path-separator))))
-;; (when window-system (set-exec-path-from-shell-PATH))
-
-;; PACKAGE ARCHIVE
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-       ("marmalade" . "https://marmalade-repo.org/packages/")
-       ("melpa" . "http://melpa.milkbox.net/packages/")))
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ;; Org-mode's repository
-
 ;; POST INIT HOOK
 (add-hook 'after-init-hook (lambda () (load "~/.emacs.d/after-init.el")))
 
