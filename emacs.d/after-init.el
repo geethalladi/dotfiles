@@ -30,13 +30,6 @@
 
 (setq mac-shift-modifier 'meta)
 
-;; Smartparens mode
-(require 'smartparens)
-(show-paren-mode t)
-
-;; magit for GIT
-(require 'magit)
-
 ;; (require 'ido)
 ;; (ido-mode 1)
 ;; (setq ido-everywhere t)
@@ -206,3 +199,13 @@
 (column-number-mode t)
 
 (load-theme 'zenburn t)
+
+;; Smartparens mode
+(require 'smartparens)
+(show-paren-mode t)
+
+(require 'yasnippet)
+(yas-global-mode 1)
+
+;; magit for GIT
+(require 'magit)
