@@ -45,6 +45,7 @@
  (depends-on "ecukes")
  (depends-on "efire")
  (depends-on "el-mock")
+ (depends-on "emmet-mode")
  (depends-on "enclose")
 ;; (depends-on "enh-ruby-mode")
  (depends-on "epl")
