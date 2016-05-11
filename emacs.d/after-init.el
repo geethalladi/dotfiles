@@ -12,11 +12,6 @@
 (require 'pallet)
 (pallet-mode t)
 
-;; CLIPBOARD Customizations
-(load "~/.emacs.d/clipboard.el")
-
-(load "~/.emacs.d/font-init.el")
-
 ;; FIX THE PATH VARIABLE
 ;; (defun set-exec-path-from-shell-PATH ()
 ;;   (let ((path-from-shell (shell-command-to-string "TERM=vt100 $SHELL -i -c 'echo $PATH'")))
@@ -38,21 +33,6 @@
 ;; etags table
 ;; (require 'etags-table)
 ;; (require 'etags-select)
-
-(load "~/.emacs.d/helm-init.el")
-
-
-;; DIRTREE MODE
-;; (require 'dirtree) ;; FOR OPTIMIZATION
-(require 'neotree)
-
-;; FOR OPTIMIZATION
-;; (setenv "TMPDIR" "/var/tmp") ;; TMPDIR to be used by tramp-mode
-;; (eval-after-load 'tramp
-;;   '(vagrant-tramp-enable))
-;; (require 'tramp)
-
-(load "~/.emacs.d/multi-term.el")
 
 ;; autocompletion in M-x
 ;; (require 'smex)
@@ -98,8 +78,6 @@
 ;;                       (setq indent-tabs-mode nil
 ;;                             tab-width 2))))
 
-(load "~/.emacs.d/projectile-init.el")
-
 ;; TAB
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
@@ -131,38 +109,6 @@
 ;; delete trailing white space
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'before-save-hook 'whitespace-cleanup)
-
-;; Load org-mode extensions
-(load "~/.emacs.d/org-mode-init.el")
-
-;; FOR OPTIMIZATION
-;; ;; LISP
-;; (setq inferior-lisp-program "/usr/local/bin/sbcl")
-;; (load "~/.emacs.d/lisp-init.el")
-
-;; ;; SASS
-;; ;; (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
-
-;; (load "~/.emacs.d/term.el")
-
-;; Loading my customizations
-(load "~/.emacs.d/custom.el")
-
-;; Loading rb init script
-(load "~/.emacs.d/rb-init.el")
-
-;; Loading js init script
-(load "~/.emacs.d/js-init.el")
-(load "~/.emacs.d/web-init.el")
-
-;; (load "~/.emacs.d/elixir-init.el")
-
-;; Start the emacs-server
-(load "~/.emacs.d/emacs-server.el")
-
-;; FOR OPTIMIZATION
-;; (load "~/.emacs.d/clojure-init.el")
-;; (cider-jack-in)
 
 ;; Tabbed Browsing Mode
 ;; tabbar
@@ -209,3 +155,63 @@
 
 ;; magit for GIT
 (require 'magit)
+
+;; DIRTREE MODE
+;; (require 'dirtree) ;; FOR OPTIMIZATION
+(require 'neotree)
+
+;; FOR OPTIMIZATION
+;; (setenv "TMPDIR" "/var/tmp") ;; TMPDIR to be used by tramp-mode
+;; (eval-after-load 'tramp
+;;   '(vagrant-tramp-enable))
+;; (require 'tramp)
+
+;; Powerline configuration for emacs
+(add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
+(require 'powerline)
+(custom-set-faces
+ '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+ '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+
+;; Start the emacs-server
+(load "~/.emacs.d/emacs-server.el")
+
+;; CLIPBOARD Customizations
+(load "~/.emacs.d/clipboard.el")
+
+(load "~/.emacs.d/font-init.el")
+
+;; FOR OPTIMIZATION
+;; ;; LISP
+;; (setq inferior-lisp-program "/usr/local/bin/sbcl")
+;; (load "~/.emacs.d/lisp-init.el")
+
+;; ;; SASS
+;; ;; (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+
+;; (load "~/.emacs.d/term.el")
+
+;; Loading my customizations
+(load "~/.emacs.d/custom.el")
+
+;; Loading rb init script
+(load "~/.emacs.d/rb-init.el")
+
+;; Loading js init script
+(load "~/.emacs.d/js-init.el")
+(load "~/.emacs.d/web-init.el")
+
+;; (load "~/.emacs.d/elixir-init.el")
+
+(load "~/.emacs.d/helm-init.el")
+
+(load "~/.emacs.d/projectile-init.el")
+
+(load "~/.emacs.d/multi-term.el")
+
+;; Load org-mode extensions
+(load "~/.emacs.d/org-mode-init.el")
+
+;; FOR OPTIMIZATION
+;; (load "~/.emacs.d/clojure-init.el")
+;; (cider-jack-in)
