@@ -1,5 +1,8 @@
 ;; term mode
 
+(add-hook 'term-mode-hook (lambda()
+        (setq yas-dont-activate t)))
+
 (setq comint-prompt-read-only t)
 (setq comint-scroll-to-bottom-on-input t)
 (setq comint-scroll-to-bottom-on-output t)
