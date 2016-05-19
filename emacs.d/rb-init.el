@@ -14,6 +14,7 @@
 
 ;; (require 'flycheck)
 (add-hook 'ruby-mode-hook 'rubocop-mode)
+(add-hook 'ruby-mode-hook 'ruby-tools-mode)
 (add-hook 'ruby-mode-hook 'robe-mode)
 (add-hook 'ruby-mode-hook 'smartparens-mode)
 (add-hook 'ruby-mode-hook 'yard-mode)

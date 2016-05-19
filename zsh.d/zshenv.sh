@@ -10,6 +10,7 @@
 # export CLICOLOR=1
 
 ########################################################################################
+
 # Alias definitions
 alias c='clear'
 alias l='ls -al'
@@ -79,6 +80,10 @@ export SCALA_HOME=${INSTALL_DIR}/scala-2.11.8
 export MAVEN_HOME=${INSTALL_DIR}/apache-maven-3.2.3
 export M2_HOME=${MAVEN_HOME}
 
+export HADOOP_HOME=${INSTALL_DIR}/hadoop-2.4.1
+export HADOOP_PREFIX=${HADOOP_HOME}
+export HIVE_HOME=${INSTALL_DIR}/apache-hive-1.0.0-bin
+
 export CLOJURE_VERSION='1.7.0' # will also be used when running clj-repl
 export CLOJURE_HOME="${INSTALL_DIR}/clojure-${CLOJURE_VERSION}"
 
@@ -91,14 +96,13 @@ export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
 export CELLAR_PATH=/usr/local/Cellar
 export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 
-export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${SCALA_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:${PATH}:/usr/local/sbin
+export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${SCALA_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:${PATH}:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin
 
 # OPAM configuration (for OCaml)
 # . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
 ## For Terminal inside emacs
 if [ -n "$INSIDE_EMACS" ]; then
-    export PS1="%{$fg[green]%}[%~]%{$reset_color%} "
     # USE emacsclient while inside emacs
     export EDITOR=emacsclient
 fi

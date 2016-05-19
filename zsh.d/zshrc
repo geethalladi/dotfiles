@@ -8,16 +8,19 @@ export ZSH=~/repo/open-source/oh-my-zsh
 # time that oh-my-zsh is loaded.
 
 # export ZSH_THEME="robbyrussell"
+# export ZSH_THEME="gallois"
+
+# export ZSH_THEME="honukai"
+# export ZSH_THEME="robbyrussell"
+# export ZSH_THEME="bira"
 # export ZSH_THEME="simple"
 # export ZSH_THEME="gallois"
 
-
 if [ -n "$INSIDE_EMACS" ]; then
-    export ZSH_THEME="robbyrussell"
+    export ZSH_THEME="gnzh"
 else
     export ZSH_THEME="agnoster"
 fi
-
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -59,9 +62,9 @@ fi
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
+# Example format: plugins=(git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew rails rvm ruby osx bundler)
+plugins=(git brew rvm osx web-search)
 
 # User configuration
 
@@ -69,7 +72,6 @@ plugins=(git brew rails rvm ruby osx bundler)
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
 
-# set -x
 source ~/dotfiles/zsh.d/zshenv.sh
 
 # You may need to manually set your language environment

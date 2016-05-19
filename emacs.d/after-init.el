@@ -1,51 +1,42 @@
+;; PACKAGE ARCHIVE
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+       ("marmalade" . "https://marmalade-repo.org/packages/")
+       ("melpa" . "http://melpa.milkbox.net/packages/")))
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ;; Org-mode's repository
+
 ;; ENABLE CASK
-(require 'cask "~/.emacs.d/.cask/24.5.1/elpa/cask-20150528.752/cask.el")
+(require 'cask "~/.emacs.d/.cask/24.5.1/elpa/cask-20151123.528/cask.el")
 (cask-initialize)
 
 ;; ENABLE PALLET
 (require 'pallet)
 (pallet-mode t)
 
-;; DIRTREE MODE
-;; (require 'dirtree) ;; FOR OPTIMIZATION
-(require 'neotree)
+;; FIX THE PATH VARIABLE
+;; (defun set-exec-path-from-shell-PATH ()
+;;   (let ((path-from-shell (shell-command-to-string "TERM=vt100 $SHELL -i -c 'echo $PATH'")))
+;;     (setenv "PATH" path-from-shell)
+;;     (setq exec-path (split-string path-from-shell path-separator))))
+;; (when window-system (set-exec-path-from-shell-PATH))
 
-;; HELM MODE
-(require 'helm)
-(require 'helm-config)
+;; SAVE BACK TO TEMP FOLDER
+(setq backup-directory-alist '((".*" . "~/.emacs.d/saves")))
+(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
 
-;; Smartparens mode
-(require 'smartparens)
-(show-paren-mode t)
+(setq mac-shift-modifier 'meta)
 
-;; magit for GIT
-(require 'magit)
-
-(require 'ido)
-(ido-mode 1)
-(setq ido-everywhere t)
-(setq ido-enable-flex-matching t)
+;; (require 'ido)
+;; (ido-mode 1)
+;; (setq ido-everywhere t)
+;; (setq ido-enable-flex-matching t)
 
 ;; etags table
 ;; (require 'etags-table)
 ;; (require 'etags-select)
 
-;; load the pbcopy.el file for integrating terminal emacs with clipboard
-(load "~/.emacs.d/pbcopy.el")
-(require 'pbcopy)
-(turn-on-pbcopy)
-
-;; FOR OPTIMIZATION
-;; (setenv "TMPDIR" "/var/tmp") ;; TMPDIR to be used by tramp-mode
-;; (eval-after-load 'tramp
-;;   '(vagrant-tramp-enable))
-;; (require 'tramp)
-
-(load "~/.emacs.d/multi-term.el")
-
 ;; autocompletion in M-x
-(require 'smex)
-(global-set-key (kbd "M-x") 'smex)
+;; (require 'smex)
+;; (global-set-key (kbd "M-x") 'smex)
 
 ;;;; ENABLING THE MOST USED MODES BY DEFAULT
 
@@ -56,14 +47,14 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/.cask/24.5.1/elpa/auto-complete-20150618.1949/dict")
 
 (global-linum-mode 1)
-(setq linum-format "%4d ")
+(setq linum-format "%3d ")
 
 ; emacs getting the same path when invoked from GUI
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
 ;; Use coreutils ls for dired program
-(setq insert-directory-program (executable-find "gls"))
+;; (setq insert-directory-program (executable-find "gls"))
 
 ;; FOR OPTIMIZATION
 ;; (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
@@ -86,14 +77,6 @@
 ;;           (function (lambda ()
 ;;                       (setq indent-tabs-mode nil
 ;;                             tab-width 2))))
-
-;; Projectile
-(projectile-global-mode)
-(setq projectile-enable-caching t)
-(setq projectile-completion-system 'helm)
-
-(helm-projectile-on)
-(setq helm-mode-fuzzy-match t)
 
 ;; TAB
 (setq-default indent-tabs-mode nil)
@@ -127,8 +110,66 @@
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
-;; Load org-mode extensions
-(load "~/.emacs.d/org-mode-init.el")
+;; Tabbed Browsing Mode
+;; tabbar
+;; (require 'tabbar)
+;; (setq 'tabbar-use-images nil)
+;; (setq tabbar-buffer-groups-function
+;;       (lambda ()
+;;	(list "All")))
+
+;; tabbar _ tabbar-ruler
+;; (setq tabbar-ruler-global-tabbar t)
+;; (setq tabbar-ruler-global-ruler t)
+;; (setq tabbar-ruler-popup-menu t)
+;; (setq tabbar-ruler-popup-toolbar t)
+;; (setq tabbar-ruler-popup-scrollbar t)
+
+;; (require 'tabbar-ruler)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Configure Emacs Look and Feel Ends here
+
+;; Key Binding C-cl for clearning buffer
+(defun erase-buffer-hook ()
+  (local-set-key "\C-cl" 'erase-buffer))
+(add-hook 'shell-mode-hook 'erase-buffer-hook)
+
+;; No more visible bell ;; black rectangle in the center
+(setq visible-bell nil)
+
+;; Enable menu-mar mode
+(menu-bar-mode 1)
+
+;; Mod line mode
+(line-number-mode t)
+(column-number-mode t)
+
+(load-theme 'zenburn t)
+
+;; Smartparens mode
+(require 'smartparens)
+(show-paren-mode t)
+
+;; magit for GIT
+(require 'magit)
+
+;; DIRTREE MODE
+;; (require 'dirtree) ;; FOR OPTIMIZATION
+(require 'neotree)
+
+;; FOR OPTIMIZATION
+;; (setenv "TMPDIR" "/var/tmp") ;; TMPDIR to be used by tramp-mode
+;; (eval-after-load 'tramp
+;;   '(vagrant-tramp-enable))
+;; (require 'tramp)
+
+;; Start the emacs-server
+(load "~/.emacs.d/emacs-server.el")
+
+;; CLIPBOARD Customizations
+(load "~/.emacs.d/clipboard.el")
+
+(load "~/.emacs.d/font-init.el")
 
 ;; FOR OPTIMIZATION
 ;; ;; LISP
@@ -150,56 +191,28 @@
 (load "~/.emacs.d/js-init.el")
 (load "~/.emacs.d/web-init.el")
 
-(load "~/.emacs.d/elixir-init.el")
+;; (load "~/.emacs.d/elixir-init.el")
 
-;; Start the emacs-server
-(load "~/.emacs.d/emacs-server.el")
+(load "~/.emacs.d/helm-init.el")
 
-;; JSON MODE
-(add-hook 'json-mode-hook
-    (lambda ()
-      (make-variable-buffer-local 'js-indent-level)
-      (setq js-indent-level 2)))
-(add-hook 'json-mode 'flymake-json-load)
-(add-hook 'json-mode-hook 'paredit-mode)
-(add-to-list 'auto-mode-alist '("\\.json" . json-mode))
+(load "~/.emacs.d/projectile-init.el")
+
+(load "~/.emacs.d/multi-term.el")
+
+;; Load org-mode extensions
+(load "~/.emacs.d/org-mode-init.el")
 
 ;; FOR OPTIMIZATION
 ;; (load "~/.emacs.d/clojure-init.el")
 ;; (cider-jack-in)
 
-;; Tabbed Browsing Mode
-;; tabbar
-;; (require 'tabbar)
-;; (setq 'tabbar-use-images nil)
-;; (setq tabbar-buffer-groups-function
-;;       (lambda ()
-;;	(list "All")))
+;; Powerline configuration for emacs
+(add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
+ (require 'powerline)
+ (custom-set-faces
+  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+(setq powerline-arrow-shape 'curve)
 
-;; ;; tabbar _ tabbar-ruler
-;; (setq tabbar-ruler-global-tabbar t)
-;; (setq tabbar-ruler-global-ruler t)
-;; ;;(setq tabbar-ruler-popup-menu t)
-;; ;;(setq tabbar-ruler-popup-toolbar t)
-;; ;;(setq tabbar-ruler-popup-scrollbar t)
-
-;; ;;(require 'tabbar-ruler)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Configure Emacs Look and Feel Ends here
-
-;; Key Binding C-cl for clearning buffer
-(defun erase-buffer-hook ()
-  (local-set-key "\C-cl" 'erase-buffer))
-(add-hook 'shell-mode-hook 'erase-buffer-hook)
-
-;; No more visible bell ;; black rectangle in the center
-(setq visible-bell nil)
-
-;; Enable menu-mar mode
-(menu-bar-mode 1)
-
-;; Mod line mode
-(line-number-mode t)
-(column-number-mode t)
-
-(load-theme 'zenburn t)
+(require 'yasnippet)
+(yas-global-mode 1)
