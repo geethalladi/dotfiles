@@ -1,7 +1,7 @@
 ;; FONT INIT
 ;; (set-face-attribute 'default nil :font "Monaco-15")
 
-;; (set-face-attribute 'default nil :font "Monaco-14:spacing=110")
+;; (set-face-attribute 'default nil :font "Monaco-13:spacing=110")
 
 ;; (set-face-attribute 'default nil :font "Inconsolata-13")
 (set-face-attribute 'default nil :font "Inconsolata-dz for Powerline:pixelsize=13:spacing=110")
