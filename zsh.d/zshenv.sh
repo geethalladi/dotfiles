@@ -98,6 +98,12 @@ export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 
 export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${SCALA_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:${PATH}:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin
 
+
+########################################################################################
+# Java Options
+
+export JAVA_OPTS="-Xms256m -Xmx3000m"
+
 # OPAM configuration (for OCaml)
 # . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
@@ -124,3 +130,7 @@ source ${ZSHDIR}/macports.sh
 
 # RVM should be the final one
 source ${DOTFILE_DIR_RVM}/rvm.sh
+
+# Not the best of all hacks
+# Use a directory specific gemset or fallback to default gemset
+cd /tmp; popd
