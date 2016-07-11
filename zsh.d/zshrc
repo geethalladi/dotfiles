@@ -20,8 +20,9 @@ export ZSH=~/repo/open-source/oh-my-zsh
 if [ -n "$INSIDE_EMACS" ]; then
     export ZSH_THEME="ys"
 else
-    # export ZSH_THEME="robbyrussell"
     export ZSH_THEME="agnoster"
+    # export ZSH_THEME="theunraveler"
+    # export ZSH_THEME="bullet-train"
 fi
 
 # Uncomment the following line to use case-sensitive completion.
