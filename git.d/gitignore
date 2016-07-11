@@ -1,6 +1,6 @@
 .DS_Store
 *.~
-.idea/*
+.idea
 *.iml
 pkg/*
 *.gem
@@ -22,3 +22,4 @@ projectile.cache
 eshell/*
 .bundle
 recentf
+bin
