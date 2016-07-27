@@ -114,6 +114,7 @@ export JAVA_OPTS="-Xms256m -Xmx3000m"
 if [ -n "$INSIDE_EMACS" ]; then
     # USE emacsclient while inside emacs
     export EDITOR=emacsclient
+    export PS1="(%{$fg[cyan]%}%/%{$reset_color%}) ~ "
 fi
 # Ripper CTAGS for rvm
 # export RIPPER_TAGS_EMACS=1
@@ -136,4 +137,4 @@ source ${DOTFILE_DIR_RVM}/rvm.sh
 
 # Not the best of all hacks
 # Use a directory specific gemset or fallback to default gemset
-cd /tmp; popd
+# cd /tmp; popd
