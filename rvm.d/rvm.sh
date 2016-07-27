@@ -5,8 +5,8 @@
 shell_session_update() { :; }
 
 # USING THE DEFAULT GEMSET WHILE LOGGING IN
-# export GEM_HOME=~/.rvm/gems/ruby-2.2.3
-# export GEM_PATH=~/.rvm/gems/ruby-2.2.3
+# export GEM_HOME=~/.rvm/gems/ruby-2.3.0
+# export GEM_PATH=~/.rvm/gems/ruby-2.3.0
 
 export PATH="${GEM_HOME}/bin:$HOME/.rvm/bin:${PATH}" # Add RVM to PATH for scripting
 
