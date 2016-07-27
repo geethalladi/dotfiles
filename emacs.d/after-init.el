@@ -204,6 +204,8 @@
 ;; Load org-mode extensions
 (load "~/.emacs.d/org-mode-init.el")
 
+(load "~/.emacs.d/scala-init.el")
+
 ;; FOR OPTIMIZATION
 ;; (load "~/.emacs.d/clojure-init.el")
 ;; (cider-jack-in)
