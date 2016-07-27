@@ -13,3 +13,6 @@
 
 (global-set-key (kbd "s-<up>") 'scroll-down-half)
 (global-set-key (kbd "s-<down>") 'scroll-up-half)
+
+(global-set-key (kbd "M-<up>") 'scroll-down-half)
+(global-set-key (kbd "M-<down>") 'scroll-up-half)
