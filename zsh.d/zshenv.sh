@@ -20,7 +20,7 @@ alias ls='ls -GFh'
 alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
 
 # alias emacsclient to 'e'
-alias e='ec'
+alias e='emacsclient -nw'
 
 alias m='mvn -Dmaven.javadoc.skip=true'
 alias g='git'
