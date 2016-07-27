@@ -19,8 +19,10 @@ alias ls='ls -GFh'
 # Emacs to use cocoa emacs app
 alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
 
-# alias emacsclient to 'e'
-alias e='emacsclient -nw'
+alias e='ec'
+
+# alias emacsclient to 'ecl'
+alias ecl='emacsclient -nw'
 
 alias m='mvn -Dmaven.javadoc.skip=true'
 alias g='git'
