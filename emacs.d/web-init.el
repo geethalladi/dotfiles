@@ -1,4 +1,6 @@
 (require 'web-mode)
+;; make web-mode play nice with smartparens
+(setq web-mode-enable-auto-pairing nil)
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -11,8 +13,6 @@
 (add-to-list 'auto-mode-alist
              '("/\\(views\\|html\\|theme\\|templates\\)/.*\\.php\\'" . web-mode))
 
-;; make web-mode play nice with smartparens
-(setq web-mode-enable-auto-pairing nil)
 
 (sp-with-modes '(web-mode)
   (sp-local-pair "%" "%"
@@ -44,3 +44,6 @@
 
 (add-hook 'web-mode-hook 'smartparens-mode)
 (add-hook 'css-mode-hook 'smartparens-mode)
+
+(sp-pair "%" "%" :wrap "C-%")
+(sp-pair "<" ">" :wrap "C->")

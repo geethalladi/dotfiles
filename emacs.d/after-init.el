@@ -1,11 +1,12 @@
 ;; PACKAGE ARCHIVE
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+(setq package-archives
+      '(("gnu" . "http://elpa.gnu.org/packages/")
        ("marmalade" . "https://marmalade-repo.org/packages/")
        ("melpa" . "http://melpa.milkbox.net/packages/")))
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ;; Org-mode's repository
 
 ;; ENABLE CASK
-(require 'cask "~/.emacs.d/.cask/24.5.1/elpa/cask-20151123.528/cask.el")
+(require 'cask "~/.emacs.d/.cask/24.5/elpa/cask-20160708.519/cask.el")
 (cask-initialize)
 
 ;; ENABLE PALLET
@@ -43,8 +44,9 @@
 ;; AUTO COMPLETE
 (require 'auto-complete-config)
 (ac-config-default)
+
 ;; [TODO] Update the exact path of the dictinoary
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/.cask/24.5.1/elpa/auto-complete-20150618.1949/dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/.cask/24.5/elpa/auto-complete-20160710.1544/dict")
 
 (global-linum-mode 1)
 (setq linum-format "%3d ")
@@ -201,6 +203,8 @@
 
 ;; Load org-mode extensions
 (load "~/.emacs.d/org-mode-init.el")
+
+(load "~/.emacs.d/scala-init.el")
 
 ;; FOR OPTIMIZATION
 ;; (load "~/.emacs.d/clojure-init.el")
