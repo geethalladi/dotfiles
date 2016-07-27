@@ -65,10 +65,12 @@ export ESHELL=bash # Till I am comfortable with emacs-shell
 # Git Configuration
 
 ${EXTN_SCRIPTS_DIR}/git-config.sh 'work'
-export GIT_CONFIG=~/.gitconfig
+# export GIT_CONFIG=~/.gitconfig
 
 ########################################################################################
 # PATH Variable
+export CELLAR_PATH=/usr/local/Cellar
+export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 
 export JDK_7_0_HOME=/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home
 export JDK_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home
@@ -76,6 +78,7 @@ export JDK_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Hom
 export JAVA_HOME=${JDK_8_HOME}
 
 export SCALA_HOME=${INSTALL_DIR}/scala-2.11.8
+export SBT_HOME=${CELLAR_PATH}/sbt/0.13.11
 
 export MAVEN_HOME=${INSTALL_DIR}/apache-maven-3.2.3
 export M2_HOME=${MAVEN_HOME}
@@ -92,9 +95,9 @@ export GRADLE_HOME=${INSTALL_DIR}gradle-2.3
 export CASK_PATH=~/.cask/bin
 export HASKELL_HOME=/Applications/Haskell.app/Contents
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
+export HOMEBREW_NO_ANALYTICS=1
+
 export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
-export CELLAR_PATH=/usr/local/Cellar
-export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 
 export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${SCALA_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:${PATH}:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin
 
