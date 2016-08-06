@@ -139,4 +139,4 @@ source ${DOTFILE_DIR_RVM}/rvm.sh
 
 # Not the best of all hacks
 # Use a directory specific gemset or fallback to default gemset
-# cd /tmp; popd
+cd /tmp; popd
