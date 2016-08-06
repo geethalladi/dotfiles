@@ -19,8 +19,10 @@ alias ls='ls -GFh'
 # Emacs to use cocoa emacs app
 alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
 
-# alias emacsclient to 'e'
 alias e='ec'
+
+# alias emacsclient to 'ecl'
+alias ecl='emacsclient -nw'
 
 alias m='mvn -Dmaven.javadoc.skip=true'
 alias g='git'
@@ -114,6 +116,7 @@ export JAVA_OPTS="-Xms256m -Xmx3000m"
 if [ -n "$INSIDE_EMACS" ]; then
     # USE emacsclient while inside emacs
     export EDITOR=emacsclient
+    export PS1="(%{$fg[cyan]%}%/%{$reset_color%}) ~ "
 fi
 # Ripper CTAGS for rvm
 # export RIPPER_TAGS_EMACS=1
