@@ -12,7 +12,4 @@ export PATH="${GEM_HOME}/bin:$HOME/.rvm/bin:${PATH}" # Add RVM to PATH for scrip
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
-rvm default
-
-# # Not required if a gemset is marked as --default
-rvm use default@zz-junk --default
+rvm use ruby-2.3.0@zz-junk
