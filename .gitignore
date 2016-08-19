@@ -2,6 +2,7 @@ zsh-update
 work.*.sh
 gitconfig.work*
 gitconfig.hack
+gitconfig.*
 .cask
 ac-comphist.dat
 *.eld
