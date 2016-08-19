@@ -62,7 +62,7 @@ export LANG=en_US.UTF-8
 
 # Use bash shell in emacs
 export ESHELL=bash # Till I am comfortable with emacs-shell
-
+export EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
 ########################################################################################
 # Git Configuration
 
@@ -92,8 +92,8 @@ export HIVE_HOME=${INSTALL_DIR}/apache-hive-1.0.0-bin
 export CLOJURE_VERSION='1.7.0' # will also be used when running clj-repl
 export CLOJURE_HOME="${INSTALL_DIR}/clojure-${CLOJURE_VERSION}"
 
-export ANT_HOME=${INSTALL_DIR}apache-ant-1.9.4
-export GRADLE_HOME=${INSTALL_DIR}gradle-2.3
+export ANT_HOME=${INSTALL_DIR}/apache-ant-1.9.4
+export GRADLE_HOME=${INSTALL_DIR}/gradle-2.14.1
 export CASK_PATH=~/.cask/bin
 export HASKELL_HOME=/Applications/Haskell.app/Contents
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
