@@ -6,7 +6,7 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ;; Org-mode's repository
 
 ;; ENABLE CASK
-(require 'cask "~/.emacs.d/.cask/24.5/elpa/cask-20160708.519/cask.el")
+(require 'cask "~/.emacs.d/.cask/24.5/elpa/cask-20160816.753/cask.el")
 (cask-initialize)
 
 ;; ENABLE PALLET
@@ -146,7 +146,7 @@
 (line-number-mode t)
 (column-number-mode t)
 
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
 
 ;; Smartparens mode
 (require 'smartparens)
@@ -175,8 +175,8 @@
 
 ;; FOR OPTIMIZATION
 ;; ;; LISP
-;; (setq inferior-lisp-program "/usr/local/bin/sbcl")
-;; (load "~/.emacs.d/lisp-init.el")
+(setq inferior-lisp-program "/usr/local/bin/sbcl")
+(load "~/.emacs.d/lisp-init.el")
 
 ;; ;; SASS
 ;; ;; (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
