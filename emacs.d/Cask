@@ -49,6 +49,7 @@
  (depends-on "emmet-mode")
  (depends-on "enclose")
 ;; (depends-on "enh-ruby-mode")
+ (depends-on "ensime")
  (depends-on "epl")
  (depends-on "ert-runner")
  (depends-on "ess")
