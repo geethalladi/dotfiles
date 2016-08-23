@@ -46,7 +46,7 @@
 (ac-config-default)
 
 ;; [TODO] Update the exact path of the dictinoary
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/.cask/24.5/elpa/auto-complete-20160710.1544/dict")
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/.cask/24.5.1/elpa/auto-complete-20160710.1544/dict")
 
 (global-linum-mode 1)
 (setq linum-format "%3d ")
@@ -213,9 +213,9 @@
 ;; Powerline configuration for emacs
 (add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
  (require 'powerline)
- (custom-set-faces
-  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
-  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+ ;; (custom-set-faces
+ ;;  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+ ;;  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
 (setq powerline-arrow-shape 'curve)
 
 (require 'yasnippet)
