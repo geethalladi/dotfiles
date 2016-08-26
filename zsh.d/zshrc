@@ -73,9 +73,8 @@ plugins=(git brew rvm osx web-search scala)
 
 # export PATH="~/.rvm/gems/ruby-2.0.0-p353/bin:~/.rvm/gems/ruby-2.0.0-p353@global/bin:~/.rvm/rubies/ruby-2.0.0-p353/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:~/.rvm/bin:${PATH}"
 # export MANPATH="/usr/local/man:$MANPATH"
-source $ZSH/oh-my-zsh.sh
 
-source ~/dotfiles/zsh.d/zshenv.sh
+source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -101,3 +100,5 @@ source ~/dotfiles/zsh.d/zshenv.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# source ~/dotfiles/zsh.d/zshenv.sh
