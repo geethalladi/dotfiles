@@ -6,7 +6,7 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ;; Org-mode's repository
 
 ;; ENABLE CASK
-(require 'cask "~/.emacs.d/.cask/24.5/elpa/cask-20160708.519/cask.el")
+(require 'cask "~/.emacs.d/.cask/24.5/elpa/cask-20160816.753/cask.el")
 (cask-initialize)
 
 ;; ENABLE PALLET
@@ -46,7 +46,7 @@
 (ac-config-default)
 
 ;; [TODO] Update the exact path of the dictinoary
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/.cask/24.5/elpa/auto-complete-20160710.1544/dict")
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/.cask/24.5.1/elpa/auto-complete-20160710.1544/dict")
 
 (global-linum-mode 1)
 (setq linum-format "%3d ")
@@ -136,6 +136,10 @@
   (local-set-key "\C-cl" 'erase-buffer))
 (add-hook 'shell-mode-hook 'erase-buffer-hook)
 
+;; Found a way to overwrite the selected text and replace it with
+;; the yanked content
+(delete-selection-mode 1)
+
 ;; No more visible bell ;; black rectangle in the center
 (setq visible-bell nil)
 
@@ -146,7 +150,7 @@
 (line-number-mode t)
 (column-number-mode t)
 
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
 
 ;; Smartparens mode
 (require 'smartparens)
@@ -175,8 +179,8 @@
 
 ;; FOR OPTIMIZATION
 ;; ;; LISP
-;; (setq inferior-lisp-program "/usr/local/bin/sbcl")
-;; (load "~/.emacs.d/lisp-init.el")
+(setq inferior-lisp-program "/usr/local/bin/sbcl")
+(load "~/.emacs.d/lisp-init.el")
 
 ;; ;; SASS
 ;; ;; (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
@@ -213,9 +217,9 @@
 ;; Powerline configuration for emacs
 (add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
  (require 'powerline)
- (custom-set-faces
-  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
-  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+ ;; (custom-set-faces
+ ;;  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+ ;;  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
 (setq powerline-arrow-shape 'curve)
 
 (require 'yasnippet)

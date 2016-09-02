@@ -61,12 +61,16 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Use bash shell in emacs
-export ESHELL=bash # Till I am comfortable with emacs-shell
+export ESHELL=zsh # Till I am comfortable with emacs-shell
+
+# Enabling EMACS variable disables line editing in zsh
+export EMACS_APP=/Applications/Emacs.app/Contents/MacOS/Emacs
 
 ########################################################################################
 # Git Configuration
 
-${EXTN_SCRIPTS_DIR}/git-config.sh 'work'
+# Manually setting/re-setting git configuration
+# ${EXTN_SCRIPTS_DIR}/git-config.sh 'work'
 # export GIT_CONFIG=~/.gitconfig
 
 ########################################################################################
@@ -79,7 +83,7 @@ export JDK_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Hom
 export JDK_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home
 export JAVA_HOME=${JDK_8_HOME}
 
-export SCALA_HOME=${INSTALL_DIR}/scala-2.11.8
+export SCALA_HOME=${CELLAR_PATH}/scala/2.11.8
 export SBT_HOME=${CELLAR_PATH}/sbt/0.13.11
 
 export MAVEN_HOME=${INSTALL_DIR}/apache-maven-3.2.3
@@ -92,8 +96,8 @@ export HIVE_HOME=${INSTALL_DIR}/apache-hive-1.0.0-bin
 export CLOJURE_VERSION='1.7.0' # will also be used when running clj-repl
 export CLOJURE_HOME="${INSTALL_DIR}/clojure-${CLOJURE_VERSION}"
 
-export ANT_HOME=${INSTALL_DIR}apache-ant-1.9.4
-export GRADLE_HOME=${INSTALL_DIR}gradle-2.3
+export ANT_HOME=${INSTALL_DIR}/apache-ant-1.9.4
+export GRADLE_HOME=${INSTALL_DIR}/gradle-2.14.1
 export CASK_PATH=~/.cask/bin
 export HASKELL_HOME=/Applications/Haskell.app/Contents
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
@@ -102,7 +106,6 @@ export HOMEBREW_NO_ANALYTICS=1
 export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
 
 export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${SCALA_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:${PATH}:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin
-
 
 ########################################################################################
 # Java Options
@@ -124,6 +127,7 @@ fi
 function show() {
     echo "rvm: "`rvm-prompt`
     echo "git branch: "`git_current_branch`
+    git-config.sh
 }
 alias shw='show'
 
@@ -139,4 +143,4 @@ source ${DOTFILE_DIR_RVM}/rvm.sh
 
 # Not the best of all hacks
 # Use a directory specific gemset or fallback to default gemset
-cd /tmp; popd
+cd /tmp; cd -

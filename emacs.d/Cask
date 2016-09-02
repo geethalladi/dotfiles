@@ -10,6 +10,7 @@
 ;; (package-file "TODO")
 
 (development
+ (depends-on "ac-geiser")
  (depends-on "ac-haskell-process")
  (depends-on "ac-js2")
  (depends-on "ac-nrepl")
@@ -48,6 +49,7 @@
  (depends-on "emmet-mode")
  (depends-on "enclose")
 ;; (depends-on "enh-ruby-mode")
+ (depends-on "ensime")
  (depends-on "epl")
  (depends-on "ert-runner")
  (depends-on "ess")
@@ -67,6 +69,7 @@
  (depends-on "flymake-json")
  (depends-on "fringe-helper")
  (depends-on "fuzzy")
+ (depends-on "geiser")
  (depends-on "git")
  (depends-on "git-gutter")
  (depends-on "git-gutter-fringe")
@@ -124,6 +127,7 @@
  (depends-on "prodigy")
  (depends-on "project-explorer")
  (depends-on "projectile")
+ (depends-on "quack")
  (depends-on "rainbow-delimiters")
  (depends-on "rainbow-mode")
  (depends-on "recentf-ext")
