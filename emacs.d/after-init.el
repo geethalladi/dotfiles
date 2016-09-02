@@ -136,6 +136,10 @@
   (local-set-key "\C-cl" 'erase-buffer))
 (add-hook 'shell-mode-hook 'erase-buffer-hook)
 
+;; Found a way to overwrite the selected text and replace it with
+;; the yanked content
+(delete-selection-mode 1)
+
 ;; No more visible bell ;; black rectangle in the center
 (setq visible-bell nil)
 
