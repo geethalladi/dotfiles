@@ -67,6 +67,8 @@
 (add-hook 'term-mode-hook
           (lambda () (define-key term-raw-map (kbd "s-v") 'term-paste)))
 
+(add-hook 'term-mode-hook (lambda () (setq truncate-lines t)))
+
 (when (require 'term nil t)
   (defun term-handle-ansi-terminal-messages (message)
     (while (string-match "\eAnSiT.+\n" message)
