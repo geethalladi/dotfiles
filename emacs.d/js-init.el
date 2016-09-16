@@ -19,6 +19,11 @@
             (moz-minor-mode 1)))
 (add-hook 'js-mode-hook 'ac-js2-mode)
 
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(add-hook 'js2-mode-hook 'skewer-mode)
+(add-hook 'css-mode-hook 'skewer-css-mode)
+(add-hook 'html-mode-hook 'skewer-html-mode)
+
 ;; (define-key js-mode-map "{" 'paredit-open-curly)
 ;; (define-key js-mode-map "}" 'paredit-close-curly-and-newline)
 
