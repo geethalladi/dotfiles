@@ -14,20 +14,6 @@
              '("/\\(views\\|html\\|theme\\|templates\\)/.*\\.php\\'" . web-mode))
 
 
-(sp-with-modes '(web-mode)
-  (sp-local-pair "%" "%"
-                 :unless '(sp-in-string-p)
-                 :post-handlers '(((lambda (&rest _ignored)
-                                     (just-one-space)
-                                     (save-excursion (insert " ")))
-                                   "SPC" "=" "#")))
-  (sp-local-pair "<% "  " %>" :insert "C-c %")
-  (sp-local-pair "<%= " " %>" :insert "C-c =")
-  (sp-local-pair "<%# " " %>" :insert "C-c #")
-  (sp-local-tag "%" "<% "  " %>")
-  (sp-local-tag "=" "<%= " " %>")
-  (sp-local-tag "#" "<%# " " %>"))
-
 (setq web-mode-comment-style 2)
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
@@ -44,6 +30,3 @@
 
 (add-hook 'web-mode-hook 'smartparens-mode)
 (add-hook 'css-mode-hook 'smartparens-mode)
-
-(sp-pair "%" "%" :wrap "C-%")
-(sp-pair "<" ">" :wrap "C->")
