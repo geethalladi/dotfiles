@@ -5,7 +5,7 @@
 
 ;; (set-face-attribute 'default nil :font "Inconsolata-16")
 ;; (set-face-attribute 'default nil :font "Inconsolata-dz for Powerline:pixelsize=13:spacing=110")
-(set-face-attribute 'default nil :font "Consolas:pixelsize=16:spacing=110")
+(set-face-attribute 'default nil :font "Consolas:pixelsize=14:spacing=110")
 
 ;; EMACS MAXIMIZED
 (custom-set-variables
