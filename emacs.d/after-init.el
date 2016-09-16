@@ -138,7 +138,7 @@
 
 ;; Found a way to overwrite the selected text and replace it with
 ;; the yanked content
-(delete-selection-mode 1)
+;; (delete-selection-mode 1)
 
 ;; No more visible bell ;; black rectangle in the center
 (setq visible-bell nil)
@@ -148,6 +148,7 @@
 
 ;; Mod line mode
 (line-number-mode t)
+(visual-line-mode 1)
 (column-number-mode t)
 
 ;; (load-theme 'zenburn t)
@@ -155,6 +156,8 @@
 ;; Smartparens mode
 (require 'smartparens)
 (show-paren-mode t)
+(show-smartparens-global-mode t)
+(load "~/.emacs.d/smartparens.el")
 
 ;; magit for GIT
 (require 'magit)
