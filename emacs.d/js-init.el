@@ -36,6 +36,16 @@
     (lambda ()
       (make-variable-buffer-local 'js-indent-level)
       (setq js-indent-level 2)))
+
 (add-hook 'json-mode 'flymake-json-load)
 (add-hook 'json-mode-hook 'paredit-mode)
-(add-to-list 'auto-mode-alist '("\\.json" . json-mode))
+(add-hook 'json-mode-hook 'tern)
+(add-hook 'json-mode-hook 'tern-auto-complete)
+(add-hook 'json-mode-hook 'tern-context-coloring)
+
+
+(load-file "~/dotfiles/emacs.d/skewer-coffee.el")
+
+(require 'skewer-coffee)
+(add-hook 'coffee-mode-hook 'skewer-coffee-mode)
+(add-hook 'coffee-mode-hook 'smartparens-mode)
