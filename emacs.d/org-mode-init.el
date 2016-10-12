@@ -1,3 +1,4 @@
+(require 'org)
 ;; Always use org indent minor mode
 (add-hook 'org-mode-hook 'org-indent-mode)
 
@@ -18,3 +19,7 @@
 
 ;; Display images inline
 (setq org-startup-with-inline-images t)
+
+
+(add-to-list 'org-emphasis-alist
+ '("*" (:foreground "red")))
