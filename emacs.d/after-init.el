@@ -157,8 +157,6 @@
 (require 'smartparens)
 (show-paren-mode t)
 (show-smartparens-global-mode t)
-(load "~/.emacs.d/smartparens.el")
-
 ;; magit for GIT
 (require 'magit)
 
@@ -172,50 +170,8 @@
 ;;   '(vagrant-tramp-enable))
 ;; (require 'tramp)
 
-;; Start the emacs-server
-(load "~/.emacs.d/emacs-server.el")
-
-;; CLIPBOARD Customizations
-(load "~/.emacs.d/clipboard.el")
-
-(load "~/.emacs.d/font-init.el")
-
-;; FOR OPTIMIZATION
-;; ;; LISP
-(setq inferior-lisp-program "/usr/local/bin/sbcl")
-(load "~/.emacs.d/lisp-init.el")
-
 ;; ;; SASS
 ;; ;; (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
-
-;; (load "~/.emacs.d/term.el")
-
-;; Loading my customizations
-(load "~/.emacs.d/custom.el")
-
-;; Loading rb init script
-(load "~/.emacs.d/rb-init.el")
-
-;; Loading js init script
-(load "~/.emacs.d/js-init.el")
-(load "~/.emacs.d/web-init.el")
-
-;; (load "~/.emacs.d/elixir-init.el")
-
-(load "~/.emacs.d/helm-init.el")
-
-(load "~/.emacs.d/projectile-init.el")
-
-(load "~/.emacs.d/multi-term.el")
-
-;; Load org-mode extensions
-(load "~/.emacs.d/org-mode-init.el")
-
-(load "~/.emacs.d/scala-init.el")
-
-;; FOR OPTIMIZATION
-;; (load "~/.emacs.d/clojure-init.el")
-;; (cider-jack-in)
 
 ;; Powerline configuration for emacs
 (add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
@@ -227,3 +183,5 @@
 
 (require 'yasnippet)
 (yas-global-mode 1)
+
+(load "~/.emacs.d/after-init-load.el")

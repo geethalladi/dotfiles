@@ -23,3 +23,5 @@ eshell/*
 .bundle
 recentf
 bin
+.tern*
+.mc-lists.el
