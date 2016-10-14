@@ -58,9 +58,6 @@
 ;; Use coreutils ls for dired program
 ;; (setq insert-directory-program (executable-find "gls"))
 
-;; FOR OPTIMIZATION
-;; (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-
 ;; NO LONGER USING TAGS
 ;; (defun create-tags (dir-name)
 ;;   "Create tags file."
