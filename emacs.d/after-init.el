@@ -26,6 +26,9 @@
 
 (setq mac-shift-modifier 'meta)
 
+(setq visual-fill-column-width 144)
+(global-visual-fill-column-mode 1)
+
 ;; (require 'ido)
 ;; (ido-mode 1)
 ;; (setq ido-everywhere t)
@@ -57,9 +60,6 @@
 
 ;; Use coreutils ls for dired program
 ;; (setq insert-directory-program (executable-find "gls"))
-
-;; FOR OPTIMIZATION
-;; (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
 ;; NO LONGER USING TAGS
 ;; (defun create-tags (dir-name)

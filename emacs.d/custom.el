@@ -16,3 +16,10 @@
 
 (global-set-key (kbd "C-x <up>") 'scroll-down-half)
 (global-set-key (kbd "C-x <down>") 'scroll-up-half)
+
+;; Multiple Cursors
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+(require 'smartparens-config)

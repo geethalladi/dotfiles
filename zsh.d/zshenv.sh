@@ -30,6 +30,9 @@ alias t='tree'
 alias pass='openssl rand -base64 16'
 alias rg='rvm gemset use'
 
+alias scheme="rlwrap -r -c -f ~/extn.d/mit_scheme_bindings.txt scheme"
+alias ghci="ghci -XNPlusKPatterns"
+
 ########################################################################################
 # Custom Path Variables
 
@@ -109,9 +112,11 @@ export PYSPARK_DRIVER_PYTHON=ipython  # Use ipython for pyspark
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
 export HOMEBREW_NO_ANALYTICS=1
 
+export MACPORT_HOME=/opt/local
+
 export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
 
-export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${SCALA_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:${PATH}:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin:${SPARK_HOME}/bin
+export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${SCALA_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:${PATH}:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin:${SPARK_HOME}/bin:${MACPORT_HOME}/bin
 
 ########################################################################################
 # Java Options
