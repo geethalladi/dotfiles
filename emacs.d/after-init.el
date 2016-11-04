@@ -26,6 +26,9 @@
 
 (setq mac-shift-modifier 'meta)
 
+(setq visual-fill-column-width 144)
+(global-visual-fill-column-mode 1)
+
 ;; (require 'ido)
 ;; (ido-mode 1)
 ;; (setq ido-everywhere t)
