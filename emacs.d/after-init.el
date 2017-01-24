@@ -6,7 +6,7 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ;; Org-mode's repository
 
 ;; ENABLE CASK
-(require 'cask "~/.emacs.d/.cask/24.5/elpa/cask-20160816.753/cask.el")
+(require 'cask "~/.emacs.d/.cask/25.1/elpa/cask-20161024.1205/cask.el")
 (cask-initialize)
 
 ;; ENABLE PALLET
