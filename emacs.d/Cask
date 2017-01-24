@@ -1,6 +1,6 @@
 (source gnu)
-(source marmalade)
 (source melpa)
+;; (source marmalade "https://marmalade-repo.org/packages/")
 (source org)
 
 ;;  (depends-on "cider-tracing") ;; cider-tracing is no longer maintained
@@ -10,10 +10,10 @@
 ;; (package-file "TODO")
 
 (development
+ (depends-on "ac-cider")
  (depends-on "ac-geiser")
  (depends-on "ac-haskell-process")
  (depends-on "ac-js2")
- (depends-on "ac-nrepl")
  (depends-on "ac-slime")
  (depends-on "adaptive-wrap")
  (depends-on "ag")
@@ -29,9 +29,7 @@
  (depends-on "cider-decompile")
  (depends-on "cljsbuild-mode")
  (depends-on "clojure-mode")
- (depends-on "clojurescript-mode")
  (depends-on "coffee-mode")
- (depends-on "color-theme-monokai")
  (depends-on "color-theme-sanityinc-tomorrow")
  (depends-on "command-log-mode")
  (depends-on "company")
@@ -54,6 +52,9 @@
  (depends-on "epl")
  (depends-on "ert-runner")
  (depends-on "ess")
+ (depends-on "ess-R-data-view")
+ (depends-on "ess-R-object-popup")
+ (depends-on "ess-smart-underscore")
  (depends-on "etags-select")
  (depends-on "etags-table")
  (depends-on "exec-path-from-shell")
@@ -87,7 +88,6 @@
  (depends-on "highlight-parentheses")
  (depends-on "htmlize")
  (depends-on "idea-darkula-theme")
- (depends-on "idle-highlight")
  (depends-on "idle-highlight-mode")
  (depends-on "ido")
  (depends-on "ido-ubiquitous")
@@ -149,7 +149,6 @@
  (depends-on "shm") ;; structured haskell mode
  (depends-on "simple-httpd")
  (depends-on "skewer-mode")
- (depends-on "slamhound")
  (depends-on "slime")
  (depends-on "smart-mode-line")
  (depends-on "smartparens")
@@ -175,3 +174,8 @@
  (depends-on "yafolding")
  (depends-on "yasnippet")
  (depends-on "zenburn-theme"))
+
+;; (depends-on "slamhound") ;; clojure
+;; (depends-on "ac-nrepl") ;; deprecated in favour of ac-cider
+;; (depends-on "clojurescript-mode") ;; use clojure-mode
+;; (depends-on "color-theme-monokai")
