@@ -23,3 +23,6 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 (require 'smartparens-config)
+
+;; For associating pomodoro with lisp mode
+(add-to-list 'auto-mode-alist '("\\.pomo" . lisp-mode))

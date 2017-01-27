@@ -33,6 +33,7 @@
 
 (load "~/.emacs.d/haskell-init.el")
 
-;; (load "~/.emacs.d/lisp-init.el")
+(load "~/.emacs.d/lisp-init.el")
+
 ;; (load "~/.emacs.d/clojure-init.el")
 ;; (load "~/.emacs.d/elixir-init.el")
