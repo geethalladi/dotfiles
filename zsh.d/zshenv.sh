@@ -103,11 +103,10 @@ export GRADLE_HOME=${CELLAR_PATH}/gradle/3.3
 ##### Needs to be updated  ######
 
 export NODE_PATH=/usr/local/lib/node_modules
-export HASKELL_HOME=/Applications/Haskell.app/Contents
 
-export HADOOP_HOME=${INSTALL_DIR}/hadoop-2.4.1
+export HADOOP_HOME=${INSTALL_DIR}/hadoop-2.7.3
 export HADOOP_PREFIX=${HADOOP_HOME}
-export HIVE_HOME=${INSTALL_DIR}/apache-hive-1.0.0-bin
+export HIVE_HOME=${INSTALL_DIR}/apache-hive-2.1.1-bin
 export SPARK_HOME=${INSTALL_DIR}/spark/spark-2.0.0-bin-hadoop2.7
 export SPARK_PREFIX=${SPARK_HOME}
 export PYSPARK_DRIVER_PYTHON=ipython  # Use ipython for pyspark
