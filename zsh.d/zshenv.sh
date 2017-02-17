@@ -79,28 +79,30 @@ export EMACS_APP=/Applications/Emacs.app/Contents/MacOS/Emacs
 ########################################################################################
 # PATH Variable
 export CELLAR_PATH=/usr/local/Cellar
+export CASK_PATH=~/.cask/bin
+
 export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 
 # export JDK_7_0_HOME=/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home
 # export JDK_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home
-
 export JDK_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/
 export JAVA_HOME=${JDK_8_HOME}
 
 export SCALA_HOME=${CELLAR_PATH}/scala/2.12.1
 export SBT_HOME=${CELLAR_PATH}/sbt/0.13.13
 
-export MAVEN_HOME=${INSTALL_DIR}/apache-maven-3.2.3
+export ANT_HOME=${CELLAR_PATH}/ant/1.10.1
+export MAVEN_HOME=${CELLAR_PATH}/maven-3.3.9
 export M2_HOME=${MAVEN_HOME}
+export GRADLE_HOME=${CELLAR_PATH}/gradle/3.3
+
+# Using lein for clojure jar dependencies
+# export CLOJURE_VERSION='1.7.0' # will also be used when running clj-repl
+# export CLOJURE_HOME="${INSTALL_DIR}/clojure-${CLOJURE_VERSION}"
+
+##### Needs to be updated  ######
 
 export NODE_PATH=/usr/local/lib/node_modules
-
-export CLOJURE_VERSION='1.7.0' # will also be used when running clj-repl
-export CLOJURE_HOME="${INSTALL_DIR}/clojure-${CLOJURE_VERSION}"
-
-export ANT_HOME=${INSTALL_DIR}/apache-ant-1.9.4
-export GRADLE_HOME=${INSTALL_DIR}/gradle-2.14.1
-export CASK_PATH=~/.cask/bin
 export HASKELL_HOME=/Applications/Haskell.app/Contents
 
 export HADOOP_HOME=${INSTALL_DIR}/hadoop-2.4.1
@@ -110,8 +112,10 @@ export SPARK_HOME=${INSTALL_DIR}/spark/spark-2.0.0-bin-hadoop2.7
 export SPARK_PREFIX=${SPARK_HOME}
 export PYSPARK_DRIVER_PYTHON=ipython  # Use ipython for pyspark
 
-export ANACONDA3_HOME=${INSTALL_DIR}/anaconda3
+##### Needs to be updated  ######
+
 export ANACONDA2_HOME=${INSTALL_DIR}/anaconda/anaconda
+export ANACONDA3_HOME=${INSTALL_DIR}/anaconda3
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
 export HOMEBREW_NO_ANALYTICS=1
