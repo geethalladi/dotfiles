@@ -32,6 +32,7 @@ alias rg='rvm gemset use'
 
 alias scheme="rlwrap -r -c -f ~/extn.d/mit_scheme_bindings.txt scheme"
 alias ghci="ghci -XNPlusKPatterns"
+alias hivec="hive -hiveconf hive.root.logger=DEBUG,console"
 
 ########################################################################################
 # Custom Path Variables
@@ -123,7 +124,9 @@ export MACPORT_HOME=/opt/local
 
 export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
 
-export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${MAVEN_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin:${SPARK_HOME}/bin:${MACPORT_HOME}/bin:${ANACONDA2_HOME}/bin
+export ES_HOME=${INSTALL_DIR}/elasticsearch-1.7.2
+
+export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${MAVEN_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin:${SPARK_HOME}/bin:${MACPORT_HOME}/bin:${ANACONDA2_HOME}/bin:${ES_HOME}/bin
 
 # Using custom installed java/scala
 export PATH=${JAVA_HOME}/bin:${SCALA_HOME}/bin:${PATH}
