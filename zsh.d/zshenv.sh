@@ -17,7 +17,7 @@ alias l='ls -al'
 alias ls='ls -GFh'
 
 # Emacs to use cocoa emacs app
-alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
+# alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
 
 alias e='ec'
 
@@ -68,7 +68,7 @@ export LANG=en_US.UTF-8
 export ESHELL=zsh # Till I am comfortable with emacs-shell
 
 # Enabling EMACS variable disables line editing in zsh
-export EMACS_APP=/Applications/Emacs.app/Contents/MacOS/Emacs
+export EMACS_APP=/usr/local/Cellar/emacs/25.1
 
 ########################################################################################
 # Git Configuration
@@ -93,9 +93,9 @@ export SCALA_HOME=${CELLAR_PATH}/scala/2.12.1
 export SBT_HOME=${CELLAR_PATH}/sbt/0.13.13
 
 export ANT_HOME=${CELLAR_PATH}/ant/1.10.1
-export MAVEN_HOME=${CELLAR_PATH}/maven-3.3.9
+export MAVEN_HOME=${CELLAR_PATH}/maven/3.3.9
 export M2_HOME=${MAVEN_HOME}
-export GRADLE_HOME=${CELLAR_PATH}/gradle/3.3
+export GRADLE_HOME=${CELLAR_PATH}/gradle/3.4.1
 
 # Using lein for clojure jar dependencies
 # export CLOJURE_VERSION='1.7.0' # will also be used when running clj-repl
@@ -114,8 +114,8 @@ export PYSPARK_DRIVER_PYTHON=ipython  # Use ipython for pyspark
 
 ##### Needs to be updated  ######
 
-export ANACONDA2_HOME=${INSTALL_DIR}/anaconda/anaconda
-export ANACONDA3_HOME=${INSTALL_DIR}/anaconda3
+export ANACONDA2_HOME=${INSTALL_DIR}/anaconda
+# export ANACONDA3_HOME=${INSTALL_DIR}/anaconda3
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
 export HOMEBREW_NO_ANALYTICS=1
@@ -126,10 +126,10 @@ export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
 
 export ES_HOME=${INSTALL_DIR}/elasticsearch-1.7.2
 
-export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${MAVEN_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin:${SPARK_HOME}/bin:${MACPORT_HOME}/bin:${ANACONDA2_HOME}/bin:${ES_HOME}/bin
+export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${MAVEN_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin:${SPARK_HOME}/bin:${MACPORT_HOME}/bin:${ANACONDA2_HOME}/bin:${ES_HOME}/bin:
 
 # Using custom installed java/scala
-export PATH=${JAVA_HOME}/bin:${SCALA_HOME}/bin:${PATH}
+export PATH=${EMACS_APP}/bin:${JAVA_HOME}/bin:${SCALA_HOME}/bin:${PATH}
 
 ########################################################################################
 # Java Options
