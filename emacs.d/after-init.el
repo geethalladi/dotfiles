@@ -96,13 +96,12 @@
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
 
-;; FOR OPTIMIZATION
-;; ;; Dash at point for emacs
-;; (require 'dash-at-point)
-;; (autoload 'dash-at-point "dash-at-point"
-;;     "Search the word at point with Dash." t nil)
-;; (global-set-key "\C-cd" 'dash-at-point)
-;; (global-set-key "\C-ce" 'dash-at-point-with-docset)
+;; Dash at point for emacs
+(require 'dash-at-point)
+(autoload 'dash-at-point "dash-at-point"
+    "Search the word at point with Dash." t nil)
+(global-set-key "\C-cd" 'dash-at-point)
+(global-set-key "\C-ce" 'dash-at-point-with-docset)
 
 ;; ENABLE PERSISTENT SCRATCH
 (persistent-scratch-setup-default)
@@ -162,7 +161,10 @@
 
 ;; DIRTREE MODE
 ;; (require 'dirtree) ;; FOR OPTIMIZATION
+(require 'all-the-icons)
 (require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 ;; FOR OPTIMIZATION
 ;; (setenv "TMPDIR" "/var/tmp") ;; TMPDIR to be used by tramp-mode
