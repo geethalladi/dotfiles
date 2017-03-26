@@ -1,6 +1,7 @@
 (require 'org)
 ;; Always use org indent minor mode
 (add-hook 'org-mode-hook 'org-indent-mode)
+;; (add-hook 'org-mode-hook 'smartparens-mode)
 
 ;; List of file extensions to use org-mode for (org|org_archive|notes)
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|notes\\)$" . org-mode))
@@ -19,7 +20,6 @@
 
 ;; Display images inline
 (setq org-startup-with-inline-images t)
-
 
 (add-to-list 'org-emphasis-alist
  '("*" (:foreground "red")))
