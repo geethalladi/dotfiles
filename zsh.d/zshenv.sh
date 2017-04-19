@@ -93,8 +93,8 @@ export SCALA_HOME=${CELLAR_PATH}/scala/2.12.1
 export SBT_HOME=${CELLAR_PATH}/sbt/0.13.13
 
 export ANT_HOME=${CELLAR_PATH}/ant/1.10.1
-export MAVEN_HOME=${CELLAR_PATH}/maven/3.3.9
-export M2_HOME=${MAVEN_HOME}
+# export MAVEN_HOME=${CELLAR_PATH}/maven/3.3.9
+# export M2_HOME=${MAVEN_HOME}
 export GRADLE_HOME=${CELLAR_PATH}/gradle/3.4.1
 
 # Using lein for clojure jar dependencies
