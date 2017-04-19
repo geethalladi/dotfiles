@@ -150,7 +150,7 @@
 (visual-line-mode 1)
 (column-number-mode t)
 
-;; (load-theme 'zenburn t)
+(load-theme 'zenburn t)
 
 ;; Smartparens mode
 (require 'smartparens)
