@@ -21,6 +21,7 @@
  (depends-on "all-the-icons")
  (depends-on "anaconda-mode")
  (depends-on "auto-complete")
+ (depends-on "autopair")
  (depends-on "bats-mode")
  (depends-on "better-defaults")
  (depends-on "bind-key")
