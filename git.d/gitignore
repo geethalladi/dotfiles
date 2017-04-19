@@ -26,3 +26,4 @@ bin
 .tern*
 .mc-lists.el
 emacs.d/anaconda-mode/*
+*.pyc
