@@ -27,10 +27,10 @@
 (load "~/.emacs.d/haskell-init.el")
 
 ;; Loading js init script
-;; (load "~/.emacs.d/js-init.el")
-;; (load "~/.emacs.d/web-init.el")
+(load "~/.emacs.d/js-init.el")
+(load "~/.emacs.d/web-init.el")
 
 ;; (load "~/.emacs.d/clojure-init.el")
 ;; (load "~/.emacs.d/elixir-init.el")
-;; (load "~/.emacs.d/scala-init.el")
-;; (load "~/.emacs.d/lisp-init.el")
+(load "~/.emacs.d/scala-init.el")
+(load "~/.emacs.d/lisp-init.el")
