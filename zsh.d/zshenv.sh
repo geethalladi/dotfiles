@@ -123,6 +123,7 @@ export HOMEBREW_NO_ANALYTICS=1
 export MACPORT_HOME=/opt/local
 
 export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
+export PYTHON_MOD_UTILS=~/repo/personal/python/modules
 
 export ES_HOME=${INSTALL_DIR}/elasticsearch-1.7.2
 
@@ -130,6 +131,9 @@ export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${MAVEN_HOME}/bin:${CASK_PATH}:${HASKELL
 
 # Using custom installed java/scala
 export PATH=${EMACS_APP}/bin:${JAVA_HOME}/bin:${SCALA_HOME}/bin:${PATH}
+
+# Importing Custom Python Modules
+export PYTHONPATH=${PYTHONPATH}:${PYTHON_MOD_UTILS}
 
 ########################################################################################
 # Java Options
