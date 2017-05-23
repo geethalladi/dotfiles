@@ -55,6 +55,7 @@
  (depends-on "ensime")
  (depends-on "epl")
  (depends-on "ert-runner")
+ (depends-on "es-mode")
  (depends-on "ess")
  (depends-on "ess-R-data-view")
  (depends-on "ess-R-object-popup")
