@@ -30,3 +30,10 @@
 (setenv "LC_CTYPE" "UTF-8")
 (setenv "LC_ALL" "en_US.UTF-8")
 (setenv "LANG" "en_US.UTF-8")
+
+
+;; Elastic Search mode
+(add-to-list 'auto-mode-alist '("\\.es$" . es-mode))
+(add-hook 'es-result-mode-hook 'hs-minor-mode)
+
+(defvar es-default-base "http://localhost:9200")
