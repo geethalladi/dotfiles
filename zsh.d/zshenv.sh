@@ -167,8 +167,8 @@ source ${DOTFILE_DIR_AWS}/awsenv.sh
 source ${ZSHDIR}/macports.sh
 
 # RVM should be the final one
-source ${DOTFILE_DIR_RVM}/rvm.sh
+# source ${DOTFILE_DIR_RVM}/rvm.sh
 
 # Not the best of all hacks
 # Use a directory specific gemset or fallback to default gemset
-cd /tmp; cd -
+# cd /tmp; cd -
