@@ -150,7 +150,7 @@
 (visual-line-mode 1)
 (column-number-mode t)
 
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
 
 ;; Smartparens mode
 (require 'smartparens)
@@ -187,3 +187,5 @@
 (yas-global-mode 1)
 
 (load "~/.emacs.d/after-init-load.el")
+
+(setq ns-pop-up-frames nil)
