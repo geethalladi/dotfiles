@@ -91,6 +91,7 @@ export JAVA_HOME=${JDK_8_HOME}
 
 export SCALA_HOME=${CELLAR_PATH}/scala/2.12.1
 export SBT_HOME=${CELLAR_PATH}/sbt/0.13.13
+export CONSCRIPT_HOME=${INSTALL_DIR}/conscript
 
 export ANT_HOME=${CELLAR_PATH}/ant/1.10.1
 # export MAVEN_HOME=${CELLAR_PATH}/maven/3.3.9
@@ -125,9 +126,9 @@ export MACPORT_HOME=/opt/local
 export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
 export PYTHON_MOD_UTILS=~/repo/personal/python/modules
 
-export ES_HOME=${INSTALL_DIR}/elasticsearch-1.7.2
+export ES_HOME=${INSTALL_DIR}/elasticsearch-2.2.1
 
-export PATH=${PATH}:${EXTN_SCRIPTS_DIR}:${MAVEN_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin:${SPARK_HOME}/bin:${MACPORT_HOME}/bin:${ANACONDA2_HOME}/bin:${ES_HOME}/bin:
+export PATH=${EXTN_SCRIPTS_DIR}:${MAVEN_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin:${SPARK_HOME}/bin:${MACPORT_HOME}/bin:${ANACONDA2_HOME}/bin:${ES_HOME}/bin:${CONSCRIPT_HOME}/bin:${PATH}:
 
 # Using custom installed java/scala
 export PATH=${EMACS_APP}/bin:${JAVA_HOME}/bin:${SCALA_HOME}/bin:${PATH}
