@@ -25,6 +25,7 @@
  (depends-on "bats-mode")
  (depends-on "better-defaults")
  (depends-on "bind-key")
+ (depends-on "bookmark+")
  (depends-on "calfw")
  (depends-on "cask")
  (depends-on "chef-mode")
