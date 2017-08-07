@@ -41,3 +41,8 @@
 
 ;; C-h for delete-backward-char
 ;; (global-set-key [(control ?h)] 'delete-backward-char)
+
+;; Get all the environment variables from shell
+(exec-path-from-shell-copy-env "PYTHONPATH")
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
