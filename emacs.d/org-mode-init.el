@@ -5,7 +5,7 @@
 ;; (add-hook 'org-mode-hook 'smartparens-mode)
 
 ;; List of file extensions to use org-mode for (org|org_archive|notes)
-(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|notes\\)$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|notes\\|pomodoro\\)$" . org-mode))
 
 ;; Key Bindings
 (global-set-key "\C-cl" 'org-store-link)
@@ -14,7 +14,7 @@
 
 ;; List of ORG mode todo list
 (setq org-todo-keywords
-      '((sequence "ICEBOX" "TODO" "PROGRESS" "DONE")))
+      '((sequence "TODO" "PROGRESS" "DONE" "ICEBOX")))
 
 ;; org agenda files
 (setq org-agenda-files (quote ("~/Documents/personal/organiser")))
@@ -24,3 +24,14 @@
 
 (add-to-list 'org-emphasis-alist
  '("*" (:foreground "red")))
+
+;; Emacs macro to add a pomodoro item
+(fset 'pomodoro
+      "[ ]")
+
+;; Emacs macro to add a pomodoro table
+;;
+;; | G | Daily | [ ] |
+;; |   |       |     |
+(fset 'pomodoro-table
+      [?| ?  ?G ?  ?| ?  ?D ?a ?i ?l ?y ? ?  ?| ?  ?\[ ?  ?\] ?  ?| tab])
