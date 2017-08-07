@@ -37,6 +37,7 @@
 (add-hook 'es-result-mode-hook 'hs-minor-mode)
 
 (defvar es-default-base "http://localhost:9200")
+(defvar nginx-indent-level 2)
 
 ;; C-h for delete-backward-char
-(global-set-key [(control ?h)] 'delete-backward-char)
+;; (global-set-key [(control ?h)] 'delete-backward-char)
