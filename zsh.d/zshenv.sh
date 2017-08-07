@@ -136,6 +136,12 @@ export PATH=${EMACS_APP}/bin:${JAVA_HOME}/bin:${SCALA_HOME}/bin:${PATH}
 # Importing Custom Python Modules
 export PYTHONPATH=${PYTHONPATH}:${PYTHON_MOD_UTILS}
 
+export PYTHON_PATH_FILE=~/.pythonpath
+# Add all the python projects to the PYTHONPATH
+if ls ${PYTHON_PATH_FILE} 1> /dev/null 2>&1; then
+    source ${PYTHON_PATH_FILE}
+fi
+
 ########################################################################################
 # Java Options
 
