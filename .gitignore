@@ -19,3 +19,6 @@ eshell
 smex-items
 tramp
 ensime
+elpa
+request
+url
