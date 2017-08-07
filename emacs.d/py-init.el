@@ -43,3 +43,15 @@
 
 ;; (add-hook 'python-mode-hook 'anaconda-mode)
 ;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+
+(setq ein:use-auto-complete t)
+
+;; Or, to enable "superpack" (a little bit hacky improvements):
+(setq ein:use-auto-complete-superpack t)
+(add-hook 'ein-mode 'smartparens-mode)
+
+;; (setq ein:use-smartrep t)
+
+(pyvenv-activate (expand-file-name "~/installed.d/anaconda/envs/mlapp"))
+
+(setq elpy-rpc-backend "jedi")
