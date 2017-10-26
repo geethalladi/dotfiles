@@ -15,16 +15,16 @@
 (global-set-key "\M-w" 'clipboard-kill-ring-save)
 (global-set-key "\C-y" 'clipboard-yank)
 
-;; ;; load the pbcopy.el file for integrating terminal emacs with clipboard
-(load "~/.emacs.d/pbcopy.el")
+(require 'osx-clipboard)
+(osx-clipboard-mode +1)
+
+;; load the pbcopy.el file for integrating terminal emacs with clipboard
+;; (load "~/.emacs.d/pbcopy.el")
 
 ;; Because of the following "kill-line" hangs in the middle
 ;; Commenting out for OPTIMIZATION
 ;; Did not see any visible changes in behaviour
 ;; Would come back for further analysis when I observe any changes in behaviour
-
-;; (require 'pbcopy)
-;; (turn-on-pbcopy)
 
 ;; (defun copy-from-osx ()
 ;;   "Handle copy/paste intelligently on osx."
