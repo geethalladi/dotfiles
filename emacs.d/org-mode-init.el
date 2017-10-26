@@ -5,7 +5,7 @@
 ;; (add-hook 'org-mode-hook 'smartparens-mode)
 
 ;; List of file extensions to use org-mode for (org|org_archive|notes)
-(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|notes\\)$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|notes\\|pomodoro\\)$" . org-mode))
 
 ;; Key Bindings
 (global-set-key "\C-cl" 'org-store-link)
@@ -14,13 +14,37 @@
 
 ;; List of ORG mode todo list
 (setq org-todo-keywords
-      '((sequence "ICEBOX" "TODO" "PROGRESS" "DONE")))
+      '((sequence "TODO" "PROGRESS" "DONE" "ICEBOX")))
 
 ;; org agenda files
-(setq org-agenda-files (quote ("~/Documents/personal/organiser")))
+;; (setq org-agenda-files (quote ("~/Documents/personal/organiser")))
+
+
 
 ;; Display images inline
 (setq org-startup-with-inline-images t)
 
+;; Using Shift keys for navigation across windows
+(windmove-default-keybindings)
+(setq org-replace-disputed-keys t)
+
+;; Make windmove work in org-mode:
+(add-hook 'org-shiftup-final-hook 'windmove-up)
+(add-hook 'org-shiftleft-final-hook 'windmove-left)
+(add-hook 'org-shiftdown-final-hook 'windmove-down)
+(add-hook 'org-shiftright-final-hook 'windmove-right)
+
+
 (add-to-list 'org-emphasis-alist
  '("*" (:foreground "red")))
+
+;; Emacs macro to add a pomodoro item
+(fset 'pomodoro
+      "[ ]")
+
+;; Emacs macro to add a pomodoro table
+;;
+;; | G | Daily | [ ] |
+;; |   |       |     |
+(fset 'pomodoro-table
+      [?| ?  ?G ?  ?| ?  ?D ?a ?i ?l ?y ? ?  ?| ?  ?\[ ?  ?\] ?  ?| tab])

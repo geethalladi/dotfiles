@@ -6,7 +6,9 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ;; Org-mode's repository
 
 ;; ENABLE CASK
-(require 'cask "~/.emacs.d/.cask/25.1/elpa/cask-20161024.1205/cask.el")
+
+
+(require 'cask "~/.emacs.d/.cask/26.0/elpa/cask-20161024.1205/cask.el")
 (cask-initialize)
 
 ;; ENABLE PALLET
@@ -150,7 +152,9 @@
 (visual-line-mode 1)
 (column-number-mode t)
 
-(load-theme 'zenburn t)
+;;  (load-theme 'zenburn t)
+(when window-system
+  (load-theme 'green-phosphor t))
 
 ;; Smartparens mode
 (require 'smartparens)
@@ -187,3 +191,5 @@
 (yas-global-mode 1)
 
 (load "~/.emacs.d/after-init-load.el")
+
+(setq ns-pop-up-frames nil)

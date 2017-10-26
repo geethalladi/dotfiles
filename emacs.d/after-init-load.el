@@ -34,3 +34,5 @@
 ;; (load "~/.emacs.d/elixir-init.el")
 (load "~/.emacs.d/scala-init.el")
 (load "~/.emacs.d/lisp-init.el")
+(load "~/.emacs.d/go-init.el")
+(load "~/.emacs.d/restclient-init.el")

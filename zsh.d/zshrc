@@ -21,11 +21,12 @@ export ZSH=~/repo/open-source/oh-my-zsh
 # export ZSH_THEME="agnoster"
 # export ZSH_THEME="robbyrussell"
 
-if [ -n "$INSIDE_EMACS" ]; then
-   export ZSH_THEME="simple"
-else
-   export ZSH_THEME="agnoster"
-fi
+export ZSH_THEME="simple"
+# if [ -n "$INSIDE_EMACS" ]; then
+#    export ZSH_THEME="simple"
+# else
+#    export ZSH_THEME="agnoster"
+# fi
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

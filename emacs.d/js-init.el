@@ -58,3 +58,8 @@
 
 (add-hook 'coffee-mode-hook 'skewer-coffee-mode)
 (add-hook 'coffee-mode-hook 'smartparens-mode)
+
+;; Adding purescirpt mode to the initial loading list
+(require 'purescript-mode)
+;; The below does not work for me :-)
+;; (require 'purescript-mode-autoloads)
