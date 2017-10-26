@@ -56,6 +56,7 @@ export DOTFILE_DIR_EMACS=${DOTFILES}/emacs.d
 export INSTALL_DIR=~/installed.d
 export EXTN_SCRIPTS_DIR=~/extn.d
 export ZSHDIR=${DOTFILE_DIR_ZSH}
+export LOCAL_BIN_DIR=~/.local/bin
 
 ########################################################################################
 # Configuration Parameters
@@ -68,7 +69,7 @@ export LANG=en_US.UTF-8
 export ESHELL=zsh # Till I am comfortable with emacs-shell
 
 # Enabling EMACS variable disables line editing in zsh
-export EMACS_APP=/usr/local/Cellar/emacs/25.1
+export EMACS_APP=/usr/local/Cellar/emacs
 
 ########################################################################################
 # Git Configuration
@@ -81,6 +82,7 @@ export EMACS_APP=/usr/local/Cellar/emacs/25.1
 # PATH Variable
 export CELLAR_PATH=/usr/local/Cellar
 export CASK_PATH=~/.cask/bin
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
 export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 
@@ -97,6 +99,7 @@ export ANT_HOME=${CELLAR_PATH}/ant/1.10.1
 # export MAVEN_HOME=${CELLAR_PATH}/maven/3.3.9
 # export M2_HOME=${MAVEN_HOME}
 export GRADLE_HOME=${CELLAR_PATH}/gradle/3.4.1
+export CABAL_HOME=~/.cabal
 
 # Using lein for clojure jar dependencies
 # export CLOJURE_VERSION='1.7.0' # will also be used when running clj-repl
@@ -109,9 +112,16 @@ export NODE_PATH=/usr/local/lib/node_modules
 export HADOOP_HOME=${INSTALL_DIR}/hadoop-2.7.3
 export HADOOP_PREFIX=${HADOOP_HOME}
 export HIVE_HOME=${INSTALL_DIR}/apache-hive-2.1.1-bin
-export SPARK_HOME=${INSTALL_DIR}/spark/spark-2.0.0-bin-hadoop2.7
+export SPARK_HOME=${INSTALL_DIR}/spark/spark-1.6.2-bin-hadoop2.6
+
 export SPARK_PREFIX=${SPARK_HOME}
-export PYSPARK_DRIVER_PYTHON=ipython  # Use ipython for pyspark
+# For Spark < 2.0
+export IPYTHON=1
+export IPYTHON_OPTS="notebook"
+
+# For Spark >= 2.0
+# export PYSPARK_DRIVER_PYTHON=jupyter
+# export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 
 ##### Needs to be updated  ######
 
@@ -128,10 +138,15 @@ export PYTHON_MOD_UTILS=~/repo/personal/python/modules
 
 export ES_HOME=${INSTALL_DIR}/elasticsearch-2.2.1
 
-export PATH=${EXTN_SCRIPTS_DIR}:${MAVEN_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin:${SPARK_HOME}/bin:${MACPORT_HOME}/bin:${ANACONDA2_HOME}/bin:${ES_HOME}/bin:${CONSCRIPT_HOME}/bin:${PATH}:
+# Adding GO related paths
+# export GOROOT=/usr/local/opt/go
+export GOPATH=~/repo/personal/go
+
+export PATH=${EXTN_SCRIPTS_DIR}:${MAVEN_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:/usr/local/sbin:${HIVE_HOME}/bin:${HADOOP_HOME}/bin:${SPARK_HOME}/bin:${MACPORT_HOME}/bin:${ANACONDA2_HOME}/bin:${ES_HOME}/bin:${CONSCRIPT_HOME}/bin:${CABAL_HOME}/bin:${GOROOT}/bin:${PATH}:
 
 # Using custom installed java/scala
-export PATH=${EMACS_APP}/bin:${JAVA_HOME}/bin:${SCALA_HOME}/bin:${PATH}
+export PATH=${JAVA_HOME}/bin:${SCALA_HOME}/bin:${PATH}
+export PATH=${PATH}:${LOCAL_BIN_DIR}
 
 # Importing Custom Python Modules
 export PYTHONPATH=${PYTHONPATH}:${PYTHON_MOD_UTILS}
@@ -141,6 +156,7 @@ export PYTHON_PATH_FILE=~/.pythonpath
 if ls ${PYTHON_PATH_FILE} 1> /dev/null 2>&1; then
     source ${PYTHON_PATH_FILE}
 fi
+
 
 ########################################################################################
 # Java Options
@@ -174,7 +190,7 @@ source ${DOTFILE_DIR_AWS}/awsenv.sh
 source ${ZSHDIR}/macports.sh
 
 # RVM should be the final one
-# source ${DOTFILE_DIR_RVM}/rvm.sh
+source ${DOTFILE_DIR_RVM}/rvm.sh
 
 # Not the best of all hacks
 # Use a directory specific gemset or fallback to default gemset
