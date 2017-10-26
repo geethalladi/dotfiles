@@ -46,3 +46,6 @@
 (exec-path-from-shell-copy-env "PYTHONPATH")
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
+
+;; Setting key for global multiple cursor mode
+(global-set-key (kbd "C-c m c") 'mc/edit-lines)
