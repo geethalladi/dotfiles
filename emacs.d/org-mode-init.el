@@ -17,10 +17,23 @@
       '((sequence "TODO" "PROGRESS" "DONE" "ICEBOX")))
 
 ;; org agenda files
-(setq org-agenda-files (quote ("~/Documents/personal/organiser")))
+;; (setq org-agenda-files (quote ("~/Documents/personal/organiser")))
+
+
 
 ;; Display images inline
 (setq org-startup-with-inline-images t)
+
+;; Using Shift keys for navigation across windows
+(windmove-default-keybindings)
+(setq org-replace-disputed-keys t)
+
+;; Make windmove work in org-mode:
+(add-hook 'org-shiftup-final-hook 'windmove-up)
+(add-hook 'org-shiftleft-final-hook 'windmove-left)
+(add-hook 'org-shiftdown-final-hook 'windmove-down)
+(add-hook 'org-shiftright-final-hook 'windmove-right)
+
 
 (add-to-list 'org-emphasis-alist
  '("*" (:foreground "red")))
