@@ -31,3 +31,5 @@ emacs.d/anaconda-mode/*
 metastore_db
 dot_*
 .notebooks
+screenlogs*
+network-security.data
