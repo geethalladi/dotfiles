@@ -1,3 +1,7 @@
 hardstatus on
 hardstatus alwayslastline
 hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+defscrollback 100000
+bind c screen 1
+bind ^c screen 1
+screen 1
