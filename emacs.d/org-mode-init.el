@@ -36,7 +36,7 @@
 
 
 (add-to-list 'org-emphasis-alist
- '("*" (:foreground "red")))
+             '("_" (:foreground "red")))
 
 ;; Emacs macro to add a pomodoro item
 (fset 'pomodoro
