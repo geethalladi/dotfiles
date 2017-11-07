@@ -152,9 +152,12 @@
 (visual-line-mode 1)
 (column-number-mode t)
 
-;;  (load-theme 'zenburn t)
-(when window-system
-  (load-theme 'green-phosphor t))
+;; default to
+;; (load-theme 'zenburn t)
+(load-theme 'wheatgrass t)
+;; when GUI window use green-phosphor
+;; (when window-system
+;;   (load-theme 'green-phosphor t))
 
 ;; Smartparens mode
 (require 'smartparens)
