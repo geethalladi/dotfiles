@@ -128,7 +128,7 @@ export IPYTHON_OPTS="notebook"
 export ANACONDA2_HOME=${INSTALL_DIR}/anaconda
 # export ANACONDA3_HOME=${INSTALL_DIR}/anaconda3
 
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HOMEBREW_NO_ANALYTICS=1
 
 export MACPORT_HOME=/opt/local
