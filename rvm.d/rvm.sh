@@ -12,4 +12,7 @@ export PATH="${GEM_HOME}/bin:$HOME/.rvm/bin:${PATH}" # Add RVM to PATH for scrip
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
+# Ripper CTAGS for rvm
+export RIPPER_TAGS_EMACS=1
+
 rvm use ruby-2.4.0@zz-junk
