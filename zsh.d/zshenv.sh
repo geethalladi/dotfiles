@@ -80,5 +80,5 @@ if ls ${PYTHON_PATH_FILE} 1> /dev/null 2>&1; then
     source ${PYTHON_PATH_FILE}
 fi
 
-source ${DOTFILES}/zsh.d/path.sh
 source ${DOTFILES}/zsh.d/alias.sh
+source ${DOTFILES}/zsh.d/path.sh
