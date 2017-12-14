@@ -15,4 +15,7 @@ export PATH="${GEM_HOME}/bin:$HOME/.rvm/bin:${PATH}" # Add RVM to PATH for scrip
 # Ripper CTAGS for rvm
 export RIPPER_TAGS_EMACS=1
 
-rvm use ruby-2.4.0@zz-junk
+# rvm use ruby-2.4.0@zz-junk
+
+# Hack to activate the gemset in the folder
+cd /tmp && cd -
