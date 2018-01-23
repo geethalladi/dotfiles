@@ -15,7 +15,8 @@ alias ecl='emacsclient -nw'
 
 alias m='mvn -Dmaven.javadoc.skip=true'
 alias g='git'
-alias t='tree'
+alias t="tree -I 'node_modules|cache'"
+alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,node_modules,cache}"
 alias pass='openssl rand -base64 16'
 alias rg='rvm gemset use'
 
