@@ -1,9 +1,11 @@
 (require 'org)
-(require 'stripe-buffer)
+;; (require 'stripe-buffer)
+
 ;; Always use org indent minor mode
 (add-hook 'org-mode-hook 'org-indent-mode)
 (add-hook 'org-mode-hook 'autopair-mode)
-(add-hook 'org-mode-hook 'stripe-table-mode)
+
+;; (add-hook 'org-mode-hook 'stripe-table-mode)
 ;; (add-hook 'org-mode-hook 'smartparens-mode)
 
 ;; List of file extensions to use org-mode for (org|org_archive|notes)
