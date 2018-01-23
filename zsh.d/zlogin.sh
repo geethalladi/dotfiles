@@ -1,1 +1,1 @@
-source ${DOTFILE_DIR_ZSH}/version-managers.sh
+# source ${DOTFILE_DIR_ZSH}/version-managers.sh
