@@ -84,4 +84,4 @@ source ${DOTFILES}/zsh.d/alias.sh
 source ${DOTFILES}/zsh.d/path.sh
 source ${DOTFILES}/employer.d/*.sh
 
-# source ${DOTFILE_DIR_ZSH}/version-managers.sh
+# source ${DOTFILE_DIR_ZSH}/xvm.sh
