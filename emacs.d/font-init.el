@@ -12,6 +12,6 @@
 ;; (when (window-system)
 ;;   (set-face-attribute 'default nil :font "Fira Code:pixelsize=16:spacing=110"))
 
-(set-face-attribute 'default nil :font "Hasklig:pixelsize=13:spacing=110")
+(set-face-attribute 'default nil :font "Hasklig:pixelsize=16:spacing=110")
 
 (load "~/.emacs.d/font-ligatures.el")
