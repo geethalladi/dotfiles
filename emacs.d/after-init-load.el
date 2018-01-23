@@ -36,3 +36,6 @@
 (load "~/.emacs.d/lisp-init.el")
 (load "~/.emacs.d/go-init.el")
 (load "~/.emacs.d/restclient-init.el")
+
+;; Groovy mode for Jenkins file
+(require 'groovy-mode)
