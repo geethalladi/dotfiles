@@ -152,9 +152,16 @@
 (visual-line-mode 1)
 (column-number-mode t)
 
+
+(add-to-list 'custom-theme-load-path
+             "~/repo/open-source/emacs-color-theme-solarized")
 ;; default to
 ;; (load-theme 'zenburn t)
-(load-theme 'wheatgrass t)
+;; (load-theme 'wheatgrass t)
+;; (load-theme 'leuven t)
+(set-frame-parameter nil 'background-mode 'light)
+(load-theme 'solarized t)
+
 ;; when GUI window use green-phosphor
 ;; (when window-system
 ;;   (load-theme 'green-phosphor t))
@@ -192,6 +199,9 @@
 
 (require 'yasnippet)
 (yas-global-mode 1)
+
+(require 'toggle-quotes)
+(global-set-key (kbd "C-'") 'toggle-quotes)
 
 (load "~/.emacs.d/after-init-load.el")
 
