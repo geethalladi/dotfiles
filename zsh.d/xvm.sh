@@ -1,15 +1,15 @@
 # echo "Sourcing nvm/rvm/gvm scripts..."
 # Updating the path here after zshrc
 
-# echo "source version managers"
+echo "Sourcing version managers"
 
 source ~/.gvm/scripts/gvm
-
-source ${DOTFILE_DIR_RVM}/rvm.sh
 
 # This loads nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+source ${DOTFILE_DIR_RVM}/rvm.sh
 
 # GVM_PATH=$(which gvm)
 # if [[ ${GVM_PATH} == "gvm not found" ]]; then
