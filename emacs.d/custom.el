@@ -50,6 +50,16 @@
 ;; Setting key for global multiple cursor mode
 (global-set-key (kbd "C-c m c") 'mc/edit-lines)
 
+;; Toggling between buffers
+(defun switch-to-previous-buffer ()
+  "Switch to previously open buffer.
+   Repeated invocations toggle between the two
+   most recently open buffers."
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+
+(global-set-key (kbd "C-c b") 'switch-to-previous-buffer)
+
 ;; '(custom-safe-themes
 ;;   (quote
 ;;    ("e14f8791b180b69f95550ae9fb6b3fa2321115197908f0a8a2cd924bd5acc86f"
