@@ -158,9 +158,12 @@
 ;; default to
 ;; (load-theme 'zenburn t)
 ;; (load-theme 'wheatgrass t)
-;; (load-theme 'leuven t)
-(set-frame-parameter nil 'background-mode 'light)
-(load-theme 'solarized t)
+(load-theme 'leuven t)
+;; (load-theme 'github-modern t)
+
+;; solarized-light theme
+;; (set-frame-parameter nil 'background-mode 'light)
+;; (load-theme 'solarized t)
 
 ;; when GUI window use green-phosphor
 ;; (when window-system
