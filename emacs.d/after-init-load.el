@@ -37,5 +37,7 @@
 (load "~/.emacs.d/go-init.el")
 (load "~/.emacs.d/restclient-init.el")
 
+(load "~/.emacs.d/keychord-init.el")
+
 ;; Groovy mode for Jenkins file
 (require 'groovy-mode)
