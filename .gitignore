@@ -23,3 +23,5 @@ elpa
 request
 url
 screenlog.*
+employer.d
+.litable-lists.el

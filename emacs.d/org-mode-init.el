@@ -1,7 +1,11 @@
 (require 'org)
+;; (require 'stripe-buffer)
+
 ;; Always use org indent minor mode
 (add-hook 'org-mode-hook 'org-indent-mode)
 (add-hook 'org-mode-hook 'autopair-mode)
+
+;; (add-hook 'org-mode-hook 'stripe-table-mode)
 ;; (add-hook 'org-mode-hook 'smartparens-mode)
 
 ;; List of file extensions to use org-mode for (org|org_archive|notes)
@@ -14,12 +18,13 @@
 
 ;; List of ORG mode todo list
 (setq org-todo-keywords
-      '((sequence "TODO" "PROGRESS" "DONE" "ICEBOX")))
+      '((sequence "TODO" "ICEBOX" "PROGRESS" "DONE")))
 
 ;; org agenda files
 ;; (setq org-agenda-files (quote ("~/Documents/personal/organiser")))
 
-
+;; Indent inside source code blocks
+(setq org-src-tab-acts-natively t)
 
 ;; Display images inline
 (setq org-startup-with-inline-images t)
@@ -36,7 +41,17 @@
 
 
 (add-to-list 'org-emphasis-alist
- '("*" (:foreground "red")))
+             '("_" (:foreground "red")))
+
+;; Visually identify DONE/Completed Items
+(setq org-fontify-done-headline t)
+(custom-set-faces
+ '(org-done ((t (:foreground "ForestGreen"
+                 :weight normal
+                 :strike-through t))))
+ '(org-headline-done
+            ((((class color) (min-colors 16) (background dark))
+               (:foreground "LightSalmon" :strike-through t)))))
 
 ;; Emacs macro to add a pomodoro item
 (fset 'pomodoro

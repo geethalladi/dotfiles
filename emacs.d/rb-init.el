@@ -27,9 +27,9 @@
 (eval-after-load 'rubocop-mode
  '(define-key rubocop-mode-map (kdb "s-r" 'rubocop-check-current-file)))
 
-;; (define-key rubocop-mode-map (kbd "s-r") 'rubocop-check-current-file)
+(define-key rubocop-mode-map (kbd "s-r") 'rubocop-check-current-file)
 
-;; (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
 
 ;; ;; COMPLETE ANYTHING MODE (COMPANY MODE)
 ;; (autoload 'company-mode "company" nil t)
@@ -40,7 +40,7 @@
 ;; (add-hook 'robe-mode-hook 'ac-robe-setup)
 
 ;; ; Company mode for inf-ruby
-;; (add-hook 'inf-ruby-mode-hook 'company-mode)
+(add-hook 'inf-ruby-mode-hook 'company-mode)
 (add-hook 'inf-ruby-mode-hook 'erase-buffer-hook)
 
 
