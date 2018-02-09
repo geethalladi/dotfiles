@@ -15,13 +15,6 @@
 (require 'pallet)
 (pallet-mode t)
 
-;; FIX THE PATH VARIABLE
-;; (defun set-exec-path-from-shell-PATH ()
-;;   (let ((path-from-shell (shell-command-to-string "TERM=vt100 $SHELL -i -c 'echo $PATH'")))
-;;     (setenv "PATH" path-from-shell)
-;;     (setq exec-path (split-string path-from-shell path-separator))))
-;; (when window-system (set-exec-path-from-shell-PATH))
-
 ;; SAVE BACK TO TEMP FOLDER
 (setq backup-directory-alist '((".*" . "~/.emacs.d/saves")))
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
@@ -152,22 +145,23 @@
 (visual-line-mode 1)
 (column-number-mode t)
 
-
-(add-to-list 'custom-theme-load-path
-             "~/repo/open-source/emacs-color-theme-solarized")
 ;; default to
 ;; (load-theme 'zenburn t)
 ;; (load-theme 'wheatgrass t)
-(load-theme 'leuven t)
+;; (load-theme 'monokai t)
 ;; (load-theme 'github-modern t)
 
 ;; solarized-light theme
+;; (add-to-list 'custom-theme-load-path
+;;              "~/repo/open-source/emacs-color-theme-solarized")
 ;; (set-frame-parameter nil 'background-mode 'light)
 ;; (load-theme 'solarized t)
 
-;; when GUI window use green-phosphor
-;; (when window-system
-;;   (load-theme 'green-phosphor t))
+(when (not window-system)
+  (load-theme 'green-phosphor t))
+
+(when (window-system)
+  (load-theme 'leuven t))
 
 ;; Smartparens mode
 (require 'smartparens)
