@@ -33,3 +33,6 @@ dot_*
 .notebooks
 screenlogs*
 network-security.data
+dump.rdb
+.dir-locals.el
+.nvmrc
