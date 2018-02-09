@@ -84,6 +84,6 @@ source ${DOTFILES}/zsh.d/alias.sh
 source ${DOTFILES}/zsh.d/path.sh
 source ${DOTFILES}/employer.d/*.sh
 
-if [[ ${TERM_PROGRAM} != "iTerm.app" && ${TERM} != "dumb" ]]; then
+if [[ ${TERM_PROGRAM} != "iTerm.app" && ${TERM} != "eterm-color" ]]; then
     source ${DOTFILE_DIR_ZSH}/xvm.sh
 fi
