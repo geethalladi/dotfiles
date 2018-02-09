@@ -18,7 +18,7 @@
 
 ;; List of ORG mode todo list
 (setq org-todo-keywords
-      '((sequence "TODO" "ICEBOX" "PROGRESS" "DONE")))
+      '((sequence "ICEBOX" "PROGRESS" "MID" "LASTMILE" "|" "DONE" "DROPPED")))
 
 ;; org agenda files
 ;; (setq org-agenda-files (quote ("~/Documents/personal/organiser")))
