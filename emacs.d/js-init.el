@@ -49,8 +49,6 @@
 ;; (add-hook 'html-mode-hook 'skewer-html-mode)
 (add-hook 'js-mode-hook 'js-mode-configuration-hook)
 
-
-
 ;; (define-key js-mode-map "{" 'paredit-open-curly)
 ;; (define-key js-mode-map "}" 'paredit-close-curly-and-newline)
 
@@ -90,7 +88,12 @@
 
 (setq psc-ide-use-npm-bin t)
 
- (add-hook 'js2-mode-hook
-           #'(lambda ()
-               (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
-               (define-key js2-mode-map "@" 'js-doc-insert-tag)))
+(add-hook 'js2-mode-hook
+          #'(lambda ()
+              (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
+              (define-key js2-mode-map "@" 'js-doc-insert-tag)))
+
+(require 'mocha)
+(add-hook 'js2-mode-hook
+          #'(lambda ()
+              (define-key js2-mode-map "\C-ct" 'mocha-test-at-point)))
