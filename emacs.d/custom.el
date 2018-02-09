@@ -17,6 +17,8 @@
 (global-set-key (kbd "C-x <up>") 'scroll-down-half)
 (global-set-key (kbd "C-x <down>") 'scroll-up-half)
 
+(global-set-key (kbd "s-/") 'comment-region)
+
 ;; Multiple Cursors
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
@@ -60,18 +62,9 @@
 
 (global-set-key (kbd "C-c b") 'switch-to-previous-buffer)
 
-;; '(custom-safe-themes
-;;   (quote
-;;    ("e14f8791b180b69f95550ae9fb6b3fa2321115197908f0a8a2cd924bd5acc86f"
-;;     "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0"
-;;     "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4"
-;;     "19352d62ea0395879be564fc36bc0b4780d9768a964d26dfae8aad218062858d"
-;;     default)))
-;; '(ecb-layout-window-sizes
-;;   (quote
-;;    (("left8"
-;;      (ecb-directories-buffer-name 0.27722772277227725 . 0.2962962962962963)
-;;      (ecb-sources-buffer-name 0.27722772277227725 . 0.24074074074074073)
-;;      (ecb-methods-buffer-name 0.27722772277227725 . 0.25925925925925924)
-;;      (ecb-history-buffer-name 0.27722772277227725 . 0.18518518518518517)))))
-;; '(ecb-options-version "2.40")
+;; FIX THE PATH VARIABLE
+;; (defun set-exec-path-from-shell-PATH ()
+;;   (let ((path-from-shell (shell-command-to-string "TERM=vt100 $SHELL -i -c 'echo $PATH'")))
+;;     (setenv "PATH" path-from-shell)
+;;     (setq exec-path (split-string path-from-shell path-separator))))
+;; (when window-system (set-exec-path-from-shell-PATH))
