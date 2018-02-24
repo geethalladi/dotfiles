@@ -56,9 +56,6 @@ export SPARK_HOME=${INSTALL_DIR}/spark/spark-1.6.2-bin-hadoop2.6
 
 export SPARK_PREFIX=${SPARK_HOME}
 
-export ANACONDA2_HOME=${INSTALL_DIR}/anaconda
-# export ANACONDA3_HOME=${INSTALL_DIR}/anaconda3
-
 export MACPORT_HOME=/opt/local
 
 export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
