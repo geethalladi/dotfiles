@@ -198,7 +198,7 @@
  (depends-on "visual-fill-column")
  (depends-on "web-mode")
  (depends-on "wrap-region")
- (depends-on "wrap-region")
+ (depends-on "xref-js2")
  (depends-on "yaml-mode")
  (depends-on "yard-mode")
  (depends-on "yafolding")
