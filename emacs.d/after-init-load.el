@@ -39,5 +39,7 @@
 
 (load "~/.emacs.d/keychord-init.el")
 
+(load "~/.emacs.d/help-fns+.el")
+
 ;; Groovy mode for Jenkins file
 (require 'groovy-mode)
