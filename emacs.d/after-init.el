@@ -157,8 +157,8 @@
 ;; (set-frame-parameter nil 'background-mode 'light)
 ;; (load-theme 'solarized t)
 
-(when (not window-system)
-   (load-theme 'tango-dark t))
+;; (when (not window-system)
+;;  (load-theme 'tango-dark t))
 
 (when (window-system)
   (load-theme 'leuven t))
