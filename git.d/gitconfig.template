@@ -6,29 +6,13 @@
   pager = less -+F
   autocrlf = input
   excludesfile = ~/dotfiles/git.d/gitignore
-
 [color "diff"]
   meta = blue black bold
-
-[alias]
-  st = status
-  co = checkout
-  br = branch
-  d = diff
-  cm = commit
-  dc = diff --cached
-  lg = log --since=1.month --date=local --pretty=format:\"%h - %an, %ad : %s\"
-  dt = difftool
-  chp = cherry-pick
-  bd = branch -d
-  st = status
-  st = status
 [config]
   d = diff
-  lg = --since=1.month --date=local --pretty=format:\"%h - %an, %ad : %s\"
+  lg0 = --since=1.month --date=local --pretty=format:\"%h - %an, %ad : %s\"
 [push]
   default = simple
-
 [diff]
   prompt = false
   tool = meld
@@ -43,12 +27,28 @@
 [mergetool "extMerge"]
   cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
   trustExitCode = false
-
-[filter "media"]
-  required = true
-  clean = git media clean %f
-  smudge = git media smudge %f
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+[alias]
+  br = branch
+  bd = branch -d
+  chp = cherry-pick
+  cm = commit
+  co = checkout
+  d = diff
+  dc = diff --cached
+  dt = difftool
+  lg = log --since=1.month --date=local --pretty=format:\"%h - %an, %ad : %s\"
+  st = status
+  lg1 = !"git lg1-specific --all"
+  lg2 = !"git lg2-specific --all"
+  lg3 = !"git lg3-specific --all"
+  lg1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+  lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+  lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
