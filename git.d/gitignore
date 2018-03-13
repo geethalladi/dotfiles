@@ -36,3 +36,4 @@ network-security.data
 dump.rdb
 .dir-locals.el
 .nvmrc
+*.zsh-theme
