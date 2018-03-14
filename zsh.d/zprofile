@@ -1,3 +1,4 @@
-echo "sourcing zprofile"
+# Sourcing in zprofile, to make sure that it is done after /etc/profile
+# https://wiki.archlinux.org/index.php/Zsh#Configuration_files
 
 source ${DOTFILES}/zsh.d/path.sh
