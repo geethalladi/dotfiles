@@ -1,7 +1,5 @@
-# echo "Sourcing nvm/rvm/gvm scripts..."
-# Updating the path here after zshrc
-
-if [ "${XVM_INIT_COMPLETE}" != 1 ]; then
+which nvm > /dev/null
+if [ "$?" != 0 ]; then
     echo "Sourcing version managers"
 
     # Go Version manager
