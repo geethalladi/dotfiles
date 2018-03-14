@@ -1,7 +1,3 @@
 echo "sourcing zprofile"
 
 source ${DOTFILES}/zsh.d/path.sh
-
-if [[ ${TERM_PROGRAM} != "iTerm.app" && ${TERM} != "eterm-color" && ${TERM} != "dumb" ]]; then
-    source ${DOTFILE_DIR_ZSH}/xvm.sh
-fi

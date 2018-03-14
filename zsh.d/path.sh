@@ -19,3 +19,7 @@ if [ "$PATH_STATE_UPDATED" -ne 1 ]; then
     # Dont update once everything is in place
     export PATH_STATE_UPDATED=1
 fi
+
+if [[ ${TERM_PROGRAM} != "iTerm.app" && ${TERM} != "eterm-color" && ${TERM} != "dumb" ]]; then
+    source ${DOTFILE_DIR_ZSH}/xvm.sh
+fi
