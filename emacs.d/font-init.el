@@ -15,7 +15,9 @@
 (load "~/.emacs.d/font-ligatures.el")
 
 ;; (set-face-attribute 'default nil :font "Hasklig:pixelsize=13:spacing=110:weight=semi-bold")
-(set-face-attribute 'default nil :font "Hasklig:pixelsize=16:spacing=110:weight=normal")
+;; (set-face-attribute 'default nil :font "Hasklig:pixelsize=16:spacing=110:weight=normal")
+(set-face-attribute 'default nil :font "Hasklig:pixelsize=15:spacing=110:weight=medium")
+
 
 ;; (require 'color-identifiers-mode)
 ;; (let ((faces '(font-lock-comment-face
