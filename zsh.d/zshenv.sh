@@ -81,9 +81,4 @@ if ls ${PYTHON_PATH_FILE} 1> /dev/null 2>&1; then
 fi
 
 source ${DOTFILES}/zsh.d/alias.sh
-source ${DOTFILES}/zsh.d/path.sh
 source ${DOTFILES}/employer.d/*.sh
-
-if [[ ${TERM_PROGRAM} != "iTerm.app" && ${TERM} != "eterm-color" && ${TERM} != "dumb" ]]; then
-    source ${DOTFILE_DIR_ZSH}/xvm.sh
-fi
