@@ -14,7 +14,11 @@
 
 (require 'nodejs-repl)
 
-(add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
+;; Use js-mode for editing json files
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+;; (add-hook 'js-mode-hook #'flycheck-mode)
+;; (add-hook 'json-mode 'flymake-json-load)
+
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 (setq js2-highlight-level 3)
@@ -44,7 +48,6 @@
 
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
 (add-hook 'js2-mode-hook 'js-mode-configuration-hook)
-(add-hook 'json-mode 'flymake-json-load)
 
 (add-hook 'js2-mode-hook
           #'(lambda ()
