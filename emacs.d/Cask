@@ -62,6 +62,7 @@
 ;; (depends-on "enh-ruby-mode")
  (depends-on "ensime")
  (depends-on "epl")
+ (depends-on "erlang")
  (depends-on "ert-runner")
  ;; (depends-on "es-mode")
  ;; (depends-on "ess")
