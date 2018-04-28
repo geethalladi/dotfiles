@@ -15,6 +15,8 @@
 export VISUAL=emacs
 export EDITOR=emacs
 export GIT_EDITOR=emacsclient
+# Specify the version of emacs to use for cask
+export EMACS="emacs-25.3"
 
 ########################################################################################
 # Configuration Parameters
