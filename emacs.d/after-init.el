@@ -160,9 +160,11 @@
 ;; (when (not window-system)
 ;;  (load-theme 'tango-dark t))
 
-(if (window-system)
-    (load-theme 'leuven t)
-  (load-theme 'monokai t))
+;; (if (window-system)
+;;     (load-theme 'leuven t)
+;;   (load-theme 'monokai t))
+
+(load-theme 'leuven t)
 
 ;; Smartparens mode
 (require 'smartparens)
