@@ -83,4 +83,4 @@ if ls ${PYTHON_PATH_FILE} 1> /dev/null 2>&1; then
 fi
 
 source ${DOTFILES}/zsh.d/alias.sh
-source ${DOTFILES}/employer.d/*.sh
+source ${DOTFILES}/dayjob.d/*.sh
