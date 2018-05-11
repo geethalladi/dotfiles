@@ -164,7 +164,8 @@
 ;;     (load-theme 'leuven t)
 ;;   (load-theme 'monokai t))
 
-(load-theme 'leuven t)
+;; (load-theme 'leuven t)
+(load-theme 'zenburn t)
 
 ;; Smartparens mode
 (require 'smartparens)
@@ -179,6 +180,7 @@
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-smart-open t) ;; Flag to open neotree for the current dir
 
 ;; FOR OPTIMIZATION
 ;; (setenv "TMPDIR" "/var/tmp") ;; TMPDIR to be used by tramp-mode
