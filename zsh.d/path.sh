@@ -23,3 +23,7 @@ fi
 if [[ ${TERM_PROGRAM} != "iTerm.app" && ${TERM} != "eterm-color" && ${TERM} != "dumb" ]]; then
     source ${DOTFILE_DIR_ZSH}/xvm.sh
 fi
+
+# Rehash to take care of the PATH variable update
+# https://stackoverflow.com/questions/36543707/why-does-zsh-ignore-the-path-entry-order
+rehash
