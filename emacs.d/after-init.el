@@ -164,8 +164,9 @@
 ;;     (load-theme 'leuven t)
 ;;   (load-theme 'monokai t))
 
-;; (load-theme 'leuven t)
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
+
+(load-theme 'leuven t)
 
 ;; Smartparens mode
 (require 'smartparens)
