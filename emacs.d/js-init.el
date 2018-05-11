@@ -21,6 +21,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . web-mode))
+;; Handlebar templates to use web-mode
+(add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
 
 (setq js2-highlight-level 3)
 (setq js2-include-node-externs t)
