@@ -20,6 +20,7 @@
 ;; (add-hook 'json-mode 'flymake-json-load)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . web-mode))
 
 (setq js2-highlight-level 3)
 (setq js2-include-node-externs t)
