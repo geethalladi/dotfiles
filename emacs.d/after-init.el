@@ -24,6 +24,8 @@
 (setq visual-fill-column-width 144)
 (global-visual-fill-column-mode 1)
 
+(setq ns-pop-up-frames nil)
+
 ;; (require 'ido)
 ;; (ido-mode 1)
 ;; (setq ido-everywhere t)
@@ -204,6 +206,7 @@
 (require 'toggle-quotes)
 (global-set-key (kbd "C-'") 'toggle-quotes)
 
-(load "~/.emacs.d/after-init-load.el")
+;; Groovy mode for Jenkins file
+(require 'groovy-mode)
 
-(setq ns-pop-up-frames nil)
+(load "~/.emacs.d/after-init-load.el")

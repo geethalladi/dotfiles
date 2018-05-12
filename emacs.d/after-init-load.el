@@ -6,10 +6,6 @@
 
 (load "~/.emacs.d/clipboard.el")
 
-(load "~/.emacs.d/font-init.el")
-
-(load "~/.emacs.d/custom.el")
-
 (load "~/.emacs.d/helm-init.el")
 
 (load "~/.emacs.d/projectile-init.el")
@@ -41,5 +37,6 @@
 
 (load "~/.emacs.d/help-fns+.el")
 
-;; Groovy mode for Jenkins file
-(require 'groovy-mode)
+(load "~/.emacs.d/font-init.el")
+
+(load "~/.emacs.d/custom.el")
