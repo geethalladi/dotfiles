@@ -35,13 +35,9 @@
 
 (require 'smartparens-config)
 
-;; For associating pomodoro with lisp mode
-(add-to-list 'auto-mode-alist '("\\.pomo" . lisp-mode))
-
 (setenv "LC_CTYPE" "UTF-8")
 (setenv "LC_ALL" "en_US.UTF-8")
 (setenv "LANG" "en_US.UTF-8")
-
 
 ;; Elastic Search mode
 (add-to-list 'auto-mode-alist '("\\.es$" . es-mode))
