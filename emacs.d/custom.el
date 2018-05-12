@@ -23,10 +23,11 @@
 
 (global-set-key (kbd "s-/") 'comment-region)
 
+;; Till I find out how to encode "Command + p"
 ;; ;; Press Command-p for fuzzy find in project
-(global-set-key (kbd "s-p") 'projectile-find-file)
+(global-set-key (kbd "M-p") 'projectile-find-file)
 ;; ;; Press Command-b for fuzzy switch buffer
-(global-set-key (kbd "s-b") 'projectile-switch-to-buffer)
+(global-set-key (kbd "M-b") 'projectile-switch-to-buffer)
 
 ;; Multiple Cursors
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
