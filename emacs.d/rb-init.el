@@ -24,10 +24,10 @@
 
 ;; (add-hook 'ruby-mode-hook 'flycheck-mode)
 
-(eval-after-load 'rubocop-mode
- '(define-key rubocop-mode-map (kdb "s-r" 'rubocop-check-current-file)))
+;; (eval-after-load 'rubocop-mode
+;;  '(define-key rubocop-mode-map (kdb "s-r" 'rubocop-check-current-file)))
 
-(define-key rubocop-mode-map (kbd "s-r") 'rubocop-check-current-file)
+;; (define-key rubocop-mode-map (kbd "s-r") 'rubocop-check-current-file)
 
 (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
 
