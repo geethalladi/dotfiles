@@ -52,11 +52,6 @@
     (before activate-rvm-for-robe activate)
   (rvm-activate-corresponding-ruby))
 
-;; ;; Press Command-p for fuzzy find in project
-(global-set-key (kbd "s-p") 'projectile-find-file)
-;; ;; Press Command-b for fuzzy switch buffer
-(global-set-key (kbd "s-b") 'projectile-switch-to-buffer)
-
 ;; ;; (setq enh-ruby-indent-tabs-mode t)
 
 ;; ;; (setq-default tab-width 2)
