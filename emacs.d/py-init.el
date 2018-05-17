@@ -53,6 +53,6 @@
 
 ;; (setq ein:use-smartrep t)
 
-(pyvenv-activate (expand-file-name "~/installed.d/anaconda/envs/mlapp"))
+;; (pyvenv-activate (expand-file-name "~/installed.d/anaconda/envs/mlapp"))
 
 (setq elpy-rpc-backend "jedi")
