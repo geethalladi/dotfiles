@@ -49,7 +49,7 @@ export CABAL_HOME=~/.cabal
 # nvm does not like NODE_PATH
 # export NODE_PATH=/usr/local/lib/node_modules
 
-export CONDA_HOME=${INSTALL_DIR}/anaconda3
+export CONDA_HOME=/usr/local/anaconda3
 
 export HADOOP_HOME=${INSTALL_DIR}/hadoop-2.7.3
 export HADOOP_PREFIX=${HADOOP_HOME}
