@@ -9,6 +9,7 @@ if [ "$PATH_STATE_UPDATED" -ne 1 ]; then
     # Using custom installed java/scala
     export PATH=${JAVA_HOME}/bin:${SCALA_HOME}/bin:${PATH}
     export PATH=${PATH}:${LOCAL_BIN_DIR}:/usr/local/opt/mysql@5.6/bin/
+    export PATH="${PATH}:${HOME}/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
 
     # for tmuxinator
     # source ${DOTFILE_DIR_TMUX}/tmuxinator.zsh
