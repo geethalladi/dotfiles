@@ -59,11 +59,11 @@
 ;; ;; (defvaralias 'enh-ruby-indent-level 'tab-width)
 ;; ;; (defvaralias 'enh-ruby-hanging-indent-level 'tab-width)
 
-;; (require 'ruby-refactor)
+(require 'ruby-refactor)
 
-;; (setenv "PAGER" "less")
-;; ;; (inf-ruby)
-;; ;; (robe-start)
+(setenv "PAGER" "less")
+;; (inf-ruby)
+;; (robe-start)
 
 ;; ;; (eval-after-load 'company
 ;; ;; '(push 'company-robe company-backends))
