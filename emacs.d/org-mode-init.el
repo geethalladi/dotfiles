@@ -64,6 +64,4 @@
 (fset 'pomodoro-table
       [?| ?  ?G ?  ?| ?  ?D ?a ?i ?l ?y ? ?  ?| ?  ?\[ ?  ?\] ?  ?| tab])
 
-;; org-confluence mode
-(add-to-list 'load-path "~/.emacs.d/vendor/org-confluence")
-;; (require 'org-confluence)
+(require 'ox-confluence)
