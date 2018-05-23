@@ -2,7 +2,7 @@
 # PATH Configurations
 
 if [ "$PATH_STATE_UPDATED" -ne 1 ]; then
-    export PATH=${EXTN_SCRIPTS_DIR}:${MAVEN_HOME}/bin:${CASK_PATH}:${HASKELL_HOME}/bin:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${RUBY_SCRIPTS_HOME}:${COREUTIL_PATH}/bin:/usr/local/sbin:${MACPORT_HOME}/bin:${CONDA_HOME}/bin:${ES_HOME}/bin:${CONSCRIPT_HOME}/bin:${CABAL_HOME}/bin:${GOROOT}/bin:${PATH}
+    export PATH=${CASK_PATH}:${COREUTIL_PATH}/bin:/usr/local/sbin:${MACPORT_HOME}/bin:${CONSCRIPT_HOME}/bin:${CABAL_HOME}/bin:${GOROOT}/bin:${PATH}:${CONDA_HOME}/bin:${RUBY_SCRIPTS_HOME}:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${HASKELL_HOME}/bin:${ES_HOME}/bin:${EXTN_SCRIPTS_DIR}:${MAVEN_HOME}/bin:
 
     # export PATH=${PATH}:${HADOOP_HOME}/bin:${HIVE_HOME}/bin:${SPARK_HOME}/bin
 
@@ -10,6 +10,7 @@ if [ "$PATH_STATE_UPDATED" -ne 1 ]; then
     export PATH=${JAVA_HOME}/bin:${SCALA_HOME}/bin:${PATH}
     export PATH=${PATH}:${LOCAL_BIN_DIR}:/usr/local/opt/mysql@5.6/bin/
     export PATH="${PATH}:${HOME}/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
+    export PATH="/usr/local/bin:${PATH}"
 
     # for tmuxinator
     # source ${DOTFILE_DIR_TMUX}/tmuxinator.zsh
