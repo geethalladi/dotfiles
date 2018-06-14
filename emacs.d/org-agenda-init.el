@@ -20,10 +20,10 @@
 ;; (setq org-refile-use-outline-path t)                  ; Show full paths for refiling
 
 (setq org-capture-templates '(("t" "Todo [inbox]" entry
-                               (file+headline "~/gtd/inbox.org" "Tasks")
+                               (file+headline "~/gtd/inbox.org" "Task Inbox")
                                "* TODO %i%?")
                               ("T" "Tickler" entry
-                               (file+headline "~/gtd/tickler.org" "Tickler")
+                               (file+headline "~/gtd/tickler.org" "Ticklers")
                                "* %i%? \n %U")))
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
