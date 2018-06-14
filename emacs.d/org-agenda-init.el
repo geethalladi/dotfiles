@@ -6,6 +6,9 @@
 ;; (defvar someday-org-file )
 ;; (defvar tickler-org-file )
 
+;; Include emacs diary entries in org-agenda
+(setq org-agenda-include-diary t)
+
 (setq org-default-notes-file "~/gtd/inbox.org")
 
 (setq org-agenda-files '("~/gtd/inbox.org"
