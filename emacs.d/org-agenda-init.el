@@ -12,15 +12,17 @@
 (setq org-default-notes-file "~/gtd/inbox.org")
 
 ;; Set the archive file and archive them under the heading "Finished Tasks"
-(setq org-archive-location "~/gtd/tasks_archive.org::* Finished Tasks")
+(setq org-archive-location "tasks_archive.org::* Finished Tasks")
 
 (setq org-agenda-files '("~/gtd/inbox.org"
                          "~/gtd/projects.org"
-                         "~/gtd/tickler.org"))
+                         "~/gtd/tickler.org"
+                         "~/gtd/recurring.org"))
 
 (setq org-refile-targets '(("~/gtd/projects.org" :maxlevel . 2)
                            ("~/gtd/someday.org" :level . 1)
-                           ("~/gtd/tickler.org" :maxlevel . 1)))
+                           ("~/gtd/tickler.org" :maxlevel . 1)
+                           ("~/gtd/recurring.org" :maxlevel . 1)))
 
 ;; (setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
 ;; (setq org-refile-use-outline-path t)                  ; Show full paths for refiling
