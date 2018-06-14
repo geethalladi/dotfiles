@@ -11,6 +11,9 @@
 
 (setq org-default-notes-file "~/gtd/inbox.org")
 
+;; Set the archive file and archive them under the heading "Finished Tasks"
+(setq org-archive-location "~/gtd/tasks_archive.org::* Finished Tasks")
+
 (setq org-agenda-files '("~/gtd/inbox.org"
                          "~/gtd/projects.org"
                          "~/gtd/tickler.org"))
