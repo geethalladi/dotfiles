@@ -9,6 +9,8 @@
 ;; Include emacs diary entries in org-agenda
 (setq org-agenda-include-diary t)
 
+(setq org-agenda-skip-scheduled-if-done t)
+
 (setq org-default-notes-file "~/gtd/inbox.org")
 
 ;; Set the archive file and archive them under the heading "Finished Tasks"
