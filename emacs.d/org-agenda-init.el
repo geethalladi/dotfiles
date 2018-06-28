@@ -11,29 +11,29 @@
 
 (setq org-agenda-skip-scheduled-if-done t)
 
-(setq org-default-notes-file "~/gtd/inbox.org")
+(setq org-default-notes-file "~/org/inbox.org")
 
 ;; Set the archive file and archive them under the heading "Finished Tasks"
 (setq org-archive-location "tasks_archive.org::* Finished Tasks")
 
-(setq org-agenda-files '("~/gtd/inbox.org"
-                         "~/gtd/projects.org"
-                         "~/gtd/tickler.org"
-                         "~/gtd/recurring.org"))
+(setq org-agenda-files '("~/org/inbox.org"
+                         "~/org/projects.org"
+                         "~/org/tickler.org"
+                         "~/org/recurring.org"))
 
-(setq org-refile-targets '(("~/gtd/projects.org" :maxlevel . 2)
-                           ("~/gtd/someday.org" :level . 1)
-                           ("~/gtd/tickler.org" :maxlevel . 1)
-                           ("~/gtd/recurring.org" :maxlevel . 1)))
+(setq org-refile-targets '(("~/org/projects.org" :maxlevel . 2)
+                           ("~/org/someday.org" :level . 1)
+                           ("~/org/tickler.org" :maxlevel . 1)
+                           ("~/org/recurring.org" :maxlevel . 1)))
 
 ;; (setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
 ;; (setq org-refile-use-outline-path t)                  ; Show full paths for refiling
 
 (setq org-capture-templates '(("t" "Todo [inbox]" entry
-                               (file+headline "~/gtd/inbox.org" "Task Inbox")
+                               (file+headline "~/org/inbox.org" "Task Inbox")
                                "* TODO %i%?")
                               ("T" "Tickler" entry
-                               (file+headline "~/gtd/tickler.org" "Ticklers")
+                               (file+headline "~/org/tickler.org" "Ticklers")
                                "* %i%? \n %U")))
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
