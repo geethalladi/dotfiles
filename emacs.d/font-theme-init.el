@@ -1,3 +1,26 @@
+;; THEME INIT
+
+;; default to
+;; (load-theme 'zenburn t)
+;; (load-theme 'wheatgrass t)
+;; (load-theme 'monokai t)
+;; (load-theme 'github-modern t)
+
+;; solarized-light theme
+;; (add-to-list 'custom-theme-load-path
+;;              "~/repo/open-source/emacs-color-theme-solarized")
+;; (set-frame-parameter nil 'background-mode 'light)
+;; (load-theme 'solarized t)
+
+;; (when (not window-system)
+;;  (load-theme 'tango-dark t))
+
+;; (load-theme 'zenburn t)
+
+;; (if (window-system)
+;;     (load-theme 'leuven t)
+;;   (load-theme 'tango-dark t))
+
 ;; FONT INIT
 
 ;; (set-face-attribute 'default nil :font "Monaco-16")
