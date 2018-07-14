@@ -37,6 +37,6 @@
 
 (load "~/.emacs.d/help-fns+.el")
 
-(load "~/.emacs.d/font-init.el")
+(load "~/.emacs.d/font-theme-init.el")
 
 (load "~/.emacs.d/custom.el")
