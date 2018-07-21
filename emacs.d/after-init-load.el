@@ -12,8 +12,6 @@
 
 (load "~/.emacs.d/org-mode-init.el")
 
-(load "~/.emacs.d/org-agenda-init.el")
-
 ;; (load "~/.emacs.d/term.el")
 
 (load "~/.emacs.d/multi-term.el")
@@ -42,3 +40,5 @@
 (load "~/.emacs.d/font-theme-init.el")
 
 (load "~/.emacs.d/custom.el")
+
+(load "~/.emacs.d/org-agenda-init.el")
