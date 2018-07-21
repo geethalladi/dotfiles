@@ -1,7 +1,9 @@
 ;; THEME INIT
 
 ;; default to
-;; (load-theme 'zenburn t)
+
+(load-theme 'zenburn t)
+
 ;; (load-theme 'wheatgrass t)
 ;; (load-theme 'monokai t)
 ;; (load-theme 'github-modern t)
@@ -14,8 +16,6 @@
 
 ;; (when (not window-system)
 ;;  (load-theme 'tango-dark t))
-
-(load-theme 'zenburn t)
 
 ;; (if (window-system)
 ;;     (load-theme 'leuven t)
