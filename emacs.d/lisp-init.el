@@ -23,5 +23,25 @@
     (read-kbd-macro paredit-backward-delete-key) nil))
 (add-hook 'slime-repl-mode-hook 'override-slime-repl-bindings-with-paredit)
 
+;; Customisations for scheme
+
+(custom-set-variables '(scheme-program-name "petite"))
+
+(setq scheme-program-name "petite")
+
+(setq geiser-active-implementations '(chez))
+
+(setq geiser-default-implementation 'chez)
+
+;; Disable version check
+(setq geiser-repl-skip-version-check-p 't)
+
+(setq geiser-chez-binary "/usr/local/bin/chez")
+
+(setq auto-mode-alist (cons '("\\.ss" . scheme-mode) auto-mode-alist))
+
+(add-hook 'scheme-mode-hook 'smartparens-mode)
+(add-hook 'scheme-mode-hook 'rainbow-delimiters-mode)
+
 (require 'quack)
 (require 'geiser)
