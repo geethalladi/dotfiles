@@ -88,6 +88,9 @@
 (add-hook 'js2-mode-hook (lambda ()
   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
 
+(require 'indium)
+(add-hook 'js2-mode-hook #'indium-interaction-mode)
+
 ;; (add-hook 'js-mode-hook
 ;;           (lambda ()
 ;;             (slime-js-minor-mode 1)))
