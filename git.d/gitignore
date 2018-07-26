@@ -37,3 +37,4 @@ dump.rdb
 .dir-locals.el
 .nvmrc
 *.zsh-theme
+.indium.json
