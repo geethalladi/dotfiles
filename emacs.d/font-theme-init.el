@@ -2,7 +2,8 @@
 
 ;; default to
 
-(load-theme 'zenburn t)
+
+;; (load-theme 'zenburn t)
 
 ;; (load-theme 'wheatgrass t)
 ;; (load-theme 'monokai t)
@@ -20,6 +21,9 @@
 ;; (if (window-system)
 ;;     (load-theme 'leuven t)
 ;;   (load-theme 'tango-dark t))
+
+(when (window-system)
+    (load-theme 'leuven t))
 
 ;; FONT INIT
 
