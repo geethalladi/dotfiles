@@ -43,5 +43,10 @@
 (add-hook 'scheme-mode-hook 'smartparens-mode)
 (add-hook 'scheme-mode-hook 'rainbow-delimiters-mode)
 
+;; Customizations for emacs lisp mode
+
+(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+(add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
+
 (require 'quack)
 (require 'geiser)
