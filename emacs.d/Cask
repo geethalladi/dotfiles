@@ -112,6 +112,7 @@
  (depends-on "ido")
  (depends-on "ido-ubiquitous")
  (depends-on "ido-yes-or-no")
+ (depends-on "indium")
  (depends-on "inf-ruby")
  (depends-on "inflections")
  (depends-on "javap-mode")

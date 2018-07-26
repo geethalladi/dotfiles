@@ -2,7 +2,6 @@
 
 ;; default to
 
-
 ;; (load-theme 'zenburn t)
 
 ;; (load-theme 'wheatgrass t)
