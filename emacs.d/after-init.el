@@ -6,8 +6,6 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ;; Org-mode's repository
 
 ;; ENABLE CASK
-
-
 (require 'cask "~/.emacs.d/.cask/26.0/elpa/cask-20161024.1205/cask.el")
 (cask-initialize)
 
@@ -94,11 +92,11 @@
   (windmove-default-keybindings))
 
 ;; Dash at point for emacs
-(require 'dash-at-point)
-(autoload 'dash-at-point "dash-at-point"
-    "Search the word at point with Dash." t nil)
-(global-set-key "\C-cd" 'dash-at-point)
-(global-set-key "\C-ce" 'dash-at-point-with-docset)
+;; (require 'dash-at-point)
+;; (autoload 'dash-at-point "dash-at-point"
+;;     "Search the word at point with Dash." t nil)
+;; (global-set-key "\C-cd" 'dash-at-point)
+;; (global-set-key "\C-ce" 'dash-at-point-with-docset)
 
 ;; ENABLE PERSISTENT SCRATCH
 (persistent-scratch-setup-default)
@@ -188,6 +186,6 @@
 (global-set-key (kbd "C-'") 'toggle-quotes)
 
 ;; Groovy mode for Jenkins file
-(require 'groovy-mode)
+;; (require 'groovy-mode)
 
 (load "~/.emacs.d/after-init-load.el")
