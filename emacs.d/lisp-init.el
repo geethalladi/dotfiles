@@ -48,5 +48,5 @@
 (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 
-(require 'quack)
 (require 'geiser)
+(require 'quack)
