@@ -26,6 +26,14 @@
 
 ;; FONT INIT
 
+;; Two fonts which look good
+;; - Haskling :: 11 :: semi-bold
+;; - Consolas :: 12 :: normal
+
+(load "~/.emacs.d/font-ligatures.el")
+
+(set-face-attribute 'default nil :font "Consolas:pixelsize=12:weight=normal")
+
 ;; (set-face-attribute 'default nil :font "Monaco-16")
 ;; (set-face-attribute 'default nil :font "Monaco-13:spacing=110")
 
@@ -35,15 +43,13 @@
 ;; (set-face-attribute 'default nil :font "Consolas:pixelsize=16:spacing=110")
 ;; (set-face-attribute 'default nil :font "Fira Code:pixelsize=15:spacing=110")
 
-;; (when (window-system)
-;;   (set-face-attribute 'default nil :font "Fira Code:pixelsize=16:spacing=110"))
-
-(load "~/.emacs.d/font-ligatures.el")
-
 ;; (set-face-attribute 'default nil :font "Hasklig:pixelsize=13:spacing=110:weight=semi-bold")
-(set-face-attribute 'default nil :font "Consolas:pixelsize=16:spacing=110:weight=normal")
+;; (set-face-attribute 'default nil :font "Consolas:pixelsize=16:spacing=110:weight=normal")
 
 ;; (set-face-attribute 'default nil :font "Hasklig:pixelsize=15:spacing=110:weight=normal")
+
+;; (when (window-system)
+;;   (set-face-attribute 'default nil :font "Fira Code:pixelsize=16:spacing=110"))
 
 ;; (if (window-system)
 ;;     (set-face-attribute 'default nil :font "Consolas:pixelsize=16:spacing=110:weight=normal")
