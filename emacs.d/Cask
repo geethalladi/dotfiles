@@ -148,6 +148,7 @@
  (depends-on "package-build")
  (depends-on "pallet")
  (depends-on "paredit")
+ (depends-on "pdf-tools")
  (depends-on "persistent-scratch")
  (depends-on "pkg-info")
  (depends-on "plantuml-mode")
