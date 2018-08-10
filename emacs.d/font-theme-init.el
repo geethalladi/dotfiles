@@ -17,12 +17,9 @@
 ;; (when (not window-system)
 ;;  (load-theme 'tango-dark t))
 
-;; (if (window-system)
-;;     (load-theme 'leuven t)
-;;   (load-theme 'tango-dark t))
-
-(when (window-system)
-    (load-theme 'leuven t))
+(if (window-system)
+    (load-theme 'leuven t)
+  (load-theme 'tango-dark t))
 
 ;; FONT INIT
 
