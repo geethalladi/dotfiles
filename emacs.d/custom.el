@@ -68,6 +68,9 @@
 
 (global-set-key (kbd "C-c b") 'switch-to-previous-buffer)
 
+;; M-b is rebound in helm; Undoing this by manually binding this here
+(global-set-key (kbd "M-b") 'backward-word)
+
 ;; FIX THE PATH VARIABLE
 ;; (defun set-exec-path-from-shell-PATH ()
 ;;   (let ((path-from-shell (shell-command-to-string "TERM=vt100 $SHELL -i -c 'echo $PATH'")))
