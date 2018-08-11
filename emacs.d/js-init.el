@@ -30,7 +30,7 @@
 
 ;; Know this is ugly; A Stop-gap solution for finding node
 (setq exec-path (append exec-path
-                        '("~/.nvm/versions/node/v8.6.0/bin")))
+                        '("~/.nvm/versions/node/v8.9.4/bin")))
 
 (defun js-mode-configuration-hook ()
   (local-set-key (kbd "C-c m") 'makey-key-mode-popup-js2-refactor)
