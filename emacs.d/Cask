@@ -192,7 +192,7 @@
  (depends-on "tern")
  (depends-on "tern-auto-complete")
  (depends-on "tern-context-coloring")
- ;; (depends-on "textmate")
+ (depends-on "tide")
  (depends-on "toggle-quotes")
  (depends-on "tuareg")
  (depends-on "use-package")
@@ -206,7 +206,7 @@
  (depends-on "yard-mode")
  (depends-on "yafolding")
  (depends-on "yasnippet")
- ;; (depends-on "zenburn-theme")
+ (depends-on "zenburn-theme")
 )
 
 ;; (depends-on "slamhound") ;; clojure
