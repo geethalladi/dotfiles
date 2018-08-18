@@ -24,6 +24,7 @@
 
 ;; Loading js init script
 (load "~/.emacs.d/js-init.el")
+(load "~/.emacs.d/ts-init.el")
 (load "~/.emacs.d/web-init.el")
 
 ;; (load "~/.emacs.d/clojure-init.el")
