@@ -22,6 +22,8 @@
 
 (load "~/.emacs.d/haskell-init.el")
 
+(load "~/.emacs.d/erlang-init.el")
+
 ;; Loading js init script
 (load "~/.emacs.d/js-init.el")
 (load "~/.emacs.d/ts-init.el")
@@ -29,9 +31,10 @@
 
 ;; (load "~/.emacs.d/clojure-init.el")
 ;; (load "~/.emacs.d/elixir-init.el")
-(load "~/.emacs.d/scala-init.el")
+;; (load "~/.emacs.d/scala-init.el")
+;; (load "~/.emacs.d/go-init.el")
+
 (load "~/.emacs.d/lisp-init.el")
-(load "~/.emacs.d/go-init.el")
 (load "~/.emacs.d/restclient-init.el")
 
 (load "~/.emacs.d/keychord-init.el")
