@@ -145,6 +145,7 @@
  (depends-on "org")
  (depends-on "org-plus-contrib")
  (depends-on "osx-clipboard")
+ (depends-on "ox-pandoc")
  (depends-on "package-build")
  (depends-on "pallet")
  (depends-on "paredit")
