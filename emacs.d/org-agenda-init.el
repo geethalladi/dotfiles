@@ -19,12 +19,14 @@
 (setq org-agenda-files '("~/org/inbox.org"
                          "~/org/projects.org"
                          "~/org/tickler.org"
-                         "~/org/recurring.org"))
+                         "~/org/recurring.org"
+                         "~/org/references.org"))
 
 (setq org-refile-targets '(("~/org/projects.org" :maxlevel . 2)
                            ("~/org/someday.org" :level . 1)
                            ("~/org/tickler.org" :maxlevel . 1)
-                           ("~/org/recurring.org" :maxlevel . 1)))
+                           ("~/org/recurring.org" :maxlevel . 1)
+                           ("~/org/references.org" :maxlevel . 2)))
 
 ;; (setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
 ;; (setq org-refile-use-outline-path t)                  ; Show full paths for refiling
