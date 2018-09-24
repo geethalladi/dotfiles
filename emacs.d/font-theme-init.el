@@ -29,7 +29,7 @@
 
 (load "~/.emacs.d/font-ligatures.el")
 
-(set-face-attribute 'default nil :font "Consolas:pixelsize=12:weight=normal")
+(set-face-attribute 'default nil :font "Consolas:pixelsize=14:weight=normal")
 
 ;; (set-face-attribute 'default nil :font "Monaco-16")
 ;; (set-face-attribute 'default nil :font "Monaco-13:spacing=110")
