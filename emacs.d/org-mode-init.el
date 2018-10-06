@@ -6,7 +6,8 @@
 (add-hook 'org-mode-hook 'autopair-mode)
 
 ;; (add-hook 'org-mode-hook 'stripe-table-mode)
-;; (add-hook 'org-mode-hook 'smartparens-mode)
+
+(add-hook 'org-mode-hook 'smartparens-mode)
 
 ;; List of file extensions to use org-mode for (org|org_archive|notes)
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|notes\\|pomodoro\\)$" . org-mode))
