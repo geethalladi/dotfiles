@@ -3,7 +3,8 @@
 
 ;; Always use org indent minor mode
 (add-hook 'org-mode-hook 'org-indent-mode)
-(add-hook 'org-mode-hook 'autopair-mode)
+
+;; (add-hook 'org-mode-hook 'autopair-mode)
 
 ;; (add-hook 'org-mode-hook 'stripe-table-mode)
 
