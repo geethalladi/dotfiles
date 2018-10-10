@@ -178,6 +178,7 @@
  (depends-on "ruby-tools")
  (depends-on "rvm")
  (depends-on "s")
+ (depends-on "scratch")
  (depends-on "shm") ;; structured haskell mode
  (depends-on "simple-httpd")
  (depends-on "skewer-mode")
