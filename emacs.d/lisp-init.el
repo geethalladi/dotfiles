@@ -8,7 +8,6 @@
 (setq inferior-lisp-program "/usr/local/bin/sbcl --noinform")
 
 (add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
-;; (add-hook 'lisp-mode-hook 'paredit-mode)
 (add-hook 'lisp-mode-hook 'smartparens-mode)
 
 (add-hook 'slime-repl-mode-hook 'rainbow-delimiters-mode)
