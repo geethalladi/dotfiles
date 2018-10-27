@@ -9,15 +9,15 @@
 (setq nrepl-popup-stacktraces nil)
 
 (add-hook 'cider-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'cider-mode-hook 'paredit-mode)
+(add-hook 'cider-mode-hook 'smartparens-mode)
 (add-hook 'cider-mode-hook #'company-mode)
 
 (add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'cider-repl-mode-hook 'paredit-mode)
+(add-hook 'cider-repl-mode-hook 'smartparens-mode)
 (add-hook 'cider-repl-mode-hook #'company-mode)
 (add-hook 'cider-repl-mode-hook '(lambda () (linum-mode 0)))
 
-(add-hook 'clojure-mode-hook #'paredit-mode)
+(add-hook 'clojure-mode-hook #'smartparens-mode)
 (add-hook 'clojure-mode-hook #'subword-mode)
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'clojure-mode-hook #'turn-on-eldoc-mode)
