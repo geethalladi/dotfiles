@@ -29,7 +29,7 @@
  (depends-on "calfw")
  (depends-on "cask")
  ;; (depends-on "chef-mode")
- ;; (depends-on "cider")
+ (depends-on "cider")
  ;; (depends-on "cider-decompile")
  ;; (depends-on "cljsbuild-mode")
  ;; (depends-on "clojure-mode")
