@@ -3,15 +3,7 @@
 ;; (source marmalade "https://marmalade-repo.org/packages/")
 (source org)
 
-;;  (depends-on "cider-tracing") ;; cider-tracing is no longer maintained
-;;  (depends-on "company-cider") ;; company mode as a hook to cider
-;;  (depends-on "ido-everywhere") ;; variable set in after-init
-;;  (depends-on "ido-flex") ;; variable set in after-init
-;; (package-file "TODO")
-
 (development
- ;; (depends-on "ac-cider")
- ;; (depends-on "ac-geiser")
  (depends-on "ac-haskell-process")
  (depends-on "ac-js2")
  (depends-on "ac-slime")
@@ -25,34 +17,18 @@
  (depends-on "bats-mode")
  (depends-on "better-defaults")
  (depends-on "bind-key")
- ;; (depends-on "bookmark+")
  (depends-on "calfw")
  (depends-on "cask")
- ;; (depends-on "chef-mode")
  (depends-on "cider")
- ;; (depends-on "cider-decompile")
- ;; (depends-on "cljsbuild-mode")
- ;; (depends-on "clojure-mode")
- ;; (depends-on "coffee-mode")
  (depends-on "confluence")
  (depends-on "color-identifiers-mode")
  (depends-on "command-log-mode")
  (depends-on "company")
  (depends-on "company-restclient")
  (depends-on "csv-mode")
- ;; (depends-on "dash")
- ;; (depends-on "dash-at-point")
- ;; (depends-on "dired+")
- ;; (depends-on "dirtree")
  (depends-on "discover")
  (depends-on "discover-js2-refactor")
- ;; (depends-on "docker")
- ;; (depends-on "docker-api")
- ;; (depends-on "docker-tramp")
- ;; (depends-on "dockerfile-mode")
  (depends-on "drag-stuff")
- ;; (depends-on "ecb")
- ;; (depends-on "ecukes")
  (depends-on "efire")
  (depends-on "ein")
  (depends-on "el-mock")
@@ -65,12 +41,6 @@
  (depends-on "erlang")
  (depends-on "ert-runner")
  (depends-on "es-mode")
- ;; (depends-on "ess")
- ;; (depends-on "ess-R-data-view")
- ;; (depends-on "ess-R-object-popup")
- ;; (depends-on "ess-smart-underscore")
- ;; (depends-on "etags-select")
- ;; (depends-on "etags-table")
  (depends-on "exec-path-from-shell")
  (depends-on "expand-region")
  (depends-on "f")
@@ -97,7 +67,6 @@
  (depends-on "graphviz-dot-mode")
  (depends-on "green-phosphor-theme")
  (depends-on "grizzl")
- ;; (depends-on "groovy-mode")
  (depends-on "haskell-emacs")
  (depends-on "haskell-mode")
  (depends-on "helm")
@@ -110,7 +79,6 @@
  (depends-on "idea-darkula-theme")
  (depends-on "idle-highlight-mode")
  (depends-on "ido")
- ;; (depends-on "ido-ubiquitous")
  (depends-on "ido-yes-or-no")
  (depends-on "indium")
  (depends-on "inf-ruby")
@@ -162,7 +130,6 @@
  (depends-on "projectile")
  (depends-on "psc-ide")
  (depends-on "purescript-mode")
- ;; (depends-on "quack") ;; manual install the quack files v0.48
  (depends-on "rainbow-delimiters")
  (depends-on "rainbow-mode")
  (depends-on "recentf-ext")
@@ -211,7 +178,38 @@
  (depends-on "zenburn-theme")
 )
 
-;; (depends-on "slamhound") ;; clojure
+;; (depends-on "ac-cider")
+;; (depends-on "ac-geiser")
 ;; (depends-on "ac-nrepl") ;; deprecated in favour of ac-cider
+;; (depends-on "bookmark+")
+;; (depends-on "chef-mode")
+;; (depends-on "cider-decompile")
+;; (depends-on "cider-tracing") ;; cider-tracing is no longer maintained
+;; (depends-on "cljsbuild-mode")
+;; (depends-on "clojure-mode")
 ;; (depends-on "clojurescript-mode") ;; use clojure-mode
+;; (depends-on "coffee-mode")
 ;; (depends-on "color-theme-monokai")
+;; (depends-on "company-cider") ;; company mode as a hook to cider
+;; (depends-on "dash")
+;; (depends-on "dash-at-point")
+;; (depends-on "dired+")
+;; (depends-on "dirtree")
+;; (depends-on "docker")
+;; (depends-on "docker-api")
+;; (depends-on "docker-tramp")
+;; (depends-on "dockerfile-mode")
+;; (depends-on "ecb")
+;; (depends-on "ecukes")
+;; (depends-on "ess")
+;; (depends-on "ess-R-data-view")
+;; (depends-on "ess-R-object-popup")
+;; (depends-on "ess-smart-underscore")
+;; (depends-on "etags-select")
+;; (depends-on "etags-table")
+;; (depends-on "groovy-mode")
+;; (depends-on "ido-everywhere") ;; variable set in after-init
+;; (depends-on "ido-flex") ;; variable set in after-init
+;; (depends-on "ido-ubiquitous")
+;; (depends-on "quack") ;; manual install the quack files v0.48
+;; (depends-on "slamhound") ;; clojure
