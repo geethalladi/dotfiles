@@ -38,3 +38,5 @@ dump.rdb
 .nvmrc
 *.zsh-theme
 .indium.json
+.report.json
+.fdk
