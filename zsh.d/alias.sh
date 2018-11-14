@@ -31,4 +31,8 @@ function show() {
     echo "git branch: "`git_current_branch`
     git-config.sh
 }
+
+function cleandir() {
+    rm -rf $1 && mkdir -p $1 && cd $1
+}
 alias shw='show'
