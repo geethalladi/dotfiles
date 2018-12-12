@@ -99,6 +99,8 @@
 ;; (global-set-key "\C-ce" 'dash-at-point-with-docset)
 
 ;; ENABLE PERSISTENT SCRATCH
+;; Needed for enabling emacs-lisp minor modes in scratch buffer
+(load "~/.emacs.d/emacs-lisp-init.el")
 (persistent-scratch-setup-default)
 (persistent-scratch-autosave-mode 1)
 
