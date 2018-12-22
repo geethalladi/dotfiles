@@ -5,6 +5,18 @@
 (require 'js2-mode)
 (require 'smartparens)
 
+;; Moving tern mode to the top
+;; tern keymap clashes with js2-refactor mode
+;; Moving it to the top, to resolve in favour of js2-refactor mode
+
+(require 'tern)
+(add-hook 'js2-mode-hook 'tern-mode)
+(eval-after-load 'tern
+  '(progn
+     (require 'tern-auto-complete)
+       (tern-ac-setup)
+       (tern-context-coloring-setup)))
+
 (require 'js2-refactor)
 (require 'discover-js2-refactor)
 
@@ -32,6 +44,11 @@
 (setq exec-path (append exec-path
                         '("~/.nvm/versions/node/v8.9.4/bin")))
 
+;; Enable this if you want constant indendation in js2-mode
+;; (custom-set-variables
+;;  '(js2-basic-offset 2)
+;;  '(js2-bounce-indent-p t))
+
 (defun js-mode-configuration-hook ()
   (local-set-key (kbd "C-c m") 'makey-key-mode-popup-js2-refactor)
   (make-variable-buffer-local 'js-indent-level)
@@ -49,7 +66,7 @@
 
 (add-hook 'js2-mode-hook 'smartparens-mode)
 
-(add-hook 'js2-mode-hook #'js2-refactor-mode)
+
 (add-hook 'js2-mode-hook 'js-mode-configuration-hook)
 
 (add-hook 'js2-mode-hook
@@ -75,14 +92,7 @@
   '(progn
      (define-key ac-js2-mode-map (kbd "M-.") nil)))
 
-(require 'tern)
-(add-hook 'js2-mode-hook 'tern-mode)
-(eval-after-load 'tern
-  '(progn
-     (require 'tern-auto-complete)
-       (tern-ac-setup)
-       (tern-context-coloring-setup)))
-
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
 
 (require 'xref-js2)
 (add-hook 'js2-mode-hook (lambda ()
