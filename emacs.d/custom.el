@@ -11,6 +11,9 @@
   (interactive)
   (scroll-down (window-half-height)))
 
+;; Setting global prettify-symbols-mode
+(global-prettify-symbols-mode +1)
+
 (global-set-key (kbd "s-<up>") 'scroll-down-half)
 (global-set-key (kbd "s-<down>") 'scroll-up-half)
 
