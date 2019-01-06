@@ -74,6 +74,7 @@
  (depends-on "helm-projectile")
  (depends-on "hi2")
  (depends-on "highlight")
+ (depends-on "highlight-indentation")
  (depends-on "highlight-parentheses")
  (depends-on "htmlize")
  (depends-on "idea-darkula-theme")
