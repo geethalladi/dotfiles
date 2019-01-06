@@ -101,6 +101,14 @@
 (require 'indium)
 (add-hook 'js2-mode-hook #'indium-interaction-mode)
 
+;; dir local variables
+(put 'mocha-which-node 'safe-local-variable #'stringp)
+(put 'mocha-command 'safe-local-variable #'stringp)
+(put 'mocha-environment-variables 'safe-local-variable #'stringp)
+(put 'mocha-options 'safe-local-variable #'stringp)
+(put 'mocha-project-test-directory 'safe-local-variable #'stringp)
+(put 'mocha-reporter 'safe-local-variable #'stringp)
+
 ;; (add-hook 'js-mode-hook
 ;;           (lambda ()
 ;;             (slime-js-minor-mode 1)))

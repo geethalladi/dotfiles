@@ -80,11 +80,3 @@
 ;;     (setenv "PATH" path-from-shell)
 ;;     (setq exec-path (split-string path-from-shell path-separator))))
 ;; (when window-system (set-exec-path-from-shell-PATH))
-
-;; dir local variables
-(put 'mocha-which-node 'safe-local-variable #'stringp)
-(put 'mocha-command 'safe-local-variable #'stringp)
-(put 'mocha-environment-variables 'safe-local-variable #'stringp)
-(put 'mocha-options 'safe-local-variable #'stringp)
-(put 'mocha-project-test-directory 'safe-local-variable #'stringp)
-(put 'mocha-reporter 'safe-local-variable #'stringp)
