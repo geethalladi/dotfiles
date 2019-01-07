@@ -27,7 +27,7 @@
 
 ;; using highlight-indentation mode
 
-(require 'highlight-indentation-mode)
+(require 'highlight-indentation)
 (setq highlight-indentation-blank-lines t)
 (set-face-background 'highlight-indentation-face "#eeeeee")
 (set-face-background 'highlight-indentation-current-column-face "#eeeeee")

@@ -36,11 +36,12 @@
 (load "~/.emacs.d/clojure-init.el")
 
 (load "~/.emacs.d/lisp-init.el")
-(load "~/.emacs.d/restclient-init.el")
 
 (load "~/.emacs.d/keychord-init.el")
 
 (load "~/.emacs.d/help-fns+.el")
+
+(load "~/.emacs.d/other-modes-init.el")
 
 (load "~/.emacs.d/theme-init.el")
 
@@ -49,5 +50,3 @@
 (load "~/.emacs.d/pdf-init.el")
 
 (load "~/.emacs.d/org-agenda-init.el")
-
-(load "~/emacs.d/other-modes-init.el")
