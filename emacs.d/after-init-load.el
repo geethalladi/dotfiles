@@ -49,3 +49,5 @@
 (load "~/.emacs.d/pdf-init.el")
 
 (load "~/.emacs.d/org-agenda-init.el")
+
+(load "~/emacs.d/other-modes-init.el")
