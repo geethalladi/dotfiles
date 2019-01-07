@@ -25,6 +25,13 @@
 ; try to automagically figure out indentation
 (setq py-smart-indentation t)
 
+;; using highlight-indentation mode
+
+(require 'highlight-indentation-mode)
+(setq highlight-indentation-blank-lines t)
+(set-face-background 'highlight-indentation-face "#eeeeee")
+(set-face-background 'highlight-indentation-current-column-face "#eeeeee")
+
 ; use IPython
 (setq-default py-shell-name "ipython")
 (setq-default py-which-bufname "IPython")
@@ -41,6 +48,7 @@
 (add-hook 'python-mode-hook 'yafolding-mode)
 (add-hook 'python-mode-hook 'flycheck-mode)
 (add-hook 'python-mode-hook 'yas-minor-mode)
+(add-hook 'python-mode-hook 'highlight-indentation-mode)
 
 ;; (add-hook 'python-mode-hook 'anaconda-mode)
 ;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
