@@ -8,6 +8,8 @@
 
 (load "~/.emacs.d/helm-init.el")
 
+(load "~/.emacs.d/company-init.el")
+
 (load "~/.emacs.d/projectile-init.el")
 
 (load "~/.emacs.d/org-mode-init.el")
