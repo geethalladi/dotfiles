@@ -7,6 +7,7 @@
 ;; (load-theme 'wheatgrass t)
 ;; (load-theme 'monokai t)
 ;; (load-theme 'tango-dark t)
+;; (load-theme 'heroku t)
 
 ;; solarized-light theme
 ;; (add-to-list 'custom-theme-load-path
