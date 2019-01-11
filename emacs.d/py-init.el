@@ -12,6 +12,9 @@
   Version must be already installed."
   (pyenv-mode-set (projectile-project-name)))
 
+(setq py-python-command "python3")
+(setq python-shell-interpreter "ipython")
+
 ; use the wx backend, for both mayavi and matplotlib
 (setq py-python-command-args
   '("--gui=wx" "--pylab=wx" "-colors" "Linux"))
