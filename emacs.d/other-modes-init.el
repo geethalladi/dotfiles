@@ -8,16 +8,21 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; REST Client mode configurations ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'company)
 (require 'restclient)
+(require 'company-restclient)
 
 (add-to-list 'auto-mode-alist '("\\.\\(rest\\)$" . restclient-mode))
 (add-to-list 'auto-mode-alist '("\\.\\(http\\)$" . restclient-mode))
 
-(add-hook 'restclient-mode-hook
-          (lambda ()
-            (setq indent-tabs-mode nil)
-            (setq tab-width 2)))
-(add-hook 'restclient-mode-hook 'smartparens-mode)
+(defun self/restclient-mode-hook ()
+  (add-to-list 'company-backends 'company-restclient)
+  (setq indent-tabs-mode nil)
+  (setq tab-width 2)
+  (smartparens-mode)
+  (set (make-local-variable 'company-backends) '(company-restclient))
+  (company-mode +1))
 
-;; (add-to-list 'company-backends 'company-restclient)
+(add-hook 'restclient-mode-hook 'self/restclient-mode-hook)
+
 ;; (setq tab-always-indent nil)
