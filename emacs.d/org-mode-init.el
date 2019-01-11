@@ -1,4 +1,6 @@
 (require 'org)
+(require 'org-bullets)
+
 ;; (require 'stripe-buffer)
 
 ;; Always use org indent minor mode
@@ -9,6 +11,9 @@
 ;; (add-hook 'org-mode-hook 'stripe-table-mode)
 
 (add-hook 'org-mode-hook 'smartparens-mode)
+
+(add-hook 'org-mode-hook
+          (lambda () (org-bullets-mode 1)))
 
 ;; List of file extensions to use org-mode for (org|org_archive|notes)
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|notes\\|pomodoro\\)$" . org-mode))
