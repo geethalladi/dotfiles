@@ -3,10 +3,10 @@
 ;; default to
 
 ;; (load-theme 'zenburn t)
-
+;; (load-theme 'github-modern t)
 ;; (load-theme 'wheatgrass t)
 ;; (load-theme 'monokai t)
-;; (load-theme 'github-modern t)
+;; (load-theme 'tango-dark t)
 
 ;; solarized-light theme
 ;; (add-to-list 'custom-theme-load-path
