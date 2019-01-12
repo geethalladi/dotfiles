@@ -32,6 +32,9 @@
 ;; ;; Press Command-b for fuzzy switch buffer
 (global-set-key (kbd "M-b") 'projectile-switch-to-buffer)
 
+;; Displaying cursors
+(setq-default cursor-type 'bar)
+
 ;; Multiple Cursors
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
