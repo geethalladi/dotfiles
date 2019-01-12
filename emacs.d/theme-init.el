@@ -8,6 +8,7 @@
 ;; (load-theme 'monokai t)
 ;; (load-theme 'tango-dark t)
 ;; (load-theme 'heroku t)
+;; (load-theme 'leuven t)
 
 ;; solarized-light theme
 ;; (add-to-list 'custom-theme-load-path
@@ -19,7 +20,7 @@
 ;;  (load-theme 'tango-dark t))
 
 (if (window-system)
-    (load-theme 'leuven t)
+    (load-theme 'heroku t)
   (load-theme 'tango-dark t))
 
 ;; FONT INIT
