@@ -26,13 +26,16 @@
 ;; FONT INIT
 
 ;; Two fonts which look good
-;; - Haskling :: 11 :: semi-bold
-;; - Consolas :: 12 :: normal
+;; - Haskling  :: 11 :: semi-bold
+;; - Consolas  :: 12 :: normal
+;; - Fira Code :: 15 :: normal
 
-;; Commenting this out for now to avoid
-;; (load "~/.emacs.d/font-ligatures.el")
+(load "~/.emacs.d/font-ligatures.el")
 
-(set-face-attribute 'default nil :font "Consolas:pixelsize=14:weight=normal")
+(set-face-attribute 'default nil :font "Fira Code:pixelsize=15:spacing=110:weight=normal")
+
+;; (set-face-attribute 'default nil :font "Consolas:pixelsize=14:weight=normal")
+;; (set-face-attribute 'default nil :font "Hasklig:pixelsize=13:spacing=110:weight=normal")
 
 ;; (set-face-attribute 'default nil :font "Monaco-16")
 ;; (set-face-attribute 'default nil :font "Monaco-13:spacing=110")
