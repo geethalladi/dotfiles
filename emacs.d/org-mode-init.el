@@ -3,17 +3,17 @@
 
 ;; (require 'stripe-buffer)
 
-;; Always use org indent minor mode
-(add-hook 'org-mode-hook 'org-indent-mode)
+;; (add-hook 'org-mode-hook 'stripe-table-mode)
 
 ;; (add-hook 'org-mode-hook 'autopair-mode)
 
-;; (add-hook 'org-mode-hook 'stripe-table-mode)
+(defun self/org-mode-hook ()
+  "org mode customization hook"
+  (org-indent-mode) ;; Always use org indent minor mode
+  (smartparens-mode)
+  (org-bullets-mode 1))
 
-(add-hook 'org-mode-hook 'smartparens-mode)
-
-(add-hook 'org-mode-hook
-          (lambda () (org-bullets-mode 1)))
+(add-hook 'org-mode-hook 'self/org-mode-hook)
 
 ;; List of file extensions to use org-mode for (org|org_archive|notes)
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|notes\\|pomodoro\\)$" . org-mode))
@@ -42,7 +42,6 @@
 (add-hook 'org-shiftleft-final-hook 'windmove-left)
 (add-hook 'org-shiftdown-final-hook 'windmove-down)
 (add-hook 'org-shiftright-final-hook 'windmove-right)
-
 
 (add-to-list 'org-emphasis-alist
              '("_" (:foreground "red")))
