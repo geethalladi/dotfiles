@@ -10,7 +10,9 @@
 (defun self/org-mode-hook ()
   "org mode customization hook"
   (org-indent-mode) ;; Always use org indent minor mode
-  (smartparens-mode)
+  ;; Commenting smartparens-mode
+  ;; because of conflict with M-up and M-down
+  ;; (smartparens-mode)
   (org-bullets-mode 1))
 
 (add-hook 'org-mode-hook 'self/org-mode-hook)
