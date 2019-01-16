@@ -32,8 +32,14 @@
 
 (require 'highlight-indentation)
 (setq highlight-indentation-blank-lines t)
-(set-face-background 'highlight-indentation-face "#eeeeee")
-(set-face-background 'highlight-indentation-current-column-face "#eeeeee")
+
+;; The following setting works for leuven-theme
+;; (set-face-background 'highlight-indentation-face "#eeeeee")
+;; (set-face-background 'highlight-indentation-current-column-face "#eeeeee")
+
+;; The following setting works for heroku theme
+(set-face-background 'highlight-indentation-face "#3B4242")
+(set-face-background 'highlight-indentation-current-column-face "#3B4242")
 
 ; use IPython
 (setq-default py-shell-name "ipython")
