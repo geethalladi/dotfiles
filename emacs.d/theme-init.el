@@ -19,8 +19,21 @@
 ;; (when (not window-system)
 ;;  (load-theme 'tango-dark t))
 
+(defun self/load-heroku-theme ()
+  "Customizing heroku theme"
+  (load-theme 'heroku t)
+  (custom-set-faces
+   '(org-level-1 ((t (:foreground "#dfaf8f"))))
+   '(org-level-2 ((t (:foreground "#94bff3"))))
+   '(org-level-3 ((t (:foreground "#e0cf9f"))))
+   '(org-level-4 ((t (:foreground "#93e0e3"))))
+   '(org-level-5 ((t (:foreground "#8fb28f"))))
+   '(org-level-6 ((t (:foreground "#aeaeae"))))
+   '(org-level-7 ((t (:foreground "#8c5353"))))
+   '(org-level-8 ((t (:foreground "#4c7073"))))))
+
 (if (window-system)
-    (load-theme 'heroku t)
+    (self/load-heroku-theme)
   (load-theme 'tango-dark t))
 
 ;; FONT INIT
