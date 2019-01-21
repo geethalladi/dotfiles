@@ -43,7 +43,7 @@
 ;; - Consolas  :: 12 :: normal
 ;; - Fira Code :: 15 :: normal
 
-;; (load "~/.emacs.d/font-ligatures.el")
+(load "~/.emacs.d/font-ligatures.el")
 
 (set-face-attribute 'default nil :font "Fira Code:pixelsize=15:spacing=110:weight=normal")
 
