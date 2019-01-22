@@ -1,3 +1,8 @@
+(defun self/scheme-mode ()
+  "Customizations of scheme mode"
+  (smartparens-mode)
+  (rainbow-delimiters-mode))
+
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 
 (require 'slime)
@@ -37,14 +42,11 @@
 
 (setq geiser-chez-binary "/usr/local/bin/chez")
 
-(setq auto-mode-alist (cons '("\\.ss" . scheme-mode) auto-mode-alist))
-
 (require 'geiser)
 (require 'quack)
 
-(defun self/scheme-mode ()
-  "Customizations of scheme mode"
-  (smartparens-mode)
-  (rainbow-delimiters-mode))
-
 (add-hook 'scheme-mode-hook 'self/scheme-mode)
+
+(add-to-list 'auto-mode-alist '("\\.scm$" . scheme-mode))
+
+(add-to-list 'auto-mode-alist '("\\.ss$" . scheme-mode))
