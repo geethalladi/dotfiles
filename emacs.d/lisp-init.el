@@ -39,8 +39,17 @@
 
 (setq auto-mode-alist (cons '("\\.ss" . scheme-mode) auto-mode-alist))
 
-(add-hook 'scheme-mode-hook 'smartparens-mode)
-(add-hook 'scheme-mode-hook 'rainbow-delimiters-mode)
-
 (require 'geiser)
 (require 'quack)
+
+(defun self/scheme-mode-hook ()
+  "Cusomizations of scheme mode"
+  (smartparens-mode)
+  (rainbow-delimiters-mode)
+
+  ;; Updating custom faces in scheme mode
+  (custom-set-faces
+   '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
+   '(quack-pltish-defn-face ((t (:foreground "#dfaf8f"))))))
+
+(add-hook 'scheme-mode-hook 'self/scheme-mode-hook)
