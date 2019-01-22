@@ -1,5 +1,26 @@
 ;; THEME INIT
 
+(defun self/load-heroku-theme ()
+  "Customizing heroku theme"
+  (load-theme 'heroku t)
+  (custom-set-faces
+   ;; org mode faces
+   '(org-level-1 ((t (:foreground "#dfaf8f"))))
+   '(org-level-2 ((t (:foreground "#94bff3"))))
+   '(org-level-3 ((t (:foreground "#e0cf9f"))))
+   '(org-level-4 ((t (:foreground "#93e0e3"))))
+   '(org-level-5 ((t (:foreground "#8fb28f"))))
+   '(org-level-6 ((t (:foreground "#aeaeae"))))
+   '(org-level-7 ((t (:foreground "#8c5353"))))
+   '(org-level-8 ((t (:foreground "#4c7073"))))
+
+   ;; rainbow delimiter mode
+   '(rainbow-delimiters-unmatched-face ((t (:foreground "#ee3344"))))
+
+   ;; scheme / quack
+   '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
+   '(quack-pltish-defn-face ((t (:foreground "#dfaf8f"))))))
+
 ;; default to
 
 ;; (load-theme 'zenburn t)
@@ -19,23 +40,6 @@
 ;; (when (not window-system)
 ;;  (load-theme 'tango-dark t))
 
-(defun self/load-heroku-theme ()
-  "Customizing heroku theme"
-  (load-theme 'heroku t)
-  (custom-set-faces
-   '(org-level-1 ((t (:foreground "#dfaf8f"))))
-   '(org-level-2 ((t (:foreground "#94bff3"))))
-   '(org-level-3 ((t (:foreground "#e0cf9f"))))
-   '(org-level-4 ((t (:foreground "#93e0e3"))))
-   '(org-level-5 ((t (:foreground "#8fb28f"))))
-   '(org-level-6 ((t (:foreground "#aeaeae"))))
-   '(org-level-7 ((t (:foreground "#8c5353"))))
-   '(org-level-8 ((t (:foreground "#4c7073"))))))
-
-(if (window-system)
-    (self/load-heroku-theme)
-  (load-theme 'tango-dark t))
-
 ;; FONT INIT
 
 ;; Two fonts which look good
@@ -46,6 +50,11 @@
 (load "~/.emacs.d/font-ligatures.el")
 
 (set-face-attribute 'default nil :font "Fira Code:pixelsize=15:spacing=110:weight=normal")
+
+;; Load theme after fonts, to override conflicting customisations in favour of theme
+(if (window-system)
+    (self/load-heroku-theme)
+  (load-theme 'tango-dark t))
 
 ;; (set-face-attribute 'default nil :font "Consolas:pixelsize=14:weight=normal")
 ;; (set-face-attribute 'default nil :font "Hasklig:pixelsize=13:spacing=110:weight=normal")
