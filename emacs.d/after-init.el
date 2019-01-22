@@ -6,8 +6,12 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ;; Org-mode's repository
 
 ;; ENABLE CASK
+
 (require 'cask "~/.emacs.d/.cask/26.1/elpa/cask-20180626.1949/cask.el")
 (cask-initialize)
+
+;; Setting the location of the cask file
+(setq cask-filename "~/.emacs.d/Cask")
 
 ;; ENABLE PALLET
 (require 'pallet)
