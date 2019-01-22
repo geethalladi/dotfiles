@@ -17,6 +17,9 @@
    ;; rainbow delimiter mode
    '(rainbow-delimiters-unmatched-face ((t (:foreground "#ee3344"))))
 
+   ;; smartparens-mode
+   '(sp-show-pair-mismatch-face ((t (:foreground "#ee3344"))))
+
    ;; scheme / quack
    '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
    '(quack-pltish-defn-face ((t (:foreground "#dfaf8f"))))))
