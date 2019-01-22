@@ -45,10 +45,10 @@
 
 (load "~/.emacs.d/other-modes-init.el")
 
-(load "~/.emacs.d/theme-init.el")
-
 (load "~/.emacs.d/custom.el")
 
 (load "~/.emacs.d/pdf-init.el")
 
 (load "~/.emacs.d/org-agenda-init.el")
+
+(load "~/.emacs.d/theme-init.el")
