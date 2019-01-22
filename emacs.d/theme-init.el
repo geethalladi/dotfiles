@@ -16,9 +16,18 @@
 
    ;; rainbow delimiter mode
    '(rainbow-delimiters-unmatched-face ((t (:foreground "#ee3344"))))
+   '(rainbow-delimiters-depth-1-face ((t (:foreground "#dfaf8f"))))
+   '(rainbow-delimiters-depth-2-face ((t (:foreground "#94bff3"))))
+   '(rainbow-delimiters-depth-3-face ((t (:foreground "#e0cf9f"))))
+   '(rainbow-delimiters-depth-4-face ((t (:foreground "#93e0e3"))))
+   '(rainbow-delimiters-depth-5-face ((t (:foreground "#8fb28f"))))
+   '(rainbow-delimiters-depth-6-face ((t (:foreground "#dfaf8f"))))
+   '(rainbow-delimiters-depth-7-face ((t (:foreground "#94bff3"))))
+   '(rainbow-delimiters-depth-8-face ((t (:foreground "#e0cf9f"))))
 
    ;; smartparens-mode
    '(sp-show-pair-mismatch-face ((t (:foreground "#ee3344"))))
+   '(sp-show-pair-match-face ((t (:background "#6F6F6F" :weight "bold"))))
 
    ;; scheme / quack
    '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
@@ -58,6 +67,8 @@
 (if (window-system)
     (self/load-heroku-theme)
   (load-theme 'tango-dark t))
+
+;; (load-theme 'zenburn t)
 
 ;; (set-face-attribute 'default nil :font "Consolas:pixelsize=14:weight=normal")
 ;; (set-face-attribute 'default nil :font "Hasklig:pixelsize=13:spacing=110:weight=normal")
