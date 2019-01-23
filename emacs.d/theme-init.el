@@ -66,7 +66,8 @@
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
 (if (window-system)
     (self/load-heroku-theme)
-  (load-theme 'tango-dark t))
+  ;; Bright theme for terminals
+  (load-theme 'leuven t))
 
 ;; (load-theme 'zenburn t)
 
