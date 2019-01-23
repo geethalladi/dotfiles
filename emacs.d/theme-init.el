@@ -43,7 +43,7 @@
 
    ;; smartparens-mode
    '(sp-show-pair-mismatch-face ((t (:foreground "#ee3344"))))
-   '(sp-show-pair-match-face ((t (:background "#6F6F6F" :weight "bold"))))
+   '(sp-show-pair-match-face ((t (:background "#6F6F6F"))))
 
    ;; scheme / quack
    '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
