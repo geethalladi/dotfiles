@@ -5,6 +5,16 @@
   (load-theme 'leuven t)
 
   (custom-set-faces
+   ;; Org mode faces
+   '(org-level-1 ((t (:background "#ffffff"))))
+   '(org-level-2 ((t (:background "#ffffff"))))
+   '(org-level-3 ((t (:background "#ffffff"))))
+   '(org-level-4 ((t (:background "#ffffff"))))
+   '(org-level-5 ((t (:background "#ffffff"))))
+   '(org-level-6 ((t (:background "#ffffff"))))
+   '(org-level-7 ((t (:background "#ffffff"))))
+   '(org-level-8 ((t (:background "#ffffff"))))
+
    ;; rainbow delimiter mode
    '(rainbow-delimiters-depth-1-face ((t (:foreground "blue"))))
    '(rainbow-delimiters-depth-2-face ((t (:foreground "black"))))
