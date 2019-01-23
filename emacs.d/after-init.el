@@ -44,8 +44,8 @@
 ;;;; ENABLING THE MOST USED MODES BY DEFAULT
 
 ;; AUTO COMPLETE
-(require 'auto-complete-config)
-(ac-config-default)
+;; (require 'auto-complete-config)
+;; (ac-config-default)
 
 ;; [TODO] Update the exact path of the dictinoary
 ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/.cask/24.5.1/elpa/auto-complete-20160710.1544/dict")
