@@ -6,15 +6,17 @@
 
   (custom-set-faces
    ;; rainbow delimiter mode
-   '(rainbow-delimiters-unmatched-face ((t (:foreground "#ee3344"))))
-   '(rainbow-delimiters-depth-1-face ((t (:foreground "#dfaf8f"))))
-   '(rainbow-delimiters-depth-2-face ((t (:foreground "#94bff3"))))
-   '(rainbow-delimiters-depth-3-face ((t (:foreground "#e0cf9f"))))
-   '(rainbow-delimiters-depth-4-face ((t (:foreground "#93e0e3"))))
-   '(rainbow-delimiters-depth-5-face ((t (:foreground "#8fb28f"))))
-   '(rainbow-delimiters-depth-6-face ((t (:foreground "#dfaf8f"))))
-   '(rainbow-delimiters-depth-7-face ((t (:foreground "#94bff3"))))
-   '(rainbow-delimiters-depth-8-face ((t (:foreground "#e0cf9f"))))))
+   '(rainbow-delimiters-depth-1-face ((t (:foreground "red"))))
+   '(rainbow-delimiters-depth-2-face ((t (:foreground "green"))))
+   '(rainbow-delimiters-depth-3-face ((t (:foreground "black"))))
+   '(rainbow-delimiters-depth-4-face ((t (:foreground "orange"))))
+   '(rainbow-delimiters-depth-5-face ((t (:foreground "blue"))))
+   '(rainbow-delimiters-depth-6-face ((t (:foreground "red"))))
+   '(rainbow-delimiters-depth-7-face ((t (:foreground "green"))))
+   '(rainbow-delimiters-depth-8-face ((t (:foreground "black"))))
+   '(rainbow-delimiters-depth-9-face ((t (:foreground "orange"))))
+   '(rainbow-delimiters-depth-10-face ((t (:foreground "blue"))))
+   '(rainbow-delimiters-unmatched-face ((t (:background "cyan"))))))
 
 (defun self/load-heroku-theme ()
   "Customizing heroku theme"
