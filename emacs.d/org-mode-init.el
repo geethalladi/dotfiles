@@ -1,5 +1,4 @@
 (require 'org)
-(require 'org-bullets)
 
 ;; (require 'stripe-buffer)
 
