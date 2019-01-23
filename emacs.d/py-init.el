@@ -37,10 +37,6 @@
 ;; (set-face-background 'highlight-indentation-face "#eeeeee")
 ;; (set-face-background 'highlight-indentation-current-column-face "#eeeeee")
 
-;; The following setting works for heroku theme
-(set-face-background 'highlight-indentation-face "#3B4242")
-(set-face-background 'highlight-indentation-current-column-face "#3B4242")
-
 ; use IPython
 (setq-default py-shell-name "ipython")
 (setq-default py-which-bufname "IPython")
@@ -48,7 +44,7 @@
       python-shell-interpreter-args "--simple-prompt -i")
 
 ;; Remove autocomplete mode for python
-(setq ac-modes (delq 'python-mode ac-modes))
+;; (setq ac-modes (delq 'python-mode ac-modes))
 
 (elpy-enable)
 
@@ -62,10 +58,11 @@
 ;; (add-hook 'python-mode-hook 'anaconda-mode)
 ;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
 
-(setq ein:use-auto-complete t)
+;; (setq ein:use-auto-complete t)
 
 ;; Or, to enable "superpack" (a little bit hacky improvements):
-(setq ein:use-auto-complete-superpack t)
+;; (setq ein:use-auto-complete-superpack t)
+
 (add-hook 'ein-mode 'smartparens-mode)
 
 ;; (setq ein:use-smartrep t)
