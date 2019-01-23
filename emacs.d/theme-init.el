@@ -31,6 +31,11 @@
   "Customizing heroku theme"
   (load-theme 'heroku t)
 
+  ;; Powerline heroku theme
+  (require 'powerline)
+  (setq powerline-default-separator 'bar)
+  (powerline-default-theme)
+
   ;; heroku-theme python
   (set-face-background 'highlight-indentation-face "#3B4242")
   (set-face-background 'highlight-indentation-current-column-face "#3B4242")

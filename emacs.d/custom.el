@@ -98,7 +98,3 @@
 ;;     (setenv "PATH" path-from-shell)
 ;;     (setq exec-path (split-string path-from-shell path-separator))))
 ;; (when window-system (set-exec-path-from-shell-PATH))
-
-(require 'powerline)
-(setq powerline-default-separator 'bar)
-(powerline-default-theme)
