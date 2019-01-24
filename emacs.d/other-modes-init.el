@@ -26,3 +26,13 @@
 (add-hook 'restclient-mode-hook 'self/restclient-mode-hook)
 
 ;; (setq tab-always-indent nil)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;  Markdown mode configurations   ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; markdown-mode binds "Esc-p" which conflicts with helm-projectile-find-file, so
+;; unbind it.
+(eval-after-load 'markdown-mode
+  '(progn
+     (define-key markdown-mode-map (kbd "M-p") nil)))
