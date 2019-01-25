@@ -14,6 +14,8 @@
 
 (setq py-python-command "python3")
 (setq python-shell-interpreter "ipython")
+(setq elpy-rpc-python-command "python3")
+(setq elpy-rpc-backend "jedi")
 
 ; use the wx backend, for both mayavi and matplotlib
 (setq py-python-command-args
@@ -46,12 +48,20 @@
 ;; Remove autocomplete mode for python
 ;; (setq ac-modes (delq 'python-mode ac-modes))
 
+
 (elpy-enable)
+
+;; Remove flymake for python and use flycheck minor mode
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 (add-hook 'python-mode-hook 'eldoc-mode)
 (add-hook 'python-mode-hook 'smartparens-mode)
 (add-hook 'python-mode-hook 'yafolding-mode)
-(add-hook 'python-mode-hook 'flycheck-mode)
 (add-hook 'python-mode-hook 'yas-minor-mode)
 (add-hook 'python-mode-hook 'highlight-indentation-mode)
 
@@ -68,5 +78,3 @@
 ;; (setq ein:use-smartrep t)
 
 ;; (pyvenv-activate (expand-file-name "~/installed.d/anaconda/envs/mlapp"))
-
-(setq elpy-rpc-backend "jedi")
