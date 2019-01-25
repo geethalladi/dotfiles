@@ -28,6 +28,7 @@
 
 (setq ns-pop-up-frames nil)
 
+(require 'better-defaults)
 ;; (require 'ido)
 ;; (ido-mode 1)
 ;; (setq ido-everywhere t)
