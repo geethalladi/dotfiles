@@ -1,6 +1,7 @@
 ########################################################################################
 # Alias definitions
-
+alias python=python3
+alias pip=pip3
 alias c='clear'
 alias l='ls -al'
 alias ls='ls -GFh'
