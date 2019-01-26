@@ -181,6 +181,7 @@
  (depends-on "yard-mode")
  (depends-on "yafolding")
  (depends-on "yasnippet")
+ (depends-on "yasnippet-snippets")
  (depends-on "zenburn-theme")
 )
 
