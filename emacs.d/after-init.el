@@ -156,10 +156,6 @@
 (visual-line-mode 1)
 (column-number-mode t)
 
-;; Smartparens mode
-(require 'smartparens)
-(show-paren-mode t)
-(show-smartparens-global-mode t)
 ;; magit for GIT
 (require 'magit)
 

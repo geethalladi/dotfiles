@@ -1,3 +1,8 @@
+;; Smartparens mode
+(require 'smartparens)
+(show-paren-mode t)
+(show-smartparens-global-mode t)
+
 (sp-local-pair 'web-mode "%" "%" :wrap "C-%")
 (sp-local-pair 'web-mode "<" ">" :wrap "C->")
 
