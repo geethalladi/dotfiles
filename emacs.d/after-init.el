@@ -183,9 +183,6 @@
 ;; ;; SASS
 ;; ;; (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 
-(require 'yasnippet)
-(yas-global-mode 1)
-
 (require 'toggle-quotes)
 (global-set-key (kbd "C-'") 'toggle-quotes)
 
