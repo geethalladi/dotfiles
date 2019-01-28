@@ -47,6 +47,8 @@
 
 (load "~/.emacs.d/custom.el")
 
+(load "~/.emacs.d/yas-init.el")
+
 (load "~/.emacs.d/pdf-init.el")
 
 (load "~/.emacs.d/org-agenda-init.el")
