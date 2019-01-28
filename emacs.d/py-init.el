@@ -75,6 +75,10 @@
 
 (add-hook 'ein-mode 'smartparens-mode)
 
+(eval-after-load 'elpy
+  '(progn
+     (define-key elpy-mode-map (kbd "C-c C-p") nil)))
+
 ;; (setq ein:use-smartrep t)
 
 ;; (pyvenv-activate (expand-file-name "~/installed.d/anaconda/envs/mlapp"))
