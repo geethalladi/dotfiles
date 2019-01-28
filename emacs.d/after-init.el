@@ -21,6 +21,8 @@
 (setq backup-directory-alist '((".*" . "~/.emacs.d/saves")))
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
 
+(load "~/.emacs.d/after-init-load.el")
+
 (setq mac-shift-modifier 'meta)
 
 (setq visual-fill-column-width 144)
@@ -189,5 +191,3 @@
 
 ;; Groovy mode for Jenkins file
 ;; (require 'groovy-mode)
-
-(load "~/.emacs.d/after-init-load.el")
