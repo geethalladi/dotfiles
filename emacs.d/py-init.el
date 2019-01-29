@@ -79,6 +79,8 @@
   '(progn
      (define-key elpy-mode-map (kbd "C-c C-p") nil)))
 
+(setq gud-pdb-command-name "python -m pdb")
+
 ;; (setq ein:use-smartrep t)
 
 ;; (pyvenv-activate (expand-file-name "~/installed.d/anaconda/envs/mlapp"))
