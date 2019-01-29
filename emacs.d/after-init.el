@@ -161,19 +161,6 @@
 ;; magit for GIT
 (require 'magit)
 
-;; DIRTREE MODE
-;; (require 'dirtree) ;; FOR OPTIMIZATION
-(require 'all-the-icons)
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
-
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-(setq neo-smart-open t) ;; Flag to open neotree for the current dir
-(setq-default neo-show-hidden-files t)
-
-;; Avoid opening new frames
-(setq split-window-preferred-function 'neotree-split-window-sensibly)
-
 ;; FOR OPTIMIZATION
 ;; (setenv "TMPDIR" "/var/tmp") ;; TMPDIR to be used by tramp-mode
 ;; (eval-after-load 'tramp

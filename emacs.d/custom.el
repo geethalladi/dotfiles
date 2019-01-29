@@ -98,3 +98,26 @@
 ;;     (setenv "PATH" path-from-shell)
 ;;     (setq exec-path (split-string path-from-shell path-separator))))
 ;; (when window-system (set-exec-path-from-shell-PATH))
+
+;;;;;;;;;;;;;;;;;;;;;
+;;; neotree mode  ;;;
+;;;;;;;;;;;;;;;;;;;;;
+
+;; DIRTREE MODE
+;; (require 'dirtree) ;; FOR OPTIMIZATION
+(require 'all-the-icons)
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-smart-open t) ;; Flag to open neotree for the current dir
+(setq-default neo-show-hidden-files t)
+
+;; Avoid opening new frames
+(setq split-window-preferred-function 'neotree-split-window-sensibly)
+
+(setq neo-show-hidden-files nil)
+
+(eval-after-load "neotree"
+  '(setq neo-hidden-regexp-list
+         '("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "^__pycache__$")))
