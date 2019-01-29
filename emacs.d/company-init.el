@@ -5,6 +5,22 @@
   (setq company-minimum-prefix-length 3)
   (global-company-mode t))
 
+(defun company-yasnippet-or-completion ()
+  "Solve company yasnippet conflicts."
+  (interactive)
+  (let ((yas-fallback-behavior
+         (apply 'company-complete-common nil)))
+    (yas-expand)))
+
+(defun my/company-mode-hook ()
+  "Customisations for company-mode"
+  (substitute-key-definition
+   'company-complete-common
+   'company-yasnippet-or-completion
+   company-active-map))
+
+(add-hook 'company-mode-hook 'my/company-mode-hook)
+
 ;; (use-package company-irony
 ;;   :ensure t
 ;;   :config
