@@ -9,10 +9,19 @@
 (defun self/org-mode-hook ()
   "org mode customization hook"
   (org-indent-mode) ;; Always use org indent minor mode
-  ;; Commenting smartparens-mode
-  ;; because of conflict with M-up and M-down
-  ;; (smartparens-mode)
-  (org-bullets-mode 1))
+
+  (org-bullets-mode 1)
+
+  ;; Removing conflicting keys from smartparens minor-mode in org-mode
+  (let ((oldmap (cdr (assoc 'smartparens-mode minor-mode-map-alist)))
+        (newmap (make-sparse-keymap)))
+    (set-keymap-parent newmap oldmap)
+    (define-key newmap (kbd "<M-up>") nil)
+    (define-key newmap (kbd "<M-down>") nil)
+    (make-local-variable 'minor-mode-overriding-map-alist)
+    (push `(smartparens-mode . ,newmap) minor-mode-overriding-map-alist))
+
+  (smartparens-mode 1))
 
 (add-hook 'org-mode-hook 'self/org-mode-hook)
 
