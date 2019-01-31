@@ -18,6 +18,8 @@
     (set-keymap-parent newmap oldmap)
     (define-key newmap (kbd "<M-up>") nil)
     (define-key newmap (kbd "<M-down>") nil)
+    ;; Conflicts with org-mode source code buffer
+    (define-key newmap (kbd "C-c '") nil)
     (make-local-variable 'minor-mode-overriding-map-alist)
     (push `(smartparens-mode . ,newmap) minor-mode-overriding-map-alist))
 
