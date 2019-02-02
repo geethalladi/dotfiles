@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: feedb
+# key: feedb
+# --
+#+TITLE: Feedback for $1
+#+OPTIONS: toc:nil
+* Feedback for $1
+** Summary
+** About
