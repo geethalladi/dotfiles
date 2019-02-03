@@ -7,6 +7,15 @@
 ;; (defvar tickler-org-file )
 
 ;; Include emacs diary entries in org-agenda
+
+(defconst agenda-inbox "~/org/inbox.org" "Org Agenda Inbox File")
+(defconst agenda-project "~/org/projects.org" "Org Agenda Project File")
+(defconst agenda-tickler "~/org/tickler.org" "Org Agenda Tickler File")
+(defconst agenda-recurring "~/org/recurring.org" "Org Agenda Recurring File")
+(defconst agenda-reference "~/org/references.org" "Org Agenda References File")
+(defconst agenda-waiting "~/org/waiting.org" "Org Agenda Waiting File")
+(defconst agenda-archive "tasks_archive.org" "Org Agenda Archive File")
+
 (setq org-agenda-include-diary t)
 
 (setq org-agenda-skip-scheduled-if-done t)
