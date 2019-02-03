@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: feedback
-# key: if
+# key: fe
 # --
 #+TITLE: Feedback for $1
 #+OPTIONS: toc:nil
