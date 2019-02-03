@@ -23,7 +23,7 @@
                          "~/org/references.org"))
 
 (setq org-refile-targets '(("~/org/projects.org" :maxlevel . 2)
-                           ("~/org/someday.org" :level . 1)
+                           ("~/org/waiting.org" :level . 1)
                            ("~/org/tickler.org" :maxlevel . 1)
                            ("~/org/recurring.org" :maxlevel . 1)
                            ("~/org/references.org" :maxlevel . 2)))
