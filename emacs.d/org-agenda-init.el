@@ -8,42 +8,47 @@
 
 ;; Include emacs diary entries in org-agenda
 
-(defconst agenda-inbox "~/org/inbox.org" "Org Agenda Inbox File")
-(defconst agenda-project "~/org/projects.org" "Org Agenda Project File")
-(defconst agenda-tickler "~/org/tickler.org" "Org Agenda Tickler File")
-(defconst agenda-recurring "~/org/recurring.org" "Org Agenda Recurring File")
-(defconst agenda-reference "~/org/references.org" "Org Agenda References File")
-(defconst agenda-waiting "~/org/waiting.org" "Org Agenda Waiting File")
-(defconst agenda-archive "tasks_archive.org" "Org Agenda Archive File")
+(defconst self/agenda-inbox "~/org/inbox.org" "Org Agenda Inbox File")
+(defconst self/agenda-project "~/org/projects.org" "Org Agenda Project File")
+(defconst self/agenda-tickler "~/org/tickler.org" "Org Agenda Tickler File")
+(defconst self/agenda-recurring "~/org/recurring.org" "Org Agenda Recurring File")
+(defconst self/agenda-waiting "~/org/waiting.org" "Org Agenda Waiting File")
+(defconst self/agenda-archive "tasks_archive.org" "Org Agenda Archive File")
 
 (setq org-agenda-include-diary t)
 
 (setq org-agenda-skip-scheduled-if-done t)
 
-(setq org-default-notes-file "~/org/inbox.org")
+(setq org-default-notes-file 'self/agenda-inbox)
 
 ;; Set the archive file and archive them under the heading "Finished Tasks"
 (setq org-archive-location "tasks_archive.org::* Finished Tasks")
 
-(setq org-agenda-files '("~/org/inbox.org"
-                         "~/org/projects.org"
-                         "~/org/tickler.org"
-                         "~/org/recurring.org"))
+(setq org-agenda-files (list self/agenda-inbox
+                             self/agenda-project
+                             self/agenda-tickler
+                             self/agenda-recurring))
 
-(setq org-refile-targets '(("~/org/projects.org" :maxlevel . 2)
-                           ("~/org/waiting.org" :level . 1)
-                           ("~/org/tickler.org" :maxlevel . 1)
-                           ("~/org/recurring.org" :maxlevel . 1)))
+(setq org-refile-targets (list `(,self/agenda-project :maxlevel . 2)
+                               `(,self/agenda-waiting :level . 1)
+                               `(,self/agenda-tickler :maxlevel . 1)
+                               `(,self/agenda-recurring :maxlevel . 1)))
+
+(setq org-refile-targets `((,self/agenda-project :maxlevel . 2)
+                           (,self/agenda-waiting :level . 1)
+                           (,self/agenda-tickler :maxlevel . 1)
+                           (,self/agenda-recurring :maxlevel . 1)))
 
 ;; (setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
 ;; (setq org-refile-use-outline-path t)                  ; Show full paths for refiling
 
-(setq org-capture-templates '(("t" "Todo [inbox]" entry
-                               (file+headline "~/org/inbox.org" "Task Inbox")
+(setq org-capture-templates `(("t" "Todo [inbox]" entry
+                               (file+headline ,self/agenda-inbox "Task Inbox")
                                "* TODO %i%?")
                               ("T" "Tickler" entry
-                               (file+headline "~/org/tickler.org" "Ticklers")
+                               (file+headline ,self/agenda-tickler "Ticklers")
                                "* %i%? \n %U")))
+
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
 
