@@ -1,3 +1,11 @@
+;; No Initial Splash Screen
+(setq inhibit-splash-screen t)
+
+;; OPENING IN THE SAME FRAME (NO NEW FRAMES)
+(setq ns-pop-up-frames nil)
+
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; PACKAGE ARCHIVE
 (setq package-archives
       '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -27,8 +35,6 @@
 
 (setq visual-fill-column-width 144)
 (global-visual-fill-column-mode 1)
-
-(setq ns-pop-up-frames nil)
 
 (require 'better-defaults)
 ;; (require 'ido)
