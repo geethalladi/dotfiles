@@ -117,6 +117,7 @@
  (depends-on "org")
  (depends-on "org-plus-contrib")
  (depends-on "org-bullets")
+ (depends-on "origami")
  (depends-on "osx-clipboard")
  (depends-on "ox-pandoc")
  (depends-on "package-build")
