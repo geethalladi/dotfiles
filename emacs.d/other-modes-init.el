@@ -2,8 +2,21 @@
 ;;; YAML mode configurations ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'yaml-mode)
-(add-hook 'yaml-mode-hook 'highlight-indentation-mode)
-(add-hook 'yaml-mode-hook 'yafolding-mode)
+
+;; Required for yaml tree navigation
+(require 'hydra)
+(require 'indent-tools)
+
+(defun self/yaml-mode-hook ()
+  "Customization of yaml mode"
+  (highlight-indentation-mode)
+  (yafolding-mode)
+  (define-key yaml-mode-map (kbd "C-c >") 'indent-tools-hydra/body))
+
+;; (add-hook 'yaml-mode-hook 'highlight-indentation-mode)
+;; (add-hook 'yaml-mode-hook 'yafolding-mode)
+
+(add-hook 'yaml-mode-hook 'self/yaml-mode-hook)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; REST Client mode configurations ;;;
