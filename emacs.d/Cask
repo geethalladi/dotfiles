@@ -156,6 +156,7 @@
  (depends-on "s")
  (depends-on "scratch")
  (depends-on "shm") ;; structured haskell mode
+ (depends-on "sicp")
  (depends-on "simple-httpd")
  (depends-on "skewer-mode")
  (depends-on "slime")
