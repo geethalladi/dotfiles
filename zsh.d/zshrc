@@ -9,7 +9,7 @@ export ZSH=~/repo/open-source/oh-my-zsh
 # export ZSH_THEME="robbyrussell"
 # export ZSH_THEME="gallois"
 
-export ZSH_THEME="honukai"
+# export ZSH_THEME="honukai"
 # export ZSH_THEME="bira"
 # export ZSH_THEME="simple"
 # export ZSH_THEME="gallois"
@@ -20,11 +20,12 @@ export ZSH_THEME="honukai"
 # export ZSH_THEME="agnoster"
 
 # export ZSH_THEME="simple"
-# if [ -n "$INSIDE_EMACS" ]; then
-#    export ZSH_THEME="simple"
-# else
-#    export ZSH_THEME="agnoster"
-# fi
+
+if [ -n "$INSIDE_EMACS" ]; then
+   export ZSH_THEME="simple"
+else
+   export ZSH_THEME="honukai"
+fi
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
