@@ -90,5 +90,13 @@ if ls ${PYTHON_PATH_FILE} 1> /dev/null 2>&1; then
     source ${PYTHON_PATH_FILE}
 fi
 
+########################################################################################
+# iterm zsh integration (only in iterm2)
+########################################################################################
+
+if [ -n "$ITERM_SESSION_ID" ]; then
+    test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+fi
+
 source ${DOTFILES}/zsh.d/alias.sh
 source ${DOTFILES}/dayjob.d/*.sh
