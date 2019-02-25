@@ -6,6 +6,13 @@
 
 ;; (add-hook 'org-mode-hook 'autopair-mode)
 
+(defun self/org-mode-after-save-hook ()
+  "Update the org-statistics in the entire file"
+  (interactive)
+  (let ((current-prefix-arg 4)) ;; emulate C-u
+    ;; invoke align-regexp interactively
+    (call-interactively 'org-update-statistics-cookies)))
+
 (defun self/org-mode-hook ()
   "org mode customization hook"
   (org-indent-mode) ;; Always use org indent minor mode
@@ -23,7 +30,8 @@
     (make-local-variable 'minor-mode-overriding-map-alist)
     (push `(smartparens-mode . ,newmap) minor-mode-overriding-map-alist))
 
-  (smartparens-mode 1))
+  (smartparens-mode 1)
+  (add-hook 'after-save-hook 'self/org-mode-after-save-hook nil 'make-it-local))
 
 (add-hook 'org-mode-hook 'self/org-mode-hook)
 
