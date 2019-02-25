@@ -1,12 +1,10 @@
 (require 'org)
 
 ;; (require 'stripe-buffer)
-
 ;; (add-hook 'org-mode-hook 'stripe-table-mode)
-
 ;; (add-hook 'org-mode-hook 'autopair-mode)
 
-(defun self/org-mode-after-save-hook ()
+(defun self/org-mode-before-save-hook ()
   "Update the org-statistics in the entire file"
   (interactive)
   (let ((current-prefix-arg 4)) ;; emulate C-u
@@ -31,7 +29,7 @@
     (push `(smartparens-mode . ,newmap) minor-mode-overriding-map-alist))
 
   (smartparens-mode 1)
-  (add-hook 'after-save-hook 'self/org-mode-after-save-hook nil 'make-it-local))
+  (add-hook 'before-save-hook 'self/org-mode-before-save-hook nil 'make-it-local))
 
 (add-hook 'org-mode-hook 'self/org-mode-hook)
 
