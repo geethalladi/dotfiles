@@ -105,10 +105,12 @@
 (set-face-attribute 'default nil :font "Fira Code:pixelsize=15:spacing=110:weight=normal")
 
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
-(if (window-system)
-    (self/load-heroku-theme)
-  ;; Bright theme for terminals
-  (self/load-leuven-theme))
+;; (if (window-system)
+;;     (self/load-heroku-theme)
+;;   ;; Bright theme for terminals
+;;   (self/load-leuven-theme))
+
+(self/load-leuven-theme)
 
 ;; (load-theme 'zenburn t)
 
