@@ -121,6 +121,7 @@
  (depends-on "org-bullets")
  (depends-on "origami")
  (depends-on "osx-clipboard")
+ (depends-on "ov")
  (depends-on "ox-pandoc")
  (depends-on "package-build")
  (depends-on "pallet")
