@@ -126,13 +126,14 @@
 
 (require 'irfc)
 (setq irfc-directory "~/dotfiles/emacs.d/.irfc")
+(setq irfc-download-base-url "https://www.ietf.org/rfc/")
 (setq irfc-assoc-mode t)
 
+(add-to-list 'auto-mode-alist '("rfc[0-9]+.txt\\'" . irfc-mode))
 
 ;; ov-highlighter mode
 
 (require 'flyspell)
 (require 'ov)
 (require 'ov-highlighter)
-(global-set-key
- (kbd "H-h") 'ov-highlighter/body)
+(global-set-key (kbd "H-h") 'ov-highlighter/body)
