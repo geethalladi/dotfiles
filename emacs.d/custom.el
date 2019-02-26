@@ -131,4 +131,8 @@
 
 ;; ov-highlighter mode
 
+(require 'flyspell)
+(require 'ov)
 (require 'ov-highlighter)
+(global-set-key
+ (kbd "H-h") 'ov-highlighter/body)

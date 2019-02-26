@@ -35,6 +35,7 @@
 (load "~/.emacs.d/after-init-load.el")
 
 (setq mac-shift-modifier 'meta)
+(setq ns-function-modifier 'hyper)  ; make Fn key do Hyper
 
 (setq visual-fill-column-width 144)
 (global-visual-fill-column-mode 1)
