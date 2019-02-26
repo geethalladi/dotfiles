@@ -29,6 +29,9 @@
 (setq backup-directory-alist '((".*" . "~/.emacs.d/saves")))
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
 
+;; Load vendor el files
+(add-to-list 'load-path "~/dotfiles/emacs.d/vendor")
+
 (load "~/.emacs.d/after-init-load.el")
 
 (setq mac-shift-modifier 'meta)
