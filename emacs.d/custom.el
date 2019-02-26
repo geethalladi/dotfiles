@@ -121,3 +121,14 @@
 (eval-after-load "neotree"
   '(setq neo-hidden-regexp-list
          '("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "^__pycache__$")))
+
+;; rfc mode
+
+(require 'irfc)
+(setq irfc-directory "~/dotfiles/emacs.d/.irfc")
+(setq irfc-assoc-mode t)
+
+
+;; ov-highlighter mode
+
+(require 'ov-highlighter)
