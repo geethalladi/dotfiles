@@ -137,3 +137,9 @@
 (require 'ov)
 (require 'ov-highlighter)
 (global-set-key (kbd "H-h") 'ov-highlighter/body)
+
+;; ag reuse buffers
+(setq ag-reuse-buffers 't)
+
+;; using bash locally inside emacs (helps with tramp as well)
+(setq explicit-shell-file-name "/bin/bash")
