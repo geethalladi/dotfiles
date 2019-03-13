@@ -5,3 +5,6 @@
 
 (helm-projectile-on)
 (setq helm-mode-fuzzy-match t)
+
+;; line mode for projectile
+(setq projectile-mode-line "Projectile")
