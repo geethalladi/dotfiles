@@ -78,6 +78,9 @@ if [ -n "$INSIDE_EMACS" ]; then
     export PS1="(%{$fg[cyan]%}%/%{$reset_color%}) ~ "
 fi
 
+## For any dumb terminal
+[[ $TERM == "dumb" || $TERM == "tramp" ]] && unsetopt zle && PS1='$ '
+
 ########################################################################################
 # Importing Custom Python Modules
 ########################################################################################
