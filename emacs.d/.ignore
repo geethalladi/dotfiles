@@ -4,3 +4,7 @@ backups/*
 tutorial/*
 anaconda-mode/*
 vendor/*
+SessionDesktop.el
+abbrev_defs
+bookmarks
+*.eld
