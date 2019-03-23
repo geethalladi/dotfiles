@@ -1,3 +1,6 @@
 [submodule "emacs.d/vendor/org-confluence"]
 	path = emacs.d/vendor/org-confluence
 	url = https://github.com/hgschmie/org-confluence.git
+[submodule "emacs.d/vendor/org-mode"]
+	path = emacs.d/vendor/org-mode
+	url = https://github.com/tkf/org-mode.git
