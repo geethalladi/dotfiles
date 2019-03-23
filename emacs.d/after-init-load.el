@@ -41,7 +41,7 @@
 
 (load "~/.emacs.d/keychord-init.el")
 
-(load "~/.emacs.d/help-fns+.el")
+(load "~/.emacs.d/vendor/help-fns+.el")
 
 (load "~/.emacs.d/other-modes-init.el")
 
