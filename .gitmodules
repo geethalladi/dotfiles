@@ -1,0 +1,3 @@
+[submodule "emacs.d/vendor/org-confluence"]
+	path = emacs.d/vendor/org-confluence
+	url = https://github.com/hgschmie/org-confluence.git
