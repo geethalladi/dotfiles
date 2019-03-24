@@ -41,3 +41,4 @@ dump.rdb
 .report.json
 .fdk
 .irfc
+.ignore
