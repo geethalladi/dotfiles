@@ -4,6 +4,9 @@
 ;; (add-hook 'org-mode-hook 'stripe-table-mode)
 ;; (add-hook 'org-mode-hook 'autopair-mode)
 
+;; scratch buffer to use org mode
+(setq initial-major-mode 'org-mode)
+
 (defun self/org-mode-before-save-hook ()
   "Update the org-statistics in the entire file"
   (interactive)
