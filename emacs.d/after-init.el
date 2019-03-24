@@ -116,6 +116,9 @@
 ;; (global-set-key "\C-ce" 'dash-at-point-with-docset)
 
 ;; ENABLE PERSISTENT SCRATCH
+;; scratch buffer to use org mode
+(setq initial-major-mode 'org-mode)
+
 ;; Needed for enabling emacs-lisp minor modes in scratch buffer
 (load "~/.emacs.d/emacs-lisp-init.el")
 (persistent-scratch-setup-default)
