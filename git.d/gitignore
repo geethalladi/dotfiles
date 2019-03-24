@@ -42,3 +42,4 @@ dump.rdb
 .fdk
 .irfc
 .ignore
+self.tangential
