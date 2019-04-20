@@ -86,3 +86,6 @@
       [?| ?  ?G ?  ?| ?  ?D ?a ?i ?l ?y ? ?  ?| ?  ?\[ ?  ?\] ?  ?| tab])
 
 (require 'ox-confluence)
+
+;; search and replace inside invisible content (like urls) in org mode
+;; (load "~/.emacs.d/vendor/org-mode-search-invisible.el")
