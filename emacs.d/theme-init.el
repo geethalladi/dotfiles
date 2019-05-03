@@ -54,6 +54,11 @@
    '(org-level-7 ((t (:foreground "#8c5353"))))
    '(org-level-8 ((t (:foreground "#4c7073"))))
 
+   '(irfc-head-name-face ((t (:foreground "#ee3344"))))
+   '(irfc-head-number-face ((t (:foreground "#dfaf8f"))))
+   '(irfc-table-item-face ((t (:foreground "#94bff3"))))
+   '(irfc-reference-face ((t (:foreground "#94bff3"))))
+
    ;; rainbow delimiter mode
    '(rainbow-delimiters-unmatched-face ((t (:foreground "#ee3344"))))
    '(rainbow-delimiters-depth-1-face ((t (:foreground "#dfaf8f"))))
@@ -112,7 +117,9 @@
 ;;   ;; Bright theme for terminals
 ;;   (self/load-leuven-theme))
 
-(self/load-leuven-theme)
+;; (self/load-leuven-theme)
+
+(self/load-heroku-theme)
 
 ;; (load-theme 'zenburn t)
 
