@@ -19,6 +19,8 @@
 
 (setq org-agenda-skip-scheduled-if-done t)
 
+(setq org-agenda-skip-unavailable-files t)
+
 (setq org-default-notes-file 'self/agenda-inbox)
 
 ;; Set the archive file and archive them under the heading "Finished Tasks"
