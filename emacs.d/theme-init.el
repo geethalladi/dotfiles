@@ -54,6 +54,13 @@
    '(org-level-7 ((t (:foreground "#8c5353"))))
    '(org-level-8 ((t (:foreground "#4c7073"))))
 
+   ;; org-table
+   '(org-table ((t (:foreground "#7fa9ee"))))
+
+   ;; helm
+   '(helm-buffer-process ((t (:foreground "#dfaf8f"))))
+
+   ;; irfc mode
    '(irfc-head-name-face ((t (:foreground "#ee3344"))))
    '(irfc-head-number-face ((t (:foreground "#dfaf8f"))))
    '(irfc-table-item-face ((t (:foreground "#94bff3"))))
