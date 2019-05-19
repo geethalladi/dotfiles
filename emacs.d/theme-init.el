@@ -124,9 +124,9 @@
 ;;   ;; Bright theme for terminals
 ;;   (self/load-leuven-theme))
 
-;; (self/load-leuven-theme)
+(self/load-leuven-theme)
 
-(self/load-heroku-theme)
+;; (self/load-heroku-theme)
 
 ;; (load-theme 'zenburn t)
 
