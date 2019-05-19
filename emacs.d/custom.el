@@ -64,6 +64,31 @@
 ;; Setting key for global multiple cursor mode
 (global-set-key (kbd "C-c m c") 'mc/edit-lines)
 
+;; Indenting buffer / region
+
+;; reference: https://emacsredux.com/blog/2013/03/27/indent-region-or-buffer/
+
+(defun self/indent-buffer ()
+  "Indent the currently visited buffer."
+  (message "Indenting buffer.")
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
+(defun self/indent-region ()
+  "Indent the currently selected region."
+  (message "Indenting selected region.")
+  (indent-region (region-beginning) (region-end)))
+
+(defun self/indent-region-or-buffer ()
+  "Indent a region if selected, otherwise the whole buffer."
+  (interactive)
+  (save-excursion
+    (if (region-active-p)
+        (progn (self/indent-region))
+      (progn (self/indent-buffer)))))
+
+(global-set-key (kbd "C-M-\\") #'self/indent-region-or-buffer)
+
 ;; Toggling between buffers
 (defun switch-to-previous-buffer ()
   "Switch to previously open buffer.
