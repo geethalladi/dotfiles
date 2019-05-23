@@ -124,7 +124,9 @@
 ;;   ;; Bright theme for terminals
 ;;   (self/load-leuven-theme))
 
-(self/load-leuven-theme)
+(if (window-system)
+    (self/load-leuven-theme)
+  (self/load-heroku-theme))
 
 ;; (self/load-heroku-theme)
 
