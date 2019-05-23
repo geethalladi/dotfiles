@@ -126,7 +126,8 @@
 
 (if (window-system)
     (self/load-leuven-theme)
-  (load-theme 'monokai t))
+  (load-theme 'monokai t)
+  (menu-bar-mode -1))
 
 ;; (self/load-heroku-theme)
 
