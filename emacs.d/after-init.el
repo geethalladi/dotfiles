@@ -4,10 +4,6 @@
 ;; OPENING IN THE SAME FRAME (NO NEW FRAMES)
 (setq ns-pop-up-frames nil)
 
-;; no menu bar in terminals
-(unless (display-graphic-p)
-  (menu-bar-mode -1))
-
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; PACKAGE ARCHIVE
@@ -192,3 +188,8 @@
 
 ;; Groovy mode for Jenkins file
 ;; (require 'groovy-mode)
+
+;; Disabling menu bar in terminals
+(unless (display-graphic-p)
+  (message "Disabling menu bar")
+  (menu-bar-mode -1))
