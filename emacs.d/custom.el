@@ -167,5 +167,4 @@
 (setq ag-reuse-buffers 't)
 (setq ag-reuse-window 't)
 
-;; using bash locally inside emacs (helps with tramp as well)
-(setq explicit-shell-file-name "/bin/bash")
+(setq explicit-shell-file-name "/bin/zsh")
