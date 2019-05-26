@@ -13,13 +13,13 @@
 ;; Default shell for multi-term
 (setq multi-term-program "/bin/zsh")
 
-(add-hook 'term-mode-hook
-          (lambda ()
-            (setq term-buffer-maximum-size 20000)))
+(defun self/term-mode-hook ()
+  "term mode customizations"
+  (setq term-buffer-maximum-size 20000)
+  (setq show-trailing-whitespace nil)
+  (smartparens-mode 1))
 
-(add-hook 'term-mode-hook
-          (lambda ()
-            (setq show-trailing-whitespace nil)))
+(add-hook 'term-mode-hook 'self/term-mode-hook)
 
 (defcustom term-unbind-key-list
   '("C-z" "C-x" "C-c" "C-h" "C-y" "<ESC>")
