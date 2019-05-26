@@ -17,6 +17,8 @@
 
   (org-bullets-mode 1)
 
+  (yas-minor-mode 1)
+
   ;; Removing conflicting keys from smartparens minor-mode in org-mode
   (let ((oldmap (cdr (assoc 'smartparens-mode minor-mode-map-alist)))
         (newmap (make-sparse-keymap)))
