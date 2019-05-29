@@ -2,26 +2,27 @@
 ;; Should be obtaining this from $ERLANG_HOME
 
 ;; Setting erlang path variables
-(setq erlang-root-dir "/usr/local/Cellar/erlang/21.0.6")
-(setq erlang-man-root-dir "/usr/local/Cellar/erlang/21.0.6/lib/erlang/man")
+(setq erlang-root-dir "/usr/local/Cellar/erlang/22.0.1")
+(setq erlang-man-root-dir "/usr/local/Cellar/erlang/22.0.1/lib/erlang/man")
 (setq inferior-erlang-machine-options '("-sname" "emacs"))
+
+(setq exec-path
+      (cons "/usr/local/Cellar/erlang/22.0.1/bin"
+       (cons "/usr/local/Cellar/erlang/22.0.1/lib/erlang/bin" exec-path)))
 
 ;; Associating erlang-mode with file extension.
 (add-to-list 'auto-mode-alist '("\\.erl?$" . erlang-mode))
 (add-to-list 'auto-mode-alist '("\\.hrl?$" . erlang-mode))
 
-;; Concatenate with erlang root dir to form the full load path
 (setq erlang-emacs-load-path
-      (concat (file-name-as-directory erlang-root-dir)
-              "lib/erlang/lib/tools-3.0/emacs"))
+      "/usr/local/Cellar/erlang/22.0.1/lib/erlang/lib/tools-3.2/emacs")
+
 (setq load-path (cons erlang-emacs-load-path load-path))
 
 (require 'smartparens)
 (require 'erlang)
 (require 'erlang-start)
-
-;; (require 'edts)
-;; (require 'edts-start)
+(require 'erlang-flymake)
 
 (defun self/erlang-mode-hook ()
   "erlang mode customization hook"

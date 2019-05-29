@@ -31,7 +31,6 @@
  (depends-on "discover")
  (depends-on "discover-js2-refactor")
  (depends-on "drag-stuff")
- (depends-on "edts")
  (depends-on "efire")
  (depends-on "ein")
  (depends-on "el-mock")
