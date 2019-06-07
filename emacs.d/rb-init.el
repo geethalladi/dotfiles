@@ -9,6 +9,7 @@
 
 (require 'rubocop)
 (require 'robe)
+(require 'rinari)
 (require 'smartparens)
 (require 'yafolding)
 
