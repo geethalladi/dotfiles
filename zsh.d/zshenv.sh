@@ -17,7 +17,8 @@ export VISUAL=emacs
 export EDITOR=emacs
 export GIT_EDITOR=emacsclient
 # Specify the version of emacs to use for cask
-export EMACS="emacs-26.1"
+export EMACS_VERSION=26.2
+export EMACS="/usr/local/bin/emacs"
 
 ########################################################################################
 # Configuration Parameters
