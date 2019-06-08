@@ -84,7 +84,7 @@
 
 (define-key js2-mode-map (kbd "C-k") #'js2r-kill)
 
-(add-hook 'js2-mode-hook 'ac-js2-mode)
+;; (add-hook 'js2-mode-hook 'ac-js2-mode)
 
 ;; js-mode (which js2 is based on) binds "M-." which conflicts with xref, so
 ;; unbind it.
