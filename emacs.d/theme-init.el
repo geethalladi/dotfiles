@@ -115,8 +115,7 @@
 ;; (load "~/.emacs.d/font-ligatures.el")
 
 (set-face-attribute 'default nil :font "Fira Code:pixelsize=15:spacing=110:weight=normal")
-
-(load "~/.emacs.d/vendor/fira-code-mode.el")
+(load "~/.emacs.d/vendor/fira-code.el")
 
 ;; (set-face-attribute 'default nil :font "Consolas:pixelsize=12:spacing=110:weight=normal")
 
