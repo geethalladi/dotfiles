@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: feedback
-# key: if
-# --
-#+TITLE: Feedback for $1
-#+OPTIONS: toc:nil
-* Feedback for $1
-** Summary
-** About
