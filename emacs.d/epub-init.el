@@ -10,7 +10,7 @@
 
 (defun self/nov-font-setup ()
   (message "Setting up nov font")
-  (setq nov-text-width 50)
+  (setq nov-text-width 70)
   (setq visual-fill-column-center-text t)
   (visual-line-mode t)
   (visual-fill-column-mode t)
