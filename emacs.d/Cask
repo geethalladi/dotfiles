@@ -116,6 +116,7 @@
  (depends-on "nginx-mode")
  (depends-on "noctilux-theme")
  (depends-on "nodejs-repl")
+ (depends-on "nov")
  (depends-on "nyan-mode")
  (depends-on "org")
  (depends-on "org-plus-contrib")
