@@ -49,7 +49,3 @@
 (eval-after-load 'markdown-mode
   '(progn
      (define-key markdown-mode-map (kbd "M-p") nil)))
-
-;; epub mode
-(require 'nov)
-(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
