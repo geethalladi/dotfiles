@@ -14,6 +14,8 @@
   (setq visual-fill-column-center-text t)
   (visual-line-mode t)
   (visual-fill-column-mode t)
+  (linum-mode 0)
+  (hl-highlight-mode t)
   (face-remap-add-relative 'variable-pitch :family "Consolas"
                            :height 1.0))
 
