@@ -82,6 +82,7 @@
  (depends-on "highlight")
  (depends-on "highlight-indentation")
  (depends-on "highlight-parentheses")
+ (depends-on "hl-anything")
  (depends-on "htmlize")
  (depends-on "hydra")
  (depends-on "idea-darkula-theme")
