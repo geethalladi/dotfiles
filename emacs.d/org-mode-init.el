@@ -11,22 +11,6 @@
     ;; invoke align-regexp interactively
     (call-interactively 'org-update-statistics-cookies)))
 
-(defun self/org-mode-after-load ()
-  "org mode after load customization"
-
-  ;; Using Shift keys for navigation across windows
-  (windmove-default-keybindings)
-  ;; Make windmove work in org-mode:
-  (add-hook 'org-shiftup-final-hook 'windmove-up)
-  (add-hook 'org-shiftleft-final-hook 'windmove-left)
-  (add-hook 'org-shiftdown-final-hook 'windmove-down)
-  (add-hook 'org-shiftright-final-hook 'windmove-right)
-
-  (define-key org-mode-map (kbd "<S-right>") 'windmove-right)
-  (define-key org-mode-map (kbd "<S-left>") 'windmove-left)
-  (define-key org-mode-map (kbd "<S-up>") 'windmove-up)
-  (define-key org-mode-map (kbd "<S-down>") 'windmove-down))
-
 (defun self/org-mode ()
   "org mode customization"
   (org-indent-mode) ;; Always use org indent minor mode
@@ -51,13 +35,15 @@
 
   (setq org-replace-disputed-keys t)
 
+  ;; Using Shift keys for navigation across windows
+  (windmove-default-keybindings)
+
   (define-key org-mode-map (kbd "<S-right>") 'windmove-right)
   (define-key org-mode-map (kbd "<S-left>") 'windmove-left)
   (define-key org-mode-map (kbd "<S-up>") 'windmove-up)
   (define-key org-mode-map (kbd "<S-down>") 'windmove-down))
 
 (add-hook 'org-mode-hook 'self/org-mode)
-(eval-after-load 'org-mode 'self/org-mode-after-load)
 
 ;; List of file extensions to use org-mode for (org|org_archive|notes)
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|notes\\|pomodoro\\)$" . org-mode))
@@ -66,9 +52,6 @@
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
-
-
-
 
 ;; List of ORG mode todo list
 (setq org-todo-keywords
