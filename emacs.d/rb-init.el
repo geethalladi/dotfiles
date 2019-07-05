@@ -8,6 +8,7 @@
 (add-to-list 'auto-mode-alist '("\\.rb" . ruby-mode))
 
 (require 'rubocop)
+(require 'ruby-tools)
 (require 'robe)
 (require 'rinari)
 (require 'smartparens)
