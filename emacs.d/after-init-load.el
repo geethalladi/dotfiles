@@ -57,4 +57,6 @@
 
 (load "~/.emacs.d/org-agenda-init.el")
 
+(load "~/.emacs.d/org-capture-init.el")
+
 (load "~/.emacs.d/theme-init.el")
