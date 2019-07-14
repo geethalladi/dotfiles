@@ -7,11 +7,11 @@
 ;;   ("L" "Protocol Link" entry (file+headline, "~/Desktop/notes.org" "Notes")
 ;;         "* %? [[%:link][%(self/transform-square-brackets-to-round-ones \"%:description\")]]\n")))
 
-(setq self/notes-directory "~/Desktop/notes")
+(setq self/notes-directory "~/Desktop/notes/")
 
 (setq
  org-capture-templates
- (let ((notes-file (concat notes-directory "browser.org"))) `(
+ (let ((notes-file (concat self/notes-directory "browser.org"))) `(
   ("p" "Protocol" entry (file+headline ,notes-file "Notes")
    "* %^{Title}\n\
 Source: [[%:link][%:description]], %(progn (setq self/delete-frame-after-capture 2) \"\")\n\
