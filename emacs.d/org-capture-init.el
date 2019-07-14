@@ -1,8 +1,5 @@
-;; (defun self/transform-square-brackets-to-round-ones(string-to-transform)
-;;   "Transforms [ into ( and ] into ), other chars left unchanged."
-;;   (concat
-;;   (mapcar #'(lambda (c) (if (equal c ?[) ?\( (if (equal c ?]) ?\) c))) string-to-transform)))
 
+;; Original Template
 ;; (setq org-capture-templates `(
 ;;   ("p" "Protocol" entry (file+headline, "~/Desktop/notes.org" "Notes")
 ;;         "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
@@ -27,6 +24,10 @@ Captured On: %u\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n"
    "* %?[[%:link][%:description]] %(progn (setq self/delete-frame-after-capture 2) \"\")\n\
 Captured On: %u"
    :empty-lines 1)))
+;; (defun self/transform-square-brackets-to-round-ones(string-to-transform)
+;;   "Transforms [ into ( and ] into ), other chars left unchanged."
+;;   (concat
+;;   (mapcar #'(lambda (c) (if (equal c ?[) ?\( (if (equal c ?]) ?\) c))) string-to-transform)))
 
 ;; Kill the frame if one was created for the capture
 (defvar self/delete-frame-after-capture 0 "Whether to delete the last frame after the current capture")
