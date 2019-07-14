@@ -24,7 +24,7 @@ Source: [[%:link][%:description]], %(progn (setq self/delete-frame-after-capture
 Captured On: %u\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n"
    :empty-lines 1)
   ("L" "Protocol Link" entry (file+headline ,(concat notes-directory "browser.org") "Notes")
-   "* %? [[%:link][%:description]] %(progn (setq self/delete-frame-after-capture 2) \"\")\n\
+   "* %?[[%:link][%:description]] %(progn (setq self/delete-frame-after-capture 2) \"\")\n\
 Captured On: %u"
    :empty-lines 1)))
 
