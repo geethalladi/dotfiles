@@ -1,3 +1,4 @@
+(require 'org-protocol)
 
 ;; Original Template
 ;; (setq org-capture-templates `(
@@ -6,24 +7,22 @@
 ;;   ("L" "Protocol Link" entry (file+headline, "~/Desktop/notes.org" "Notes")
 ;;         "* %? [[%:link][%(self/transform-square-brackets-to-round-ones \"%:description\")]]\n")))
 
-(require 'org-protocol)
+(setq self/notes-directory "~/Desktop/notes")
 
-(setq notes-directory "~/Desktop/notes/")
-
-(setq org-capture-templates `(
-  ;; Original Template
-  ;; ("p" "Protocol" entry (file+headline ,(concat notes-directory "browser.org") "Notes")
-  ;;  "* %^{Title}\nSource: [[%:link][%:description]], %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n"
-  ;;  :empty-lines 1)
-  ("p" "Protocol" entry (file+headline ,(concat notes-directory "browser.org") "Notes")
+(setq
+ org-capture-templates
+ (let ((notes-file (concat notes-directory "browser.org"))) `(
+  ("p" "Protocol" entry (file+headline ,notes-file "Notes")
    "* %^{Title}\n\
 Source: [[%:link][%:description]], %(progn (setq self/delete-frame-after-capture 2) \"\")\n\
 Captured On: %u\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n"
    :empty-lines 1)
-  ("L" "Protocol Link" entry (file+headline ,(concat notes-directory "browser.org") "Notes")
+
+  ("L" "Protocol Link" entry (file+headline ,notes-file "Notes")
    "* %?[[%:link][%:description]] %(progn (setq self/delete-frame-after-capture 2) \"\")\n\
 Captured On: %u"
-   :empty-lines 1)))
+   :empty-lines 1))))
+
 ;; (defun self/transform-square-brackets-to-round-ones(string-to-transform)
 ;;   "Transforms [ into ( and ] into ), other chars left unchanged."
 ;;   (concat
