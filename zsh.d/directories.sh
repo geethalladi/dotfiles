@@ -72,4 +72,4 @@ export ERLANG_HOME=${ERLANG_ROOT_DIR}
 export GOPATH=~/repo/personal/go
 
 # Enabling EMACS variable disables line editing in zsh
-export EMACS_APP=/usr/local/Cellar/emacs
+export EMACS_APP=/Applications/Emacs.app
