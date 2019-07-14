@@ -13,11 +13,15 @@
 
 (defun self/org-mode ()
   "org mode customization"
-  (org-indent-mode) ;; Always use org indent minor mode
+  ;; Always use org indent minor mode
+  (org-indent-mode)
 
   (org-bullets-mode 1)
 
   (yas-minor-mode 1)
+
+  ;; Always use visual-line-mode
+  (visual-line-mode 1)
 
   ;; Removing conflicting keys from smartparens minor-mode in org-mode
   (let ((oldmap (cdr (assoc 'smartparens-mode minor-mode-map-alist)))
