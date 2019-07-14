@@ -104,7 +104,7 @@
  (depends-on "less-css-mode")
  (depends-on "leuven-theme")
  (depends-on "litable")
- (depends-on "lua")
+ (depends-on "lua-mode")
  (depends-on "magit")
  (depends-on "makey")
  (depends-on "markdown-mode")
