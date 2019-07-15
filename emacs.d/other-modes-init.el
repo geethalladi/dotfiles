@@ -44,8 +44,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;  Markdown mode configurations   ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; markdown-mode binds "Esc-p" which conflicts with helm-projectile-find-file, so
-;; unbind it.
-(eval-after-load 'markdown-mode
+
+(defun self/markdown-mode ()
+  "markdown mode customization"
+
+  ;; markdown-mode binds "Esc-p" which conflicts with helm-projectile-find-file, so
+  ;; unbind it.
   '(progn
-     (define-key markdown-mode-map (kbd "M-p") nil)))
+     (define-key markdown-mode-map (kbd "M-p") nil))
+
+  ;; Always use visual-line-mode
+  (visual-line-mode 1))
+
+(add-hook 'markdown-mode-hook 'self/markdown-mode)
