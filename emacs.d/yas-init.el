@@ -4,4 +4,9 @@
 (require 'yasnippet)
 (require 'yasnippet-snippets)
 
+;; adding yassnippets for yard mode
+(let ((yard-snippet-dir "~/.emacs.d/site-lisp/yard-snippets"))
+  (if (file-directory-p yard-snippet-dir)
+      (add-to-list 'yas-snippet-dirs yard-snippet-dir)))
+
 (yas-global-mode 1)
