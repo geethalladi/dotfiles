@@ -72,6 +72,7 @@
  (depends-on "graphviz-dot-mode")
  (depends-on "green-phosphor-theme")
  (depends-on "grizzl")
+ (depends-on "groovy-mode")
  (depends-on "haskell-emacs")
  (depends-on "haskell-mode")
  (depends-on "helm")
@@ -226,7 +227,6 @@
 ;; (depends-on "ess-smart-underscore")
 ;; (depends-on "etags-select")
 ;; (depends-on "etags-table")
-;; (depends-on "groovy-mode")
 ;; (depends-on "ido-everywhere") ;; variable set in after-init
 ;; (depends-on "ido-flex") ;; variable set in after-init
 ;; (depends-on "ido-ubiquitous")
