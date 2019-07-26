@@ -15,3 +15,7 @@
 - rvm / ruby
 - vagrant
 - IntelliJ IDEA
+
+## How to setup
+
+TODO: Steps to be done after cloning this repo
