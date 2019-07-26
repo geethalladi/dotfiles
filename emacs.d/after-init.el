@@ -119,8 +119,6 @@
 ;; scratch buffer to use org mode
 ;; (setq initial-major-mode 'org-mode)
 
-;; Needed for enabling emacs-lisp minor modes in scratch buffer
-(load "~/.emacs.d/emacs-lisp-init.el")
 (persistent-scratch-setup-default)
 (persistent-scratch-autosave-mode 1)
 
