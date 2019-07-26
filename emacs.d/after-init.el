@@ -153,3 +153,41 @@
 (defun erase-buffer-hook ()
   (local-set-key "\C-cl" 'erase-buffer))
 (add-hook 'shell-mode-hook 'erase-buffer-hook)
+
+;; Found a way to overwrite the selected text and replace it with
+;; the yanked content
+;; (delete-selection-mode 1)
+
+;; No more visible bell ;; black rectangle in the center
+(setq visible-bell nil)
+
+;; Enable menu-mar mode
+(menu-bar-mode 1)
+
+;; Mod line mode
+(line-number-mode t)
+(visual-line-mode 1)
+(column-number-mode t)
+
+;; magit for GIT
+(require 'magit)
+
+;; FOR OPTIMIZATION
+;; (setenv "TMPDIR" "/var/tmp") ;; TMPDIR to be used by tramp-mode
+;; (eval-after-load 'tramp
+;;   '(vagrant-tramp-enable))
+;; (require 'tramp)
+
+;; ;; SASS
+;; ;; (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+
+(require 'toggle-quotes)
+(global-set-key (kbd "C-'") 'toggle-quotes)
+
+;; Groovy mode for Jenkins file
+;; (require 'groovy-mode)
+
+;; Disabling menu bar in terminals
+(unless (display-graphic-p)
+  (message "Disabling menu bar")
+  (menu-bar-mode -1))
