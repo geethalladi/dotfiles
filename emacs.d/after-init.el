@@ -46,19 +46,9 @@
 ;; (setq ido-everywhere t)
 ;; (setq ido-enable-flex-matching t)
 
-;; etags table
-;; (require 'etags-table)
-;; (require 'etags-select)
-
 ;; autocompletion in M-x
 ;; (require 'smex)
 ;; (global-set-key (kbd "M-x") 'smex)
-
-;;;; ENABLING THE MOST USED MODES BY DEFAULT
-
-;; AUTO COMPLETE
-;; (require 'auto-complete-config)
-;; (ac-config-default)
 
 ;; [TODO] Update the exact path of the dictinoary
 ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/.cask/24.5.1/elpa/auto-complete-20160710.1544/dict")
@@ -69,28 +59,6 @@
 ; emacs getting the same path when invoked from GUI
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
-
-;; Use coreutils ls for dired program
-;; (setq insert-directory-program (executable-find "gls"))
-
-;; NO LONGER USING TAGS
-;; (defun create-tags (dir-name)
-;;   "Create tags file."
-;;   (interactive "DDirectory: ")
-;;   (shell-command
-;;    (format "%s -f %s -e -R %s" path-to-ctags "TAGS" (directory-file-name dir-name))))
-
-;; (setq tag-table-alist
-;;       '(("~/.emacs.d" . "~/.emacs.d/TAGS")))
-;; (setq etags-table-search-up 10)
-
-
-;; FOR OPTIMIZATION
-;; ;; Python Hook for tab spaces
-;; (add-hook 'python-mode-hook
-;;           (function (lambda ()
-;;                       (setq indent-tabs-mode nil
-;;                             tab-width 2))))
 
 ;; TAB
 (setq-default indent-tabs-mode nil)
@@ -108,17 +76,7 @@
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
 
-;; Dash at point for emacs
-;; (require 'dash-at-point)
-;; (autoload 'dash-at-point "dash-at-point"
-;;     "Search the word at point with Dash." t nil)
-;; (global-set-key "\C-cd" 'dash-at-point)
-;; (global-set-key "\C-ce" 'dash-at-point-with-docset)
-
 ;; ENABLE PERSISTENT SCRATCH
-;; scratch buffer to use org mode
-;; (setq initial-major-mode 'org-mode)
-
 (persistent-scratch-setup-default)
 (persistent-scratch-autosave-mode 1)
 
@@ -129,25 +87,6 @@
 ;; delete trailing white space
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'before-save-hook 'whitespace-cleanup)
-
-;; Tabbed Browsing Mode
-;; tabbar
-;; (require 'tabbar)
-;; (setq 'tabbar-use-images nil)
-;; (setq tabbar-buffer-groups-function
-;;       (lambda ()
-;;	(list "All")))
-
-;; tabbar _ tabbar-ruler
-;; (setq tabbar-ruler-global-tabbar t)
-;; (setq tabbar-ruler-global-ruler t)
-;; (setq tabbar-ruler-popup-menu t)
-;; (setq tabbar-ruler-popup-toolbar t)
-;; (setq tabbar-ruler-popup-scrollbar t)
-
-;; (require 'tabbar-ruler)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Configure Emacs Look and Feel Ends here
 
 ;; Key Binding C-cl for clearning buffer
 (defun erase-buffer-hook ()
@@ -172,20 +111,8 @@
 ;; magit for GIT
 (require 'magit)
 
-;; FOR OPTIMIZATION
-;; (setenv "TMPDIR" "/var/tmp") ;; TMPDIR to be used by tramp-mode
-;; (eval-after-load 'tramp
-;;   '(vagrant-tramp-enable))
-;; (require 'tramp)
-
-;; ;; SASS
-;; ;; (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
-
 (require 'toggle-quotes)
 (global-set-key (kbd "C-'") 'toggle-quotes)
-
-;; Groovy mode for Jenkins file
-;; (require 'groovy-mode)
 
 ;; Disabling menu bar in terminals
 (unless (display-graphic-p)
