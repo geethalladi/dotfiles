@@ -11,6 +11,7 @@
 - emacs
 - zsh
 - git
-- rvm
-- ruby
+- screen / tmux
+- rvm / ruby
+- vagrant
 - IntelliJ IDEA
