@@ -15,6 +15,23 @@
 (defconst self/agenda-waiting "~/org/waiting.org" "Org Agenda Waiting File")
 (defconst self/agenda-archive "tasks_archive.org" "Org Agenda Archive File")
 
+(defun self--add-agenda-templates ()
+  "add the templates required for org-agenda"
+  (let ((agenda-templates
+         `(("t" "Todo [inbox]" entry
+            (file+headline ,self/agenda-inbox "Task Inbox")
+            "* TODO %i%?")
+           ("T" "Tickler" entry
+            (file+headline ,self/agenda-tickler "Ticklers")
+            "* %i%? \n %U"))))
+
+    (if (boundp 'org-capture-templates)
+        ;; append to the list
+        (setq org-capture-templates
+              (append org-capture-templates agenda-templates))
+      ;; create the variable
+      (setq org-capture-templates agenda-templates))))
+
 (setq org-agenda-include-diary t)
 
 (setq org-agenda-skip-scheduled-if-done t)
@@ -44,12 +61,7 @@
 ;; (setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
 ;; (setq org-refile-use-outline-path t)                  ; Show full paths for refiling
 
-(setq org-capture-templates `(("t" "Todo [inbox]" entry
-                               (file+headline ,self/agenda-inbox "Task Inbox")
-                               "* TODO %i%?")
-                              ("T" "Tickler" entry
-                               (file+headline ,self/agenda-tickler "Ticklers")
-                               "* %i%? \n %U")))
+(self--add-agenda-templates)
 
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
