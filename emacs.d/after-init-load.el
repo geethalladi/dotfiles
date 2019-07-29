@@ -39,6 +39,8 @@
 
 (load "~/.emacs.d/lisp-init.el")
 
+(load "~/.emacs.d/emacs-lisp-init.el")
+
 (load "~/.emacs.d/keychord-init.el")
 
 (load "~/.emacs.d/vendor/help-fns+.el")
