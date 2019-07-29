@@ -10,6 +10,7 @@
 (defun self/lisp-interaction-mode ()
   "Customizations of Lisp Interaction mode"
   (smartparens-mode)
-  (rainbow-delimiters-mode))
+  (rainbow-delimiters-mode)
+  (litable-mode))
 
 (add-hook 'lisp-interaction-mode-hook 'self/lisp-interaction-mode)
