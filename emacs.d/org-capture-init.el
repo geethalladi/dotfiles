@@ -14,7 +14,7 @@
 
   (let* ((notes-file (concat self/notes-directory "browser.org"))
          (browser-capture-templates
-          `(("p" "Protocol" entry (file+headline notes-file "Notes")
+          `(("p" "Protocol" entry (file+headline ,notes-file "Notes")
              "* %^{Title}\n\
 Source: [[%:link][%:description]], %(progn (setq self/delete-frame-after-capture 2) \"\")\n\
 Captured On: %u\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n"
