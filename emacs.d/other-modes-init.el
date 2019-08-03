@@ -52,6 +52,7 @@
   ;; unbind it.
   (local-unset-key (kbd "M-p"))
 
+  (flyspell-mode 1)
   ;; Always use visual-line-mode
   (visual-line-mode 1))
 
