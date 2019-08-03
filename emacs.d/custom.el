@@ -158,7 +158,6 @@
 
 ;; ov-highlighter mode
 
-(require 'flyspell)
 (require 'ov)
 (require 'ov-highlighter)
 (global-set-key (kbd "H-h") 'ov-highlighter/body)
@@ -168,3 +167,12 @@
 (setq ag-reuse-window 't)
 
 (setq explicit-shell-file-name "/bin/zsh")
+
+(require 'flyspell)
+
+(defun self/flyspell-save-word ()
+  (interactive)
+  (let ((current-location (point))
+         (word (flyspell-get-word)))
+    (when (consp word)
+      (flyspell-do-correct 'save nil (car word) current-location (cadr word) (caddr word) current-location))))
