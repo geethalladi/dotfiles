@@ -50,8 +50,7 @@
 
   ;; markdown-mode binds "Esc-p" which conflicts with helm-projectile-find-file, so
   ;; unbind it.
-  '(progn
-     (define-key markdown-mode-map (kbd "M-p") nil))
+  (local-unset-key (kbd "M-p"))
 
   ;; Always use visual-line-mode
   (visual-line-mode 1))
