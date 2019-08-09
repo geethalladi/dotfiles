@@ -7,19 +7,19 @@
 ;;   ("L" "Protocol Link" entry (file+headline, "~/Desktop/notes.org" "Notes")
 ;;         "* %? [[%:link][%(self/transform-square-brackets-to-round-ones \"%:description\")]]\n")))
 
-(setq self/notes-directory "~/Desktop/notes/")
+(setq self--default-capture-file "~/Desktop/captured.org")
 
 (defun self--add-capture-templates ()
   "Add the templates needed for org-capture from firefox browser"
 
-  (let* ((notes-file (concat self/notes-directory "browser.org"))
+  (let* ((capture-file self--default-capture-file)
          (browser-capture-templates
-          `(("p" "Protocol" entry (file+headline ,notes-file "Notes")
+          `(("p" "Protocol" entry (file+headline ,capture-file "Captured")
              "** %^{Title}\n\
 Source: [[%:link][%:description]], %(progn (setq self/delete-frame-after-capture 2) \"\")\n\
 Captured On: %u\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n"
              :empty-lines 1)
-            ("L" "Protocol Link" entry (file+headline ,notes-file "Notes")
+            ("L" "Protocol Link" entry (file+headline ,capture-file "Captured")
              "** %?[[%:link][%:description]] %(progn (setq self/delete-frame-after-capture 2) \"\")\n\
 Captured On: %u"
              :empty-lines 1))))
