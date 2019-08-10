@@ -93,6 +93,8 @@ if ls ${PYTHON_PATH_FILE} 1> /dev/null 2>&1; then
     source ${PYTHON_PATH_FILE}
 fi
 
+source ${CONDA_HOME}/etc/profile.d/conda.sh
+
 ########################################################################################
 # iterm zsh integration (only in iterm2)
 ########################################################################################
