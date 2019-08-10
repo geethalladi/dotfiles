@@ -30,7 +30,7 @@
  (depends-on "csv-mode")
  (depends-on "dash")
  (depends-on "dash-functional")
- (depends-on "discover")
+ (depends-on "define-word")
  (depends-on "discover")
  (depends-on "discover-js2-refactor")
  (depends-on "drag-stuff")
