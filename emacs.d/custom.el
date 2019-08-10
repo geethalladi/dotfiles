@@ -176,3 +176,6 @@
          (word (flyspell-get-word)))
     (when (consp word)
       (flyspell-do-correct 'save nil (car word) current-location (cadr word) (caddr word) current-location))))
+
+;; Enabling googling from emacs
+(google-this-mode 1)

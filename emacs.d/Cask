@@ -68,6 +68,7 @@
  (depends-on "github-modern-theme")
  (depends-on "go-autocomplete")
  (depends-on "go-mode")
+ (depends-on "google-this")
  (depends-on "grandshell-theme")
  (depends-on "graphviz-dot-mode")
  (depends-on "green-phosphor-theme")
