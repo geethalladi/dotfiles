@@ -88,7 +88,6 @@ fi
 
 export PYTHONPATH=${PYTHONPATH}:${PYTHON_MOD_UTILS}
 
-export PYTHON_PATH_FILE=~/.pythonpath
 # Add all the python projects to the PYTHONPATH
 if ls ${PYTHON_PATH_FILE} 1> /dev/null 2>&1; then
     source ${PYTHON_PATH_FILE}

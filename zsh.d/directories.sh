@@ -62,6 +62,7 @@ export MACPORT_HOME=/opt/local
 
 export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
 export PYTHON_MOD_UTILS=~/repo/personal/python/modules
+export PYTHON_PATH_FILE=~/.pythonpath
 
 export ES_HOME=${INSTALL_DIR}/elasticsearch-2.2.1
 export ERLANG_ROOT_DIR=${CELLAR_PATH}/erlang/20.3.4
