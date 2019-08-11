@@ -35,6 +35,9 @@
 ;; Displaying cursors
 ;; (setq-default cursor-type 'bar)
 
+;; Don't blink the cursor
+(blink-cursor-mode 0)
+
 ;; Multiple Cursors
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
