@@ -182,3 +182,8 @@
 
 ;; Enabling googling from emacs
 (google-this-mode 1)
+
+;; Hide from appearing as sub-modes
+(diminish 'google-this-mode)
+(diminish 'helm-mode)
+(diminish 'projectile-mode)
