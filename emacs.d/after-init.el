@@ -15,7 +15,8 @@
 
 ;; ENABLE CASK
 
-(require 'cask "~/.emacs.d/.cask/26.1/elpa/cask-20180626.1949/cask.el")
+(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+;; (require 'cask "~/.emacs.d/.cask/26.1/elpa/cask-20180626.1949/cask.el")
 (cask-initialize)
 
 ;; Setting the location of the cask file
