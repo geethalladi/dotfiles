@@ -31,6 +31,7 @@
  (depends-on "dash")
  (depends-on "dash-functional")
  (depends-on "define-word")
+ (depends-on "diminish")
  (depends-on "discover")
  (depends-on "discover-js2-refactor")
  (depends-on "drag-stuff")
