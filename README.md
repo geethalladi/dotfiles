@@ -18,4 +18,7 @@
 
 ## How to setup
 
-TODO: Steps to be done after cloning this repo
+TODO:
+
+- Steps to be done after cloning this repo
+- How to setup zsh dotfiles
