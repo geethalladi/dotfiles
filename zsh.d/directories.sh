@@ -50,6 +50,8 @@ export CABAL_HOME=~/.cabal
 # export NODE_PATH=/usr/local/lib/node_modules
 
 export CONDA_HOME=/usr/local/anaconda3
+# Needed to emacs-pyvenv
+export WORKON_HOME=${CONDA_HOME}/envs
 
 export HADOOP_HOME=${INSTALL_DIR}/hadoop-2.7.3
 export HADOOP_PREFIX=${HADOOP_HOME}
