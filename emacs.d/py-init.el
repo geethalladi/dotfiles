@@ -1,10 +1,13 @@
 ;; Python Hook
 
-(add-hook 'python-mode-hook
- (function (lambda ()
-             (setq indent-tabs-mode nil
-                   python-indent 4
-                   tab-width 4))))
+(defun self/python-mode ()
+  "Customizations for python mode"
+  (setq indent-tabs-mode nil
+        python-indent 4
+        tab-width 4)
+  (setenv "WORKON_HOME" "/usr/local/anaconda3/envs")
+  (pyvenv-mode 1))
+
 (setq python-indent 4)
 
 (defun projectile-pyenv-mode-set ()
@@ -48,7 +51,6 @@
 ;; Remove autocomplete mode for python
 ;; (setq ac-modes (delq 'python-mode ac-modes))
 
-
 (elpy-enable)
 
 ;; Remove flymake for python and use flycheck minor mode
@@ -59,6 +61,7 @@
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
+(add-hook 'python-mode-hook 'self/python-mode)
 (add-hook 'python-mode-hook 'eldoc-mode)
 (add-hook 'python-mode-hook 'smartparens-mode)
 (add-hook 'python-mode-hook 'yafolding-mode)
