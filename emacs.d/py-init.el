@@ -9,7 +9,8 @@
   (smartparens-mode 1)
   (yafolding-mode 1)
   (yas-minor-mode 1)
-  (highlight-indentation-mode 1))
+  (highlight-indentation-mode 1)
+  (pyvenv-activate "/usr/local/anaconda3/envs/PDSH"))
 
 (defun projectile-pyenv-mode-set ()
   "Set pyenv version matching project name.
