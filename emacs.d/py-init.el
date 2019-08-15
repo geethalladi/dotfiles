@@ -16,6 +16,8 @@
   Version must be already installed."
   (pyenv-mode-set (projectile-project-name)))
 
+(setenv "WORKON_HOME" "/usr/local/anaconda3/envs")
+
 ; use IPython
 (setq-default py-shell-name "ipython")
 (setq-default py-which-bufname "IPython")
