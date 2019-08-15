@@ -23,14 +23,21 @@
   Version must be already installed."
   (pyenv-mode-set (projectile-project-name)))
 
+(require 'python)
+;; TODO: Move this to eval-after-load python
+(add-to-list 'python-shell-completion-native-disabled-interpreters "jupyter")
+
 (setenv "WORKON_HOME" "/usr/local/anaconda3/envs")
 
 ; use IPython
 (setq-default py-shell-name "ipython")
 (setq-default py-which-bufname "IPython")
 
-(setq python-shell-interpreter "ipython"
-      python-shell-interpreter-args "--simple-prompt -i"
+;; Reference :: https://elpy.readthedocs.io/en/latest/ide.html#interpreter-setup
+(setq python-shell-interpreter "jupyter"
+      python-shell-interpreter-args "console --simple-prompt"
+      python-shell-prompt-detect-failure-warning nil
+      ;; python is aliased to use python3
       py-python-command "python3"
       ;; use the wx backend, for both mayavi and matplotlib
       py-python-command-args '("--gui=wx" "--pylab=wx" "-colors" "Linux")
