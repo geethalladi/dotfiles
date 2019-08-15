@@ -1,7 +1,5 @@
 ;; Python Hook
 
-(setq python-indent 4)
-
 (defun projectile-pyenv-mode-set ()
   "Set pyenv version matching project name.
   Version must be already installed."
@@ -74,7 +72,6 @@
   (setq indent-tabs-mode nil
         python-indent 4
         tab-width 4)
-  (setenv "WORKON_HOME" "/usr/local/anaconda3/envs")
   (pyvenv-mode 1)
   (eldoc-mode 1)
   (smartparens-mode 1)
