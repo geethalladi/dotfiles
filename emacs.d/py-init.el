@@ -1,13 +1,5 @@
 ;; Python Hook
 
-(defun self/python-mode ()
-  "Customizations for python mode"
-  (setq indent-tabs-mode nil
-        python-indent 4
-        tab-width 4)
-  (setenv "WORKON_HOME" "/usr/local/anaconda3/envs")
-  (pyvenv-mode 1))
-
 (setq python-indent 4)
 
 (defun projectile-pyenv-mode-set ()
@@ -61,16 +53,6 @@
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
-(add-hook 'python-mode-hook 'self/python-mode)
-(add-hook 'python-mode-hook 'eldoc-mode)
-(add-hook 'python-mode-hook 'smartparens-mode)
-(add-hook 'python-mode-hook 'yafolding-mode)
-(add-hook 'python-mode-hook 'yas-minor-mode)
-(add-hook 'python-mode-hook 'highlight-indentation-mode)
-
-;; (add-hook 'python-mode-hook 'anaconda-mode)
-;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
-
 ;; (setq ein:use-auto-complete t)
 
 ;; Or, to enable "superpack" (a little bit hacky improvements):
@@ -87,3 +69,20 @@
 ;; (setq ein:use-smartrep t)
 
 ;; (pyvenv-activate (expand-file-name "~/installed.d/anaconda/envs/mlapp"))
+(defun self/python-mode ()
+  "Customizations for python mode"
+  (setq indent-tabs-mode nil
+        python-indent 4
+        tab-width 4)
+  (setenv "WORKON_HOME" "/usr/local/anaconda3/envs")
+  (pyvenv-mode 1)
+  (eldoc-mode 1)
+  (smartparens-mode 1)
+  (yafolding-mode 1)
+  (yas-minor-mode 1)
+  (highlight-indentation-mode 1))
+
+(add-hook 'python-mode-hook 'self/python-mode)
+
+;; (add-hook 'python-mode-hook 'anaconda-mode)
+;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
