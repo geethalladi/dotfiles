@@ -12,6 +12,12 @@
   (highlight-indentation-mode 1)
   (pyvenv-activate "/usr/local/anaconda3/envs/PDSH"))
 
+(defun self/inf-python-mode ()
+  "Customizations for inf python mode"
+  ;; (eldoc-mode 1)    ;; eldoc mode does not work in inf-python buffer
+  (smartparens-mode 1)
+  (highlight-indentation-mode 1))
+
 (defun projectile-pyenv-mode-set ()
   "Set pyenv version matching project name.
   Version must be already installed."
@@ -78,6 +84,7 @@
 
 ;; (pyvenv-activate (expand-file-name "~/installed.d/anaconda/envs/mlapp"))
 (add-hook 'python-mode-hook 'self/python-mode)
+(add-hook 'inferior-python-mode-hook 'self/inf-python-mode)
 
 ;; (add-hook 'python-mode-hook 'anaconda-mode)
 ;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
