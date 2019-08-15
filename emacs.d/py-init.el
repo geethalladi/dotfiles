@@ -1,42 +1,49 @@
 ;; Python Hook
+(defun self/python-mode ()
+  "Customizations for python mode"
+  (setq indent-tabs-mode nil
+        python-indent 4
+        tab-width 4)
+  (pyvenv-mode 1)
+  (eldoc-mode 1)
+  (smartparens-mode 1)
+  (yafolding-mode 1)
+  (yas-minor-mode 1)
+  (highlight-indentation-mode 1))
 
 (defun projectile-pyenv-mode-set ()
   "Set pyenv version matching project name.
   Version must be already installed."
   (pyenv-mode-set (projectile-project-name)))
 
-(setq py-python-command "python3")
-(setq python-shell-interpreter "ipython")
-(setq elpy-rpc-python-command "python3")
-(setq elpy-rpc-backend "jedi")
+; use IPython
+(setq-default py-shell-name "ipython")
+(setq-default py-which-bufname "IPython")
 
-; use the wx backend, for both mayavi and matplotlib
-(setq py-python-command-args
-  '("--gui=wx" "--pylab=wx" "-colors" "Linux"))
-(setq py-force-py-shell-name-p t)
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "--simple-prompt -i"
+      py-python-command "python3"
+      ;; use the wx backend, for both mayavi and matplotlib
+      py-python-command-args '("--gui=wx" "--pylab=wx" "-colors" "Linux")
+      py-force-py-shell-name-p t
+      ;; switch to the interpreter after executing code
+      py-shell-switch-buffers-on-execute-p t
+      py-switch-buffers-on-execute-p t
+      ;; don't split windows
+      py-split-windows-on-execute-p nil
+      ;; try to automagically figure out indentation
+      py-smart-indentation t)
 
-; switch to the interpreter after executing code
-(setq py-shell-switch-buffers-on-execute-p t)
-(setq py-switch-buffers-on-execute-p t)
-; don't split windows
-(setq py-split-windows-on-execute-p nil)
-; try to automagically figure out indentation
-(setq py-smart-indentation t)
+(setq elpy-rpc-python-command "python3"
+      elpy-rpc-backend "jedi")
 
 ;; using highlight-indentation mode
-
 (require 'highlight-indentation)
 (setq highlight-indentation-blank-lines t)
 
 ;; The following setting works for leuven-theme
 ;; (set-face-background 'highlight-indentation-face "#eeeeee")
 ;; (set-face-background 'highlight-indentation-current-column-face "#eeeeee")
-
-; use IPython
-(setq-default py-shell-name "ipython")
-(setq-default py-which-bufname "IPython")
-(setq python-shell-interpreter "ipython"
-      python-shell-interpreter-args "--simple-prompt -i")
 
 ;; Remove autocomplete mode for python
 ;; (setq ac-modes (delq 'python-mode ac-modes))
@@ -67,18 +74,6 @@
 ;; (setq ein:use-smartrep t)
 
 ;; (pyvenv-activate (expand-file-name "~/installed.d/anaconda/envs/mlapp"))
-(defun self/python-mode ()
-  "Customizations for python mode"
-  (setq indent-tabs-mode nil
-        python-indent 4
-        tab-width 4)
-  (pyvenv-mode 1)
-  (eldoc-mode 1)
-  (smartparens-mode 1)
-  (yafolding-mode 1)
-  (yas-minor-mode 1)
-  (highlight-indentation-mode 1))
-
 (add-hook 'python-mode-hook 'self/python-mode)
 
 ;; (add-hook 'python-mode-hook 'anaconda-mode)
