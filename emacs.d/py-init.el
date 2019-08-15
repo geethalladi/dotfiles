@@ -58,16 +58,16 @@
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
+(eval-after-load 'elpy
+  '(progn
+     (define-key elpy-mode-map (kbd "C-c C-p") nil)))
+
 ;; (setq ein:use-auto-complete t)
 
 ;; Or, to enable "superpack" (a little bit hacky improvements):
 ;; (setq ein:use-auto-complete-superpack t)
 
 (add-hook 'ein-mode 'smartparens-mode)
-
-(eval-after-load 'elpy
-  '(progn
-     (define-key elpy-mode-map (kbd "C-c C-p") nil)))
 
 (setq gud-pdb-command-name "python -m pdb")
 
