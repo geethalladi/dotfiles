@@ -14,6 +14,13 @@
 (require 'smartparens)
 (require 'yafolding)
 
+(require 'bundler)
+(require 'rubocop)
+(require 'rspec-mode)
+(require 'ruby-test-mode)
+(require 'ruby-tools)
+(require 'rake)
+
 ;; (require 'flycheck)
 (add-hook 'ruby-mode-hook 'rubocop-mode)
 (add-hook 'ruby-mode-hook 'ruby-tools-mode)
@@ -23,8 +30,13 @@
 (add-hook 'ruby-mode-hook 'projectile-mode)
 (add-hook 'ruby-mode-hook 'ruby-refactor-mode-launch)
 (add-hook 'ruby-mode-hook 'yafolding-mode)
+(add-hook 'ruby-mode-hook 'flycheck-mode)
 
-;; (add-hook 'ruby-mode-hook 'flycheck-mode)
+(add-hook 'ruby-mode-hook 'rubocop-mode)
+(add-hook 'ruby-mode-hook 'rspec-mode)
+(add-hook 'ruby-mode-hook 'ruby-test-mode)
+;; (add-hook 'ruby-mode-hook 'bundler-mode)
+;; (add-hook 'ruby-mode-hook 'rake-mode)
 
 ;; (eval-after-load 'rubocop-mode
 ;;  '(define-key rubocop-mode-map (kdb "s-r" 'rubocop-check-current-file)))
