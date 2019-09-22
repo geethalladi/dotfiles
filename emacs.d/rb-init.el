@@ -20,8 +20,8 @@
 (require 'ruby-test-mode)
 (require 'ruby-tools)
 (require 'rake)
+(require 'rvm)
 
-;; (require 'flycheck)
 (add-hook 'ruby-mode-hook 'rubocop-mode)
 (add-hook 'ruby-mode-hook 'ruby-tools-mode)
 (add-hook 'ruby-mode-hook 'robe-mode)
@@ -35,8 +35,6 @@
 (add-hook 'ruby-mode-hook 'rubocop-mode)
 (add-hook 'ruby-mode-hook 'rspec-mode)
 (add-hook 'ruby-mode-hook 'ruby-test-mode)
-;; (add-hook 'ruby-mode-hook 'bundler-mode)
-;; (add-hook 'ruby-mode-hook 'rake-mode)
 
 ;; (eval-after-load 'rubocop-mode
 ;;  '(define-key rubocop-mode-map (kdb "s-r" 'rubocop-check-current-file)))
@@ -57,7 +55,6 @@
 (add-hook 'inf-ruby-mode-hook 'company-mode)
 (add-hook 'inf-ruby-mode-hook 'erase-buffer-hook)
 
-
 ;; ;; (add-hook 'enh-ruby-mode-hook 'ruby-electric-mode)
 ;; ;; (add-hook 'enh-ruby-mode-hook 'auto-complete-mode)
 
@@ -76,6 +73,8 @@
 (require 'ruby-refactor)
 
 (setenv "PAGER" "less")
+(rvm-use-default)
+
 ;; (inf-ruby)
 ;; (robe-start)
 
