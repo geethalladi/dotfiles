@@ -63,6 +63,9 @@
     (before activate-rvm-for-robe activate)
   (rvm-activate-corresponding-ruby))
 
+;; Use the rubocop binary in the default gemset
+(setq flycheck-ruby-rubocop-executable "~/.rvm/gems/ruby-2.1.10@global/bin/rubocop")
+
 ;; ;; (setq enh-ruby-indent-tabs-mode t)
 
 ;; ;; (setq-default tab-width 2)
