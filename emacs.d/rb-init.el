@@ -30,7 +30,7 @@
 (add-hook 'ruby-mode-hook 'projectile-mode)
 (add-hook 'ruby-mode-hook 'ruby-refactor-mode-launch)
 (add-hook 'ruby-mode-hook 'yafolding-mode)
-(add-hook 'ruby-mode-hook 'flycheck-mode)
+;; (add-hook 'ruby-mode-hook 'flycheck-mode)
 
 (add-hook 'ruby-mode-hook 'rubocop-mode)
 (add-hook 'ruby-mode-hook 'rspec-mode)
