@@ -54,6 +54,10 @@
   (make-variable-buffer-local 'js-indent-level)
   (setq js-indent-level 2))
 
+;; js-mode is used while rendering JSON response
+;; Use yafolding mode with js-mode
+(add-hook 'js-mode-hook 'yafolding-mode)
+
 ;; node js repl may override some skewer related shortcuts
 ;; skewer is for web development (may not be specific to nodejs)
 (add-hook 'js2-mode-hook
