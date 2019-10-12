@@ -148,6 +148,7 @@
  (depends-on "prodigy")
  (depends-on "project-explorer")
  (depends-on "projectile")
+ (depends-on "projectile-rails")
  (depends-on "psc-ide")
  (depends-on "purescript-mode")
  (depends-on "py-autopep8")

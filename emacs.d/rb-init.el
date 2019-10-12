@@ -78,6 +78,10 @@
 (setenv "PAGER" "less")
 (rvm-use-default)
 
+(require 'projectile-rails)
+(projectile-rails-global-mode)
+(define-key projectile-rails-mode-map (kbd "s-r") 'hydra-projectile-rails/body)
+
 ;; (inf-ruby)
 ;; (robe-start)
 
