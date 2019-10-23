@@ -1,7 +1,7 @@
 ;; term mode
 
-(add-hook 'term-mode-hook (lambda()
-        (setq yas-dont-activate t)))
+(add-hook 'term-mode-hook
+          (lambda () (setq yas-dont-activate t)))
 
 (setq comint-prompt-read-only t)
 (setq comint-scroll-to-bottom-on-input t)
@@ -17,6 +17,7 @@
   "term mode customizations"
   (setq term-buffer-maximum-size 20000)
   (setq show-trailing-whitespace nil)
+  (toggle-truncate-lines 1)
   (smartparens-mode 1))
 
 (add-hook 'term-mode-hook 'self/term-mode-hook)
@@ -132,5 +133,4 @@
      (define-key term-raw-map (kbd "<M-left>")
        (lambda () (interactive) (term-send-raw-string "\eb")))
      (define-key term-raw-map (kbd "<M-right>")
-       (lambda () (interactive) (term-send-raw-string "\ef")))
-     ))
+       (lambda () (interactive) (term-send-raw-string "\ef")))))
