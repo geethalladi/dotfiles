@@ -107,6 +107,13 @@
                                   (format "/%s@%s:%s/" term-ansi-at-user term-ansi-at-host term-ansi-at-dir))))
     message))
 
+(eval-after-load "term"
+  '(progn
+     (define-key term-raw-map (kbd "<M-left>")
+       (lambda () (interactive) (term-send-raw-string "\eb")))
+     (define-key term-raw-map (kbd "<M-right>")
+       (lambda () (interactive) (term-send-raw-string "\ef")))))
+
 ;; term
 ;; Using zenburn defaults
 ;; '(term-color-black ((t (:foreground ,zenburn-bg
@@ -127,10 +134,3 @@
 ;;                                     :background ,zenburn-fg-1))))
 ;; '(term-default-fg-color ((t (:inherit term-color-white))))
 ;; '(term-default-bg-color ((t (:inherit term-color-black))))
-
-(eval-after-load "term"
-  '(progn
-     (define-key term-raw-map (kbd "<M-left>")
-       (lambda () (interactive) (term-send-raw-string "\eb")))
-     (define-key term-raw-map (kbd "<M-right>")
-       (lambda () (interactive) (term-send-raw-string "\ef")))))
