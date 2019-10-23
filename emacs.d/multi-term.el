@@ -1,8 +1,5 @@
 ;; term mode
 
-(add-hook 'term-mode-hook
-          (lambda () (setq yas-dont-activate t)))
-
 (setq comint-prompt-read-only t)
 (setq comint-scroll-to-bottom-on-input t)
 (setq comint-scroll-to-bottom-on-output t)
@@ -12,15 +9,6 @@
 
 ;; Default shell for multi-term
 (setq multi-term-program "/bin/zsh")
-
-(defun self/term-mode-hook ()
-  "term mode customizations"
-  (setq term-buffer-maximum-size 20000)
-  (setq show-trailing-whitespace nil)
-  (toggle-truncate-lines 1)
-  (smartparens-mode 1))
-
-(add-hook 'term-mode-hook 'self/term-mode-hook)
 
 (defcustom term-unbind-key-list
   '("C-z" "C-x" "C-c" "C-h" "C-y" "<ESC>")
@@ -57,18 +45,20 @@
 ;;   :type 'alist
 ;;   :group 'multi-term)
 
-(add-hook 'term-mode-hook
-          (lambda ()
-            (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
-            (add-to-list 'term-bind-key-alist '("M-]" . multi-term-next))))
+(defun self/term-mode-hook ()
+  "term mode customizations"
+  (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
+  (add-to-list 'term-bind-key-alist '("M-]" . multi-term-next))
+  (define-key term-raw-map (kbd "s-v") 'term-paste)
+  (define-key term-raw-map (kbd "C-y") 'term-paste)
+  (setq term-buffer-maximum-size 20000)
+  (setq show-trailing-whitespace nil)
+  (setq truncate-lines t)
+  (setq yas-dont-activate t)
+  (toggle-truncate-lines 1)
+  (smartparens-mode 1))
 
-(add-hook 'term-mode-hook
-          (lambda () (define-key term-raw-map (kbd "C-y") 'term-paste)))
-
-(add-hook 'term-mode-hook
-          (lambda () (define-key term-raw-map (kbd "s-v") 'term-paste)))
-
-(add-hook 'term-mode-hook (lambda () (setq truncate-lines t)))
+(add-hook 'term-mode-hook 'self/term-mode-hook)
 
 (when (require 'term nil t)
   (defun term-handle-ansi-terminal-messages (message)
