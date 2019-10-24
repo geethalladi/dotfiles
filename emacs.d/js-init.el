@@ -27,7 +27,7 @@
 (require 'nodejs-repl)
 
 ;; Use js-mode for editing json files
-(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 ;; (add-hook 'js-mode-hook #'flycheck-mode)
 ;; (add-hook 'json-mode 'flymake-json-load)
 
