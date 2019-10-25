@@ -5,6 +5,9 @@
 (setq comint-scroll-to-bottom-on-output t)
 (setq comint-move-point-for-output t)
 
+;; use smartparens in comint mode
+(add-hook 'comint-mode-hook 'smartparens-mode)
+
 (require 'multi-term)
 
 ;; Default shell for multi-term
