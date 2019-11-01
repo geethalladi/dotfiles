@@ -24,4 +24,9 @@
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'clojure-mode-hook #'turn-on-eldoc-mode)
 
-;; (cider-jack-in)
+;; TODO:
+;; unbind C-c C-p p
+;; C-x C-p to cider-pprint
+;; C-x C-e to cider-eval (exists)
+;; C-c C-d d to show the documentation (exists)
+;; hydra for smartparens slurp / barp
