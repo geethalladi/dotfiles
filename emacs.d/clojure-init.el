@@ -17,6 +17,8 @@
 (add-hook 'cider-repl-mode-hook #'company-mode)
 (add-hook 'cider-repl-mode-hook '(lambda () (linum-mode 0)))
 
+;; Added cider mode for clojure editing
+(add-hook 'clojure-mode-hook #'cider-mode)
 (add-hook 'clojure-mode-hook #'smartparens-mode)
 (add-hook 'clojure-mode-hook #'subword-mode)
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
