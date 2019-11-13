@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: rspec-init
+# key: rs
+# --
+RSpec.describe $1 do
+  it 'works' do
+    expect(true).to eql(true)
+  end
+end
