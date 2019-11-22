@@ -3,6 +3,7 @@
   (smartparens-mode)
   (rainbow-delimiters-mode))
 
+(load (expand-file-name "~/installed.d/quicklisp/slime-helper.el"))
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 
 (require 'slime)
