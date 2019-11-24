@@ -8,6 +8,9 @@
 (setq nrepl-buffer-name-separator "-")
 (setq nrepl-popup-stacktraces nil)
 
+;; no longer prompt while asking for doc-at-point
+(setq cider-prompt-for-symbol nil)
+
 (add-hook 'cider-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'cider-mode-hook 'smartparens-mode)
 (add-hook 'cider-mode-hook #'company-mode)
