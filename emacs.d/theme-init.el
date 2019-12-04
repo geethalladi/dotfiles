@@ -134,7 +134,14 @@
 
 ;; (set-face-attribute 'default nil :font "Hasklig:pixelsize=15:spacing=110:weight=normal")
 
-(set-face-attribute 'default nil :font "Consolas:pixelsize=14:spacing=110:weight=normal")
+;; (set-face-attribute 'default nil :font "Consolas:pixelsize=14:spacing=110:weight=normal")
+
+(set-face-attribute 'default nil
+                    :family "Consolas"
+                    :height 160
+                    :weight 'normal
+                    :width 'expanded
+                    :slant 'normal)
 
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
 
