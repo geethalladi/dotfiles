@@ -76,6 +76,7 @@
  (depends-on "green-phosphor-theme")
  (depends-on "grizzl")
  (depends-on "groovy-mode")
+ (depends-on "hasklig-mode")
  (depends-on "haskell-emacs")
  (depends-on "haskell-mode")
  (depends-on "helm")
