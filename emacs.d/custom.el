@@ -32,6 +32,9 @@
 ;; ;; Press Command-b for fuzzy switch buffer
 (global-set-key (kbd "M-b") 'projectile-switch-to-buffer)
 
+;; cycle between the last two buffers
+(global-set-key (kbd "M-o")  'mode-line-other-buffer)
+
 ;; Displaying cursors
 ;; (setq-default cursor-type 'bar)
 
