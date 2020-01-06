@@ -32,9 +32,16 @@
 (add-hook 'ruby-mode-hook 'yafolding-mode)
 ;; (add-hook 'ruby-mode-hook 'flycheck-mode)
 
-(add-hook 'ruby-mode-hook 'rubocop-mode)
-(add-hook 'ruby-mode-hook 'rspec-mode)
-(add-hook 'ruby-mode-hook 'ruby-test-mode)
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (rvm-activate-corresponding-ruby)
+            (rspec-mode)
+            (ruby-test-mode)
+            (company-mode)))
+
+;; (add-hook 'ruby-mode-hook 'rubocop-mode)
+;; (add-hook 'ruby-mode-hook 'rspec-mode)
+;; (add-hook 'ruby-mode-hook 'ruby-test-mode)
 
 ;; (eval-after-load 'rubocop-mode
 ;;  '(define-key rubocop-mode-map (kdb "s-r" 'rubocop-check-current-file)))
@@ -52,7 +59,7 @@
 ;; (add-hook 'robe-mode-hook 'ac-robe-setup)
 
 ;; ; Company mode for inf-ruby
-(add-hook 'inf-ruby-mode-hook 'company-mode)
+;; (add-hook 'inf-ruby-mode-hook 'company-mode)
 (add-hook 'inf-ruby-mode-hook 'erase-buffer-hook)
 
 ;; ;; (add-hook 'enh-ruby-mode-hook 'ruby-electric-mode)
@@ -76,6 +83,7 @@
 (require 'ruby-refactor)
 
 (setenv "PAGER" "less")
+(setq rspec-use-rvm t)
 (rvm-use-default)
 
 (require 'projectile-rails)
