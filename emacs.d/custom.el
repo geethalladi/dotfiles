@@ -190,3 +190,5 @@
 (diminish 'google-this-mode)
 (diminish 'helm-mode)
 (diminish 'projectile-mode)
+
+(setq org-reveal-root "file:///opt/reveal.js")
