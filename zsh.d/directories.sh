@@ -29,7 +29,7 @@ export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 # export JDK_7_0_HOME=/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home
 # export JDK_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home
 # export JDK_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/
-export JDK_13_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home/
+export JDK_13_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home
 export JAVA_HOME=${JDK_13_HOME}
 
 export SCALA_HOME=${CELLAR_PATH}/scala/2.12.1
