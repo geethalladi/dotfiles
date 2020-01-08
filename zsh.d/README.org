@@ -1,0 +1,17 @@
+* README
+
+ZSH scripts for creating my own development environment. Additions to be expected.
+
+** Simple PS1 Prompt
+#+BEGIN_SRC bash
+  export PS1="%{$fg[green]%}[%~]%{$reset_color%} "
+#+END_SRC
+
+** Setup
+
+#+BEGIN_SRC bash
+  # Create symlinks to the following files
+  ln -sf ${DOTFILES_DIR}/zsh.d/zshenv ~/.zshenv
+  ln -sf ${DOTFILES_DIR}/zsh.d/zshrc ~/.zshrc
+  ln -sf ${DOTFILES_DIR}/zsh.d/zprofile ~/.zprofile
+#+END_SRC
