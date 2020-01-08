@@ -103,4 +103,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/dotfiles/zsh.d/zshenv.sh
+# source ~/dotfiles/zsh.d/zshenv.sh
