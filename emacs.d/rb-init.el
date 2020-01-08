@@ -83,8 +83,8 @@
 (require 'ruby-refactor)
 
 (setenv "PAGER" "less")
-(setq rspec-use-rvm t)
-(rvm-use-default)
+;; (setq rspec-use-rvm t)
+;; (rvm-use-default)
 
 (require 'projectile-rails)
 (projectile-rails-global-mode)
