@@ -3,7 +3,7 @@ if [ "$?" != 0 ]; then
     echo "Sourcing version managers"
 
     # Go Version manager
-    source ~/.gvm/scripts/gvm
+    # source ~/.gvm/scripts/gvm
 
     # nvm
     export NVM_DIR="$HOME/.nvm"
