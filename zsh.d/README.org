@@ -15,3 +15,15 @@ ZSH scripts for creating my own development environment. Additions to be expecte
   ln -sf ${DOTFILES_DIR}/zsh.d/zshrc ~/.zshrc
   ln -sf ${DOTFILES_DIR}/zsh.d/zprofile ~/.zprofile
 #+END_SRC
+
+** Usage
+
+|-----------+------------------------------------------+----------------------------------------------------|
+| File name | Usage                                    | What I use it for                                  |
+|-----------+------------------------------------------+----------------------------------------------------|
+| .zshenv   | Used by all the process - Shell, ag etc. | Configure all environment variables                |
+|-----------+------------------------------------------+----------------------------------------------------|
+| .zshrc    | Used by Interactive Shells               | Z Shell Theme Settings                             |
+|-----------+------------------------------------------+----------------------------------------------------|
+| .zprofile | Called after /etc/profile                | Set PATH here to avoid overwriting by /etc/profile |
+|-----------+------------------------------------------+----------------------------------------------------|
