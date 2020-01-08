@@ -1,7 +1,10 @@
+#!/usr/bin/env zsh
+
 ########################################################################################
 # PATH Configurations
+########################################################################################
 
-if [ "$PATH_STATE_UPDATED" -ne 1 ]; then
+if [ "$PATH_STATE_UPDATED" != "1" ]; then
     export PATH=${CASK_PATH}:${COREUTIL_PATH}/bin:${CONSCRIPT_HOME}/bin:${CABAL_HOME}/bin:${PATH}:${CONDA_HOME}/bin:${RUBY_SCRIPTS_HOME}:${ANT_HOME}/bin:${GRADLE_HOME}/bin:${HASKELL_HOME}/bin:${ES_HOME}/bin:${EXTN_SCRIPTS_DIR}:${MAVEN_HOME}/bin:${GOROOT}/bin
 
     # export PATH=${PATH}:${HADOOP_HOME}/bin:${HIVE_HOME}/bin:${SPARK_HOME}/bin
@@ -18,9 +21,6 @@ if [ "$PATH_STATE_UPDATED" -ne 1 ]; then
     # source ${DOTFILE_DIR_AWS}/awsenv.sh
     # source ${ZSHDIR}/macports.sh
 
-    # Dont update once everything is in place
-    export PATH_STATE_UPDATED=1
-
     if [[ ${TERM_PROGRAM} != "iTerm.app" && ${TERM} != "eterm-color" && ${TERM} != "dumb" ]]; then
         source ${DOTFILE_DIR_ZSH}/xvm.sh
     fi
@@ -31,4 +31,7 @@ if [ "$PATH_STATE_UPDATED" -ne 1 ]; then
     # Rehash to take care of the PATH variable update
     # https://stackoverflow.com/questions/36543707/why-does-zsh-ignore-the-path-entry-order
     rehash
+
+    # Dont update once everything is in place
+    export PATH_STATE_UPDATED=1
 fi
