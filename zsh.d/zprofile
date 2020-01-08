@@ -1,6 +1,8 @@
 # Sourcing in zprofile, to make sure that it is done after /etc/profile
 # https://wiki.archlinux.org/index.php/Zsh#Configuration_files
 
-echo "Sourcing in zprofile"
+# echo "Sourcing in zprofile"
 
-# source ${DOTFILES}/zsh.d/path.sh
+# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+source ${DOTFILES}/zsh.d/path.sh
