@@ -70,6 +70,10 @@
     (before activate-rvm-for-robe activate)
   (rvm-activate-corresponding-ruby))
 
+;; switch to inf-ruby from rspec-compilation mode
+;; on C-x C-q
+(inf-ruby-switch-setup)
+
 ;; Use the rubocop binary in the default gemset
 (setq flycheck-ruby-rubocop-executable "~/.rvm/gems/ruby-2.1.10@global/bin/rubocop")
 
