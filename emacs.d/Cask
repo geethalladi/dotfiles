@@ -155,6 +155,7 @@
  (depends-on "psc-ide")
  (depends-on "purescript-mode")
  (depends-on "py-autopep8")
+ (depends-on "racket-mode")
  (depends-on "rainbow-delimiters")
  (depends-on "rainbow-mode")
  (depends-on "recentf-ext")
