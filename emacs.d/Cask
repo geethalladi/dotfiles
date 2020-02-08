@@ -178,6 +178,8 @@
  (depends-on "rvm")
  (depends-on "s")
  (depends-on "scratch")
+ (depends-on "scheme-complete")
+ (depends-on "scribble-mode")
  (depends-on "shm") ;; structured haskell mode
  (depends-on "sicp")
  (depends-on "simple-httpd")
