@@ -1,7 +1,29 @@
+(defun self/configure-prettify-symbols-alist ()
+  "Set prettify symbols alist."
+  (setq prettify-symbols-alist
+        '(("lambda" . ?λ)
+          ;; ("=<<" . ?=≪)  ;; ? is always followed by a single character
+          ;; (">>=" . ?≫=)
+          ;; ("map" . ?↦)
+          ("->" . ?→)
+          ("->>" . ?↠)
+          ("=>" . ?⇒)
+          ("/=" . ?≠)
+          ("!=" . ?≠)
+          ("==" . ?≡)
+          ("<=" . ?≤)
+          (">=" . ?≥)
+          ("<=<" . ?↢)
+          (">=>" . ?↣)
+          ("&&" . ?∧)
+          ("||" . ?∨)
+          ("not" . ?¬))))
+
 (defun self/lisp-customizations ()
   "Customizations of lisp mode"
   (smartparens-mode)
-  (rainbow-delimiters-mode))
+  (rainbow-delimiters-mode)
+  (self/configure-prettify-symbols-alist))
 
 (defun self/racket-mode ()
   "Customizations of racket mode"
