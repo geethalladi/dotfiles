@@ -61,4 +61,6 @@
 
 (load "~/.emacs.d/org-capture-init.el")
 
+(load "~/.emacs.d/org-babel-init.el")
+
 (load "~/.emacs.d/theme-init.el")
