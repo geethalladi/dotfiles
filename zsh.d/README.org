@@ -14,6 +14,8 @@ ZSH scripts for creating my own development environment. Additions to be expecte
   ln -sf ${DOTFILES_DIR}/zsh.d/zshenv ~/.zshenv
   ln -sf ${DOTFILES_DIR}/zsh.d/zshrc ~/.zshrc
   ln -sf ${DOTFILES_DIR}/zsh.d/zprofile ~/.zprofile
+  ln -sf ${DOTFILES_DIR}/zsh.d/emacs_zsh ~/.emacs_zsh
+
 #+END_SRC
 
 ** Usage
