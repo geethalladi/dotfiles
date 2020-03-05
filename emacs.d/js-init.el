@@ -5,6 +5,8 @@
 (require 'js2-mode)
 (require 'smartparens)
 
+(require 'json-snatcher)
+
 ;; Moving tern mode to the top
 ;; tern keymap clashes with js2-refactor mode
 ;; Moving it to the top, to resolve in favour of js2-refactor mode
@@ -27,12 +29,20 @@
 (require 'nodejs-repl)
 
 ;; Use js-mode for editing json files
-(add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
+;; (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
+
 ;; (add-hook 'js-mode-hook #'flycheck-mode)
 ;; (add-hook 'json-mode 'flymake-json-load)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
 (add-to-list 'auto-mode-alist '("\\.json$" . web-mode))
+
+(add-hook 'web-mode-hook
+          (lambda ()
+            (message "Configuring web-mode hook")
+            (define-key web-mode-map "\C-cp" 'jsons-print-path)))
+
 ;; Handlebar templates to use web-mode
 (add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
 
