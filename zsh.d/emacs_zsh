@@ -1,0 +1,5 @@
+# Used in the emacs "shell"
+
+echo "Sourcing emacs_zsh"
+
+source ~/.zprofile
