@@ -138,7 +138,7 @@
 
 (set-face-attribute 'default nil
                     :family "Consolas"
-                    :height 160
+                    :height 140
                     :weight 'normal
                     :width 'expanded
                     :slant 'normal)
