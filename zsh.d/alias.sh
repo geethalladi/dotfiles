@@ -36,4 +36,14 @@ function show() {
 function cleandir() {
     rm -rf $1 && mkdir -p $1 && cd $1
 }
+
+function open_in_emacs_buffer() {
+    # Open the stdin in a separate emacs buffer
+    # Create a temporary file and copy the contents
+    # Open the file in emacsclient
+    perl -MFile::Temp -MFile::Copy -e \
+         'copy *STDIN, $file = File::Temp->new; system "emacsclient", $file';
+}
+
 alias shw='show'
+alias eb='open_in_emacs_buffer'
