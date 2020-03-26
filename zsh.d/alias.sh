@@ -37,6 +37,8 @@ function cleandir() {
     rm -rf $1 && mkdir -p $1 && cd $1
 }
 
+# source: https://stackoverflow.com/questions/8590872/pipe-emacs-shell-output-to-a-new-buffer
+# in future, check this, https://www.emacswiki.org/emacs/EmacsClient#toc17, as well
 function open_in_emacs_buffer() {
     # Open the stdin in a separate emacs buffer
     # Create a temporary file and copy the contents
