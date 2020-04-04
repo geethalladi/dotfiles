@@ -4,8 +4,8 @@
   "Customizing leuven theme"
   (load-theme 'leuven t)
 
-  (face-remap-add-relative
-   'mode-line '((:foreground "ivory" :background "Green4") mode-line))
+  ;; (face-remap-add-relative
+  ;;  'mode-line '((:foreground "ivory" :background "Green4") mode-line))
 
   (custom-set-faces
    ;; Org mode faces
