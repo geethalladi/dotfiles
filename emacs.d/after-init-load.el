@@ -1,7 +1,4 @@
 ;; Loading my customizations
-;; Start the emacs-server
-(load "~/.emacs.d/emacs-server.el")
-
 (defun self/load-all ()
   "Load the entire environment"
   (interactive)
