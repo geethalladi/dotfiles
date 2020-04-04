@@ -25,6 +25,12 @@
 ;; ENABLE PALLET
 (require 'pallet)
 (pallet-mode t)
+(set-face-attribute 'default nil
+                    :family "Consolas"
+                    :height 160
+                    :weight 'normal
+                    :width 'expanded
+                    :slant 'normal)
 
 ;; SAVE BACK TO TEMP FOLDER
 (setq backup-directory-alist '((".*" . "~/.emacs.d/saves")))
