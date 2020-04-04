@@ -27,6 +27,7 @@ if [ "$PATH_STATE_UPDATED" != "1" ]; then
 
     # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
     export PATH="$PATH:$HOME/.rvm/bin"
+    export MANPATH="/usr/local/man:$MANPATH"
 
     # Rehash to take care of the PATH variable update
     # https://stackoverflow.com/questions/36543707/why-does-zsh-ignore-the-path-entry-order
