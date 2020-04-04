@@ -5,6 +5,7 @@
 (defun self/load-all ()
   "Load the entire environment"
   (interactive)
+  (self/load-packages)
   (self/load-dev-env)
   (self/load-org-env))
 
