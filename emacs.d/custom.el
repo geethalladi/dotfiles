@@ -261,3 +261,7 @@
 (unless (display-graphic-p)
   (message "Disabling menu bar")
   (menu-bar-mode -1))
+
+;; for emacs sentence navigation
+;; without this setting, the keybinding moves every paragraph
+(setq sentence-end-double-space nil)
