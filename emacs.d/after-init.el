@@ -21,9 +21,8 @@
 
 ;; Never kill scratch buffer
 (add-hook 'kill-buffer-query-functions
-          (lambda() (not (equal (buffer-name) "*scratch*"))))
+    (lambda() (not (equal (buffer-name) "*scratch*"))))
 
 ;; delete trailing white space
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'before-save-hook 'whitespace-cleanup)
-
