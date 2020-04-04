@@ -1,8 +1,14 @@
 (defun self/load-all ()
   "Load the entire environment"
   (interactive)
+
+  ;; load details about the installed packages
   (self/load-packages)
+  ;; load customizations of these packages
+  (self/load-customizations)
+  ;; load the development environment
   (self/load-dev-env)
+  ;; load org mode customizations
   (self/load-org-env))
 
 (defun self/load-customizations ()
