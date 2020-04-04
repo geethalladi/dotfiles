@@ -1,4 +1,3 @@
-;; Loading my customizations
 (defun self/load-all ()
   "Load the entire environment"
   (interactive)
@@ -14,14 +13,14 @@
   '(("gnu" . "http://elpa.gnu.org/packages/")
     ("marmalade" . "https://marmalade-repo.org/packages/")
     ("melpa" . "http://melpa.milkbox.net/packages/")))
-  (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ;; Org-mode's repository
+
+  ;; Org-mode's repository
+  (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 
   ;; ENABLE CASK
-
   (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
   ;; (require 'cask "~/.emacs.d/.cask/26.1/elpa/cask-20180626.1949/cask.el")
   (cask-initialize)
-
   ;; Setting the location of the cask file
   (setq cask-filename "~/.emacs.d/Cask")
 
