@@ -5,6 +5,31 @@
   (self/load-dev-env)
   (self/load-org-env))
 
+(defun self/load-customizations ()
+  "Customize the installed packages"
+
+  ;; emacs getting the same path when invoked from GUI
+  (when (memq window-system '(mac ns))
+    (exec-path-from-shell-initialize))
+
+  ;; ENABLE PERSISTENT SCRATCH
+  (persistent-scratch-setup-default)
+  (persistent-scratch-autosave-mode 1)
+
+  (load "~/.emacs.d/helm-init.el")
+  (load "~/.emacs.d/keychord-init.el")
+  (load "~/.emacs.d/vendor/help-fns+.el")
+
+  (load "~/.emacs.d/clipboard.el")
+
+  (load "~/.emacs.d/tramp-init.el")
+  (load "~/.emacs.d/yas-init.el")
+  (load "~/.emacs.d/pdf-init.el")
+  (load "~/.emacs.d/epub-init.el")
+
+  (load "~/.emacs.d/custom.el")
+  (load "~/.emacs.d/theme-init.el"))
+
 (defun self/load-packages ()
   "Loads all the installed packages"
 
@@ -29,17 +54,7 @@
   (pallet-mode t)
 
   ;; Load vendor el files
-  (add-to-list 'load-path "~/dotfiles/emacs.d/vendor")
-
-  ;; emacs getting the same path when invoked from GUI
-  (when (memq window-system '(mac ns))
-    (exec-path-from-shell-initialize))
-
-  ;; ENABLE PERSISTENT SCRATCH
-  (persistent-scratch-setup-default)
-  (persistent-scratch-autosave-mode 1)
-
-  (load "~/.emacs.d/clipboard.el"))
+  (add-to-list 'load-path "~/dotfiles/emacs.d/vendor"))
 
 (defun self/load-org-env ()
   "Load the org environment"
@@ -51,10 +66,6 @@
 
 (defun self/load-dev-env ()
   "Load the development environment"
-
-  (load "~/.emacs.d/helm-init.el")
-  (load "~/.emacs.d/keychord-init.el")
-  (load "~/.emacs.d/vendor/help-fns+.el")
 
   (load "~/.emacs.d/smartparens.el")
   (load "~/.emacs.d/company-init.el")
@@ -81,11 +92,4 @@
   (load "~/.emacs.d/lisp-init.el")
   (load "~/.emacs.d/emacs-lisp-init.el")
 
-  (load "~/.emacs.d/tramp-init.el")
-  (load "~/.emacs.d/yas-init.el")
-  (load "~/.emacs.d/pdf-init.el")
-  (load "~/.emacs.d/epub-init.el")
-
-  (load "~/.emacs.d/custom.el")
-  (load "~/.emacs.d/theme-init.el")
   (load "~/.emacs.d/other-modes-init.el"))
