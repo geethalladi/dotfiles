@@ -2,8 +2,6 @@
 ;; Start the emacs-server
 (load "~/.emacs.d/emacs-server.el")
 
-(load "~/.emacs.d/theme-init.el")
-
 (defun self/load-all ()
   "Load the entire environment"
   (interactive)
@@ -92,4 +90,5 @@
   (load "~/.emacs.d/epub-init.el")
 
   (load "~/.emacs.d/custom.el")
+  (load "~/.emacs.d/theme-init.el")
   (load "~/.emacs.d/other-modes-init.el"))
