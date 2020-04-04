@@ -56,10 +56,14 @@
   (define-key term-raw-map (kbd "C-y") 'term-paste)
   (setq term-buffer-maximum-size 20000)
   (setq show-trailing-whitespace nil)
-  (setq truncate-lines t)
   (setq yas-dont-activate t)
-  (toggle-truncate-lines 1)
-  (smartparens-mode 1))
+
+  ;; enabling them here, causes the echo'ed output to vanish
+  ;; (setq truncate-lines t)
+  ;; (toggle-truncate-lines)
+
+  (setq show-trailing-whitespace nil)
+  (setq yas-dont-activate t))
 
 (add-hook 'term-mode-hook 'self/term-mode-hook)
 
