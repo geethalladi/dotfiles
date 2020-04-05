@@ -6,5 +6,6 @@
 #+TAGS: $2
 #+DATE: `(format-time-string "%Y-%m-%d")`
 #+STARTUP: hideblocks
+#+TODO: TODO(t) PROGRESS(p) WAITING(w) | DONE(d) | CANCELLED(c)
 #+OPTIONS: toc:nil
 * $1
