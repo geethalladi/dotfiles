@@ -127,6 +127,9 @@
 ;; Key binding for magit-status
 (global-set-key (kbd "C-c g s") 'magit-status)
 
+;; Follow symlinks
+(setq vc-follow-symlinks t)
+
 ;; FIX THE PATH VARIABLE
 ;; (defun set-exec-path-from-shell-PATH ()
 ;;   (let ((path-from-shell (shell-command-to-string "TERM=vt100 $SHELL -i -c 'echo $PATH'")))
