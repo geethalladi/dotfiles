@@ -31,7 +31,8 @@
 
   (add-hook 'clojure-mode-hook #'cider-mode))
 
-(self/-add-cider-mode)
+;; Skip adding cider mode for now
+;; (self/-add-cider-mode)
 
 ;; TODO:
 ;; unbind C-c C-p p
