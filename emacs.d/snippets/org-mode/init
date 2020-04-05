@@ -3,7 +3,8 @@
 # key: init
 # --
 #+TITLE: $1
-#+TAG: $2
+#+TAGS: $2
+#+DATE: `(format-time-string "%Y-%m-%d")`
 #+STARTUP: hideblocks
 #+OPTIONS: toc:nil
 * $1
