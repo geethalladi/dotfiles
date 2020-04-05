@@ -23,6 +23,7 @@
 
 (global-set-key (kbd "C-x <up>") 'scroll-down-half)
 (global-set-key (kbd "C-x <down>") 'scroll-up-half)
+(global-set-key (kbd "C-@") 'er/expand-region)
 
 (global-set-key (kbd "s-/") 'comment-region)
 
@@ -40,6 +41,9 @@
 
 ;; Don't blink the cursor
 (blink-cursor-mode 0)
+
+;; Automatically insert new characters into the selected region
+(pending-delete-mode 1)
 
 ;; Multiple Cursors
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
