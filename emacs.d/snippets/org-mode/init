@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: init
+# key: init
+# --
+#+TITLE: $1
+#+TAG: $2
+#+STARTUP: hideblocks
+#+OPTIONS: toc:nil
+* $1
