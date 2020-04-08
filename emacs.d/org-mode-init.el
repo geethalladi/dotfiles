@@ -26,6 +26,9 @@
   ;; Enable flyspell minor mode in org
   (flyspell-mode 1)
 
+  ;; Enabling writegood mode for org documents
+  (writegood-mode 1)
+
   ;; Removing conflicting keys from smartparens minor-mode in org-mode
   (let ((oldmap (cdr (assoc 'smartparens-mode minor-mode-map-alist)))
         (newmap (make-sparse-keymap)))
