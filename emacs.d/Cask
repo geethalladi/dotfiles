@@ -99,6 +99,7 @@
  (depends-on "ido-yes-or-no")
  (depends-on "indium")
  (depends-on "indent-tools")
+ (depends-on "inf-clojure")
  (depends-on "inf-ruby")
  (depends-on "inflections")
  (depends-on "javap-mode")
