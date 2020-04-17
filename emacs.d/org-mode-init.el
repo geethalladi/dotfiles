@@ -4,14 +4,14 @@
 ;; (add-hook 'org-mode-hook 'stripe-table-mode)
 ;; (add-hook 'org-mode-hook 'autopair-mode)
 
-(defun self/org-mode-before-save-hook ()
+(defun self/-org-mode-before-save-hook ()
   "Update the org-statistics in the entire file"
   (interactive)
   (let ((current-prefix-arg 4)) ;; emulate C-u
     ;; invoke align-regexp interactively
     (call-interactively 'org-update-statistics-cookies)))
 
-(defun self/org-mode ()
+(defun self/-org-mode ()
   "org mode customization"
   ;; Always use org indent minor mode
   (org-indent-mode)
@@ -41,7 +41,7 @@
     (push `(smartparens-mode . ,newmap) minor-mode-overriding-map-alist))
 
   (smartparens-mode 1)
-  (add-hook 'before-save-hook 'self/org-mode-before-save-hook nil 'make-it-local)
+  (add-hook 'before-save-hook 'self/-org-mode-before-save-hook nil 'make-it-local)
 
   (setq org-replace-disputed-keys t)
 
@@ -53,7 +53,7 @@
   (define-key org-mode-map (kbd "<S-up>") 'windmove-up)
   (define-key org-mode-map (kbd "<S-down>") 'windmove-down))
 
-(add-hook 'org-mode-hook 'self/org-mode)
+(add-hook 'org-mode-hook 'self/-org-mode)
 
 ;; List of file extensions to use org-mode for (org|org_archive|notes)
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|notes\\|pomodoro\\)$" . org-mode))
