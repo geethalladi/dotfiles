@@ -1,12 +1,17 @@
 (require 'rainbow-delimiters)
 (require 'icomplete)
 
-(show-paren-mode 1)
 
-(add-hook 'clojure-mode-hook #'smartparens-mode)
-(add-hook 'clojure-mode-hook #'subword-mode)
-(add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
-(add-hook 'clojure-mode-hook #'turn-on-eldoc-mode)
+(defun self/-clojure-mode ()
+  "Clojure mode customization"
+  (show-paren-mode 1)
+  (smartparens-mode)
+  (subword-mode)
+  (rainbow-delimiters-mode)
+  (turn-on-eldoc-mode)
+  (inf-clojure-minor-mode))
+
+(add-hook 'clojure-mode-hook 'self/-clojure-mode)
 
 (defun self/-add-cider-mode ()
   "Adding cider minor mode for clojure editing"
