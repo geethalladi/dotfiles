@@ -32,7 +32,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
-(add-to-list 'auto-mode-alist '("\\.json$" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.json$" . web-mode))
 
 ;; Handlebar templates to use web-mode
 (add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
