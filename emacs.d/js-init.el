@@ -11,9 +11,14 @@
 (require 'indium)
 (require 'xref-js2)
 
-;; Know this is ugly; A Stop-gap solution for finding node
+;; needed for making the tern-server integration
+;; know this is ugly; A Stop-gap solution for finding node
 (setq exec-path (append exec-path
-                        '("~/.nvm/versions/node/v8.9.4/bin")))
+                        '((expand-file-name "~/.nvm/versions/node/v8.9.4/bin"))))
+(setenv "PATH"
+        (concat (expand-file-name "~/.nvm/versions/node/v8.9.4/bin")
+                ":"
+                (getenv "PATH")))
 
 ;; Moving tern mode to the top
 ;; tern keymap clashes with js2-refactor mode
