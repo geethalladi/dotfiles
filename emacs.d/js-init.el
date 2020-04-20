@@ -38,13 +38,13 @@
 
 (add-to-list 'auto-mode-alist '("\\.json$" . web-mode))
 
-(add-hook 'web-mode-hook
-          (lambda ()
-            (message "Configuring web-mode hook")
-            (define-key web-mode-map "\C-cp" 'jsons-print-path)))
-
 ;; Handlebar templates to use web-mode
 (add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
+
+(defun self/-web-customizations ()
+  "Customizations for web mode"
+  (message "Configuring web-mode hook")
+  (define-key web-mode-map "\C-cp" 'jsons-print-path))
 
 (defun self/-js-customizations ()
   "javascript mode customizations"
@@ -81,6 +81,7 @@
   (define-key js2-mode-map (kbd "C-k") #'js2r-kill)
 
   (js2r-add-keybindings-with-prefix "C-c C-r"))
+(add-hook 'web-mode-hook 'self/-web-customizations)
 
 ;; node js repl may override some skewer related shortcuts
 ;; skewer is for web development (may not be specific to nodejs)
