@@ -100,4 +100,4 @@
 
   (load "~/.emacs.d/other-modes-init.el"))
 
-(self/load-all)
+;; (self/load-all)
