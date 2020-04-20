@@ -39,7 +39,6 @@
 
 (defun self/-web-customizations ()
   "Customizations for web mode"
-  (message "Configuring web-mode hook")
   (define-key web-mode-map "\C-cp" 'jsons-print-path))
 
 (defun self/-js-keybindings ()
@@ -69,9 +68,6 @@
 
 (defun self/-js-customizations ()
   "javascript mode customizations"
-
-  (message "Configuring js-mode hook")
-
   (setq js2-highlight-level 3)
   (setq js2-include-node-externs t)
   (setq js2-basic-offset 2)
