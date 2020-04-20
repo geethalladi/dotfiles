@@ -99,3 +99,5 @@
   (load "~/.emacs.d/emacs-lisp-init.el")
 
   (load "~/.emacs.d/other-modes-init.el"))
+
+(self/load-all)
