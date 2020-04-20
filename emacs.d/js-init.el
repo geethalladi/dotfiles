@@ -97,9 +97,18 @@
   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)
   (self/-js-keybindings))
 
+(defun self/-json-customizations ()
+  "JSON mode customizations"
+
+  (make-variable-buffer-local 'js-indent-level)
+  (setq js-indent-level 2)
+
+  (yafolding-mode)
+  (smartparens-mode))
 
 (add-hook 'js2-mode-hook 'self/-js-customizations)
 (add-hook 'web-mode-hook 'self/-web-customizations)
+(add-hook 'json-mode-hook 'self/-json-customizations)
 
 ;; node js repl may override some skewer related shortcuts
 ;; skewer is for web development (may not be specific to nodejs)
