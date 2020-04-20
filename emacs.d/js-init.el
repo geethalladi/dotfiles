@@ -9,6 +9,7 @@
 (require 'nvm)
 (require 'nodejs-repl)
 (require 'indium)
+(require 'xref-js2)
 
 ;; Know this is ugly; A Stop-gap solution for finding node
 (setq exec-path (append exec-path
@@ -93,6 +94,7 @@
   (js2-refactor-mode)
   (indium-interaction-mode)
 
+  (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)
   (self/-js-keybindings))
 
 (add-hook 'js-mode-hook 'self/-js-customizations)
@@ -109,10 +111,6 @@
 (eval-after-load 'ac-js2
   '(progn
      (define-key ac-js2-mode-map (kbd "M-.") nil)))
-
-(require 'xref-js2)
-(add-hook 'js2-mode-hook (lambda ()
-  (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
 
 ;; (add-hook 'js-mode-hook
 ;;           (lambda ()
