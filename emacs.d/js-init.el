@@ -89,7 +89,7 @@
   (yafolding-mode)
   (smartparens-mode)
 
-  (js2-minor-mode)
+  ;; (js2-minor-mode)
   (tern-mode)
   (js2-refactor-mode)
   (indium-interaction-mode)
@@ -97,8 +97,8 @@
   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)
   (self/-js-keybindings))
 
-(add-hook 'js-mode-hook 'self/-js-customizations)
 
+(add-hook 'js2-mode-hook 'self/-js-customizations)
 (add-hook 'web-mode-hook 'self/-web-customizations)
 
 ;; node js repl may override some skewer related shortcuts
