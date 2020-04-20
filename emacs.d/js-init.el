@@ -1,32 +1,27 @@
 (require 'js2-mode)
 (require 'smartparens)
-
 (require 'json-snatcher)
+(require 'tern)
+(require 'js2-refactor)
+(require 'discover-js2-refactor)
+(require 'js-doc)
+(require 'mocha)
+(require 'nvm)
+(require 'nodejs-repl)
+(require 'indium)
+
+;; Know this is ugly; A Stop-gap solution for finding node
+(setq exec-path (append exec-path
+                        '("~/.nvm/versions/node/v8.9.4/bin")))
 
 ;; Moving tern mode to the top
 ;; tern keymap clashes with js2-refactor mode
 ;; Moving it to the top, to resolve in favour of js2-refactor mode
-
-(require 'tern)
-(add-hook 'js2-mode-hook 'tern-mode)
 (eval-after-load 'tern
   '(progn
      (require 'tern-auto-complete)
        (tern-ac-setup)
        (tern-context-coloring-setup)))
-
-(require 'js2-refactor)
-(require 'discover-js2-refactor)
-
-(require 'js-doc)
-(require 'mocha)
-(require 'nvm)
-
-(require 'nodejs-repl)
-
-;; Know this is ugly; A Stop-gap solution for finding node
-(setq exec-path (append exec-path
-                        '("~/.nvm/versions/node/v8.9.4/bin")))
 
 ;; Use js-mode for editing json files
 ;; (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
@@ -61,13 +56,21 @@
   (define-key js2-mode-map "\C-ct" 'mocha-test-at-point)
   (define-key js2-mode-map (kbd "C-k") #'js2r-kill)
 
-  (js2r-add-keybindings-with-prefix "C-c C-r"))
+  (js2r-add-keybindings-with-prefix "C-c C-r")
 
+  ;; dir local variables
+  (put 'mocha-which-node 'safe-local-variable #'stringp)
+  (put 'mocha-command 'safe-local-variable #'stringp)
+  (put 'mocha-environment-variables 'safe-local-variable #'stringp)
+  (put 'mocha-options 'safe-local-variable #'stringp)
+  (put 'mocha-project-test-directory 'safe-local-variable #'stringp)
+  (put 'mocha-reporter 'safe-local-variable #'stringp))
 
 (defun self/-js-customizations ()
   "javascript mode customizations"
 
   (message "Configuring js-mode hook")
+
   (setq js2-highlight-level 3)
   (setq js2-include-node-externs t)
   (setq js2-basic-offset 2)
@@ -83,9 +86,13 @@
   ;; js-mode is used while rendering JSON response
   ;; Use yafolding mode with js-mode
   (yafolding-mode)
-  (js2-minor-mode)
   (smartparens-mode)
+
+  (js2-minor-mode)
+  (tern-mode)
   (js2-refactor-mode)
+  (indium-interaction-mode)
+
   (self/-js-keybindings))
 
 (add-hook 'js-mode-hook 'self/-js-customizations)
@@ -106,17 +113,6 @@
 (require 'xref-js2)
 (add-hook 'js2-mode-hook (lambda ()
   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
-
-(require 'indium)
-(add-hook 'js2-mode-hook #'indium-interaction-mode)
-
-;; dir local variables
-(put 'mocha-which-node 'safe-local-variable #'stringp)
-(put 'mocha-command 'safe-local-variable #'stringp)
-(put 'mocha-environment-variables 'safe-local-variable #'stringp)
-(put 'mocha-options 'safe-local-variable #'stringp)
-(put 'mocha-project-test-directory 'safe-local-variable #'stringp)
-(put 'mocha-reporter 'safe-local-variable #'stringp)
 
 ;; (add-hook 'js-mode-hook
 ;;           (lambda ()
