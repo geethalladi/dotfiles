@@ -46,29 +46,10 @@
   (message "Configuring web-mode hook")
   (define-key web-mode-map "\C-cp" 'jsons-print-path))
 
-(defun self/-js-customizations ()
-  "javascript mode customizations"
-
-  (setq js2-highlight-level 3)
-  (setq js2-include-node-externs t)
-  (setq js2-basic-offset 2)
-
-  ;; Enable this if you want constant indendation in js2-mode
-  ;; (custom-set-variables
-  ;;  '(js2-basic-offset 2)
-  ;;  '(js2-bounce-indent-p t))
+(defun self/-js-keybindings ()
+  "Updating keybindings for javascript"
 
   (local-set-key (kbd "C-c m") 'makey-key-mode-popup-js2-refactor)
-  (make-variable-buffer-local 'js-indent-level)
-  (setq js-indent-level 2)
-
-  ;; js-mode is used while rendering JSON response
-  ;; Use yafolding mode with js-mode
-  (yafolding-mode)
-  (js2-minor-mode)
-  (smartparens-mode)
-  (js2-refactor-mode)
-
   (define-key js2-mode-map (kbd "C-x C-e") 'nodejs-repl-send-last-expression)
   (define-key js2-mode-map (kbd "C-c C-j") 'nodejs-repl-send-line)
   (define-key js2-mode-map (kbd "C-c C-r") 'nodejs-repl-send-region)
@@ -81,6 +62,34 @@
   (define-key js2-mode-map (kbd "C-k") #'js2r-kill)
 
   (js2r-add-keybindings-with-prefix "C-c C-r"))
+
+
+(defun self/-js-customizations ()
+  "javascript mode customizations"
+
+  (message "Configuring js-mode hook")
+  (setq js2-highlight-level 3)
+  (setq js2-include-node-externs t)
+  (setq js2-basic-offset 2)
+
+  ;; Enable this if you want constant indendation in js2-mode
+  ;; (custom-set-variables
+  ;;  '(js2-basic-offset 2)
+  ;;  '(js2-bounce-indent-p t))
+
+  (make-variable-buffer-local 'js-indent-level)
+  (setq js-indent-level 2)
+
+  ;; js-mode is used while rendering JSON response
+  ;; Use yafolding mode with js-mode
+  (yafolding-mode)
+  (js2-minor-mode)
+  (smartparens-mode)
+  (js2-refactor-mode)
+  (self/-js-keybindings))
+
+(add-hook 'js-mode-hook 'self/-js-customizations)
+
 (add-hook 'web-mode-hook 'self/-web-customizations)
 
 ;; node js repl may override some skewer related shortcuts
