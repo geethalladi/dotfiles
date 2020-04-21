@@ -13,12 +13,12 @@
 
 ;; needed for making the tern-server integration
 ;; know this is ugly; A Stop-gap solution for finding node
-(setq exec-path (append exec-path
-                        '((expand-file-name "~/.nvm/versions/node/v8.9.4/bin"))))
-(setenv "PATH"
-        (concat (expand-file-name "~/.nvm/versions/node/v8.9.4/bin")
-                ":"
-                (getenv "PATH")))
+(let ((node-exec-path (expand-file-name "~/.nvm/versions/node/v8.9.4/bin")))
+  ;; setting the node-executable path in both the forms of PATH variables
+  (setq exec-path
+        (append exec-path (list node-exec-path)))
+  (setenv "PATH"
+          (concat node-exec-path ":" (getenv "PATH"))))
 
 ;; Moving tern mode to the top
 ;; tern keymap clashes with js2-refactor mode
