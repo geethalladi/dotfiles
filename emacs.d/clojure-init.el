@@ -6,9 +6,11 @@
   "Clojure mode customization"
   (show-paren-mode 1)
   (smartparens-mode)
+  (paxedit-mode)
   (subword-mode)
-  (rainbow-delimiters-mode)
   (turn-on-eldoc-mode)
+  (rainbow-delimiters-mode)
+  (rainbow-identifiers-mode)
   (inf-clojure-minor-mode))
 
 (add-hook 'clojure-mode-hook 'self/-clojure-mode)
