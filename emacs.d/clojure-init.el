@@ -6,6 +6,7 @@
   "Clojure mode customization"
   (show-paren-mode 1)
   (smartparens-mode)
+  (yafolding-mode)
   (paxedit-mode)
   (subword-mode)
   (turn-on-eldoc-mode)
