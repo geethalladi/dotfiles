@@ -1,7 +1,3 @@
-(require 'rainbow-delimiters)
-(require 'icomplete)
-
-
 (defun self/-clojure-mode ()
   "Clojure mode customization"
   (show-paren-mode 1)
