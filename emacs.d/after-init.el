@@ -7,11 +7,11 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (set-face-attribute 'default nil
-                    :family "Consolas"
-                    :height 160
-                    :weight 'normal
-                    :width 'expanded
-                    :slant 'normal)
+		    :family "Monaco"
+		    :height 160
+		    :weight 'normal
+		    :width 'expanded
+		    :slant 'normal)
 
 ;; SAVE BACK TO TEMP FOLDER
 (setq backup-directory-alist '((".*" . "~/.emacs.d/saves")))
@@ -24,7 +24,7 @@
 
 ;; Never kill scratch buffer
 (add-hook 'kill-buffer-query-functions
-          (lambda () (not (equal (buffer-name) "*scratch*"))))
+	  (lambda () (not (equal (buffer-name) "*scratch*"))))
 
 ;; delete trailing white space
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
