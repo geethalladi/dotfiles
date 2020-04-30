@@ -1,7 +1,15 @@
+(defun self/-reload-scratch-buffer ()
+  "reload scratch buffer for modes to take effect"
+  (let* ((buffer-name "*scratch*")
+         (filter-scratch-p (lambda (buf) (string-prefix-p buffer-name (buffer-name buf))))
+         (scratch-buffer
+          (elt (seq-filter filter-scratch-p (buffer-list)) 0)))
+    (with-current-buffer scratch-buffer
+      (lisp-interaction-mode))))
+
 (defun self/load-all ()
   "Load the entire environment"
   (interactive)
-
   ;; load details about the installed packages
   (self/load-packages)
   ;; load customizations of these packages
@@ -9,7 +17,9 @@
   ;; load the development environment
   (self/load-dev-env)
   ;; load org mode customizations
-  (self/load-org-env))
+  (self/load-org-env)
+  ;; reload scratch-buffer after loading everything
+  (self/-reload-scratch-buffer))
 
 (defun self/load-customizations ()
   "Customize the installed packages"
@@ -97,6 +107,8 @@
   (load "~/.emacs.d/clojure-init.el")
   (load "~/.emacs.d/lisp-init.el")
 
-  (load "~/.emacs.d/other-modes-init.el"))
+  (load "~/.emacs.d/other-modes-init.el")
+
+  )
 
 ;; (self/load-all)
