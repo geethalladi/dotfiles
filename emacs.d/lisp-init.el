@@ -21,6 +21,7 @@
 
 (defun self/lisp-customizations ()
   "Customizations of lisp mode"
+  (yafolding-mode)
   (smartparens-mode)
   (rainbow-delimiters-mode)
   (hungry-delete-mode)
