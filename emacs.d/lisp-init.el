@@ -25,6 +25,12 @@
   (rainbow-delimiters-mode)
   (self/configure-prettify-symbols-alist))
 
+(defun self/lisp-interaction-customizations ()
+  "Customizations of lisp interaction mode"
+  (message "Calling Lisp Interaction Customizations")
+  (self/lisp-customizations)
+  (litable-mode))
+
 (defun self/racket-mode ()
   "Customizations of racket mode"
   (self/lisp-customizations)
@@ -79,10 +85,9 @@
 (require 'quack)
 
 (add-hook 'scheme-mode-hook 'self/lisp-customizations)
+(add-hook 'emacs-lisp-mode-hook 'self/lisp-customizations)
 (add-hook 'racket-mode-hook 'self/racket-mode)
 
 (add-to-list 'auto-mode-alist '("\\.scm$" . scheme-mode))
-
 (add-to-list 'auto-mode-alist '("\\.ss$" . scheme-mode))
-
 (add-to-list 'auto-mode-alist '("\\.rkt$" . racket-mode))
