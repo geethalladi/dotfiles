@@ -23,6 +23,8 @@
   "Customizations of lisp mode"
   (smartparens-mode)
   (rainbow-delimiters-mode)
+  (hungry-delete-mode)
+  (eldoc-mode)
   (self/configure-prettify-symbols-alist))
 
 (defun self/lisp-interaction-customizations ()
