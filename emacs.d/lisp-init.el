@@ -86,6 +86,7 @@
 
 (add-hook 'scheme-mode-hook 'self/lisp-customizations)
 (add-hook 'emacs-lisp-mode-hook 'self/lisp-customizations)
+(add-hook 'lisp-interaction-mode-hook 'self/lisp-interaction-customizations)
 (add-hook 'racket-mode-hook 'self/racket-mode)
 
 (add-to-list 'auto-mode-alist '("\\.scm$" . scheme-mode))
