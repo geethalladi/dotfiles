@@ -7,11 +7,11 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (set-face-attribute 'default nil
-        :family "PT Mono"
-        :height 160
-        :weight 'normal
-        :width 'expanded
-        :slant 'normal)
+                    :family "PT Mono"
+                    :height 160
+                    :weight 'normal
+                    :width 'expanded
+                    :slant 'normal)
 
 ;; SAVE BACK TO TEMP FOLDER
 (setq backup-directory-alist '((".*" . "~/.emacs.d/saves")))
