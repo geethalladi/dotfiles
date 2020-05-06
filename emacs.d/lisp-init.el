@@ -32,6 +32,8 @@
   "Customizations of lisp interaction mode"
   (message "Calling Lisp Interaction Customizations")
   (self/lisp-customizations)
+  ;; disable hungry delete mode in scratch
+  (hungry-delete-mode -1)
   (litable-mode))
 
 (defun self/racket-mode ()
