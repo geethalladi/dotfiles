@@ -32,9 +32,15 @@
   "Customizations of lisp interaction mode"
   (message "Calling Lisp Interaction Customizations")
   (self/lisp-customizations)
-  ;; disable hungry delete mode in scratch
-  (hungry-delete-mode -1)
-  (litable-mode))
+  (litable-mode)
+  ;; specific for scratch buffer
+  (when (string-equal (buffer-name) "*scratch*")
+    ;; disable hungry delete mode
+    (hungry-delete-mode -1)
+    ;; enable flyspell minor mode
+    (flyspell-mode 1)
+    ;; enable visual-line-mode
+    (visual-line-mode 1)))
 
 (defun self/racket-mode ()
   "Customizations of racket mode"
