@@ -105,7 +105,8 @@
   (setq js-indent-level 2)
 
   (yafolding-mode)
-  (smartparens-mode))
+  (smartparens-mode)
+  (rainbow-identifiers-mode))
 
 (add-hook 'js2-mode-hook 'self/-js-customizations)
 (add-hook 'web-mode-hook 'self/-web-customizations)
