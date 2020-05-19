@@ -38,6 +38,10 @@
 
 (add-hook 'restclient-mode-hook 'self/restclient-mode-hook)
 
+;; Using json-mode for rest client responses
+(add-to-list 'restclient-content-type-modes
+             '("application/json" . json-mode))
+
 ;; (setq tab-always-indent nil)
 
 
