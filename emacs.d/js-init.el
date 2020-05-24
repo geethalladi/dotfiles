@@ -106,7 +106,7 @@
 
   (yafolding-mode)
   (smartparens-mode)
-  (rainbow-identifiers-mode))
+  (rainbow-delimiters-mode))
 
 (add-hook 'js2-mode-hook 'self/-js-customizations)
 (add-hook 'web-mode-hook 'self/-web-customizations)
