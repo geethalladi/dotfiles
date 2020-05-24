@@ -18,6 +18,8 @@
   (self/load-dev-env)
   ;; load org mode customizations
   (self/load-org-env)
+  ;; load my own lisp extensions
+  (self/load-self-lisp)
   ;; reload scratch-buffer after loading everything
   (self/-reload-scratch-buffer))
 
@@ -107,8 +109,11 @@
   (load "~/.emacs.d/clojure-init.el")
   (load "~/.emacs.d/lisp-init.el")
 
-  (load "~/.emacs.d/other-modes-init.el")
+  (load "~/.emacs.d/other-modes-init.el"))
 
-  )
+(defun self/load-self-lisp ()
+  "Load my personal lisp extensions"
 
+  ;; to facilitate the velocity of lectures
+  (load "~/.emacs.d/self-lisp/lecture-stats.el"))
 ;; (self/load-all)
