@@ -99,5 +99,8 @@
 
 (require 'ox-confluence)
 
+;; required for org-reveal mode presentations
+(require 'ox-reveal)
+
 ;; search and replace inside invisible content (like urls) in org mode
 ;; (load "~/.emacs.d/vendor/org-mode-search-invisible.el")
