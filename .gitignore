@@ -32,3 +32,4 @@ tutorial
 site-lisp
 rake.cache
 games
+emacs.d/vendor/swank-js
