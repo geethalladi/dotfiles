@@ -42,6 +42,11 @@
 ;; Handlebar templates to use web-mode
 (add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
 
+;; Comments in json mode ;; Use // for comments
+(defconst json-mode-comments-re (rx (group "//" (zero-or-more nonl) line-end)))
+(push (list json-mode-comments-re 1 font-lock-comment-face) json-font-lock-keywords-1)
+
+
 (defun self/-web-customizations ()
   "Customizations for web mode"
   (define-key web-mode-map "\C-cp" 'jsons-print-path))
