@@ -78,6 +78,9 @@
   '(progn
      (define-key elpy-mode-map (kbd "C-c C-p") nil)))
 
+;; Instead of region, currently use staement, for faster iteration
+(define-key elpy-mode-map (kbd "C-c C-c") 'elpy-shell-send-statement-and-go)
+
 ;; (setq ein:use-auto-complete t)
 
 ;; Or, to enable "superpack" (a little bit hacky improvements):
