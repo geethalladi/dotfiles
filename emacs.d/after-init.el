@@ -6,6 +6,7 @@
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+;; eager loading font customizations
 (load "~/.emacs.d/font-init.el")
 
 ;; SAVE BACK TO TEMP FOLDER
