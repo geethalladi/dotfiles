@@ -22,7 +22,7 @@
            (123 . ".\\(?:-\\)")
            (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)")
 
-           ;;; Contentious Patterns :: Hangs my emacs
+           ;;; TODO: Contentious Patterns :: Hangs my emacs
 
            ;; hangs in org-mode (distractions.org)
            ;; (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
@@ -34,9 +34,7 @@
            ;; (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
            ;; (124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
 
-           (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
-
-           )))
+           (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)"))))
     (dolist (char-regexp alist)
       (set-char-table-range composition-function-table (car char-regexp)
                             `([,(cdr char-regexp) 0 font-shape-gstring])))))
