@@ -4,6 +4,8 @@
   (setq indent-tabs-mode nil
         python-indent 4
         tab-width 4)
+  ;; Don't resize the existing window heights
+  (setq even-window-heights nil)
   (pyvenv-mode 1)
   (eldoc-mode 1)
   (smartparens-mode 1)
