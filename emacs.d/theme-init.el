@@ -104,37 +104,6 @@
 ;; (when (not window-system)
 ;;  (load-theme 'tango-dark t))
 
-;; FONT INIT
-
-;; Two fonts which look good
-;; - Haskling  :: 11 :: semi-bold
-;; - Consolas  :: 12 :: normal
-;; - Fira Code :: 15 :: normal
-
-;; Ligatures hang during code folding
-;; (load "~/.emacs.d/font-ligatures.el")
-
-;; (set-face-attribute 'default nil :font "Fira Code:pixelsize=15:spacing=110:weight=normal")
-;; (load "~/.emacs.d/vendor/fira-code.el")
-
-;; (set-face-attribute 'default nil :font "Consolas:pixelsize=14:weight=normal")
-;; (set-face-attribute 'default nil :font "Hasklig:pixelsize=13:spacing=110:weight=normal")
-
-;; (set-face-attribute 'default nil :font "Monaco-16")
-;; (set-face-attribute 'default nil :font "Monaco-13:spacing=110")
-
-;; (set-face-attribute 'default nil :font "Inconsolata-16")
-;; (set-face-attribute 'default nil :font "Inconsolata-dz for Powerline:pixelsize=13:spacing=110")
-
-;; (set-face-attribute 'default nil :font "Consolas:pixelsize=16:spacing=110")
-;; (set-face-attribute 'default nil :font "Fira Code:pixelsize=15:spacing=110")
-
-;; (set-face-attribute 'default nil :font "Hasklig:pixelsize=13:spacing=110:weight=semi-bold")
-;; (set-face-attribute 'default nil :font "Consolas:pixelsize=16:spacing=110:weight=normal")
-
-;; (set-face-attribute 'default nil :font "Hasklig:pixelsize=15:spacing=110:weight=normal")
-
-;; (set-face-attribute 'default nil :font "Consolas:pixelsize=14:spacing=110:weight=normal")
 
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
 
