@@ -45,6 +45,9 @@
 
   (setq org-replace-disputed-keys t)
 
+  ;; do not truncate lines in org mode
+  (toggle-truncate-lines)
+
   ;; Using Shift keys for navigation across windows
   (windmove-default-keybindings)
 
