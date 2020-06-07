@@ -2,11 +2,18 @@
 ;; Moving this into its own module
 
 (set-face-attribute 'default nil
-                    :family "PT Mono"
-                    :height 160
+                    :family "Consolas"
+                    :height 140
                     :weight 'normal
                     :width 'expanded
                     :slant 'normal)
+
+;; (set-face-attribute 'default nil
+;;                     :family "PT Mono"
+;;                     :height 160
+;;                     :weight 'normal
+;;                     :width 'expanded
+;;                     :slant 'normal)
 
 ;; fonts I liked
 ;; - Jet Brains Mono :: 16    :: normal
