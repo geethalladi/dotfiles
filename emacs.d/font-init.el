@@ -9,11 +9,11 @@
                     :slant 'normal)
 
 ;; fonts I liked
-;; - Jet Brains Mono :: 16 :: normal
-;; - Consolas        :: 16 :: normal
-;; - PT Mono         :: 16 :: normal
-;; - Haskling        :: 11 :: semi-bold
-;; - Fira Code       :: 15 :: normal
+;; - Jet Brains Mono :: 16    :: normal
+;; - Consolas        :: 14/16 :: normal
+;; - PT Mono         :: 16    :: normal
+;; - Haskling        :: 11    :: semi-bold
+;; - Fira Code       :: 15    :: normal
 
 ;; Ligatures hang during code folding
 ;; (load "~/.emacs.d/font-ligatures.el")
