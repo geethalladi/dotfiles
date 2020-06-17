@@ -11,6 +11,21 @@
     ;; invoke align-regexp interactively
     (call-interactively 'org-update-statistics-cookies)))
 
+;; taken from https://emacs.stackexchange.com/questions/43651/moving-a-subtree-to-the-top-or-bottom-of-its-parent
+(defun self/org-move-to-extreme (up)
+  "Move current org subtree to the end of its parent.
+  With prefix arg move subtree to the start of its parent."
+  (interactive "P")
+  (condition-case err
+      (while t
+        (funcall (if up
+                     'org-move-subtree-up
+                   'org-move-subtree-down)))
+    (user-error
+     (let ((err-msg (cadr err)))
+       (unless (string-match "Cannot move past superior level or buffer limit" err-msg)
+         (signal 'user-error (list err-msg)))))))
+
 (defun self/-org-mode ()
   "org mode customization"
   ;; Always use org indent minor mode
