@@ -84,7 +84,7 @@
 
 (setq geiser-implementations-alist
       '(((regexp "\\.scm$") chez)
-        ((regexp "\\.ss$") racket)
+        ((regexp "\\.ss$") chez)
         ((regexp "\\.rkt$") racket)))
 
 ;; Disable version check
