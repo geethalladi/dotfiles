@@ -1,4 +1,24 @@
-;; Python Hook
+;; python mode hook
+
+(defun self/-python-mode-custom-keybindings ()
+  "Customizing python mode keybindings"
+
+  ;; new keybindings for elpy mode
+  ;; Instead of region, currently use staement, for faster iteration
+  (define-key elpy-mode-map (kbd "C-c C-c") 'elpy-shell-send-statement-and-go)
+  (define-key elpy-mode-map (kbd "s-<down>") 'elpy-nav-forward-block)
+  (define-key elpy-mode-map (kbd "s-<up>") 'elpy-nav-backward-block)
+
+  ;; Removing conflicting keys from smartparens minor-mode
+  ;; when used as a minor mode in elpy
+  (let ((oldmap (cdr (assoc 'smartparens-mode minor-mode-map-alist)))
+        (newmap (make-sparse-keymap)))
+    (set-keymap-parent newmap oldmap)
+    (define-key newmap (kbd "s-<down>") nil)
+    (define-key newmap (kbd "s-<up>") nil)
+    (make-local-variable 'minor-mode-overriding-map-alist)
+    (push `(smartparens-mode . ,newmap) minor-mode-overriding-map-alist)))
+
 (defun self/python-mode ()
   "Customizations for python mode"
   (setq indent-tabs-mode nil
@@ -6,12 +26,15 @@
         tab-width 4)
   ;; Don't resize the existing window heights
   (setq even-window-heights nil)
+  (self/-python-mode-custom-keybindings)
+
   (pyvenv-mode 1)
   (eldoc-mode 1)
   (smartparens-mode 1)
   (yafolding-mode 1)
   (yas-minor-mode 1)
   (highlight-indentation-mode 1)
+
   (pyvenv-activate "/usr/local/anaconda3/envs/PDSH"))
 
 (defun self/inf-python-mode ()
@@ -79,9 +102,6 @@
 (eval-after-load 'elpy
   '(progn
      (define-key elpy-mode-map (kbd "C-c C-p") nil)))
-
-;; Instead of region, currently use staement, for faster iteration
-(define-key elpy-mode-map (kbd "C-c C-c") 'elpy-shell-send-statement-and-go)
 
 ;; (setq ein:use-auto-complete t)
 
