@@ -73,7 +73,7 @@ export ERLANG_HOME=${ERLANG_ROOT_DIR}
 
 # Adding GO related paths
 # export GOROOT=/usr/local/opt/go
-export GOPATH=~/repo/personal/go
+export GOPATH=~/repo/personal/golang
 
 # Enabling EMACS variable disables line editing in zsh
 export EMACS_APP=/Applications/Emacs.app
