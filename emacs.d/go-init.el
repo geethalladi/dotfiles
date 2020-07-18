@@ -2,7 +2,6 @@
 
 (require 'go-mode)
 (require 'go-mode-autoloads)
-
 (require 'go-autocomplete)
 
 ;; uses native auto completion (M-TAB)
@@ -11,9 +10,8 @@
 
 (defun self/go-mode ()
   "Customizations for go mode"
-  (require 'auto-complete-config)
-  (ac-config-default)
   (smartparens-global-mode)
+  (auto-complete-mode)
   (setq indent-tabs-mode 1)
   (setq tab-width 4))
 
