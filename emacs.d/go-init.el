@@ -11,6 +11,11 @@
 (defun self/go-mode ()
   "Customizations for go mode"
   (smartparens-global-mode)
+  (smartparens-mode)
+  (yafolding-mode 1)
+  ;; disable company minor mode
+  ;; conflicts with auto-complete mode
+  (company-mode nil)
   (auto-complete-mode)
   (setq indent-tabs-mode 1)
   (setq tab-width 4))
