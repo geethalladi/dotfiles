@@ -88,6 +88,9 @@
 ;; Indent inside source code blocks
 (setq org-src-tab-acts-natively t)
 
+;; Prefer width mentioned in the file
+(setq org-image-actual-width nil)
+
 ;; Display images inline
 (setq org-startup-with-inline-images t)
 
