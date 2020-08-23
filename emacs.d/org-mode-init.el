@@ -132,8 +132,8 @@
   ;; Uncomment the below if 'ensure-system-packages` is installed
   ;;:ensure-system-package (gvgen . graphviz)
   :config
-  (setq org-mind-map-engine "dot")       ; Default. Directed Graph
-  )
+  (setq org-mind-map-engine "twopi") ;; radial layout
+  (setq org-mind-map-dot-output '("jpeg")))
 
 ;; search and replace inside invisible content (like urls) in org mode
 ;; (load "~/.emacs.d/vendor/org-mode-search-invisible.el")
