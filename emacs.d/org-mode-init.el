@@ -133,7 +133,13 @@
   ;;:ensure-system-package (gvgen . graphviz)
   :config
   (setq org-mind-map-engine "twopi") ;; radial layout
-  (setq org-mind-map-dot-output '("jpeg")))
+  (setq org-mind-map-dot-output '("jpeg"))
+  ;; this needs to be added at the end
+  ;; as they are converted to CLI args
+  ;; so the one coming last overrides the previous one
+  (setq org-mind-map-default-graph-attribs
+        (append org-mind-map-default-graph-attribs
+                '(("autosize" . "true") ("size" . "15,15")))))
 
 ;; search and replace inside invisible content (like urls) in org mode
 ;; (load "~/.emacs.d/vendor/org-mode-search-invisible.el")
