@@ -123,5 +123,17 @@
 ;; required for org-reveal mode presentations
 (require 'ox-reveal)
 
+;; configurations for org-mind-map
+;; taken from its README
+(use-package org-mind-map
+  :init
+  (require 'ox-org)
+  :ensure t
+  ;; Uncomment the below if 'ensure-system-packages` is installed
+  ;;:ensure-system-package (gvgen . graphviz)
+  :config
+  (setq org-mind-map-engine "dot")       ; Default. Directed Graph
+  )
+
 ;; search and replace inside invisible content (like urls) in org mode
 ;; (load "~/.emacs.d/vendor/org-mode-search-invisible.el")

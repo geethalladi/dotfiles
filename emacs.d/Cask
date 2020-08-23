@@ -136,6 +136,7 @@
  (depends-on "org")
  (depends-on "org-plus-contrib")
  (depends-on "org-bullets")
+ (depends-on "org-mind-map")
  (depends-on "origami")
  (depends-on "osx-clipboard")
  (depends-on "ov")
