@@ -45,6 +45,7 @@
 (defun self/racket-mode ()
   "Customizations of racket mode"
   (self/lisp-customizations)
+  (setq geiser-scheme-implementation 'racket)
   (geiser-mode))
 
 (load (expand-file-name "~/installed.d/quicklisp/slime-helper.el"))
