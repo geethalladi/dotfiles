@@ -45,6 +45,7 @@
 (defun self/racket-mode ()
   "Customizations of racket mode"
   (self/lisp-customizations)
+  (setq scheme-program-name "racket")
   (setq geiser-scheme-implementation 'racket)
   (geiser-mode))
 
