@@ -35,9 +35,6 @@
 
   (yas-minor-mode 1)
 
-  ;; Always use visual-line-mode
-  (visual-line-mode 1)
-
   ;; Enable flyspell minor mode in org
   (flyspell-mode 1)
 
