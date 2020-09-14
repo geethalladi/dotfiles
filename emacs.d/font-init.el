@@ -2,8 +2,8 @@
 ;; Moving this into its own module
 
 (set-face-attribute 'default nil
-                    :family "Consolas"
-                    :height 160
+                    :family "JetBrains Mono"
+                    :height 150
                     :weight 'normal
                     :width 'expanded
                     :slant 'normal)
@@ -16,7 +16,7 @@
 ;;                     :slant 'normal)
 
 ;; fonts I liked
-;; - Jet Brains Mono :: 16    :: normal
+;; - JetBrains Mono  :: 15/16 :: normal
 ;; - Consolas        :: 14/16 :: normal
 ;; - PT Mono         :: 16    :: normal
 ;; - Haskling        :: 11    :: semi-bold
