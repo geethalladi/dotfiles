@@ -27,11 +27,16 @@
 
    '(rainbow-delimiters-unmatched-face ((t (:background "cyan"))))))
 
-(defun self/load-leuven-theme ()
-  "Customizing leuven theme"
+(defun self/load-window-theme ()
+  "Customizing theme for window"
   (load-theme 'leuven t)
-
   (self/-light-theme-custom))
+
+(defun self/load-terminal-theme ()
+  "Customizing theme for terminal"
+  ;; (load-theme 'twilight-bright t)
+  ;; (self/-light-theme-custom)
+)
 
 (defun self/load-heroku-theme ()
   "Customizing heroku theme"
@@ -111,7 +116,10 @@
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
 
 (if (window-system)
-    (self/load-leuven-theme))
+    (self/load-window-theme)
+  (self/load-terminal-theme))
+
+;; (self/load-twilight-theme)
 
 ;; (self/load-heroku-theme)
 ;; (load-theme 'zenburn t)
