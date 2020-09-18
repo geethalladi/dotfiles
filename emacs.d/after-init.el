@@ -4,6 +4,9 @@
 ;; OPENING IN THE SAME FRAME (NO NEW FRAMES)
 (setq ns-pop-up-frames nil)
 
+;; no toolbar
+(tool-bar-mode -1)
+
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; eager loading font customizations
