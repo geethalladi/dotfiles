@@ -1,12 +1,6 @@
 ;; THEME INIT
 
-(defun self/load-leuven-theme ()
-  "Customizing leuven theme"
-  (load-theme 'leuven t)
-
-  ;; (face-remap-add-relative
-  ;;  'mode-line '((:foreground "ivory" :background "Green4") mode-line))
-
+(defun self/-light-theme-custom ()
   (custom-set-faces
    ;; Org mode faces
    '(org-level-1 ((t (:background "#ffffff"))))
@@ -17,6 +11,9 @@
    '(org-level-6 ((t (:background "#ffffff"))))
    '(org-level-7 ((t (:background "#ffffff"))))
    '(org-level-8 ((t (:background "#ffffff"))))
+
+   ;; (face-remap-add-relative
+   ;;  'mode-line '((:foreground "ivory" :background "Green4") mode-line))
 
    ;; rainbow delimiter mode
    '(rainbow-delimiters-depth-1-face ((t (:foreground "blue"))))
@@ -29,6 +26,12 @@
    '(rainbow-delimiters-depth-8-face ((t (:foreground "black"))))
 
    '(rainbow-delimiters-unmatched-face ((t (:background "cyan"))))))
+
+(defun self/load-leuven-theme ()
+  "Customizing leuven theme"
+  (load-theme 'leuven t)
+
+  (self/-light-theme-custom))
 
 (defun self/load-heroku-theme ()
   "Customizing heroku theme"
