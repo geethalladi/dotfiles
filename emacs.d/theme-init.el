@@ -110,10 +110,8 @@
 
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
 
-;; (if (window-system)
-;;     (self/load-heroku-theme))
-
-(self/load-leuven-theme)
+(if (window-system)
+    (self/load-leuven-theme))
 
 ;; (self/load-heroku-theme)
 ;; (load-theme 'zenburn t)
