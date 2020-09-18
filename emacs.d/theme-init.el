@@ -34,6 +34,7 @@
 
 (defun self/load-terminal-theme ()
   "Customizing theme for terminal"
+  (load-theme 'tango-plus t)
   ;; (load-theme 'twilight-bright t)
   ;; (self/-light-theme-custom)
 )
