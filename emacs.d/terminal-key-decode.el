@@ -13,5 +13,6 @@
   (define-key input-decode-map "\e[1;2C" [S-right])
   (define-key input-decode-map "\e[1;2D" [S-left]))
 
-;; decode the escape sequences inside the terminal
-(self/-custom-decode-map)
+(if (getenv "TERM_PROGRAM")
+    ;; decode the escape sequences inside the terminal
+    (self/-custom-decode-map))
