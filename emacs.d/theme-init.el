@@ -1,5 +1,14 @@
 ;; THEME INIT
 
+;; default themes
+;; (load-theme 'zenburn t)
+;; (load-theme 'github-modern t)
+;; (load-theme 'wheatgrass t)
+;; (load-theme 'monokai t)
+;; (load-theme 'tango-dark t)
+;; (load-theme 'heroku t)
+;; (load-theme 'leuven t)
+
 (defun self/-dark-modep ()
   "Check if emacs is started in dark context"
   ;; if the iterm profile contains the word dark
@@ -95,15 +104,7 @@
    '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
    '(quack-pltish-defn-face ((t (:foreground "#dfaf8f"))))))
 
-;; default to
 
-;; (load-theme 'zenburn t)
-;; (load-theme 'github-modern t)
-;; (load-theme 'wheatgrass t)
-;; (load-theme 'monokai t)
-;; (load-theme 'tango-dark t)
-;; (load-theme 'heroku t)
-;; (load-theme 'leuven t)
 
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
 
