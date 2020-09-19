@@ -32,12 +32,12 @@
   (load-theme 'leuven t)
   (self/-light-theme-custom))
 
-(defun self/load-terminal-theme ()
-  "Customizing theme for terminal"
-  (load-theme 'tango-plus t)
-  ;; (load-theme 'twilight-bright t)
-  ;; (self/-light-theme-custom)
-)
+;; (defun self/load-terminal-theme ()
+;;   "Customizing theme for terminal"
+;;   (load-theme 'tango-plus t)
+;;   ;; (load-theme 'twilight-bright t)
+;;   ;; (self/-light-theme-custom)
+;; )
 
 (defun self/load-heroku-theme ()
   "Customizing heroku theme"
@@ -116,9 +116,12 @@
 
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
 
-(if (window-system)
-    (self/load-window-theme)
-  (self/load-terminal-theme))
+;; Use the same theme everywhere
+(self/load-window-theme)
+
+;; (if (window-system)
+;;     (self/load-window-theme)
+;;   (self/load-terminal-theme))
 
 ;; (self/load-twilight-theme)
 
