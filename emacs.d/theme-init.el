@@ -44,11 +44,6 @@
 
    '(rainbow-delimiters-unmatched-face ((t (:background "cyan"))))))
 
-(defun self/load-window-theme ()
-  "Customizing theme for window"
-  (load-theme 'leuven t)
-  (self/-light-theme-custom))
-
 (defun self/load-heroku-theme ()
   "Customizing heroku theme"
   (load-theme 'heroku t)
@@ -105,6 +100,10 @@
    '(quack-pltish-defn-face ((t (:foreground "#dfaf8f"))))))
 
 
+(defun self/load-window-theme ()
+  "Customizing theme for window"
+  (load-theme 'leuven t)
+  (self/-light-theme-custom))
 
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
 
@@ -114,7 +113,6 @@
  ((self/-dark-modep) (load-theme 'zenburn t))
  ;; everywhere else use the light theme
  (t (self/load-window-theme)))
-
 
 ;; (require 'color-identifiers-mode)
 ;; (let ((faces '(font-lock-comment-face
