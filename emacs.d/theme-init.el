@@ -44,19 +44,8 @@
 
    '(rainbow-delimiters-unmatched-face ((t (:background "cyan"))))))
 
-(defun self/load-heroku-theme ()
-  "Customizing heroku theme"
-  (load-theme 'heroku t)
-
-  ;; Powerline heroku theme
-  (require 'powerline)
-  (setq powerline-default-separator 'bar)
-  (powerline-default-theme)
-
-  ;; heroku-theme python
-  ;; (set-face-background 'highlight-indentation-face "#3B4242")
-  ;; (set-face-background 'highlight-indentation-current-column-face "#3B4242")
-
+(defun self/-dark-theme-custom ()
+  "Custom theme for a dark background"
   (custom-set-faces
    ;; org mode faces
    '(org-level-1 ((t (:foreground "#dfaf8f"))))
@@ -99,6 +88,19 @@
    '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
    '(quack-pltish-defn-face ((t (:foreground "#dfaf8f"))))))
 
+(defun self/load-heroku-theme ()
+  "Customizing heroku theme"
+  (load-theme 'heroku t)
+
+  ;; heroku-theme python
+  ;; (set-face-background 'highlight-indentation-face "#3B4242")
+  ;; (set-face-background 'highlight-indentation-current-column-face "#3B4242")
+  (self/-dark-theme-custom)
+
+  ;; Powerline heroku theme
+  (require 'powerline)
+  (setq powerline-default-separator 'bar)
+  (powerline-default-theme))
 
 (defun self/load-window-theme ()
   "Customizing theme for window"
