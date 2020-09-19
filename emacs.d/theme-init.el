@@ -1,4 +1,4 @@
-;; THEME INIT
+;; Load theme after fonts, to override conflicting customisations in favour of theme
 
 ;; default themes
 ;; (load-theme 'zenburn t)
@@ -8,6 +8,19 @@
 ;; (load-theme 'tango-dark t)
 ;; (load-theme 'heroku t)
 ;; (load-theme 'leuven t)
+
+(defun self/-load-heroku-theme ()
+  "Customizing heroku theme"
+  (load-theme 'heroku t)
+  (self/-dark-theme-custom)
+  ;; heroku-theme python
+  ;; (set-face-background 'highlight-indentation-face "#3B4242")
+  ;; (set-face-background 'highlight-indentation-current-column-face "#3B4242")
+
+  ;; Powerline heroku theme
+  (require 'powerline)
+  (setq powerline-default-separator 'bar)
+  (powerline-default-theme))
 
 (defun self/-dark-modep ()
   "Check if emacs is started in dark context"
@@ -88,32 +101,14 @@
    '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
    '(quack-pltish-defn-face ((t (:foreground "#dfaf8f"))))))
 
-(defun self/load-heroku-theme ()
-  "Customizing heroku theme"
-  (load-theme 'heroku t)
-
-  ;; heroku-theme python
-  ;; (set-face-background 'highlight-indentation-face "#3B4242")
-  ;; (set-face-background 'highlight-indentation-current-column-face "#3B4242")
-  (self/-dark-theme-custom)
-
-  ;; Powerline heroku theme
-  (require 'powerline)
-  (setq powerline-default-separator 'bar)
-  (powerline-default-theme))
-
 (defun self/load-window-theme ()
   "Customizing theme for window"
   (load-theme 'leuven t)
   (self/-light-theme-custom))
 
-;; Load theme after fonts, to override conflicting customisations in favour of theme
-
-;; Use the same theme everywhere
 (cond
- ;; use dark theme in dark context
- ((self/-dark-modep) (load-theme 'zenburn t))
- ;; everywhere else use the light theme
+ ((self/-dark-modep) (load-theme 'zenburn t))  ;; use dark theme in dark context
+ ;; and light theme everywhere
  (t (self/load-window-theme)))
 
 ;; (require 'color-identifiers-mode)
