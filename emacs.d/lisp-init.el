@@ -32,7 +32,9 @@
   "Customizations of lisp interaction mode"
   (message "Calling Lisp Interaction Customizations")
   (self/lisp-customizations)
-  (litable-mode)
+  ;; disable litable mode
+  ;; as scratch buffer mostly is devoid of lisp code
+  ;; (litable-mode)
   ;; specific for scratch buffer
   (when (string-equal (buffer-name) "*scratch*")
     ;; disable hungry delete mode
