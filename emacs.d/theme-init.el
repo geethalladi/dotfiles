@@ -101,15 +101,19 @@
    '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
    '(quack-pltish-defn-face ((t (:foreground "#dfaf8f"))))))
 
-(defun self/load-window-theme ()
-  "Customizing theme for window"
+(defun self/load-light-theme ()
+  "light theme"
   (load-theme 'leuven t)
   (self/-light-theme-custom))
 
-(cond
- ((self/-dark-modep) (load-theme 'zenburn t))  ;; use dark theme in dark context
- ;; and light theme everywhere
- (t (self/load-window-theme)))
+(defun self/load-dark-theme ()
+  "dark theme"
+  (load-theme 'zenburn t)
+  (self/-dark-theme-custom))
+
+(if (self/-dark-modep)
+    (self/load-dark-theme) ;; use dark theme in dark context
+  (self/load-light-theme))
 
 ;; (require 'color-identifiers-mode)
 ;; (let ((faces '(font-lock-comment-face
