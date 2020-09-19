@@ -46,6 +46,7 @@
   (load "~/.emacs.d/epub-init.el")
 
   (load "~/.emacs.d/custom.el")
+  (load "~/.emacs.d/terminal-key-decode.el")
   (load "~/.emacs.d/theme-init.el"))
 
 (defun self/load-packages ()
