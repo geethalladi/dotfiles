@@ -116,7 +116,11 @@
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
 
 ;; Use the same theme everywhere
-(self/load-window-theme)
+(cond
+ ;; use dark theme in dark context
+ ((self/-dark-modep) (load-theme 'zenburn t))
+ ;; everywhere else use the light theme
+ (t (self/load-window-theme)))
 
 ;; (if (window-system)
 ;;     (self/load-window-theme)
