@@ -26,8 +26,9 @@
   "Check if emacs is started in dark context"
   ;; if the iterm profile contains the word dark
   ;; then return true
-  (string-match-p (regexp-quote "dark")
-                  (getenv "ITERM_PROFILE")))
+  (let ((profile (getenv "ITERM_PROFILE")))
+    (and (stringp profile)
+         (string-match-p (regexp-quote "dark") profile))))
 
 (defun self/-light-theme-custom ()
   "Custom theme for a light background"
