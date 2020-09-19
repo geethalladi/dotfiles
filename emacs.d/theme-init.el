@@ -131,10 +131,3 @@
 ;;                font-lock-doc-face)))
 ;;   (dolist (face faces)
 ;;     (set-face-attribute face nil :foreground nil :weight 'normal :slant 'normal)))
-
-;; (set-face-attribute 'font-lock-comment-delimiter-face nil :slant 'italic)
-;; (set-face-attribute 'font-lock-comment-face nil :slant 'italic)
-;; (set-face-attribute 'font-lock-doc-face nil :slant 'italic)
-;; (set-face-attribute 'font-lock-keyword-face nil :weight 'bold)
-;; (set-face-attribute 'font-lock-builtin-face nil :weight 'bold)
-;; (set-face-attribute 'font-lock-preprocessor-face nil :weight 'bold)
