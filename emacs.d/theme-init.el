@@ -2,8 +2,10 @@
 
 (defun self/-dark-modep ()
   "Check if emacs is started in dark context"
-  (equal "dark"
-         (getenv "ITERM_PROFILE")))
+  ;; if the iterm profile contains the word dark
+  ;; then return true
+  (string-match-p (regexp-quote "dark")
+                  (getenv "ITERM_PROFILE")))
 
 (defun self/-light-theme-custom ()
   "Custom theme for a light background"
