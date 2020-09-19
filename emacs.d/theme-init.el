@@ -48,8 +48,8 @@
   (powerline-default-theme)
 
   ;; heroku-theme python
-  (set-face-background 'highlight-indentation-face "#3B4242")
-  (set-face-background 'highlight-indentation-current-column-face "#3B4242")
+  ;; (set-face-background 'highlight-indentation-face "#3B4242")
+  ;; (set-face-background 'highlight-indentation-current-column-face "#3B4242")
 
   (custom-set-faces
    ;; org mode faces
