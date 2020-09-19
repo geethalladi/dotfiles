@@ -38,13 +38,6 @@
   (load-theme 'leuven t)
   (self/-light-theme-custom))
 
-;; (defun self/load-terminal-theme ()
-;;   "Customizing theme for terminal"
-;;   (load-theme 'tango-plus t)
-;;   ;; (load-theme 'twilight-bright t)
-;;   ;; (self/-light-theme-custom)
-;; )
-
 (defun self/load-heroku-theme ()
   "Customizing heroku theme"
   (load-theme 'heroku t)
