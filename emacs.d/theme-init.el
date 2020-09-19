@@ -1,6 +1,12 @@
 ;; THEME INIT
 
+(defun self/-dark-modep ()
+  "Check if emacs is started in dark context"
+  (equal "dark"
+         (getenv "ITERM_PROFILE")))
+
 (defun self/-light-theme-custom ()
+  "Custom theme for a light background"
   (custom-set-faces
    ;; Org mode faces
    '(org-level-1 ((t (:background "#ffffff"))))
