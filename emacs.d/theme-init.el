@@ -103,16 +103,6 @@
 ;; (load-theme 'heroku t)
 ;; (load-theme 'leuven t)
 
-;; solarized-light theme
-;; (add-to-list 'custom-theme-load-path
-;;              "~/repo/open-source/emacs-color-theme-solarized")
-;; (set-frame-parameter nil 'background-mode 'light)
-;; (load-theme 'solarized t)
-
-;; (when (not window-system)
-;;  (load-theme 'tango-dark t))
-
-
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
 
 ;; Use the same theme everywhere
@@ -122,21 +112,6 @@
  ;; everywhere else use the light theme
  (t (self/load-window-theme)))
 
-;; (if (window-system)
-;;     (self/load-window-theme)
-;;   (self/load-terminal-theme))
-
-;; (self/load-twilight-theme)
-
-;; (self/load-heroku-theme)
-;; (load-theme 'zenburn t)
-
-;; (when (window-system)
-;;   (set-face-attribute 'default nil :font "Fira Code:pixelsize=16:spacing=110"))
-
-;; (if (window-system)
-;;     (set-face-attribute 'default nil :font "Consolas:pixelsize=16:spacing=110:weight=normal")
-;;   (set-face-attribute 'default nil :font "Hasklig:pixelsize=13:spacing=110:weight=medium"))
 
 ;; (require 'color-identifiers-mode)
 ;; (let ((faces '(font-lock-comment-face
