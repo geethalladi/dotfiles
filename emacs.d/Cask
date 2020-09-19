@@ -21,6 +21,7 @@
  (depends-on "calfw")
  (depends-on "cask")
  (depends-on "cider")
+ (depends-on "clipetty")
  (depends-on "confluence")
  (depends-on "color-identifiers-mode")
  (depends-on "command-log-mode")
