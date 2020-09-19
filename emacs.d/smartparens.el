@@ -57,7 +57,10 @@
  ("C-<backspace>" . sp-backward-kill-word)
  ([remap sp-backward-kill-word] . backward-kill-word)
 
- ("M-[" . sp-backward-unwrap-sexp)
+ ;; Collides with input-decode-map
+ ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Translation-Keymaps.html
+ ;; ("M-[" . sp-backward-unwrap-sexp)
+
  ("M-]" . sp-unwrap-sexp)
 
  ("C-x C-t" . sp-transpose-hybrid-sexp)
