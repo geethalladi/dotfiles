@@ -1,4 +1,4 @@
-(define self/-custom-decode-map ()
+(defun self/-custom-decode-map ()
   "Customize decode input sequences"
   ;; ctrl keys
   (define-key input-decode-map "\e[1;5E" [C-return])
