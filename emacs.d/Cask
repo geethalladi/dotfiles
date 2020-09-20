@@ -224,21 +224,6 @@
  (depends-on "zenburn-theme")
 )
 
-;; (depends-on "ac-cider")
-;; (depends-on "ac-geiser")
-;; (depends-on "ac-nrepl") ;; deprecated in favour of ac-cider
-;; (depends-on "bookmark+")
-;; (depends-on "chef-mode")
-;; (depends-on "cider-decompile")
-;; (depends-on "cider-tracing") ;; cider-tracing is no longer maintained
-;; (depends-on "cljsbuild-mode")
-;; (depends-on "clojure-mode")
-;; (depends-on "clojurescript-mode") ;; use clojure-mode
-;; (depends-on "coffee-mode")
-;; (depends-on "color-theme-monokai")
-;; (depends-on "company-cider") ;; company mode as a hook to cider
-;; (depends-on "dash")
-;; (depends-on "dash-at-point")
 ;; (depends-on "dired+")
 ;; (depends-on "dirtree")
 ;; (depends-on "docker")
@@ -253,8 +238,4 @@
 ;; (depends-on "ess-smart-underscore")
 ;; (depends-on "etags-select")
 ;; (depends-on "etags-table")
-;; (depends-on "ido-everywhere") ;; variable set in after-init
-;; (depends-on "ido-flex") ;; variable set in after-init
-;; (depends-on "ido-ubiquitous")
 ;; (depends-on "quack") ;; manual install the quack files v0.48
-;; (depends-on "slamhound") ;; clojure
