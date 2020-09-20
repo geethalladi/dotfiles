@@ -49,11 +49,11 @@
    ;; rainbow delimiter mode
    '(rainbow-delimiters-depth-1-face ((t (:foreground "blue"))))
    '(rainbow-delimiters-depth-2-face ((t (:foreground "red"))))
-   '(rainbow-delimiters-depth-3-face ((t (:foreground "orange"))))
+   '(rainbow-delimiters-depth-3-face ((t (:foreground "green4"))))
    '(rainbow-delimiters-depth-4-face ((t (:foreground "black"))))
    '(rainbow-delimiters-depth-5-face ((t (:foreground "blue"))))
    '(rainbow-delimiters-depth-6-face ((t (:foreground "red"))))
-   '(rainbow-delimiters-depth-7-face ((t (:foreground "orange"))))
+   '(rainbow-delimiters-depth-7-face ((t (:foreground "green4"))))
    '(rainbow-delimiters-depth-8-face ((t (:foreground "black"))))
 
    '(rainbow-delimiters-unmatched-face ((t (:background "cyan"))))))
