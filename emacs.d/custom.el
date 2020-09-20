@@ -272,3 +272,6 @@
 ;; for emacs sentence navigation
 ;; without this setting, the keybinding moves every paragraph
 (setq sentence-end-double-space nil)
+
+;; when bookmarks are added, save it to disk immediately
+(setq bookmark-save-flag 1)
