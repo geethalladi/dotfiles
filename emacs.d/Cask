@@ -47,7 +47,6 @@
  (depends-on "emmet-mode")
  (depends-on "enclose")
  (depends-on "enh-ruby-mode")
- (depends-on "ensime")
  (depends-on "epl")
  (depends-on "erlang")
  (depends-on "ert-runner")
@@ -239,3 +238,4 @@
 ;; (depends-on "etags-select")
 ;; (depends-on "etags-table")
 ;; (depends-on "quack") ;; manual install the quack files v0.48
+;; (depends-on "ensime")
