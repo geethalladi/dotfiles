@@ -1,7 +1,9 @@
-(add-to-list 'load-path "~/.emacs.d/.cask/26.0/elpa/go-mode-20170726.555/go-mode.el")
+;; go-mode-autoloads is no longer needed
+;; https://github.com/dominikh/go-mode.el/issues/222
+;; (add-to-list 'load-path "~/.emacs.d/.cask/26.0/elpa/go-mode-20170726.555/go-mode.el")
+;; (require 'go-mode-autoloads)
 
 (require 'go-mode)
-(require 'go-mode-autoloads)
 (require 'go-autocomplete)
 
 ;; uses native auto completion (M-TAB)
