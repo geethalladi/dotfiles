@@ -163,6 +163,7 @@
  (depends-on "psc-ide")
  (depends-on "purescript-mode")
  (depends-on "py-autopep8")
+ (depends-on "quack")
  (depends-on "racket-mode")
  (depends-on "rainbow-delimiters")
  (depends-on "rainbow-identifiers")
@@ -237,5 +238,4 @@
 ;; (depends-on "ess-smart-underscore")
 ;; (depends-on "etags-select")
 ;; (depends-on "etags-table")
-;; (depends-on "quack") ;; manual install the quack files v0.48
 ;; (depends-on "ensime")
