@@ -34,3 +34,4 @@ rake.cache
 games
 emacs.d/vendor/swank-js
 feedback
+transient/
