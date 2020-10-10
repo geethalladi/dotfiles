@@ -24,6 +24,14 @@
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
+;; TODO: make this conditional
+(defun -mac-set-options-command-key ()
+  "Use Options as Meta Key"
+  (setq mac-option-modifier 'meta)
+  (setq mac-command-modifier 'super))
+
+(-mac-set-options-command-key)
+
 ;; Start the emacs-server
 (load "~/.emacs.d/emacs-server.el")
 
