@@ -8,7 +8,7 @@
 (require 'mocha)
 (require 'nvm)
 (require 'nodejs-repl)
-(require 'indium)
+;; (require 'indium)  ;; uncomment after fixing json-client-process issue in emacs 27
 (require 'xref-js2)
 
 ;; needed for making the tern-server integration
