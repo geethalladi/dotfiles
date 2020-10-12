@@ -127,6 +127,17 @@
 ;; Key binding for magit-status
 (global-set-key (kbd "C-c g s") 'magit-status)
 
+;; Key binding for mac
+(global-set-key [(super a)] 'mark-whole-buffer)
+(global-set-key [(super v)] 'yank)
+(global-set-key [(super c)] 'kill-ring-save)
+(global-set-key [(super s)] 'save-buffer)
+(global-set-key [(super l)] 'goto-line)
+(global-set-key [(super w)]
+                (lambda () (interactive) (delete-window)))
+(global-set-key [(super z)] 'undo)
+(global-set-key [(super k)] 'kill-current-buffer)
+
 ;; Follow symlinks
 (setq vc-follow-symlinks t)
 
