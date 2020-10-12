@@ -1,4 +1,9 @@
 ;; Projectile
+
+(require 'projectile)
+(define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
+(projectile-mode +1)
+
 (projectile-global-mode)
 (setq projectile-enable-caching t)
 (setq projectile-completion-system 'helm)
@@ -7,4 +12,4 @@
 (setq helm-mode-fuzzy-match t)
 
 ;; line mode for projectile
-(setq projectile-mode-line "Projectile")
+(setq projectile-mode-line "Project")
