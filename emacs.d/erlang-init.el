@@ -26,7 +26,8 @@
 
 (defun self/erlang-mode-hook ()
   "erlang mode customization hook"
-  (smartparens-mode 1))
+  (smartparens-mode 1)
+  (yafolding-mode 1))
 
 (add-hook 'erlang-mode-hook 'self/erlang-mode-hook)
 (add-hook 'erlang-shell-mode-hook 'smartparens-mode)
