@@ -8,7 +8,7 @@
 (require 'mocha)
 (require 'nvm)
 (require 'nodejs-repl)
-;; TODO: fix json-client-process issue in emacs 27
+
 (require 'json-process-client)
 (require 'indium)
 (require 'xref-js2)
