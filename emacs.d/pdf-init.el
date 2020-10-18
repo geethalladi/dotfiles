@@ -4,7 +4,7 @@
 (use-package pdf-tools
   :config
  ;; initialise
- ;; (pdf-tools-install) ;; TODO: uncomment after moving to emacs-27
+ (pdf-tools-install)
  ;; open pdfs scaled to fit page
  (setq-default pdf-view-display-size 'fit-page)
  ;; automatically annotate highlights
