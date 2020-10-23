@@ -1,5 +1,9 @@
 (require 'org)
 
+;; Required for old org mode templates to work (changed after org mode 9.2)
+;; templates for source, quote blocks
+(require 'org-tempo)
+
 ;; (require 'stripe-buffer)
 ;; (add-hook 'org-mode-hook 'stripe-table-mode)
 ;; (add-hook 'org-mode-hook 'autopair-mode)
