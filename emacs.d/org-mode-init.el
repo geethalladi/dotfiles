@@ -2,7 +2,8 @@
 
 ;; Required for old org mode templates to work (changed after org mode 9.2)
 ;; templates for source, quote blocks
-(require 'org-tempo)
+(unless (version<= org-version "9.2")
+  (require 'org-tempo))
 
 ;; (require 'stripe-buffer)
 ;; (add-hook 'org-mode-hook 'stripe-table-mode)
