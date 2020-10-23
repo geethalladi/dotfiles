@@ -25,9 +25,6 @@ if [ "$PATH_STATE_UPDATED" != "1" ]; then
         source ${DOTFILE_DIR_ZSH}/xvm.sh
     fi
 
-    # OCaml / opam configuration
-    test -r ${OPAM_DIR}/opam-init/init.zsh && . ${OPAM_DIR}/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
     # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
     export PATH="$PATH:$HOME/.rvm/bin"
     export MANPATH="/usr/local/man:$MANPATH"
