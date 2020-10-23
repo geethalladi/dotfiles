@@ -2,7 +2,9 @@
 ;; Install the following packages
 ;; $ opam install tuareg merlin ocp-incident utop
 
-(add-to-list 'load-path "~/.opam/default/share/emacs/site-lisp/")
+;; Add opam emacs directory to the load-path
+(setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
+(add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
 
 (add-hook 'tuareg-mode 'tuareg-imenu-set-imenu)
 (setq auto-mode-alist
@@ -12,9 +14,6 @@
 (autoload 'utop-setup-ocaml-buffer "utop" "Top level for OCaml" t)
 (autoload 'merlin-mode "merlin" "Merlin mode" t)
 
-;; Add opam emacs directory to the load-path
-(setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
-(add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
 ;; Load merlin-mode
 (require 'merlin)
 
