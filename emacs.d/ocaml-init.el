@@ -1,3 +1,7 @@
+;; Install opam
+;; Install the following packages
+;; $ opam install tuareg merlin ocp-incident
+
 (add-hook 'tuareg-mode 'tuareg-imenu-set-imenu)
 (setq auto-mode-alist
       (append '(("\\.ml[ily]?$" . tuareg-mode)
@@ -39,5 +43,5 @@
 (autoload 'utop "utop" "Toplevel for OCaml" t)
 
 ;; Adding ocp-indent
-(add-to-list 'load-path "~/.opam/system/share/emacs/site-lisp")
+(add-to-list 'load-path "~/.opam/default/share/emacs/site-lisp/")
 (require 'ocp-indent)
