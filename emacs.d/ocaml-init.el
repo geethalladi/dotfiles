@@ -24,42 +24,42 @@
 ;; (require 'opam-user-setup "~/.emacs.d/vendor/opam-user-setup.el")
 ;; ## end of OPAM user-setup addition for emacs / base ## keep this line
 
-(add-hook 'tuareg-mode 'tuareg-imenu-set-imenu)
-
-(autoload 'merlin-mode "merlin" "Merlin mode" t)
-
-;; Load merlin-mode
-(require 'merlin)
-(require 'utop)
-
-(add-hook 'tuareg-mode-hook 'utop-minor-mode)
-(add-hook 'tuareg-mode-hook 'merlin-mode)
-(add-hook 'tuareg-mode-hook 'smartparens-mode)
-
-;; (add-hook 'tuareg-mode-hook 'merlin-mode t)
-;; (add-hook 'caml-mode-hook 'merlin-mode t)
-
-;; (setq merlin-use-auto-complete-mode t)
-
-(setq merlin-error-after-save nil)
-;; Enable auto-complete
-(setq merlin-use-auto-complete-mode 'easy)
 ;; Use opam switch to lookup ocamlmerlin binary
 (setq merlin-command 'opam)
+(setq merlin-use-auto-complete-mode nil)
 
-;; Running UTOP from emacs
+(autoload 'merlin-mode "merlin" "Merlin mode" t)
+(autoload 'utop "utop" "Toplevel for OCaml" t)
+
+(require 'merlin)
+(require 'utop)
+(require 'ocp-indent)
 
 ;; Setup environment variables using opam
 (dolist (var (car (read-from-string (shell-command-to-string "opam config env --sexp"))))
   (setenv (car var) (cadr var)))
+
 ;; Update the emacs path
 (setq exec-path (append (parse-colon-path (getenv "PATH"))
-      (list exec-directory)))
-;; Update the emacs load path
-(add-to-list 'load-path (expand-file-name "../../share/emacs/site-lisp"
-      (getenv "OCAML_TOPLEVEL_PATH")))
-;; Automatically load utop.el
-(autoload 'utop "utop" "Toplevel for OCaml" t)
+                        (list exec-directory)))
 
-;; Adding ocp-indent
-(require 'ocp-indent)
+(defun self/-ocaml-mode ()
+  "Customizations for OCaml mode"
+  (merlin-mode)
+  (smartparens-mode)
+  (utop-minor-mode)
+  (setq merlin-error-after-save nil)
+  (self/remove-conflicting-keybindings 'merlin-mode (kbd "C-c C-p"))
+  ;; disable autocomplete mode
+  (auto-complete-mode -1))
+
+(add-hook 'tuareg-mode-hook 'self/-ocaml-mode)
+
+;; (tuareg-imenu-set-imenu)
+
+;; Enable auto-complete
+;; (setq merlin-use-auto-complete-mode 'easy)
+
+;; ;; Update the emacs load path
+;; (add-to-list 'load-path (expand-file-name "../../share/emacs/site-lisp"
+;;                                           (getenv "OCAML_TOPLEVEL_PATH")))
