@@ -31,8 +31,8 @@
 (setq merlin-command 'opam)
 (setq merlin-use-auto-complete-mode nil)
 
-(autoload 'merlin-mode "merlin" "Merlin mode" t)
-(autoload 'utop "utop" "Toplevel for OCaml" t)
+;; (autoload 'merlin-mode "merlin" "Merlin mode" t)
+;; (autoload 'utop "utop" "Toplevel for OCaml" t)
 
 (require 'merlin)
 (require 'utop)
