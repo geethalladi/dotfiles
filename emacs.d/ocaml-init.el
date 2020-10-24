@@ -11,8 +11,9 @@
                 ("\\.topml$" . tuareg-mode))
               auto-mode-alist))
 
-;; (autoload 'utop-setup-ocaml-buffer "utop" "Top level for OCaml" t)
-;; (add-hook 'tuareg-mode-hook 'utop-setup-ocaml-buffer)
+;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
+;; (require 'opam-user-setup "~/.emacs.d/vendor/opam-user-setup.el")
+;; ## end of OPAM user-setup addition for emacs / base ## keep this line
 
 (add-hook 'tuareg-mode 'tuareg-imenu-set-imenu)
 
