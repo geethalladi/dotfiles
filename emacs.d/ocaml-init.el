@@ -15,10 +15,6 @@
 (setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
 (add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
 
-(setq auto-mode-alist
-      (append '(("\\.ml[ily]?$" . tuareg-mode)
-                ("\\.topml$" . tuareg-mode))
-              auto-mode-alist))
 
 ;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
 ;; (require 'opam-user-setup "~/.emacs.d/vendor/opam-user-setup.el")
@@ -52,6 +48,11 @@
   (self/remove-conflicting-keybindings 'merlin-mode (kbd "C-c C-p"))
   ;; disable autocomplete mode
   (auto-complete-mode -1))
+
+(setq auto-mode-alist
+      (append '(("\\.ml[ily]?$" . tuareg-mode)
+                ("\\.topml$" . tuareg-mode))
+              auto-mode-alist))
 
 (add-hook 'tuareg-mode-hook 'self/-ocaml-mode)
 
