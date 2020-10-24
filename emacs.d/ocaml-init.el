@@ -23,10 +23,6 @@
 (dolist (var (car (read-from-string (shell-command-to-string "opam config env --sexp"))))
   (setenv (car var) (cadr var)))
 
-;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
-;; (require 'opam-user-setup "~/.emacs.d/vendor/opam-user-setup.el")
-;; ## end of OPAM user-setup addition for emacs / base ## keep this line
-
 ;; Use opam switch to lookup ocamlmerlin binary
 (setq merlin-command 'opam)
 (setq merlin-use-auto-complete-mode nil)
@@ -37,6 +33,10 @@
 (require 'merlin)
 (require 'utop)
 (require 'ocp-indent)
+
+;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
+;; (require 'opam-user-setup "~/.emacs.d/vendor/opam-user-setup.el")
+;; ## end of OPAM user-setup addition for emacs / base ## keep this line
 
 (defun self/-ocaml-mode ()
   "Customizations for OCaml mode"
