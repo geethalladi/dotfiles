@@ -2,6 +2,15 @@
 ;; Install the following packages
 ;; $ opam install tuareg merlin ocp-incident utop
 
+(defun self/remove-conflicting-keybindings (mode binding)
+  "remove conflicting keybindings"
+  (let ((oldmap (cdr (assoc mode minor-mode-map-alist)))
+        (newmap (make-sparse-keymap)))
+    (set-keymap-parent newmap oldmap)
+    (define-key newmap binding nil)
+    (make-local-variable 'minor-mode-overriding-map-alist)
+    (push `(,mode . ,newmap) minor-mode-overriding-map-alist)))
+
 ;; Add opam emacs directory to the load-path
 (setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
 (add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
