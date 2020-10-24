@@ -15,6 +15,13 @@
 (setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
 (add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
 
+;; Update the emacs path
+(setq exec-path (append (parse-colon-path (getenv "PATH"))
+                        (list exec-directory)))
+
+;; Setup environment variables using opam
+(dolist (var (car (read-from-string (shell-command-to-string "opam config env --sexp"))))
+  (setenv (car var) (cadr var)))
 
 ;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
 ;; (require 'opam-user-setup "~/.emacs.d/vendor/opam-user-setup.el")
@@ -30,14 +37,6 @@
 (require 'merlin)
 (require 'utop)
 (require 'ocp-indent)
-
-;; Setup environment variables using opam
-(dolist (var (car (read-from-string (shell-command-to-string "opam config env --sexp"))))
-  (setenv (car var) (cadr var)))
-
-;; Update the emacs path
-(setq exec-path (append (parse-colon-path (getenv "PATH"))
-                        (list exec-directory)))
 
 (defun self/-ocaml-mode ()
   "Customizations for OCaml mode"
