@@ -26,6 +26,7 @@
 ;; Use opam switch to lookup ocamlmerlin binary
 (setq merlin-command 'opam)
 (setq merlin-use-auto-complete-mode nil)
+(setq merlin-error-after-save nil)
 
 ;; (autoload 'merlin-mode "merlin" "Merlin mode" t)
 ;; (autoload 'utop "utop" "Toplevel for OCaml" t)
@@ -43,7 +44,6 @@
   (merlin-mode)
   (smartparens-mode)
   (utop-minor-mode)
-  (setq merlin-error-after-save nil)
   (self/remove-conflicting-keybindings 'merlin-mode (kbd "C-c C-p"))
   ;; disable autocomplete mode
   (auto-complete-mode -1))
