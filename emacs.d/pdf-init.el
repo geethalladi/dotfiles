@@ -3,8 +3,11 @@
 ;; Install the pdf tools
 (use-package pdf-tools
   :config
- ;; initialise
- (pdf-tools-install)
+
+  (unless (version<= emacs-version "27.0")
+    ;; initialise pdf tools for emacs 27+
+    (pdf-tools-install))
+
  ;; open pdfs scaled to fit page
  (setq-default pdf-view-display-size 'fit-page)
  ;; automatically annotate highlights
