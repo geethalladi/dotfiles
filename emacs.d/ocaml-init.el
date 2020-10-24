@@ -42,11 +42,12 @@
 (defun self/-ocaml-mode ()
   "Customizations for OCaml mode"
   (merlin-mode)
-  (smartparens-mode)
   (utop-minor-mode)
-  (self/remove-conflicting-keybindings 'merlin-mode (kbd "C-c C-p"))
+  (ocp-setup-indent)
+  (smartparens-mode)
   ;; disable autocomplete mode
-  (auto-complete-mode -1))
+  (auto-complete-mode -1)
+  (self/remove-conflicting-keybindings 'merlin-mode (kbd "C-c C-p")))
 
 (setq auto-mode-alist
       (append '(("\\.ml[ily]?$" . tuareg-mode)
