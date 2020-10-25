@@ -34,6 +34,7 @@
 (require 'merlin)
 (require 'utop)
 (require 'ocp-indent)
+(require 'ocamlformat)
 
 ;; TODO: Introduces auto-complete mode magically; Need to analyse later
 ;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
