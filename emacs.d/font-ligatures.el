@@ -1,40 +1,42 @@
+;; ligatures using composition char table ;;
+
+;; The basic idea is to provide starting character, and a regular expression, that matches all
+;; ligatures starting with that character, and put it to the composition table.
+
+;; reference: https://andreyorst.gitlab.io/posts/2020-07-21-programming-ligatures-in-emacs/
+
 (when (window-system)
-  ;; (set-default-font "Hasklig")
-  (let ((alist
-         '(
-           (33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
-           (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
-           (36 . ".\\(?:>\\)")
-           (37 . ".\\(?:\\(?:%%\\)\\|%\\)")
-           (38 . ".\\(?:\\(?:&&\\)\\|&\\)")
-           (43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
-           (48 . ".\\(?:x[a-zA-Z]\\)")
-           (58 . ".\\(?:::\\|[:=]\\)")
-           (59 . ".\\(?:;;\\|;\\)")
-           (60 . ".\\(?:\\(?:!--\\)\\|\\(?:~~\\|->\\|\\$>\\|\\*>\\|\\+>\\|--\\|<[<=-]\\|=[<=>]\\||>\\)\\|[*$+~/<=>|-]\\)")
-           (61 . ".\\(?:\\(?:/=\\|:=\\|<<\\|=[=>]\\|>>\\)\\|[<=>~]\\)")
-           (62 . ".\\(?:\\(?:=>\\|>[=>-]\\)\\|[=>-]\\)")
-           (63 . ".\\(?:\\(\\?\\?\\)\\|[:=?]\\)")
-           (91 . ".\\(?:]\\)")
-           (92 . ".\\(?:\\(?:\\\\\\\\\\)\\|\\\\\\)")
-           (94 . ".\\(?:=\\)")
-           (119 . ".\\(?:ww\\)")
-           (123 . ".\\(?:-\\)")
-           (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)")
+  ;; enabling ligatures only in native UI
+  ;; terminal takes care of the ligature support itself
+  (use-package composite
+    :hook (prog-mode . auto-composition-mode)
+    :init (global-auto-composition-mode -1))
 
-           ;;; TODO: Contentious Patterns :: Hangs my emacs
-
-           ;; hangs in org-mode (distractions.org)
-           ;; (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
-
-           ;; hangs in ag search
-           ;; (47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
-
-           ;; hangs in automate.py + folding
-           ;; (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
-           ;; (124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
-
-           (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)"))))
-    (dolist (char-regexp alist)
+  (let ((ligatures `((?-  . ,(regexp-opt '("-|" "-~" "---" "-<<" "-<" "--" "->" "->>" "-->")))
+                     (?/  . ,(regexp-opt '("/**" "/*" "///" "/=" "/==" "/>" "//")))
+                     (?*  . ,(regexp-opt '("*>" "***" "*/")))
+                     (?<  . ,(regexp-opt '("<-" "<<-" "<=>" "<=" "<|" "<||" "<|||::=" "<|>" "<:" "<>" "<-<"
+                                           "<<<" "<==" "<<=" "<=<" "<==>" "<-|" "<<" "<~>" "<=|" "<~~" "<~"
+                                           "<$>" "<$" "<+>" "<+" "</>" "</" "<*" "<*>" "<->" "<!--")))
+                     (?:  . ,(regexp-opt '(":>" ":<" ":::" "::" ":?" ":?>" ":=")))
+                     (?=  . ,(regexp-opt '("=>>" "==>" "=/=" "=!=" "=>" "===" "=:=" "==")))
+                     (?!  . ,(regexp-opt '("!==" "!!" "!=")))
+                     (?>  . ,(regexp-opt '(">]" ">:" ">>-" ">>=" ">=>" ">>>" ">-" ">=")))
+                     (?&  . ,(regexp-opt '("&&&" "&&")))
+                     (?|  . ,(regexp-opt '("|||>" "||>" "|>" "|]" "|}" "|=>" "|->" "|=" "||-" "|-" "||=" "||")))
+                     (?.  . ,(regexp-opt '(".." ".?" ".=" ".-" "..<" "...")))
+                     (?+  . ,(regexp-opt '("+++" "+>" "++")))
+                     (?\[ . ,(regexp-opt '("[||]" "[<" "[|")))
+                     (?\{ . ,(regexp-opt '("{|")))
+                     (?\? . ,(regexp-opt '("??" "?." "?=" "?:")))
+                     (?#  . ,(regexp-opt '("####" "###" "#[" "#{" "#=" "#!" "#:" "#_(" "#_" "#?" "#(" "##")))
+                     (?\; . ,(regexp-opt '(";;")))
+                     (?_  . ,(regexp-opt '("_|_" "__")))
+                     (?\\ . ,(regexp-opt '("\\" "\\/")))
+                     (?~  . ,(regexp-opt '("~~" "~~>" "~>" "~=" "~-" "~@")))
+                     (?$  . ,(regexp-opt '("$>")))
+                     (?^  . ,(regexp-opt '("^=")))
+                     (?\] . ,(regexp-opt '("]#"))))))
+    (dolist (char-regexp ligatures)
       (set-char-table-range composition-function-table (car char-regexp)
                             `([,(cdr char-regexp) 0 font-shape-gstring])))))
