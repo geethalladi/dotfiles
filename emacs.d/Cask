@@ -24,6 +24,7 @@
  (depends-on "clipetty")
  (depends-on "confluence")
  (depends-on "color-identifiers-mode")
+ (depends-on "color-theme-buffer-local")
  (depends-on "command-log-mode")
  (depends-on "company")
  (depends-on "company-irony")
