@@ -112,6 +112,15 @@
   (load-theme 'zenburn t)
   (self/-dark-theme-custom))
 
+(defun disable-all-themes ()
+  "disable all active themes."
+  (dolist (i custom-enabled-themes)
+    (disable-theme i)))
+
+(defadvice load-theme (before disable-themes-first activate)
+  "Calling disable all themes before loading a new one"
+  (disable-all-themes))
+
 (if (self/-dark-modep)
     (self/load-dark-theme) ;; use dark theme in dark context
   (self/load-light-theme))
