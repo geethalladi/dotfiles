@@ -104,11 +104,13 @@
 
 (defun self/load-light-theme ()
   "light theme"
+  (interactive)
   (load-theme 'leuven t)
   (self/-light-theme-custom))
 
 (defun self/load-dark-theme ()
   "dark theme"
+  (interactive)
   (load-theme 'zenburn t)
   (self/-dark-theme-custom))
 
