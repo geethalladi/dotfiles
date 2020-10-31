@@ -121,5 +121,7 @@
   "Load my personal lisp extensions"
 
   ;; to facilitate the velocity of lectures
-  (load "~/.emacs.d/self-lisp/lecture-stats.el"))
+  (load "~/.emacs.d/self-lisp/lecture-stats.el")
+  (load "~/.emacs.d/self-lisp/index.el"))
+
 ;; (self/load-all)
