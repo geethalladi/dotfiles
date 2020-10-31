@@ -1,6 +1,6 @@
 ;; default module for collecting personal functions
 
-(defun next-meditation-goal (min &optional sec)
+(defun self/next-meditation-goal (min &optional sec)
   "Given the current time I meditate, find the next goal post"
   (let* ((current (+ (* min 60.0)
                      (if sec sec 0.0)))
