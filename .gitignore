@@ -35,3 +35,5 @@ games
 emacs.d/vendor/swank-js
 feedback
 transient/
+emacs.d/cache/
+emacs.d/elpy/
