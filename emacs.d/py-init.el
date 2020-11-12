@@ -76,7 +76,8 @@
       py-smart-indentation t)
 
 (setq elpy-rpc-python-command "python3"
-      elpy-rpc-backend "jedi")
+      elpy-rpc-backend "jedi"
+      elpy-rpc-virtualenv-path 'current)
 
 ;; using highlight-indentation mode
 (require 'highlight-indentation)
