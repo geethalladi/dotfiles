@@ -33,7 +33,8 @@ site-lisp
 rake.cache
 games
 emacs.d/vendor/swank-js
-feedback
 transient/
 emacs.d/cache/
 emacs.d/elpy/
+emacs.d/snippets/org-mode/feedback
+emacs.d/snippets/org-mode/assignment
