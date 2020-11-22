@@ -1,7 +1,7 @@
 ;; Projectile
 
 (require 'projectile)
-(define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-x C-p") 'projectile-command-map)
 (projectile-mode +1)
 
 (projectile-global-mode)
