@@ -8,4 +8,5 @@
 #+STARTUP: hideblocks
 #+TODO: TODO(t) PROGRESS(p) WAITING(w) | DONE(d) | CANCELLED(c)
 #+OPTIONS: toc:nil
+#+FILETAGS: :none:
 * $1
