@@ -4,7 +4,7 @@
 (put 'erase-buffer 'disabled nil)
 
 ;; global clipetty mode
-(global-clipetty-mode)
+;; (global-clipetty-mode)
 
 ;; FOR INTEGRATING WITH CLIPBOARD
 (defun swap-and-kill ()
