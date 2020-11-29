@@ -56,3 +56,5 @@
   unignore = update-index --no-assume-unchanged
   ignored = !"git ls-files -v | grep "^[h]" | awk '{print $2}'"
   watch = !"git unignore"
+[pull]
+  ff = only
