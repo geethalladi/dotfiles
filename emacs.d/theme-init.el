@@ -123,9 +123,19 @@
   "Calling disable all themes before loading a new one"
   (disable-all-themes))
 
-(if (self/-dark-modep)
-    (self/load-dark-theme) ;; use dark theme in dark context
-  (self/load-light-theme))
+(defun self/-inside-screenp ()
+  "Predicate to check if running inside screen"
+  ;; TODO: should grep for screen inside TERMCAP
+  (and (not (window-system))
+       (stringp (getenv "TERMCAP"))))
+
+(defun self/-load-theme ()
+  "Load theme as per the environment"
+  (cond ((self/-inside-screenp) (message "Skipping loading theme inside screen"))
+        ((self/-dark-modep) (self/load-dark-theme))
+        (t (self/load-light-theme))))
+
+(self/-load-theme)
 
 ;; (require 'color-identifiers-mode)
 ;; (let ((faces '(font-lock-comment-face
