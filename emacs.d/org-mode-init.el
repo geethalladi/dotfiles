@@ -60,6 +60,10 @@
   (smartparens-mode 1)
   (add-hook 'before-save-hook 'self/-org-mode-before-save-hook nil 'make-it-local)
 
+  (setq fill-column 120)
+
+  (auto-fill-mode t)
+
   (setq org-replace-disputed-keys t)
 
   ;; do not truncate lines in org mode
