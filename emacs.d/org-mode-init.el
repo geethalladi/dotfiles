@@ -46,6 +46,9 @@
   ;; Enabling writegood mode for org documents
   (writegood-mode 1)
 
+  ;; Enabling word count mode
+  (wc-mode)
+
   ;; Removing conflicting keys from smartparens minor-mode in org-mode
   (let ((oldmap (cdr (assoc 'smartparens-mode minor-mode-map-alist)))
         (newmap (make-sparse-keymap)))
