@@ -37,6 +37,7 @@
   (load "~/.emacs.d/helm-init.el")
   (load "~/.emacs.d/keychord-init.el")
   (load "~/.emacs.d/vendor/help-fns+.el")
+  (load "~/.emacs.d/vendor/tiddlywiki-mode.el")
 
   (load "~/.emacs.d/clipboard.el")
 
