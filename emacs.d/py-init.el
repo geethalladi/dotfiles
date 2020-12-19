@@ -34,9 +34,9 @@
   (yafolding-mode 1)
   (yas-minor-mode 1)
   (highlight-indentation-mode 1)
-
-  (pyvenv-activate "/usr/local/anaconda3/envs/PDSH"))
   (elpy-set-test-runner 'elpy-test-pytest-runner)
+  ;; (pyvenv-activate "/usr/local/anaconda3/envs/PDSH")
+  )
 
 (defun self/inf-python-mode ()
   "Customizations for inf python mode"
@@ -53,7 +53,7 @@
 ;; TODO: Move this to eval-after-load python
 (add-to-list 'python-shell-completion-native-disabled-interpreters "jupyter")
 
-(setenv "WORKON_HOME" "/usr/local/anaconda3/envs")
+;; (setenv "WORKON_HOME" "/usr/local/anaconda3/envs")
 
 ; use IPython
 (setq-default py-shell-name "ipython")
