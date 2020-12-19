@@ -36,6 +36,7 @@
   (highlight-indentation-mode 1)
 
   (pyvenv-activate "/usr/local/anaconda3/envs/PDSH"))
+  (elpy-set-test-runner 'elpy-test-pytest-runner)
 
 (defun self/inf-python-mode ()
   "Customizations for inf python mode"
