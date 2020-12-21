@@ -95,7 +95,11 @@
 
   ;; (js2-minor-mode)
   (tern-mode)
+  (diminish 'tern-mode)
+
   (js2-refactor-mode)
+  (diminish 'js2-refactor-mode)
+
   (indium-interaction-mode)
 
   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)

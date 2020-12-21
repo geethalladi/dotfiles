@@ -45,6 +45,7 @@
 
   ;; Enabling writegood mode for org documents
   (writegood-mode 1)
+  (diminish 'writegood-mode)
 
   ;; Enabling word count mode
   (wc-mode)
@@ -66,6 +67,9 @@
   (setq fill-column 120)
 
   (auto-fill-mode t)
+  (diminish 'auto-revert-mode)
+  (diminish 'org-indent-mode)
+  (diminish 'auto-fill-function)
 
   (setq org-replace-disputed-keys t)
 

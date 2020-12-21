@@ -204,20 +204,6 @@
 ;; Enabling googling from emacs
 (google-this-mode 1)
 
-;; Hide from appearing as sub-modes
-(diminish 'google-this-mode)
-(diminish 'helm-mode)
-(diminish 'projectile-mode)
-
-(diminish 'projectile-mode)
-(diminish 'smartparens-mode)
-(diminish 'writegood-mode)
-(diminish 'highlight-indentation-mode)
-(diminish 'js2-refactor-mode)
-(diminish 'auto-revert-mode)
-(diminish 'org-indent-mode)
-(diminish 'tern-mode)
-
 (setq org-reveal-root "file:///opt/reveal.js")
 
 (setq mac-shift-modifier 'meta)

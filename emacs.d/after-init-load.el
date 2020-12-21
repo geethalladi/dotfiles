@@ -20,6 +20,8 @@
   (self/load-org-env)
   ;; load my own lisp extensions
   (self/load-self-lisp)
+  ;; clean up modal line
+  (self/-diminish-modal-line)
   ;; reload scratch-buffer after loading everything
   (self/-reload-scratch-buffer))
 
@@ -49,6 +51,17 @@
   (load "~/.emacs.d/custom.el")
   (load "~/.emacs.d/terminal-key-decode.el")
   (load "~/.emacs.d/theme-init.el"))
+
+(defun self/-diminish-modal-line ()
+  "Remove the most used packages from the modal line"
+
+  ;; Hide from appearing as sub-modes
+  (diminish 'google-this-mode)
+  (diminish 'helm-mode)
+  (diminish 'projectile-mode)
+  (diminish 'flyspell-mode)
+  (diminish 'smartparens-mode)
+  (diminish 'highlight-indentation-mode))
 
 (defun self/load-packages ()
   "Loads all the installed packages"
