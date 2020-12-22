@@ -34,7 +34,7 @@
 
   ;; ENABLE PERSISTENT SCRATCH
   (persistent-scratch-setup-default)
-  (persistent-scratch-autosave-mode 1)
+  ;; (persistent-scratch-autosave-mode 1)
 
   (load "~/.emacs.d/helm-init.el")
   (load "~/.emacs.d/keychord-init.el")
