@@ -225,8 +225,9 @@
 ;; [TODO] Update the exact path of the dictinoary
 ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/.cask/24.5.1/elpa/auto-complete-20160710.1544/dict")
 
-(global-linum-mode 1)
-(setq linum-format "%3d ")
+;; turning off linum-mode as an experimentation
+;; (global-linum-mode 1)
+;; (setq linum-format "%3d ")
 
 ;; TAB
 (setq-default indent-tabs-mode nil)
