@@ -44,6 +44,7 @@
  (depends-on "efire")
  (depends-on "ein")
  (depends-on "el-mock")
+ (depends-on "elisp-slime-nav")
  (depends-on "elpy")
  (depends-on "emmet-mode")
  (depends-on "enclose")
