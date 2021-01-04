@@ -28,6 +28,12 @@
   (eldoc-mode)
   (self/configure-prettify-symbols-alist))
 
+(defun self/elisp-customizations ()
+  "Customizations for emacs lisp mode"
+  (self/lisp-customizations)
+  (turn-on-elisp-slime-nav-mode))
+
+
 (defun self/lisp-interaction-customizations ()
   "Customizations of lisp interaction mode"
   (message "Calling Lisp Interaction Customizations")
