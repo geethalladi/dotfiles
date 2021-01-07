@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: writing
+# key: writ
+# --
+#+DATE: `(format-time-string "%Y-%m-%d")`
+#+OPTIONS: toc:nil
+#+STARTUP: hideblocks overview
+* $1
+** Bootstrap questions
+# Points to remember
+*** Why am I writing this ?
+*** What is my objective ?
+*** What's my key takeaway on this subject ?
+*** What's my point of view ?
+*** So what ? (Why should the reader really care ?)
