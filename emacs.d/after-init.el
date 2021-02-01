@@ -4,8 +4,8 @@
 ;; setting GC threshold
 (setq gc-cons-threshold
       (if (display-graphic-p)
-          ;; 100 MB with cocoa emacs
-          (* 100 (expt 10 6))
+          ;; 200 MB with cocoa emacs
+          (* 200 (expt 10 6))
         ;; 10 MB for terminal
         (* 10 (expt 10 6))))
 
