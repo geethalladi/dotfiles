@@ -1,6 +1,14 @@
 ;; No Initial Splash Screen
 (setq inhibit-splash-screen t)
 
+;; setting GC threshold
+(setq gc-cons-threshold
+      (if (display-graphic-p)
+          ;; 100 MB with cocoa emacs
+          (* 100 (expt 10 6))
+        ;; 10 MB for terminal
+        (* 10 (expt 10 6))))
+
 ;; OPENING IN THE SAME FRAME (NO NEW FRAMES)
 (setq ns-pop-up-frames nil)
 
