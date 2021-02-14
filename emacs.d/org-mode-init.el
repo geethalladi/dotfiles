@@ -136,6 +136,12 @@
 ;; required for org-reveal mode presentations
 (require 'ox-reveal)
 
+;; slipbox directory
+(setq org-roam-directory "~/slipbox")
+
+(require 'org-roam)
+(org-roam-mode)
+
 ;; configurations for org-mind-map
 ;; taken from its README
 (use-package org-mind-map
