@@ -38,3 +38,4 @@ emacs.d/cache/
 emacs.d/elpy/
 emacs.d/snippets/org-mode/feedback
 emacs.d/snippets/org-mode/assignment
+emacs.d/org-roam.db
