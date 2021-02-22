@@ -136,11 +136,21 @@
 ;; required for org-reveal mode presentations
 (require 'ox-reveal)
 
-;; slipbox directory
-(setq org-roam-directory "~/slipbox")
-
-(require 'org-roam)
-(org-roam-mode)
+;; org-roam configurations
+(use-package org-roam
+      :ensure t
+      :hook
+      (after-init . org-roam-mode)
+      :custom
+      ;; slipbox directory
+      (org-roam-directory "~/slipbox")
+      :bind (:map org-roam-mode-map
+                  (("C-c r l" . org-roam)
+                   ("C-c r f" . org-roam-find-file)
+                   ("C-c r g" . org-roam-graph))
+                  :map org-mode-map
+                  (("C-c r i" . org-roam-insert))
+                  (("C-c r I" . org-roam-insert-immediate))))
 
 ;; configurations for org-mind-map
 ;; taken from its README
