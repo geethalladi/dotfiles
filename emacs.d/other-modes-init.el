@@ -61,3 +61,13 @@
   (visual-line-mode 1))
 
 (add-hook 'markdown-mode-hook 'self/markdown-mode)
+
+;; PlantUML configurations are in two places. Refactor !
+(setq plantuml-jar-path "~/.emacs.d/vendor/org-mode/contrib/scripts/plantuml.jar")
+(setq plantuml-default-exec-mode 'jar)
+
+(defun self/plantuml-mode ()
+  "Plantuml mode customization"
+  (smartparens-mode 1))
+
+(add-hook 'plantuml-mode-hook 'self/plantuml-mode)
