@@ -53,6 +53,7 @@
 ;; TODO: Move this to eval-after-load python
 (add-to-list 'python-shell-completion-native-disabled-interpreters "jupyter")
 
+
 ;; (setenv "WORKON_HOME" "/usr/local/anaconda3/envs")
 
 ; use IPython
@@ -78,7 +79,10 @@
 
 (setq elpy-rpc-python-command "python3"
       elpy-rpc-backend "jedi"
-      elpy-rpc-virtualenv-path 'current)
+      elpy-rpc-virtualenv-path 'current
+      ;; stops throwing Ctrl-G when the file is fully loaded
+      elpy-shell-echo-output nil)
+
 
 ;; using highlight-indentation mode
 (require 'highlight-indentation)
