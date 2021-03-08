@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: tst
+# key: tst
+# --
+
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-class-docstring
+# pylint: disable=missing-function-docstring
+# pylint: disable=no-self-use
+
+from $1 import $2
+
+class Test$2:
+    """
+    A Test Suite for $2
+    """
+    def test_empty(self):
+        assert 1 == 1
