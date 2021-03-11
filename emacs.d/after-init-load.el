@@ -45,6 +45,7 @@
 
   (load "~/.emacs.d/tramp-init.el")
   (load "~/.emacs.d/yas-init.el")
+  (load "~/.emacs.d/tex-init.el")
   (load "~/.emacs.d/pdf-init.el")
   (load "~/.emacs.d/epub-init.el")
 
