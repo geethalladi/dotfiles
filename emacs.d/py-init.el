@@ -28,7 +28,6 @@
   (setq even-window-heights nil)
   (self/-python-mode-custom-keybindings)
 
-  (pyvenv-activate "~/repo/personal/algorithms/algo/venv")
   (pyvenv-mode 1)
   (eldoc-mode 1)
   (smartparens-mode 1)
