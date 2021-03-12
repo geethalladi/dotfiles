@@ -103,17 +103,18 @@
   "Load the development environment"
 
   (load "~/.emacs.d/smartparens.el")
-  (load "~/.emacs.d/company-init.el")
-  (load "~/.emacs.d/projectile-init.el")
 
   ;; (load "~/.emacs.d/term.el")
   (load "~/.emacs.d/multi-term.el")
 
   (load "~/.emacs.d/py-init.el")
   (load "~/.emacs.d/rb-init.el")
-  (load "~/.emacs.d/haskell-init.el")
-  (load "~/.emacs.d/ocaml-init.el")
-  (load "~/.emacs.d/erlang-init.el")
+  ;; (load "~/.emacs.d/haskell-init.el")
+  ;; (load "~/.emacs.d/ocaml-init.el")
+  ;; (load "~/.emacs.d/erlang-init.el")
+
+  (load "~/.emacs.d/company-init.el")
+  (load "~/.emacs.d/projectile-init.el")
 
   ;; Loading js init script
   (load "~/.emacs.d/js-init.el")
