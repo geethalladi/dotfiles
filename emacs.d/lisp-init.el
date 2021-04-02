@@ -57,6 +57,10 @@
   (setq geiser-scheme-implementation 'racket)
   (geiser-mode))
 
+(defun self/hy-lang-mode ()
+  "Customizations for hy-lang"
+  (self/lisp-customizations))
+
 (load (expand-file-name "~/installed.d/quicklisp/slime-helper.el"))
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 
@@ -109,6 +113,8 @@
 (add-hook 'emacs-lisp-mode-hook 'self/lisp-customizations)
 (add-hook 'lisp-interaction-mode-hook 'self/lisp-interaction-customizations)
 (add-hook 'racket-mode-hook 'self/racket-mode)
+
+(add-hook 'hy-mode-hook 'self/hy-lang-mode)
 
 (add-to-list 'auto-mode-alist '("\\.scm$" . scheme-mode))
 (add-to-list 'auto-mode-alist '("\\.ss$" . scheme-mode))
