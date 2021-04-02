@@ -93,7 +93,11 @@ if ls ${PYTHON_PATH_FILE} 1> /dev/null 2>&1; then
     source ${PYTHON_PATH_FILE}
 fi
 
-source ${CONDA_HOME}/etc/profile.d/conda.sh
+# Commenting out conda for now
+# source ${CONDA_HOME}/etc/profile.d/conda.sh
+
+# for matplot plots inside iterm
+export MPLBACKEND="module://itermplot"
 
 ########################################################################################
 # OCaml / opam configuration
