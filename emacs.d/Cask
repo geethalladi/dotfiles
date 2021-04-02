@@ -97,6 +97,7 @@
  (depends-on "hl-anything")
  (depends-on "htmlize")
  (depends-on "hungry-delete")
+ (depends-on "hy-mode")
  (depends-on "hydra")
  (depends-on "idea-darkula-theme")
  (depends-on "idle-highlight-mode")
