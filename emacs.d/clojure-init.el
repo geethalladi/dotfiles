@@ -9,8 +9,9 @@
   (rainbow-delimiters-mode)
   (rainbow-identifiers-mode)
   (inf-clojure-minor-mode)
-  (define-key clojure-mode-map (kbd "C-c DEL") 'hungry-delete-backward)
-  (define-key clojure-mode-map (kbd "C-c C-d") 'hungry-delete-forward))
+  ;; (define-key clojure-mode-map (kbd "C-c DEL") 'hungry-delete-backward)
+  ;; (define-key clojure-mode-map (kbd "C-c C-d") 'hungry-delete-forward)
+  (hungry-delete-mode))
 
 (add-hook 'clojure-mode-hook 'self/-clojure-mode)
 
