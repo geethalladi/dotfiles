@@ -1,6 +1,6 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; YAML mode configurations ;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; YAML mode configurations
+;;
 (require 'yaml-mode)
 
 ;; Required for yaml tree navigation
@@ -18,9 +18,9 @@
 
 (add-hook 'yaml-mode-hook 'self/yaml-mode-hook)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; REST Client mode configurations ;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; REST Client mode configurations
+;;
 (require 'company)
 (require 'restclient)
 (require 'company-restclient)
@@ -44,11 +44,9 @@
 
 ;; (setq tab-always-indent nil)
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;  Markdown mode configurations   ;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+;;
+;;  Markdown mode configurations
+;;
 (defun self/markdown-mode ()
   "markdown mode customization"
 
@@ -62,7 +60,11 @@
 
 (add-hook 'markdown-mode-hook 'self/markdown-mode)
 
-;; PlantUML configurations are in two places. Refactor !
+
+;;
+;;  Plantuml Configuration
+;;
+;; TODO: PlantUML configurations are in two places. Refactor !
 (setq plantuml-jar-path "~/.emacs.d/vendor/org-mode/contrib/scripts/plantuml.jar")
 (setq plantuml-default-exec-mode 'jar)
 
@@ -71,3 +73,8 @@
   (smartparens-mode 1))
 
 (add-hook 'plantuml-mode-hook 'self/plantuml-mode)
+
+;;
+;; TLA+ specification mode
+
+(load-file "~/dotfiles/emacs.d/vendor/tla-pcal-mode.el")
