@@ -97,7 +97,8 @@
   (load "~/.emacs.d/org-mode-init.el")
   (load "~/.emacs.d/org-agenda-init.el")
   (load "~/.emacs.d/org-capture-init.el")
-  (load "~/.emacs.d/org-babel-init.el"))
+  (load "~/.emacs.d/org-babel-init.el")
+  (load "~/.emacs.d/vendor/org-colored-text.el"))
 
 (defun self/load-dev-env ()
   "Load the development environment"
