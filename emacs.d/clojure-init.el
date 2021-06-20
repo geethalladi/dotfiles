@@ -9,6 +9,8 @@
   (rainbow-delimiters-mode)
   (rainbow-identifiers-mode)
   (inf-clojure-minor-mode)
+  ;; Skip adding cider mode for now
+  ;; (self/-add-cider-mode)
   ;; (define-key clojure-mode-map (kbd "C-c DEL") 'hungry-delete-backward)
   ;; (define-key clojure-mode-map (kbd "C-c C-d") 'hungry-delete-forward)
   (hungry-delete-mode))
@@ -37,9 +39,6 @@
   (add-hook 'cider-repl-mode-hook '(lambda () (linum-mode 0)))
 
   (add-hook 'clojure-mode-hook #'cider-mode))
-
-;; Skip adding cider mode for now
-;; (self/-add-cider-mode)
 
 ;; TODO:
 ;; unbind C-c C-p p
