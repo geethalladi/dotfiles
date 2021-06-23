@@ -78,3 +78,15 @@
 ;; TLA+ specification mode
 
 (load-file "~/dotfiles/emacs.d/vendor/tla-pcal-mode.el")
+
+;;
+;; adoc-mode
+;;
+(defun self/adoc-mode ()
+  "adoc-mode specifications"
+  (buffer-face-mode t)
+  (self/use-variable-width-font))
+
+(add-hook 'adoc-mode-hook 'self/adoc-mode)
+
+(add-to-list 'auto-mode-alist '("\\.\\(adoc\\|txt\\)$" . adoc-mode))
