@@ -76,18 +76,19 @@
 
 ;;
 ;; TLA+ specification mode
-
 (load-file "~/dotfiles/emacs.d/vendor/tla-pcal-mode.el")
 
+;; info mode
+(add-hook 'Info-mode-hook 'self/use-variable-width-font)
+
 ;;
-;; adoc-mode
+;; asciidoc / text mode
 ;;
 (defun self/adoc-mode ()
   "adoc-mode specifications"
-  (self/use-variable-width-font))
+  (self/use-variable-width-font)
+  (flyspell-mode))
 
 (add-hook 'adoc-mode-hook 'self/adoc-mode)
-
-(add-hook 'Info-mode-hook 'self/use-variable-width-font)
 
 (add-to-list 'auto-mode-alist '("\\.\\(adoc\\|asciidoc\\|txt\\)$" . adoc-mode))
