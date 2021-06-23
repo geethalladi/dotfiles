@@ -89,4 +89,4 @@
 
 (add-hook 'adoc-mode-hook 'self/adoc-mode)
 
-(add-to-list 'auto-mode-alist '("\\.\\(adoc\\|txt\\)$" . adoc-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(adoc\\|asciidoc\\|txt\\)$" . adoc-mode))
