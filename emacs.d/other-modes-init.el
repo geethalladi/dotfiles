@@ -84,7 +84,6 @@
 ;;
 (defun self/adoc-mode ()
   "adoc-mode specifications"
-  (buffer-face-mode t)
   (self/use-variable-width-font))
 
 (add-hook 'adoc-mode-hook 'self/adoc-mode)

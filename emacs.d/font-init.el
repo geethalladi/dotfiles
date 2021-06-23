@@ -10,13 +10,15 @@
 
 (defun self/use-variable-width-font ()
   "Use variable width font in current buffer"
+  (message "Using Variable width font")
   (interactive)
   (setq buffer-face-mode-face
         '(:family "PT Sans"
-          :height 200
+          :height 180
           :width expanded
           :weight normal
           :slant normal))
+  (buffer-face-mode t)
   (visual-line-mode t))
 
 ;; (set-face-attribute 'default nil
