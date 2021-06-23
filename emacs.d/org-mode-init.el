@@ -36,6 +36,9 @@
   ;; Always use org indent minor mode
   (org-indent-mode)
 
+  ;; TODO: play around with variable width font for org mode
+  ;; (self/use-variable-width-font)
+
   (org-bullets-mode 1)
 
   (yas-minor-mode 1)

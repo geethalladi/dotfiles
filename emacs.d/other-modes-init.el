@@ -88,4 +88,6 @@
 
 (add-hook 'adoc-mode-hook 'self/adoc-mode)
 
+(add-hook 'Info-mode-hook 'self/use-variable-width-font)
+
 (add-to-list 'auto-mode-alist '("\\.\\(adoc\\|asciidoc\\|txt\\)$" . adoc-mode))
