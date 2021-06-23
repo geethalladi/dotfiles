@@ -7,6 +7,7 @@
  (depends-on "ac-haskell-process")
  (depends-on "ac-js2")
  (depends-on "ac-slime")
+ (depends-on "adoc-mode")
  (depends-on "adaptive-wrap")
  (depends-on "ag")
  (depends-on "alchemist")
