@@ -14,7 +14,7 @@
   (interactive)
   (setq buffer-face-mode-face
         '(:family "PT Sans"
-          :height 160
+          :height 200
           :width expanded
           :weight normal
           :slant normal))
