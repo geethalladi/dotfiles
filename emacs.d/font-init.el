@@ -8,6 +8,16 @@
                     :width 'expanded
                     :slant 'normal)
 
+(defun self/use-variable-width-font ()
+  "Use variable width font in current buffer"
+  (interactive)
+  (setq buffer-face-mode-face
+        '(:family "Times"
+          :height 160
+          :width expanded
+          :weight normal
+          :slant normal))
+
 ;; (set-face-attribute 'default nil
 ;;                     :family "PT Mono"
 ;;                     :height 160
