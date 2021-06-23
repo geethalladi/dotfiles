@@ -12,11 +12,12 @@
   "Use variable width font in current buffer"
   (interactive)
   (setq buffer-face-mode-face
-        '(:family "Times"
-          :height 160
+        '(:family "PT Sans"
+          :height 180
           :width expanded
           :weight normal
           :slant normal))
+  (visual-line-mode t))
 
 ;; (set-face-attribute 'default nil
 ;;                     :family "PT Mono"
