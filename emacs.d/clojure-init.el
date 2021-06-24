@@ -40,6 +40,15 @@
 
   (add-hook 'clojure-mode-hook #'cider-mode))
 
+;; using function style indent for match / matche
+;; https://github.com/clojure-emacs/clojure-mode/tree/5.3.0#indentation-of-macro-forms
+;; '1' means the body comes after the first argument
+(define-clojure-indent
+  (-> 1)
+  (--> 1)
+  (match 1)
+  (matche 1))
+
 ;; TODO:
 ;; unbind C-c C-p p
 ;; C-x C-p to cider-pprint
