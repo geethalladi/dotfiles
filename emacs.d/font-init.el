@@ -12,6 +12,8 @@
   "Use variable width font in current buffer"
   (message "Using Variable width font")
   (interactive)
+  ;; (load-theme 'poet t)
+  (variable-pitch-mode)
   (setq buffer-face-mode-face
         '(:family "PT Sans"
           :height 180

@@ -87,6 +87,7 @@
 (defun self/adoc-mode ()
   "adoc-mode specifications"
   (self/use-variable-width-font)
+  (smartparens-mode)
   (flyspell-mode))
 
 (add-hook 'adoc-mode-hook 'self/adoc-mode)
