@@ -1,3 +1,5 @@
+(require 'clojure-mode)
+
 (defun self/-clojure-mode ()
   "Clojure mode customization"
   (show-paren-mode 1)
@@ -9,10 +11,18 @@
   (rainbow-delimiters-mode)
   (rainbow-identifiers-mode)
   (inf-clojure-minor-mode)
+
+  ;; using function style indent for match / matche
+  ;; '1' means the body comes after the first argument
+  ;; https://github.com/clojure-emacs/clojure-mode/tree/5.3.0#indentation-of-macro-forms
+  (define-clojure-indent
+    (-> 1)
+    (--> 1)
+    (match 1)
+    (matche 1))
+
   ;; Skip adding cider mode for now
   ;; (self/-add-cider-mode)
-  ;; (define-key clojure-mode-map (kbd "C-c DEL") 'hungry-delete-backward)
-  ;; (define-key clojure-mode-map (kbd "C-c C-d") 'hungry-delete-forward)
   (hungry-delete-mode))
 
 (add-hook 'clojure-mode-hook 'self/-clojure-mode)
@@ -39,15 +49,6 @@
   (add-hook 'cider-repl-mode-hook '(lambda () (linum-mode 0)))
 
   (add-hook 'clojure-mode-hook #'cider-mode))
-
-;; using function style indent for match / matche
-;; https://github.com/clojure-emacs/clojure-mode/tree/5.3.0#indentation-of-macro-forms
-;; '1' means the body comes after the first argument
-(define-clojure-indent
-  (-> 1)
-  (--> 1)
-  (match 1)
-  (matche 1))
 
 ;; TODO:
 ;; unbind C-c C-p p
