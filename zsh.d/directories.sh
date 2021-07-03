@@ -41,6 +41,7 @@ export ANT_HOME=${CELLAR_PATH}/ant/1.10.1
 # export M2_HOME=${MAVEN_HOME}
 export GRADLE_HOME=${CELLAR_PATH}/gradle/3.4.1
 export CABAL_HOME=~/.cabal
+export SDKMAN_DIR=${HOME}/.sdkman
 
 ##### Needs to be updated  ######
 # Using lein for clojure jar dependencies
