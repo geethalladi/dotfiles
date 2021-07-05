@@ -2,8 +2,8 @@
 ;; Moving this into its own module
 
 (set-face-attribute 'default nil
-                    :family "JetBrains Mono"
-                    :height 130
+                    :family "JetBrainsMono Nerd Font Mono"
+                    :height 150
                     :weight 'normal
                     :width 'expanded
                     :slant 'normal)
