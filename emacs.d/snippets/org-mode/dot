@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: dot
+# key: dot_
+# reference: https://joy.pm/post/2017-09-17-a_graphviz_primer/
+# --
+#+BEGIN_SRC dot :file img.png :cmdline -Kdot -Tpng
+digraph sys {
+  $0
+}
+#+END_SRC
