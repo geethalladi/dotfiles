@@ -93,3 +93,10 @@
 (add-hook 'adoc-mode-hook 'self/adoc-mode)
 
 (add-to-list 'auto-mode-alist '("\\.\\(adoc\\|asciidoc\\|txt\\)$" . adoc-mode))
+
+;; graphviz dot mode customizations
+(use-package graphviz-dot-mode
+  :ensure t
+  :config
+  (setq graphviz-dot-indent-width 4))
+(use-package company-graphviz-dot)
