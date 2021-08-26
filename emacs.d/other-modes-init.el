@@ -101,3 +101,9 @@
   (setq graphviz-dot-indent-width 4))
 
 (use-package company-graphviz-dot)
+
+;; editorconfig-mode
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
