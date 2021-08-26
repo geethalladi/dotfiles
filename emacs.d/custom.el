@@ -11,6 +11,12 @@
   (interactive)
   (scroll-down (window-half-height)))
 
+;; ref: http://www.emacswiki.org/emacs-en/download/misc-cmds.el
+(defun revert-buffer-no-confirm ()
+    "Revert buffer without confirmation."
+    (interactive)
+    (revert-buffer :ignore-auto :noconfirm))
+
 ;; Setting global prettify-symbols-mode
 (global-prettify-symbols-mode +1)
 
