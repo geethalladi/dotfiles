@@ -42,6 +42,7 @@
  (depends-on "docker-compose-mode")
  (depends-on "docker-tramp")
  (depends-on "drag-stuff")
+ (depends-on "editorconfig")
  (depends-on "efire")
  (depends-on "ein")
  (depends-on "el-mock")
