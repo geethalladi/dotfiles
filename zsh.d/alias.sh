@@ -5,6 +5,7 @@ alias pip=pip3
 alias c='clear'
 alias l='ls -al'
 alias ls='ls -GFh'
+alias jcov="find . -name jacoco -type d -exec open '{}/index.html' \;"
 
 # Emacs to use cocoa emacs app
 # alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
