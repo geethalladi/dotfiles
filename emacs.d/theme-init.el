@@ -131,11 +131,14 @@
 
 (defun self/-load-theme ()
   "Load theme as per the environment"
-  (cond ((and (self/-inside-screenp)
-              (self/-dark-modep))
-         (message "Skipping loading dark theme inside screen"))
-        ((self/-dark-modep) (self/load-dark-theme))
-        (t (self/load-light-theme))))
+  ;; (cond ((and (self/-inside-screenp)
+  ;;             (self/-dark-modep))
+  ;;        (message "Skipping loading dark theme inside screen"))
+  ;;       ((self/-dark-modep) (self/load-dark-theme))
+  ;;       (t (self/load-light-theme)))
+
+  ;; preferring dark theme for sometime
+  (self/load-dark-theme))
 
 (self/-load-theme)
 
