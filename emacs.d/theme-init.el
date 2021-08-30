@@ -102,6 +102,33 @@
    '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
    '(quack-pltish-defn-face ((t (:foreground "#dfaf8f"))))))
 
+(defun self/load-less-bright-theme ()
+  "Custom theme for a less bright theme"
+  (interactive)
+  (load-theme 'solarized-light t)
+  ;; (custom-set-faces
+  ;;  ;; Org mode faces
+  ;;  '(org-level-1 ((t (:background "#ffffff"))))
+  ;;  '(org-level-2 ((t (:background "#ffffff"))))
+  ;;  '(org-level-3 ((t (:background "#ffffff"))))
+  ;;  '(org-level-4 ((t (:background "#ffffff"))))
+  ;;  '(org-level-5 ((t (:background "#ffffff"))))
+  ;;  '(org-level-6 ((t (:background "#ffffff"))))
+  ;;  '(org-level-7 ((t (:background "#ffffff"))))
+  ;;  '(org-level-8 ((t (:background "#ffffff"))))
+
+   ;; '(rainbow-delimiters-depth-1-face ((t (:foreground "blue"))))
+   ;; '(rainbow-delimiters-depth-2-face ((t (:foreground "red"))))
+   ;; '(rainbow-delimiters-depth-3-face ((t (:foreground "green4"))))
+   ;; '(rainbow-delimiters-depth-4-face ((t (:foreground "black"))))
+   ;; '(rainbow-delimiters-depth-5-face ((t (:foreground "blue"))))
+   ;; '(rainbow-delimiters-depth-6-face ((t (:foreground "red"))))
+   ;; '(rainbow-delimiters-depth-7-face ((t (:foreground "green4"))))
+   ;; '(rainbow-delimiters-depth-8-face ((t (:foreground "black"))))
+
+  ;; '(rainbow-delimiters-unmatched-face ((t (:background "cyan"))))
+  )
+
 (defun self/load-light-theme ()
   "light theme"
   (interactive)
@@ -137,8 +164,8 @@
   ;;       ((self/-dark-modep) (self/load-dark-theme))
   ;;       (t (self/load-light-theme)))
 
-  ;; preferring dark theme for sometime
-  (self/load-dark-theme))
+  ;; preferring less bright theme for sometime
+  (self/load-less-bright-theme))
 
 (self/-load-theme)
 
