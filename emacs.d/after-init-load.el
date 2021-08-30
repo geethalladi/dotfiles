@@ -63,7 +63,8 @@
   (diminish 'flyspell-mode)
   (diminish 'smartparens-mode)
   (diminish 'highlight-indentation-mode)
-  (diminish 'osx-clipboard-mode))
+  (diminish 'osx-clipboard-mode)
+  (diminish 'editorconfig-mode))
 
 (defun self/load-packages ()
   "Loads all the installed packages"
