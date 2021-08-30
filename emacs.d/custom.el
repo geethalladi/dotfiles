@@ -46,7 +46,10 @@
 ;; (setq-default cursor-type 'bar)
 
 ;; Don't blink the cursor
-(blink-cursor-mode 0)
+(blink-cursor-mode 1)
+
+(setq-default cursor-type 'bar)
+(blink-cursor-mode 1)
 
 ;; Automatically insert new characters into the selected region
 (pending-delete-mode 1)
