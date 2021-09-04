@@ -77,14 +77,6 @@
         ;; try to automagically figure out indentation
         py-smart-indentation t))
 
-;; Reference :: https://elpy.readthedocs.io/en/latest/ide.html#interpreter-setup
-
-(setq elpy-rpc-python-command "python3"
-      elpy-rpc-backend "jedi"
-      elpy-rpc-virtualenv-path 'current
-      ;; stops throwing Ctrl-G when the file is fully loaded
-      elpy-shell-echo-output nil)
-
 (defun self/-use-python ()
   "Use regular python for inf-python"
   (setq python-shell-interpreter "python"
@@ -105,19 +97,23 @@
 ;; Remove autocomplete mode for python
 ;; (setq ac-modes (delq 'python-mode ac-modes))
 
-(elpy-enable)
+(defun self/-elpy-configure ()
+  (setq elpy-rpc-python-command "python3"
+        elpy-rpc-backend "jedi"
+        elpy-rpc-virtualenv-path 'current
+        ;; stops throwing Ctrl-G when the file is fully loaded
+        elpy-shell-echo-output nil)
 
-;; Remove flymake for python and use flycheck minor mode
-(when (require 'flycheck nil t)
-  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
+  ;; Remove flymake for python and use flycheck minor mode
+  (when (require 'flycheck nil t)
+    (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+    (add-hook 'elpy-mode-hook 'flycheck-mode))
 
-(require 'py-autopep8)
-(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
-
-(eval-after-load 'elpy
-  '(progn
-     (define-key elpy-mode-map (kbd "C-c C-p") nil)))
+  (require 'py-autopep8)
+  (py-autopep8-enable-on-save)
+  (eval-after-load 'elpy
+    '(progn
+       (define-key elpy-mode-map (kbd "C-c C-p") nil))))
 
 ;; (setq ein:use-auto-complete t)
 
@@ -133,6 +129,9 @@
 ;; (pyvenv-activate (expand-file-name "~/installed.d/anaconda/envs/mlapp"))
 (add-hook 'python-mode-hook 'self/python-mode)
 (add-hook 'inferior-python-mode-hook 'self/inf-python-mode)
+
+(elpy-enable)
+(add-hook 'elpy-mode-hook 'self/-elpy-configure)
 
 ;; (add-hook 'python-mode-hook 'anaconda-mode)
 ;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
