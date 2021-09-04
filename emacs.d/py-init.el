@@ -34,9 +34,7 @@
   (yafolding-mode 1)
   (yas-minor-mode 1)
   (highlight-indentation-mode 1)
-  (elpy-set-test-runner 'elpy-test-pytest-runner)
-  ;; (pyvenv-activate "/usr/local/anaconda3/envs/PDSH")
-  )
+  (elpy-set-test-runner 'elpy-test-pytest-runner))
 
 (defun self/inf-python-mode ()
   "Customizations for inf python mode"
