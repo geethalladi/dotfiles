@@ -30,6 +30,13 @@
     (and (stringp profile)
          (string-match-p (regexp-quote "dark") profile))))
 
+(defun self/-os-theme ()
+  "Check the os theme"
+  (let ((check-mac-theme
+         "printf %s \"$( osascript -e \'tell application \"System Events\" to tell appearance preferences to return dark mode\' )\""))
+    (if (string= (shell-command-to-string check-mac-theme) "true")
+        "dark"
+      "light")))
 
 (defun self/-light-theme-custom ()
   "Custom theme for a light background"
