@@ -34,6 +34,7 @@
   (yafolding-mode 1)
   (yas-minor-mode 1)
   (highlight-indentation-mode 1)
+  (self/-use-python)
   (elpy-set-test-runner 'elpy-test-pytest-runner))
 
 (defun self/inf-python-mode ()
@@ -54,13 +55,13 @@
 (defun self/-use-ipython ()
   "Using ipython as the default interpreter"
   ;; use IPython
-  (setq-default py-shell-name "ipython")
-  (setq-default py-which-bufname "IPython")
   ;; TODO: Move this to eval-after-load python
   (add-to-list 'python-shell-completion-native-disabled-interpreters "jupyter")
 
   ;; Reference :: https://elpy.readthedocs.io/en/latest/ide.html#interpreter-setup
   (setq python-shell-interpreter "jupyter"
+        py-shell-name "ipython"
+        py-which-bufname "IPython"
         python-shell-interpreter-args "console --simple-prompt"
         python-shell-prompt-detect-failure-warning nil
         ;; python is aliased to use python3
@@ -84,6 +85,14 @@
       ;; stops throwing Ctrl-G when the file is fully loaded
       elpy-shell-echo-output nil)
 
+(defun self/-use-python ()
+  "Use regular python for inf-python"
+  (setq python-shell-interpreter "python"
+        python-shell-interpreter-args "-i"
+        python-shell-completion-native-enable nil
+        ;; switch to the interpreter after executing code
+        py-shell-switch-buffers-on-execute-p t
+        py-switch-buffers-on-execute-p t))
 
 ;; using highlight-indentation mode
 (require 'highlight-indentation)
