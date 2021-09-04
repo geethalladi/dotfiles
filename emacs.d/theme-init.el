@@ -27,8 +27,10 @@
   ;; if the iterm profile contains the word dark
   ;; then return true
   (let ((profile (getenv "ITERM_PROFILE")))
-    (and (stringp profile)
-         (string-match-p (regexp-quote "dark") profile))))
+    (or (and (stringp profile)
+             (string-match-p (regexp-quote "dark") profile)) ;; if dark profile
+        ;; os-theme-dark
+        (string= (self/-os-theme) "dark"))))
 
 (defun self/-os-theme ()
   "Check the os theme"
