@@ -156,8 +156,9 @@
   (and (not (window-system))
        (stringp (getenv "TERMCAP"))))
 
-(defun self/-load-theme ()
+(defun self/reload-theme ()
   "Load theme as per the environment"
+  (interactive)
   (cond ((and (self/-inside-screenp)
               (self/-dark-modep))
          (message "Skipping loading dark theme inside screen"))
@@ -167,7 +168,7 @@
         ;; (t (self/load-light-theme))
 )
 
-(self/-load-theme)
+(self/reload-theme)
 
 ;; (require 'color-identifiers-mode)
 ;; (let ((faces '(font-lock-comment-face
