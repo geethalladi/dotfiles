@@ -14,6 +14,7 @@
 (defconst self/agenda-recurring "~/org/recurring.org" "Org Agenda Recurring File")
 (defconst self/agenda-waiting "~/org/waiting.org" "Org Agenda Waiting File")
 (defconst self/agenda-archive "tasks_archive.org" "Org Agenda Archive File")
+(defconst self/agenda-dayjob "~/org/dayjob.org" "Org Agenda Dayjob File")
 
 (defun self--add-agenda-templates ()
   "add the templates required for org-agenda"
@@ -46,14 +47,11 @@
 (setq org-agenda-files (list self/agenda-inbox
                              self/agenda-project
                              self/agenda-tickler
-                             self/agenda-recurring))
-
-(setq org-refile-targets (list `(,self/agenda-project :maxlevel . 2)
-                               `(,self/agenda-waiting :level . 1)
-                               `(,self/agenda-tickler :maxlevel . 1)
-                               `(,self/agenda-recurring :maxlevel . 1)))
+                             self/agenda-recurring
+                             self/agenda-dayjob))
 
 (setq org-refile-targets `((,self/agenda-project :maxlevel . 2)
+                           (,self/agenda-dayjob :maxlevel . 2)
                            (,self/agenda-waiting :level . 1)
                            (,self/agenda-tickler :maxlevel . 1)
                            (,self/agenda-recurring :maxlevel . 1)))
