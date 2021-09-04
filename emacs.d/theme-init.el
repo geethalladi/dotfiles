@@ -103,10 +103,8 @@
    '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
    '(quack-pltish-defn-face ((t (:foreground "#dfaf8f"))))))
 
-(defun self/load-less-bright-theme ()
-  "Custom theme for a less bright theme"
-  (interactive)
-  (load-theme 'solarized-light t)
+(defun self/-less-bright-theme-custom ()
+  "Custom settings for a less bright theme"
   (custom-set-faces
    '(rainbow-delimiters-depth-1-face ((t (:foreground "blue"))))
    '(rainbow-delimiters-depth-2-face ((t (:foreground "black"))))
@@ -117,6 +115,12 @@
    '(rainbow-delimiters-depth-7-face ((t (:foreground "orange2"))))
    '(rainbow-delimiters-depth-8-face ((t (:foreground "green4"))))
    '(rainbow-delimiters-unmatched-face ((t (:background "cyan"))))))
+
+(defun self/load-less-bright-theme ()
+  "less bright theme"
+  (interactive)
+  (load-theme 'solarized-light t)
+  (self/-less-bright-theme-custom))
 
 (defun self/load-light-theme ()
   "light theme"
@@ -147,14 +151,14 @@
 
 (defun self/-load-theme ()
   "Load theme as per the environment"
-  ;; (cond ((and (self/-inside-screenp)
-  ;;             (self/-dark-modep))
-  ;;        (message "Skipping loading dark theme inside screen"))
-  ;;       ((self/-dark-modep) (self/load-dark-theme))
-  ;;       (t (self/load-light-theme)))
-
-  ;; preferring less bright theme for sometime
-  (self/load-less-bright-theme))
+  (cond ((and (self/-inside-screenp)
+              (self/-dark-modep))
+         (message "Skipping loading dark theme inside screen"))
+        ((self/-dark-modep) (self/load-dark-theme))
+        ;; preferring less bright theme for sometime
+        (t (self/load-less-bright-theme)))
+        ;; (t (self/load-light-theme))
+)
 
 (self/-load-theme)
 
