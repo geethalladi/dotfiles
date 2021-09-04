@@ -48,32 +48,35 @@
   (pyenv-mode-set (projectile-project-name)))
 
 (require 'python)
-;; TODO: Move this to eval-after-load python
-(add-to-list 'python-shell-completion-native-disabled-interpreters "jupyter")
 
+(setenv "WORKON_HOME" ".")
 
-;; (setenv "WORKON_HOME" "/usr/local/anaconda3/envs")
+(defun self/-use-ipython ()
+  "Using ipython as the default interpreter"
+  ;; use IPython
+  (setq-default py-shell-name "ipython")
+  (setq-default py-which-bufname "IPython")
+  ;; TODO: Move this to eval-after-load python
+  (add-to-list 'python-shell-completion-native-disabled-interpreters "jupyter")
 
-; use IPython
-(setq-default py-shell-name "ipython")
-(setq-default py-which-bufname "IPython")
+  ;; Reference :: https://elpy.readthedocs.io/en/latest/ide.html#interpreter-setup
+  (setq python-shell-interpreter "jupyter"
+        python-shell-interpreter-args "console --simple-prompt"
+        python-shell-prompt-detect-failure-warning nil
+        ;; python is aliased to use python3
+        py-python-command "python3"
+        ;; use the wx backend, for both mayavi and matplotlib
+        py-python-command-args '("--gui=wx" "--pylab=wx" "-colors" "Linux")
+        py-force-py-shell-name-p t
+        ;; switch to the interpreter after executing code
+        py-shell-switch-buffers-on-execute-p t
+        py-switch-buffers-on-execute-p t
+        ;; don't split windows
+        py-split-windows-on-execute-p nil
+        ;; try to automagically figure out indentation
+        py-smart-indentation t))
 
 ;; Reference :: https://elpy.readthedocs.io/en/latest/ide.html#interpreter-setup
-(setq python-shell-interpreter "jupyter"
-      python-shell-interpreter-args "console --simple-prompt"
-      python-shell-prompt-detect-failure-warning nil
-      ;; python is aliased to use python3
-      py-python-command "python3"
-      ;; use the wx backend, for both mayavi and matplotlib
-      py-python-command-args '("--gui=wx" "--pylab=wx" "-colors" "Linux")
-      py-force-py-shell-name-p t
-      ;; switch to the interpreter after executing code
-      py-shell-switch-buffers-on-execute-p t
-      py-switch-buffers-on-execute-p t
-      ;; don't split windows
-      py-split-windows-on-execute-p nil
-      ;; try to automagically figure out indentation
-      py-smart-indentation t)
 
 (setq elpy-rpc-python-command "python3"
       elpy-rpc-backend "jedi"
