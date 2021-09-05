@@ -115,6 +115,16 @@
 (defun self/-less-bright-theme-custom ()
   "Custom settings for a less bright theme"
   (custom-set-faces
+   ;; org mode faces theme
+   '(org-level-2 ((t (:foreground "lightblue4"))))
+   '(org-level-3 ((t (:foreground "green4"))))
+   '(org-level-4 ((t (:foreground "brown"))))
+
+   ;; smartparens theme
+   '(sp-show-pair-mismatch-face ((t (:foreground "#ee3344"))))
+   '(sp-show-pair-match-face ((t (:background "#E0C0C0"))))
+
+   ;; rainbow delimiter themes
    '(rainbow-delimiters-depth-1-face ((t (:foreground "blue"))))
    '(rainbow-delimiters-depth-2-face ((t (:foreground "black"))))
    '(rainbow-delimiters-depth-3-face ((t (:foreground "orange2"))))
