@@ -118,9 +118,9 @@
    ;; org mode faces theme
    ;; replacing with better variants from
    ;; https://en.wikipedia.org/wiki/Solarized
-   '(org-level-2 ((t (:foreground "#268bd2"))))
-   '(org-level-3 ((t (:foreground "#2aa198"))))
-   '(org-level-4 ((t (:foreground "#b58900"))))
+   '(org-level-2 ((t (:foreground "#2aa198"))))
+   '(org-level-3 ((t (:foreground "#b58900"))))
+   '(org-level-4 ((t (:foreground "#268bd2"))))
    '(org-level-5 ((t (:foreground "#cb4b16"))))
 
    ;; smartparens theme
