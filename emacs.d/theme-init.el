@@ -116,9 +116,12 @@
   "Custom settings for a less bright theme"
   (custom-set-faces
    ;; org mode faces theme
-   '(org-level-2 ((t (:foreground "lightblue4"))))
-   '(org-level-3 ((t (:foreground "green4"))))
-   '(org-level-4 ((t (:foreground "brown"))))
+   ;; replacing with better variants from
+   ;; https://en.wikipedia.org/wiki/Solarized
+   '(org-level-2 ((t (:foreground "#268bd2"))))
+   '(org-level-3 ((t (:foreground "#2aa198"))))
+   '(org-level-4 ((t (:foreground "#b58900"))))
+   '(org-level-5 ((t (:foreground "#cb4b16"))))
 
    ;; smartparens theme
    '(sp-show-pair-mismatch-face ((t (:foreground "#ee3344"))))
