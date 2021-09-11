@@ -15,7 +15,7 @@
 ;; no toolbar
 (tool-bar-mode -1)
 
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; eager loading font customizations
 (load "~/.emacs.d/font-init.el")
