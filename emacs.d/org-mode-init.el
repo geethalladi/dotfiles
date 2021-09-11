@@ -85,7 +85,8 @@
   (define-key org-mode-map (kbd "<S-right>") 'windmove-right)
   (define-key org-mode-map (kbd "<S-left>") 'windmove-left)
   (define-key org-mode-map (kbd "<S-up>") 'windmove-up)
-  (define-key org-mode-map (kbd "<S-down>") 'windmove-down))
+  (define-key org-mode-map (kbd "<S-down>") 'windmove-down)
+  (define-key org-mode-map (kbd "C-c M-w") 'org-refile))
 
 (add-hook 'org-mode-hook 'self/-org-mode)
 
