@@ -6,6 +6,8 @@ alias c='clear'
 alias l='ls -al'
 alias ls='ls -GFh'
 alias jcov="find . -name jacoco -type d -exec open '{}/index.html' \;"
+# javadoc generates error sometimes. replacing && with ; for now
+alias jdoc="rm -rf javadocs && javadoc -d javadocs **/src/**/*.java; open javadocs/index.html"
 
 # Emacs to use cocoa emacs app
 # alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
