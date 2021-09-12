@@ -48,3 +48,4 @@ nov-places
 eww-bookmarks
 *.beam
 *.class
+javadocs/
