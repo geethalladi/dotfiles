@@ -174,14 +174,18 @@
 (defun self/reload-theme ()
   "Load theme as per the environment"
   (interactive)
-  (cond ((and (self/-inside-screenp)
-              (self/-dark-modep))
-         (message "Skipping loading dark theme inside screen"))
-        ((self/-dark-modep) (self/load-dark-theme))
-        ;; preferring less bright theme for sometime
-        (t (self/load-less-bright-theme)))
-        ;; (t (self/load-light-theme))
-)
+  (cond
+   ;; skip inside screen
+   ((and (self/-inside-screenp)
+         (self/-dark-modep))
+    (message "Skipping loading dark theme inside screen"))
+   ;; if dark-mode if true, use it
+   ((self/-dark-modep) (self/load-dark-theme))
+   ;; else in window system, use the less bright theme
+   ;; preferring less bright theme for sometime
+   ((window-system) (self/load-less-bright-theme))
+   ;; fall back to light
+   (t (self/load-light-theme))))
 
 (self/reload-theme)
 
