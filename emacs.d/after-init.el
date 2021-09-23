@@ -24,6 +24,9 @@
 (setq backup-directory-alist '((".*" . "~/.emacs.d/saves")))
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
 
+;; save configurations to this file - (but don't load themm :)
+(setq custom-file "~/.emacs.d/emacs-custom.el")
+
 ;; Never kill scratch buffer
 (add-hook 'kill-buffer-query-functions
     (lambda () (not (equal (buffer-name) "*scratch*"))))
