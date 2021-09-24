@@ -8,6 +8,7 @@ alias ls='ls -GFh'
 alias jcov="find . -name jacoco -type d -exec open '{}/index.html' \;"
 # javadoc generates error sometimes. replacing && with ; for now
 alias jdoc="rm -rf javadocs && javadoc -d javadocs **/src/**/*.java; open javadocs/index.html"
+alias rs-start="docker run -d --cap-add sys_resource --name rp -p 8443:8443 -p 9443:9443 -p 12000:12000 redislabs/redis"
 
 # Emacs to use cocoa emacs app
 # alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
