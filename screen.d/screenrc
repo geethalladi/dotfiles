@@ -7,3 +7,4 @@ bind ^c screen 1
 bind x
 bind ^x
 screen 1
+defdynamictitle off
