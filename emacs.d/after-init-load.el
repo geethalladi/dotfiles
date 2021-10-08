@@ -114,6 +114,7 @@
   ;; (load "~/.emacs.d/haskell-init.el")
   ;; (load "~/.emacs.d/ocaml-init.el")
   ;; (load "~/.emacs.d/erlang-init.el")
+  (load "~/.emacs.d/prolog-init.el")
 
   (load "~/.emacs.d/company-init.el")
   (load "~/.emacs.d/projectile-init.el")

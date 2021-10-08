@@ -43,6 +43,7 @@
  (depends-on "docker-tramp")
  (depends-on "drag-stuff")
  (depends-on "editorconfig")
+ (depends-on "ediprolog")
  (depends-on "efire")
  (depends-on "ein")
  (depends-on "el-mock")
