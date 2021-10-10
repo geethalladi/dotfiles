@@ -36,6 +36,7 @@
   (setq flymake-allowed-file-name-masks
         '(("\\.pl\\'" flymake-prolog-init)))
   (flymake-mode 1)
+  (smartparens-mode 1)
   (define-key prolog-mode-map (kbd "C-c q") 'prolog-insert-comment-block)
   (define-key prolog-mode-map (kbd "C-c l")
             (lambda ()
