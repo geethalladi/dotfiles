@@ -1,5 +1,7 @@
 ;; from https://www.metalevel.at/pceprolog/
 
+(load "~/.emacs.d/vendor/prolog.el")
+
 (setq prolog-system 'swi
       prolog-program-switches '((swi ("-G128M" "-T128M" "-L128M" "-O"))
                                 (t nil))
@@ -14,25 +16,6 @@
     (forward-line -1)
     (indent-for-tab-command)))
 
-;; (global-set-key "\C-cq" 'prolog-insert-comment-block)
-
-;; (global-set-key "\C-cl" (lambda ()
-;;                           (interactive)
-;;                           (insert ":- use_module(library()).")
-;;                           (forward-char -3)))
-
-(add-hook 'prolog-mode-hook
-          (lambda ()
-            (require 'flymake)
-            (make-local-variable 'flymake-allowed-file-name-masks)
-            (make-local-variable 'flymake-err-line-patterns)
-            (setq flymake-err-line-patterns
-                  '(("ERROR: (?\\(.*?\\):\\([0-9]+\\)" 1 2)
-                    ("Warning: (\\(.*\\):\\([0-9]+\\)" 1 2)))
-            (setq flymake-allowed-file-name-masks
-                  '(("\\.pl\\'" flymake-prolog-init)))
-            (flymake-mode 1)))
-
 (defun flymake-prolog-init ()
   (let* ((temp-file   (flymake-init-create-temp-buffer-copy
                        'flymake-create-temp-inplace))
@@ -40,3 +23,24 @@
                        temp-file
                        (file-name-directory buffer-file-name))))
     (list "swipl" (list "-q" "-t" "halt" "-s " local-file))))
+(add-to-list 'auto-mode-alist '("\\.pl\\'" . prolog-mode))
+
+(defun self/prolog-mode ()
+  "Customizations for prolog mode"
+  (require 'flymake)
+  (make-local-variable 'flymake-allowed-file-name-masks)
+  (make-local-variable 'flymake-err-line-patterns)
+  (setq flymake-err-line-patterns
+        '(("ERROR: (?\\(.*?\\):\\([0-9]+\\)" 1 2)
+          ("Warning: (\\(.*\\):\\([0-9]+\\)" 1 2)))
+  (setq flymake-allowed-file-name-masks
+        '(("\\.pl\\'" flymake-prolog-init)))
+  (flymake-mode 1)
+  (define-key prolog-mode-map (kbd "C-c q") 'prolog-insert-comment-block)
+  (define-key prolog-mode-map (kbd "C-c l")
+            (lambda ()
+              (interactive)
+              (insert ":- use_module(library()).")
+              (forward-char -3))))
+
+(add-hook 'prolog-mode-hook 'self/prolog-mode)
