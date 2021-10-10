@@ -4,6 +4,12 @@
 (source org)
 
 (development
+ (depends-on "ansi")
+ (depends-on "shut-up")
+ (depends-on "package-build")
+ (depends-on "git")
+ (depends-on "epl")
+ (depends-on "commander")
  (depends-on "ac-haskell-process")
  (depends-on "ac-js2")
  (depends-on "ac-slime")
