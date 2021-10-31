@@ -172,7 +172,7 @@
   ;; so the one coming last overrides the previous one
   (setq org-mind-map-default-graph-attribs
         (append org-mind-map-default-graph-attribs
-                '(("autosize" . "true") ("size" . "15,15")))))
+                '(("autosize" . "true") ("size" . "20,20")))))
 
 ;; search and replace inside invisible content (like urls) in org mode
 ;; (load "~/.emacs.d/vendor/org-mode-search-invisible.el")
