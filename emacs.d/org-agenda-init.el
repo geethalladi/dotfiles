@@ -8,13 +8,14 @@
 
 ;; Include emacs diary entries in org-agenda
 
-(defconst self/agenda-inbox "~/org/inbox.org" "Org Agenda Inbox File")
-(defconst self/agenda-project "~/org/projects.org" "Org Agenda Project File")
-(defconst self/agenda-tickler "~/org/tickler.org" "Org Agenda Tickler File")
-(defconst self/agenda-recurring "~/org/recurring.org" "Org Agenda Recurring File")
-(defconst self/agenda-waiting "~/org/waiting.org" "Org Agenda Waiting File")
-(defconst self/agenda-archive "tasks_archive.org" "Org Agenda Archive File")
-(defconst self/agenda-dayjob "~/org/dayjob.org" "Org Agenda Dayjob File")
+(defconst self/agenda-inbox "~/org/inbox.org" "Org Agenda Inbox file")
+(defconst self/agenda-project "~/org/projects.org" "Org Agenda Project file")
+(defconst self/agenda-tickler "~/org/tickler.org" "Org Agenda Tickler file")
+(defconst self/agenda-recurring "~/org/recurring.org" "Org Agenda Recurring file")
+(defconst self/agenda-waiting "~/org/waiting.org" "Org Agenda Waiting file")
+(defconst self/agenda-archive "tasks_archive.org" "Org Agenda Archive file")
+(defconst self/agenda-dayjob "~/org/dayjob.org" "Org Agenda Dayjob file")
+(defconst self/agenda-this-week "~/org/dayjob.org" "Org Agenda this week file")
 
 (defun self--add-agenda-templates ()
   "add the templates required for org-agenda"
@@ -48,12 +49,14 @@
                              self/agenda-project
                              self/agenda-tickler
                              self/agenda-recurring
-                             self/agenda-dayjob))
+                             self/agenda-dayjob
+                             self/agenda-this-week))
 
 (setq org-refile-targets `((,self/agenda-project :maxlevel . 2)
                            (,self/agenda-dayjob :maxlevel . 2)
                            (,self/agenda-waiting :level . 1)
                            (,self/agenda-tickler :maxlevel . 1)
+                           (,self/agenda-this-week :maxlevel . 1)
                            (,self/agenda-recurring :maxlevel . 1)))
 
 ;; (setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
