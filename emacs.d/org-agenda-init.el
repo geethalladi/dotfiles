@@ -15,7 +15,7 @@
 (defconst self/agenda-waiting "~/org/waiting.org" "Org Agenda Waiting file")
 (defconst self/agenda-archive "tasks_archive.org" "Org Agenda Archive file")
 (defconst self/agenda-dayjob "~/org/dayjob.org" "Org Agenda Dayjob file")
-(defconst self/agenda-this-week "~/org/dayjob.org" "Org Agenda this week file")
+(defconst self/agenda-this-week "~/org/this-week.org" "Org Agenda this week file")
 
 (defun self--add-agenda-templates ()
   "add the templates required for org-agenda"
