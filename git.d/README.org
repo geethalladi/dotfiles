@@ -1,0 +1,4 @@
+* README
+
+  cp ${DOTFILES}/git.d/gitconfig.template ~/.gitconfig
+  Update the git user and email data in the global git config
