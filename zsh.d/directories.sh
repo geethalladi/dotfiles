@@ -26,15 +26,16 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
 export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 
+# Using sdkman for jvm languages
 # export JDK_7_0_HOME=/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home
 # export JDK_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home
-export JDK_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
-export JDK_13_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home
-export JAVA_HOME=${JDK_8_HOME}
+# export JDK_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
+# export JDK_13_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home
+# export JAVA_HOME=${JDK_8_HOME}
 
-export SCALA_HOME=${CELLAR_PATH}/scala/2.12.1
-export SBT_HOME=${CELLAR_PATH}/sbt/0.13.13
-export CONSCRIPT_HOME=${INSTALL_DIR}/conscript
+# export SCALA_HOME=${CELLAR_PATH}/scala/2.12.1
+# export SBT_HOME=${CELLAR_PATH}/sbt/0.13.13
+# export CONSCRIPT_HOME=${INSTALL_DIR}/conscript
 
 export ANT_HOME=${CELLAR_PATH}/ant/1.10.1
 # export MAVEN_HOME=${CELLAR_PATH}/maven/3.3.9
