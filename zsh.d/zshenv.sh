@@ -115,6 +115,3 @@ fi
 
 source ${DOTFILES}/zsh.d/alias.sh
 source ${DOTFILES}/dayjob.d/*.sh
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"

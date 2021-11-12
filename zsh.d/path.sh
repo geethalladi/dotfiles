@@ -10,8 +10,8 @@ if [ "$PATH_STATE_UPDATED" != "1" ]; then
     # export PATH=${PATH}:${HADOOP_HOME}/bin:${HIVE_HOME}/bin:${SPARK_HOME}/bin
 
     # Using custom installed java/scala
-    export PATH=${JAVA_HOME}/bin:${SCALA_HOME}/bin:${GOPATH}/bin:${PATH}
-    export PATH=${PATH}:${LOCAL_BIN_DIR}:/usr/local/opt/mysql@5.6/bin/:/usr/local/sbin
+    export PATH=${GOPATH}/bin:${PATH}
+    export PATH=${PATH}:${LOCAL_BIN_DIR}:/usr/local/sbin
     export PATH=${PATH}:${HOME}/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
     export PATH=${PATH}:${INSTALL_DIR}
     # export PATH="/usr/local/bin:${PATH}"
@@ -29,6 +29,9 @@ if [ "$PATH_STATE_UPDATED" != "1" ]; then
     # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
     export PATH="$PATH:$HOME/.rvm/bin"
     export MANPATH="/usr/local/man:$MANPATH"
+
+    # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+    [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
 
     # Rehash to take care of the PATH variable update
     # https://stackoverflow.com/questions/36543707/why-does-zsh-ignore-the-path-entry-order
