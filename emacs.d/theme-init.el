@@ -70,6 +70,9 @@
 
 (defun self/-dark-theme-custom ()
   "Custom theme for a dark background"
+  (set-face-attribute 'helm-selection nil
+                      :background "green"
+                      :foreground "black")
   (custom-set-faces
    ;; org mode faces
    '(org-level-1 ((t (:foreground "#dfaf8f"))))
