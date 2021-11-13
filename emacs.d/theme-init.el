@@ -111,6 +111,9 @@
    '(sp-show-pair-mismatch-face ((t (:foreground "#ee3344"))))
    '(sp-show-pair-match-face ((t (:background "#6F6F6F"))))
 
+   ;; magit
+   '(magit-diff-added-highlight ((t (:foreground "#151515"))))
+
    ;; scheme / quack
    '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
    '(quack-pltish-defn-face ((t (:foreground "#dfaf8f"))))))
