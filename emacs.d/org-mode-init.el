@@ -165,6 +165,7 @@
   ;; Uncomment the below if 'ensure-system-packages` is installed
   ;;:ensure-system-package (gvgen . graphviz)
   :config
+  (setq org-roam-v2-ack t)
   (setq org-mind-map-engine "twopi") ;; radial layout
   (setq org-mind-map-dot-output '("jpeg"))
   ;; this needs to be added at the end
