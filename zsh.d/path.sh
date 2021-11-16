@@ -33,6 +33,9 @@ if [ "$PATH_STATE_UPDATED" != "1" ]; then
     # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
     [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
 
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home
+    export PATH=${JAVA_HOME}/bin:${PATH}
+
     # Rehash to take care of the PATH variable update
     # https://stackoverflow.com/questions/36543707/why-does-zsh-ignore-the-path-entry-order
     rehash
