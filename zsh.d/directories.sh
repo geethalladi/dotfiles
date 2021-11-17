@@ -81,3 +81,14 @@ export GOPATH=~/repo/open-source/goprojects
 
 # Enabling EMACS variable disables line editing in zsh
 export EMACS_APP=/Applications/Emacs.app
+
+# For faster traversal
+export PRIVATE_DIR=~/private
+export PROJECT_DIR=${PRIVATE_DIR}/projects
+export JOURNAL_DIR=${PRIVATE_DIR}/journals
+export INVESTING_DIR=${PRIVATE_DIR}/investing
+
+# where I write stuff
+export WRITING_DIR=${PRIVATE_DIR}/writing
+export MEETING_DIR=${WRITING_DIR}/meeting
+export EMAIL_DIR=${WRITING_DIR}/email
