@@ -140,21 +140,23 @@
 ;; required for org-reveal mode presentations
 (require 'ox-reveal)
 
-;; org-roam configurations
-(use-package org-roam
-      :ensure t
-      :hook
-      (after-init . org-roam-mode)
-      :custom
-      ;; slipbox directory
-      (org-roam-directory "~/slipbox")
-      :bind (:map org-roam-mode-map
-                  (("C-c r l" . org-roam)
-                   ("C-c r f" . org-roam-find-file)
-                   ("C-c r g" . org-roam-graph))
-                  :map org-mode-map
-                  (("C-c r i" . org-roam-insert))
-                  (("C-c r I" . org-roam-insert-immediate))))
+;; ;; org-roam configurations
+;; (use-package org-roam
+;;   :ensure t
+;;   ;; :straight (:type git :host github :repo "org-roam/org-roam-v1")
+;;   :hook
+;;   (after-init . org-roam-mode)
+;;   :custom
+;;   ;; slipbox directory
+;;   (org-roam-directory "~/slipbox")
+;;   ;; (setq org-roam-v2-ack t)
+;;   :bind (:map org-roam-mode-map
+;;               (("C-c r l" . org-roam)
+;;                ("C-c r f" . org-roam-find-file)
+;;                ("C-c r g" . org-roam-graph))
+;;               :map org-mode-map
+;;               (("C-c r i" . org-roam-insert))
+;;               (("C-c r I" . org-roam-insert-immediate))))
 
 ;; configurations for org-mind-map
 ;; taken from its README
@@ -165,7 +167,6 @@
   ;; Uncomment the below if 'ensure-system-packages` is installed
   ;;:ensure-system-package (gvgen . graphviz)
   :config
-  (setq org-roam-v2-ack t)
   (setq org-mind-map-engine "twopi") ;; radial layout
   (setq org-mind-map-dot-output '("jpeg"))
   ;; this needs to be added at the end

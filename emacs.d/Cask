@@ -147,7 +147,8 @@
  (depends-on "org-mind-map")
  (depends-on "org-plus-contrib")
  ;; TODO: migrate to org-v2 later
- (depends-on "org-roam" "20210308.457")
+ ;; Using straight.el to install org-roam package
+ ;; (depends-on "org-roam" "20210308.457")
  (depends-on "origami")
  (depends-on "osx-clipboard")
  (depends-on "ov")
@@ -210,6 +211,7 @@
  (depends-on "soft-morning-theme")
  (depends-on "solarized-theme")
  (depends-on "sr-speedbar")
+ ;; (depends-on "straight")
  (depends-on "stripe-buffer")
  (depends-on "tabbar")
  (depends-on "tango-plus-theme")
