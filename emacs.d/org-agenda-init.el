@@ -10,6 +10,7 @@
 
 (defconst self/agenda-inbox "~/org/inbox.org" "Org Agenda Inbox file")
 (defconst self/agenda-project "~/org/projects.org" "Org Agenda Project file")
+(defconst self/agenda-finance "~/org/finance.org" "Org Agenda Finance file")
 (defconst self/agenda-tickler "~/org/tickler.org" "Org Agenda Tickler file")
 (defconst self/agenda-recurring "~/org/recurring.org" "Org Agenda Recurring file")
 (defconst self/agenda-waiting "~/org/waiting.org" "Org Agenda Waiting file")
@@ -47,12 +48,14 @@
 
 (setq org-agenda-files (list self/agenda-inbox
                              self/agenda-project
+                             self/agenda-finance
                              self/agenda-tickler
                              self/agenda-recurring
                              self/agenda-dayjob
                              self/agenda-this-week))
 
 (setq org-refile-targets `((,self/agenda-project :maxlevel . 2)
+                           (,self/agenda-finance :maxlevel . 2)
                            (,self/agenda-dayjob :maxlevel . 2)
                            (,self/agenda-waiting :level . 1)
                            (,self/agenda-tickler :maxlevel . 1)
