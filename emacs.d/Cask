@@ -78,6 +78,8 @@
  (depends-on "fringe-helper")
  (depends-on "fuzzy")
  (depends-on "geiser")
+ (depends-on "geiser-chez")
+ (depends-on "geiser-racket")
  (depends-on "git")
  (depends-on "git-gutter")
  (depends-on "git-gutter-fringe")
