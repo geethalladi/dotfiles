@@ -88,9 +88,9 @@
 
 ;; Customisations for scheme
 
-(custom-set-variables '(scheme-program-name "petite"))
 (setq geiser-chez-binary "/usr/local/bin/chez")
 
+(custom-set-variables '(scheme-program-name "chez"))
 
 (setq scheme-program-name "chez")
 
