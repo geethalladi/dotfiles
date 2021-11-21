@@ -167,9 +167,11 @@
 
 ;; clone https://github.com/org-roam/org-roam-v1 into "~/.emacs.d/vendor/org-roam-v1"
 (add-to-list 'load-path "~/.emacs.d/vendor/org-roam-v1")
+(require 'org-roam)
 
 (use-package org-roam
-  :ensure t
+  ;; do not install the package from elpa
+  :ensure f
   ;; :straight (:type git :host github :repo "org-roam/org-roam-v1")
   :hook
   (after-init . org-roam-mode)
