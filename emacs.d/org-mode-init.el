@@ -140,24 +140,6 @@
 ;; required for org-reveal mode presentations
 (require 'ox-reveal)
 
-;; ;; org-roam configurations
-;; (use-package org-roam
-;;   :ensure t
-;;   ;; :straight (:type git :host github :repo "org-roam/org-roam-v1")
-;;   :hook
-;;   (after-init . org-roam-mode)
-;;   :custom
-;;   ;; slipbox directory
-;;   (org-roam-directory "~/slipbox")
-;;   ;; (setq org-roam-v2-ack t)
-;;   :bind (:map org-roam-mode-map
-;;               (("C-c r l" . org-roam)
-;;                ("C-c r f" . org-roam-find-file)
-;;                ("C-c r g" . org-roam-graph))
-;;               :map org-mode-map
-;;               (("C-c r i" . org-roam-insert))
-;;               (("C-c r I" . org-roam-insert-immediate))))
-
 ;; configurations for org-mind-map
 ;; taken from its README
 (use-package org-mind-map
@@ -178,3 +160,27 @@
 
 ;; search and replace inside invisible content (like urls) in org mode
 ;; (load "~/.emacs.d/vendor/org-mode-search-invisible.el")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; org-roam configurations
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; clone https://github.com/org-roam/org-roam-v1 into "~/.emacs.d/vendor/org-roam-v1"
+(add-to-list 'load-path "~/.emacs.d/vendor/org-roam-v1")
+
+(use-package org-roam
+  :ensure t
+  ;; :straight (:type git :host github :repo "org-roam/org-roam-v1")
+  :hook
+  (after-init . org-roam-mode)
+  :custom
+  ;; slipbox directory
+  (org-roam-directory "~/slipbox")
+  ;; (setq org-roam-v2-ack t)
+  :bind (:map org-roam-mode-map
+              (("C-c r l" . org-roam)
+               ("C-c r f" . org-roam-find-file)
+               ("C-c r g" . org-roam-graph))
+              :map org-mode-map
+              (("C-c r i" . org-roam-insert))
+              (("C-c r I" . org-roam-insert-immediate))))
