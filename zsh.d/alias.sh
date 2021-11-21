@@ -26,7 +26,7 @@ alias pass='openssl rand -base64 16'
 alias rg='rvm gemset use'
 
 
-alias scheme="rlwrap -r -c -f ~/extn.d/mit_scheme_bindings.txt scheme"
+# alias scheme="rlwrap -r -c -f ~/extn.d/mit_scheme_bindings.txt scheme"
 alias ghci="ghci -XNPlusKPatterns"
 alias hivec="hive -hiveconf hive.root.logger=DEBUG,console"
 # alias jnote="jupyter notebook --notebook-dir=~/repo/notebooks"
