@@ -89,8 +89,10 @@
 ;; Customisations for scheme
 
 (custom-set-variables '(scheme-program-name "petite"))
+(setq geiser-chez-binary "/usr/local/bin/chez")
 
-(setq scheme-program-name "petite")
+
+(setq scheme-program-name "chez")
 
 ;; (setq geiser-active-implementations '(chez))
 
@@ -104,7 +106,6 @@
 ;; Disable version check
 (setq geiser-repl-skip-version-check-p 't)
 
-(setq geiser-chez-binary "/usr/local/bin/chez")
 
 (require 'geiser)
 (require 'quack)
