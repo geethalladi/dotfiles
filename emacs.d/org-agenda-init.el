@@ -55,8 +55,8 @@
                              self/agenda-this-week))
 
 (setq org-refile-targets `((,self/agenda-project :maxlevel . 2)
-                           (,self/agenda-finance :maxlevel . 2)
                            (,self/agenda-dayjob :maxlevel . 2)
+                           (,self/agenda-finance :maxlevel . 1)
                            (,self/agenda-waiting :level . 1)
                            (,self/agenda-tickler :maxlevel . 1)
                            (,self/agenda-this-week :maxlevel . 1)
