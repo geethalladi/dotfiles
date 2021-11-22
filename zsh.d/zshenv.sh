@@ -111,13 +111,5 @@ test -r ${OPAM_DIR}/opam-init/init.zsh && . ${OPAM_DIR}/opam-init/init.zsh > /de
 
 source $HOME/.cargo/env
 
-########################################################################################
-# iterm zsh integration (only in iterm2)
-########################################################################################
-
-if [ -n "$ITERM_SESSION_ID" ]; then
-    test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-fi
-
 source ${DOTFILES}/zsh.d/alias.sh
 source ${DOTFILES}/dayjob.d/*.sh
