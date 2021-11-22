@@ -22,7 +22,10 @@ if [ "$PATH_STATE_UPDATED" != "1" ]; then
     # source ${DOTFILE_DIR_AWS}/awsenv.sh
     # source ${ZSHDIR}/macports.sh
 
-    if [[ ${TERM_PROGRAM} != "iTerm.app" && ${TERM} != "eterm-color" && ${TERM} != "dumb" ]]; then
+    if [[ ${TERM_PROGRAM} != "iTerm.app" &&
+              ${TERM_PROGRAM} != "tmux" &&
+              ${TERM} != "eterm-color" &&
+              ${TERM} != "dumb" ]]; then
         source ${DOTFILE_DIR_ZSH}/xvm.sh
     fi
 
