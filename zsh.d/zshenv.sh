@@ -119,8 +119,5 @@ if [ -n "$ITERM_SESSION_ID" ]; then
     test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 fi
 
-# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
-
 source ${DOTFILES}/zsh.d/alias.sh
 source ${DOTFILES}/dayjob.d/*.sh
