@@ -29,8 +29,8 @@
   "Customize the installed packages"
 
   ;; emacs getting the same path when invoked from GUI
-  (when (memq window-system '(mac ns))
-    (exec-path-from-shell-initialize))
+  ;; (when (memq window-system '(mac ns))
+  ;;   (exec-path-from-shell-initialize))
 
   ;; ENABLE PERSISTENT SCRATCH
   (persistent-scratch-setup-default)

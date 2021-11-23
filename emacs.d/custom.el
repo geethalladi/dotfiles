@@ -65,6 +65,13 @@
 (setenv "LC_ALL" "en_US.UTF-8")
 (setenv "LANG" "en_US.UTF-8")
 
+;; emacs getting the same path when invoked from GUI
+;; Get all the environment variables from shell
+;; (exec-path-from-shell-copy-env "PYTHONPATH")
+(when (memq window-system '(mac ns x))
+  (setq exec-path-from-shell-check-startup-files nil)
+  (exec-path-from-shell-initialize))
+
 ;; Elastic Search mode
 (add-to-list 'auto-mode-alist '("\\.es$" . es-mode))
 (add-hook 'es-result-mode-hook 'hs-minor-mode)
@@ -74,11 +81,6 @@
 
 ;; C-h for delete-backward-char
 ;; (global-set-key [(control ?h)] 'delete-backward-char)
-
-;; Get all the environment variables from shell
-(exec-path-from-shell-copy-env "PYTHONPATH")
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
 
 ;; Setting key for global multiple cursor mode
 (global-set-key (kbd "C-c m c") 'mc/edit-lines)
