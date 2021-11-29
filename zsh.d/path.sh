@@ -15,6 +15,7 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
     export PATH=${PATH}:${LOCAL_BIN_DIR}:/usr/local/sbin
     export PATH=${PATH}:${HOME}/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
     export PATH=${PATH}:${INSTALL_DIR}
+    export PATH=${PATH}:/usr/local/opt/mysql@5.7/bin:/usr/local/opt/mysql-client/bin
     # export PATH="/usr/local/bin:${PATH}"
 
     # for tmuxinator
