@@ -73,6 +73,8 @@ export ES_HOME=${INSTALL_DIR}/elasticsearch-2.2.1
 export ERLANG_ROOT_DIR=${CELLAR_PATH}/erlang/20.3.4
 export ERLANG_HOME=${ERLANG_ROOT_DIR}
 
+export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
+
 export OPAM_DIR=${HOME}/.opam
 
 # Adding GO related paths
