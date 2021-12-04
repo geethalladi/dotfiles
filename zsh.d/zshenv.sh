@@ -107,12 +107,6 @@ export MPLBACKEND="module://itermplot"
 test -r ${OPAM_DIR}/opam-init/init.zsh && . ${OPAM_DIR}/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 ########################################################################################
-# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-########################################################################################
-
-[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
-
-########################################################################################
 # Rust / cargo
 ########################################################################################
 
