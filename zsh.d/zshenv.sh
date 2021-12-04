@@ -114,3 +114,4 @@ source $HOME/.cargo/env
 
 source ${DOTFILES}/zsh.d/alias.sh
 source ${DOTFILES}/dayjob.d/*.sh
+source ${DOTFILES}/zsh.d/utils.zsh
