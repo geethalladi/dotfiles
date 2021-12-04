@@ -77,6 +77,12 @@ export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
 
 export OPAM_DIR=${HOME}/.opam
 
+# private / project
+export PRIVATE_DIR=~/private
+export PROJECT_DIR=${PRIVATE_DIR}/projects
+
+export TMUXP_CONFIGDIR=${PROJECT_DIR}/tmux
+
 # Adding GO related paths
 # export GOROOT=/usr/local/opt/go
 export GOPATH=~/repo/open-source/goprojects
@@ -85,8 +91,6 @@ export GOPATH=~/repo/open-source/goprojects
 export EMACS_APP=/Applications/Emacs.app
 
 # For faster traversal
-export PRIVATE_DIR=~/private
-export PROJECT_DIR=${PRIVATE_DIR}/projects
 export JOURNAL_DIR=${PRIVATE_DIR}/journals
 export FINANCE_DIR=${PRIVATE_DIR}/finance
 export INVESTING_DIR=${FINANCE_DIR}/investing
