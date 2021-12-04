@@ -35,6 +35,7 @@
  (depends-on "company-irony")
  (depends-on "company-jedi")
  (depends-on "company-restclient")
+ (depends-on "copy-as-format")
  (depends-on "csv-mode")
  (depends-on "dash")
  (depends-on "dash-functional")
