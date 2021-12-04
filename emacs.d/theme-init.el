@@ -189,7 +189,7 @@
    ((self/-dark-modep) (self/load-dark-theme))
    ;; else in window system, use the less bright theme
    ;; preferring less bright theme for sometime
-   ((window-system) (self/load-less-bright-theme))
+   ;; ((window-system) (self/load-less-bright-theme))
    ;; fall back to light
    (t (self/load-light-theme))))
 
