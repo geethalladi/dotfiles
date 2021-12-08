@@ -18,7 +18,7 @@ alias e='ec'
 # alias emacsclient to 'ecl'
 alias ecl='emacsclient -nw'
 
-alias m='mvn -Dmaven.javadoc.skip=true'
+alias m='make'
 alias g='git'
 alias t="tree -I 'node_modules|cache'"
 alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,node_modules,cache}"
