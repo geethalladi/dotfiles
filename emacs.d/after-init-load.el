@@ -133,6 +133,7 @@
   (load "~/.emacs.d/lisp-init.el")
 
   (load "~/.emacs.d/other-modes-init.el")
+  (load "~/.emacs.d/log-init.el")
 
   ;; Loading font ligatures for development
   (load "~/.emacs.d/font-ligatures.el"))
