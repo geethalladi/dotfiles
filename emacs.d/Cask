@@ -129,6 +129,7 @@
  (depends-on "less-css-mode")
  (depends-on "leuven-theme")
  (depends-on "litable")
+ (depends-on "log4j-mode")
  (depends-on "lua-mode")
  (depends-on "magit")
  (depends-on "magit-section")
