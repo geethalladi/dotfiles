@@ -220,7 +220,7 @@
 (setq mac-shift-modifier 'meta)
 (setq ns-function-modifier 'hyper)  ; make Fn key do Hyper
 
-(setq visual-fill-column-width 144)
+(setq visual-fill-column-width 185)
 (global-visual-fill-column-mode 1)
 
 ;; (require 'better-defaults)
