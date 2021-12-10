@@ -24,7 +24,7 @@ alias t="tree -I 'node_modules|cache'"
 alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,node_modules,cache}"
 alias pass='openssl rand -base64 16'
 alias rg='rvm gemset use'
-
+alias tssh='tsh ssh'
 
 # alias scheme="rlwrap -r -c -f ~/extn.d/mit_scheme_bindings.txt scheme"
 alias ghci="ghci -XNPlusKPatterns"
