@@ -106,7 +106,7 @@
   (self/-js-keybindings))
 
 (defun self/-json-customizations ()
-  "JSON mode customizations"
+  "JSON customizations"
 
   (make-variable-buffer-local 'js-indent-level)
   (setq js-indent-level 2)
@@ -119,9 +119,14 @@
   (smartparens-mode)
   (rainbow-delimiters-mode))
 
+(defun self/-json-mode-customizations ()
+  "JSON mode customizations"
+  (self/-json-customizations)
+  (define-key json-mode-map (kbd "C-c C-f") 'json-pretty-print-buffer))
+
 (add-hook 'js2-mode-hook 'self/-js-customizations)
 (add-hook 'web-mode-hook 'self/-web-customizations)
-(add-hook 'json-mode-hook 'self/-json-customizations)
+(add-hook 'json-mode-hook 'self/-json-mode-customizations)
 
 ;; node js repl may override some skewer related shortcuts
 ;; skewer is for web development (may not be specific to nodejs)
