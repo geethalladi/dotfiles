@@ -16,7 +16,7 @@ alias rs-start="docker run -d --cap-add sys_resource --name rp -p 8443:8443 -p 9
 alias e='ec'
 
 # alias emacsclient to 'ecl'
-alias ecl='emacsclient -nw'
+alias enw='emacsclient -nw'
 
 alias m='make'
 alias g='git'
