@@ -94,6 +94,7 @@ export EMACS_APP=/Applications/Emacs.app
 export JOURNAL_DIR=${PRIVATE_DIR}/journals
 export FINANCE_DIR=${PRIVATE_DIR}/finance
 export INVESTING_DIR=${FINANCE_DIR}/investing
+export DOCS_DIR=${PRIVATE_DIR}/documents
 
 # where I write stuff
 export WRITING_DIR=${PRIVATE_DIR}/writing
