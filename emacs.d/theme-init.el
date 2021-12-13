@@ -187,9 +187,8 @@
     (message "Skipping loading dark theme inside screen"))
    ;; if dark-mode if true, use it
    ((self/-dark-modep) (self/load-dark-theme))
-   ;; else in window system, use the less bright theme
-   ;; preferring less bright theme for sometime
-   ;; ((window-system) (self/load-less-bright-theme))
+   ;; else in window system
+   ((window-system) (self/load-dark-theme))
    ;; fall back to light
    (t (self/load-light-theme))))
 
