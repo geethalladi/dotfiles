@@ -2,3 +2,4 @@ emacs-custom.el
 .cache
 .org-id-locations
 vendor/org-roam-v1
+vendor/bookmark-plus
