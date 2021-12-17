@@ -40,6 +40,7 @@ export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 export ANT_HOME=${CELLAR_PATH}/ant/1.10.1
 # export MAVEN_HOME=${CELLAR_PATH}/maven/3.3.9
 # export M2_HOME=${MAVEN_HOME}
+export ES_HOME=${INSTALL_DIR}/elasticsearch-5.6.16
 export GRADLE_HOME=${CELLAR_PATH}/gradle/3.4.1
 export CABAL_HOME=~/.cabal
 export SDKMAN_DIR=${HOME}/.sdkman
