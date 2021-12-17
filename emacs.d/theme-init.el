@@ -114,6 +114,16 @@
    ;; magit
    '(magit-diff-added-highlight ((t (:foreground "#151515"))))
 
+   ;; log4j mode
+   '(log4j-font-lock-keywords ((t (:foreground "#dfaf8f"))))
+   '(log4j-font-lock-error-face ((t (:foreground "#ff4500"))))
+   '(log4j-font-lock-warn-face ((t (:foreground "#e0cf9f"))))
+   '(log4j-font-lock-info-face ((t (:foreground "#93e0e3"))))
+   '(log4j-font-lock-debug-face ((t (:foreground "#8fb28f"))))
+   '(log4j-font-lock-fatal-face ((t (:foreground "#aeaeae"))))
+   '(log4j-font-lock-config-face ((t (:foreground "#8c5353"))))
+   ;; '(log4j-font-lock- ((t (:foreground "#4c7073"))))
+
    ;; scheme / quack
    '(quack-pltish-comment-face ((t (:foreground "#aeaeae"))))
    '(quack-pltish-defn-face ((t (:foreground "#dfaf8f"))))))
