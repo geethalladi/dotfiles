@@ -40,7 +40,6 @@ export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 export ANT_HOME=${CELLAR_PATH}/ant/1.10.1
 # export MAVEN_HOME=${CELLAR_PATH}/maven/3.3.9
 # export M2_HOME=${MAVEN_HOME}
-export ES_HOME=${INSTALL_DIR}/elasticsearch-5.6.16
 export GRADLE_HOME=${CELLAR_PATH}/gradle/3.4.1
 export CABAL_HOME=~/.cabal
 export SDKMAN_DIR=${HOME}/.sdkman
@@ -70,7 +69,7 @@ export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
 export PYTHON_MOD_UTILS=~/repo/personal/python/modules
 export PYTHON_PATH_FILE=~/.pythonpath
 
-export ES_HOME=${INSTALL_DIR}/elasticsearch-2.2.1
+export ES_HOME=${INSTALL_DIR}/elasticsearch-5.6.16
 export ERLANG_ROOT_DIR=${CELLAR_PATH}/erlang/20.3.4
 export ERLANG_HOME=${ERLANG_ROOT_DIR}
 
