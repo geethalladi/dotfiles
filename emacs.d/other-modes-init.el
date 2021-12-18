@@ -147,3 +147,9 @@
 ;; bookmark+ for better bookmark UI
 (add-to-list 'load-path "~/.emacs.d/vendor/bookmark-plus")
 (require 'bookmark+)
+
+;; zeal integration
+(global-set-key (kbd "C-c C-d") 'zeal-at-point)
+
+(add-to-list 'zeal-at-point-mode-alist
+             '(python-mode . ("python")))
