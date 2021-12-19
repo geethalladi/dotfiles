@@ -149,11 +149,12 @@
 (require 'bookmark+)
 
 ;; zeal integration
+(require 'zeal-at-point)
 (global-set-key (kbd "C-c C-d") 'zeal-at-point)
 
 (add-to-list 'zeal-at-point-mode-alist
              '(python-mode . ("python3" "scipy" "numpy" "pandas" "sqlalchemy")))
-(add-to-list 'zeal-at-point-mode-alist '(emacs-lisp-mode   . ("lisp")))
+(add-to-list 'zeal-at-point-mode-alist '(emacs-lisp-mode   . ("elisp")))
 (add-to-list 'zeal-at-point-mode-alist '(shell-script-mode . ("bash")))
 (add-to-list 'zeal-at-point-mode-alist '(ocaml-mode        . ("ocaml")))
 (add-to-list 'zeal-at-point-mode-alist '(sql-mode          . ("sqlite" "mysql")))
