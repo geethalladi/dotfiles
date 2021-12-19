@@ -151,17 +151,11 @@
 ;; zeal integration
 (global-set-key (kbd "C-c C-d") 'zeal-at-point)
 
-(setq zeal-at-point-mode-alist '())
 (add-to-list 'zeal-at-point-mode-alist
-             '(python-mode . ("python" "scipy" "numpy" "pandas" "sqlalchemy")))
-(add-to-list 'zeal-at-point-mode-alist '(ruby-mode         . ("ruby")))
-(add-to-list 'zeal-at-point-mode-alist '(clojure-mode      . ("clojure")))
+             '(python-mode . ("python3" "scipy" "numpy" "pandas" "sqlalchemy")))
 (add-to-list 'zeal-at-point-mode-alist '(emacs-lisp-mode   . ("lisp")))
 (add-to-list 'zeal-at-point-mode-alist '(shell-script-mode . ("bash")))
-(add-to-list 'zeal-at-point-mode-alist '(erlang-mode       . ("erlang")))
-(add-to-list 'zeal-at-point-mode-alist '(rust-mode         . ("rust")))
 (add-to-list 'zeal-at-point-mode-alist '(ocaml-mode        . ("ocaml")))
-(add-to-list 'zeal-at-point-mode-alist '(java-mode         . ("java")))
 (add-to-list 'zeal-at-point-mode-alist '(sql-mode          . ("sqlite" "mysql")))
 (add-to-list 'zeal-at-point-mode-alist '(dockerfile-mode   . ("docker")))
 (add-to-list 'zeal-at-point-mode-alist '(latex-mode        . ("latex")))
