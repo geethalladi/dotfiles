@@ -16,6 +16,10 @@ export EXTN_SCRIPTS_DIR=~/extn.d
 export ZSHDIR=${DOTFILE_DIR_ZSH}
 export LOCAL_BIN_DIR=~/.local/bin
 
+# private / project
+export PRIVATE_DIR=~/private
+export PROJECT_DIR=${PRIVATE_DIR}/projects
+
 ########################################################################################
 # For PATH Variable
 ########################################################################################
@@ -65,8 +69,8 @@ export SPARK_PREFIX=${SPARK_HOME}
 
 export MACPORT_HOME=/opt/local
 
-export RUBY_SCRIPTS_HOME=~/repo/personal/ruby
-export PYTHON_MOD_UTILS=~/repo/personal/python/modules
+export RUBY_SCRIPTS_HOME=${PROJECT_DIR}/ruby
+export PYTHON_MOD_UTILS=${PROJECT_DIR}/python/modules
 export PYTHON_PATH_FILE=~/.pythonpath
 
 export ES_HOME=${INSTALL_DIR}/elasticsearch-5.6.16
@@ -76,10 +80,6 @@ export ERLANG_HOME=${ERLANG_ROOT_DIR}
 export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
 
 export OPAM_DIR=${HOME}/.opam
-
-# private / project
-export PRIVATE_DIR=~/private
-export PROJECT_DIR=${PRIVATE_DIR}/projects
 
 export TMUXP_CONFIGDIR=${PROJECT_DIR}/tmux
 
