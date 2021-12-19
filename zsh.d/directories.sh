@@ -56,10 +56,6 @@ export SDKMAN_DIR=${HOME}/.sdkman
 # nvm does not like NODE_PATH
 # export NODE_PATH=/usr/local/lib/node_modules
 
-export CONDA_HOME=/usr/local/anaconda3
-# Needed to emacs-pyvenv
-export WORKON_HOME=${CONDA_HOME}/envs
-
 export HADOOP_HOME=${INSTALL_DIR}/hadoop-2.7.3
 export HADOOP_PREFIX=${HADOOP_HOME}
 export HIVE_HOME=${INSTALL_DIR}/apache-hive-2.1.1-bin
@@ -89,6 +85,7 @@ export GOPATH=~/repo/open-source/goprojects
 
 # Enabling EMACS variable disables line editing in zsh
 export EMACS_APP=/Applications/Emacs.app
+export ZEAL_HOME=/Applications/Zeal.app
 
 # For faster traversal
 export JOURNAL_DIR=${PRIVATE_DIR}/journals
