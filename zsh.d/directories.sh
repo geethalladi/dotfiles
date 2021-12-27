@@ -76,6 +76,7 @@ export ERLANG_HOME=${ERLANG_ROOT_DIR}
 export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
 
 export OPAM_DIR=${HOME}/.opam
+export BABASHKA_CLASSPATH=.
 
 export TMUXP_CONFIGDIR=${PROJECT_DIR}/tmux
 
