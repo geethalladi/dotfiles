@@ -48,6 +48,8 @@
   (add-hook 'cider-repl-mode-hook #'company-mode)
   (add-hook 'cider-repl-mode-hook '(lambda () (linum-mode 0)))
 
+  (define-key cider-mode-map (kbd "C-c C-d z") 'zeal-at-point)
+
   (add-hook 'clojure-mode-hook #'cider-mode))
 
 ;; TODO:
