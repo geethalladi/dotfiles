@@ -150,7 +150,7 @@
 
 ;; zeal integration
 (require 'zeal-at-point)
-(global-set-key (kbd "C-c C-d") 'zeal-at-point)
+(global-set-key (kbd "C-c z") 'zeal-at-point)
 
 (add-to-list 'zeal-at-point-mode-alist
              '(python-mode . ("python3" "scipy" "numpy" "pandas" "sqlalchemy")))
