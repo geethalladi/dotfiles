@@ -10,7 +10,7 @@
   (turn-on-eldoc-mode)
   (rainbow-delimiters-mode)
   (rainbow-identifiers-mode)
-  (inf-clojure-minor-mode)
+  ;; (inf-clojure-minor-mode)
 
   ;; using function style indent for match / matche
   ;; '1' means the body comes after the first argument
@@ -22,7 +22,7 @@
     (matche 1))
 
   ;; Skip adding cider mode for now
-  ;; (self/-add-cider-mode)
+  (self/-add-cider-mode)
   (hungry-delete-mode))
 
 (add-hook 'clojure-mode-hook 'self/-clojure-mode)
@@ -30,7 +30,7 @@
 (defun self/-add-cider-mode ()
   "Adding cider minor mode for clojure editing"
 
-  (add-to-list 'same-window-buffer-names "<em>nrepl</em>")
+  ;; (add-to-list 'same-window-buffer-names "<em>nrepl</em>")
 
   (setq nrepl-log-messages t)
   (setq nrepl-buffer-name-separator "-")
