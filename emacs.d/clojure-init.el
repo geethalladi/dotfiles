@@ -1,5 +1,42 @@
 (require 'clojure-mode)
 
+;; extensions to cider
+;; print the output to popup buffer
+;; reference: https://github.com/clojure-emacs/cider/commit/34783f5551c656667c20217171179769a3bc6bc8
+(defun self/cider-popup-eval-out-handler (&optional buffer)
+  "Make a handler for evaluating and printing stdout/stderr in popup BUFFER.
+   This is used by pretty-printing commands and intentionally discards their results."
+  (cl-flet ((popup-output-handler (buffer str)
+                                  (cider-emit-into-popup-buffer buffer
+                                                                (ansi-color-apply str)
+                                                                nil
+                                                                t)))
+    (nrepl-make-response-handler (or buffer (current-buffer))
+                                 '()
+                                 ;; stdout handler
+                                 #'popup-output-handler
+                                 ;; stderr handler
+                                 #'popup-output-handler
+                                 '())))
+
+(defun self/cider--pprint-eval-form (form)
+  "Pretty print FORM in popup buffer."
+  (let* ((buffer (current-buffer))
+         (result-buffer (cider-popup-buffer cider-result-buffer nil 'clojure-mode 'ancillary))
+         (handler (self/cider-popup-eval-out-handler result-buffer)))
+    (with-current-buffer buffer
+      (cider-interactive-eval (when (stringp form) form)
+                              handler
+                              (when (consp form) form)
+                              (cider--nrepl-print-request-map fill-column)))))
+
+(defun self/cider-pprint-eval-last-sexp (&optional _output-to-current-buffer)
+  "Evaluate the sexp preceding point and pprint its value.
+   If invoked with OUTPUT-TO-CURRENT-BUFFER, insert as comment in the current
+   buffer, else display in a popup buffer."
+  (interactive "P")
+  (self/cider--pprint-eval-form (cider-last-sexp 'bounds)))
+
 (defun self/-clojure-mode ()
   "Clojure mode customization"
   (show-paren-mode 1)
@@ -49,6 +86,8 @@
   (add-hook 'cider-repl-mode-hook '(lambda () (linum-mode 0)))
 
   (define-key cider-mode-map (kbd "C-c C-d z") 'zeal-at-point)
+
+  (define-key cider-mode-map (kbd "C-c C-n") 'self/cider-pprint-eval-last-sexp)
 
   (add-hook 'clojure-mode-hook #'cider-mode))
 
