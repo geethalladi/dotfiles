@@ -1,11 +1,11 @@
 (require 'clojure-mode)
+(require 'cider)
 
-;; extensions to cider
-;; print the output to popup buffer
+;; extension to cider
+;; print the output to popup buffer (for API response)
 ;; reference: https://github.com/clojure-emacs/cider/commit/34783f5551c656667c20217171179769a3bc6bc8
 (defun self/cider-popup-eval-out-handler (&optional buffer)
-  "Make a handler for evaluating and printing stdout/stderr in popup BUFFER.
-   This is used by pretty-printing commands and intentionally discards their results."
+  "Make a handler for evaluating and printing stdout/stderr in popup BUFFER"
   (cl-flet ((popup-output-handler (buffer str)
                                   (cider-emit-into-popup-buffer buffer
                                                                 (ansi-color-apply str)
