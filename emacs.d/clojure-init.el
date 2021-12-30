@@ -1,38 +1,6 @@
 (require 'clojure-mode)
 (require 'cider)
 
-;; extension to cider
-;; print the output to popup buffer (for API response)
-;; reference: https://github.com/clojure-emacs/cider/commit/34783f5551c656667c20217171179769a3bc6bc8
-(defun self/cider-popup-eval-out-handler (&optional buffer)
-  "Make a handler for evaluating and printing stdout/stderr in popup BUFFER"
-  (cl-flet ((popup-output-handler (buffer str)
-                                  (cider-emit-into-popup-buffer buffer
-                                                                (ansi-color-apply str)
-                                                                nil
-                                                                t)))
-    (nrepl-make-response-handler (or buffer (current-buffer))
-                                 '()
-                                 ;; stdout handler
-                                 #'popup-output-handler
-                                 ;; stderr handler
-                                 #'popup-output-handler
-                                 '())))
-
-(defun self/cider-pprint-last-sexp (&optional _output-to-current-buffer)
-  "Evaluate the sexp preceding point and pprint its value.
-   display in a popup buffer."
-  (interactive "P")
-  (let* ((buffer (current-buffer))
-         (result-buffer (cider-popup-buffer cider-result-buffer nil 'clojure-mode 'ancillary))
-         (handler (self/cider-popup-eval-out-handler result-buffer))
-         (form (cider-last-sexp 'bounds)))
-    (with-current-buffer buffer
-      (cider-interactive-eval (when (stringp form) form)
-                              handler
-                              (when (consp form) form)
-                              (cider--nrepl-print-request-map fill-column)))))
-
 (defun self/-clojure-mode ()
   "Clojure mode customization"
   (show-paren-mode 1)
@@ -87,9 +55,39 @@
 
   (add-hook 'clojure-mode-hook #'cider-mode))
 
+;; extension to cider
+;; print the output to popup buffer (for API response)
+;; reference: https://github.com/clojure-emacs/cider/commit/34783f5551c656667c20217171179769a3bc6bc8
+
+(defun self/cider-pprint-last-sexp (&optional _buffer)
+  "Evaluate the sexp preceding point and pprint its value.
+   display in a popup buffer."
+  (interactive "P")
+  (let* ((buffer (current-buffer))
+         (result-buffer (cider-popup-buffer cider-result-buffer nil 'clojure-mode 'ancillary))
+         (handler (self/-cider-popup-eval-out-handler result-buffer))
+         (form (cider-last-sexp 'bounds)))
+    (with-current-buffer buffer
+      (cider-interactive-eval (when (stringp form) form)
+                              handler
+                              (when (consp form) form)
+                              (cider--nrepl-print-request-map fill-column)))))
+
+(defun self/-cider-popup-eval-out-handler (&optional buffer)
+  "Make a handler for evaluating and printing stdout/stderr in popup BUFFER"
+  (cl-flet ((popup-output-handler (buffer str)
+                                  (cider-emit-into-popup-buffer buffer
+                                                                (ansi-color-apply str)
+                                                                nil
+                                                                t)))
+    (nrepl-make-response-handler (or buffer (current-buffer))
+                                 '()
+                                 ;; stdout handler
+                                 #'popup-output-handler
+                                 ;; stderr handler
+                                 #'popup-output-handler
+                                 '())))
+
 ;; TODO:
 ;; unbind C-c C-p p
 ;; C-x C-p to cider-pprint
-;; C-x C-e to cider-eval (exists)
-;; C-c C-d d to show the documentation (exists)
-;; hydra for smartparens slurp / barp
