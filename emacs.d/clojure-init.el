@@ -19,23 +19,19 @@
                                  #'popup-output-handler
                                  '())))
 
-(defun self/cider--pprint-eval-form (form)
-  "Pretty print FORM in popup buffer."
+(defun self/cider-pprint-last-sexp (&optional _output-to-current-buffer)
+  "Evaluate the sexp preceding point and pprint its value.
+   display in a popup buffer."
+  (interactive "P")
   (let* ((buffer (current-buffer))
          (result-buffer (cider-popup-buffer cider-result-buffer nil 'clojure-mode 'ancillary))
-         (handler (self/cider-popup-eval-out-handler result-buffer)))
+         (handler (self/cider-popup-eval-out-handler result-buffer))
+         (form (cider-last-sexp 'bounds)))
     (with-current-buffer buffer
       (cider-interactive-eval (when (stringp form) form)
                               handler
                               (when (consp form) form)
                               (cider--nrepl-print-request-map fill-column)))))
-
-(defun self/cider-pprint-eval-last-sexp (&optional _output-to-current-buffer)
-  "Evaluate the sexp preceding point and pprint its value.
-   If invoked with OUTPUT-TO-CURRENT-BUFFER, insert as comment in the current
-   buffer, else display in a popup buffer."
-  (interactive "P")
-  (self/cider--pprint-eval-form (cider-last-sexp 'bounds)))
 
 (defun self/-clojure-mode ()
   "Clojure mode customization"
@@ -87,7 +83,7 @@
 
   (define-key cider-mode-map (kbd "C-c C-d z") 'zeal-at-point)
 
-  (define-key cider-mode-map (kbd "C-c C-n") 'self/cider-pprint-eval-last-sexp)
+  (define-key cider-mode-map (kbd "C-c C-n") 'self/cider-pprint-last-sexp)
 
   (add-hook 'clojure-mode-hook #'cider-mode))
 
