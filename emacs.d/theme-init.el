@@ -166,12 +166,6 @@
   (load-theme 'leuven t)
   (self/-light-theme-custom))
 
-(defun self/load-dark-theme ()
-  "dark theme"
-  (interactive)
-  (load-theme 'zenburn t)
-  (self/-dark-theme-custom))
-
 (defun disable-all-themes ()
   "disable all active themes."
   (dolist (i custom-enabled-themes)
@@ -198,9 +192,15 @@
    ;; if dark-mode if true, use it
    ((self/-dark-modep) (self/load-dark-theme))
    ;; else in window system
-   ((window-system) (self/load-dark-theme))
+   ((window-system) (self/load-light-theme))
    ;; fall back to light
    (t (self/load-light-theme))))
+
+(defun self/load-dark-theme ()
+  "dark theme"
+  (interactive)
+  (load-theme 'zenburn t)
+  (self/-dark-theme-custom))
 
 (self/reload-theme)
 
