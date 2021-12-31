@@ -23,6 +23,12 @@
   (buffer-face-mode t)
   (visual-line-mode t))
 
+(defun self/use-terminal-font ()
+  "set terminal style font"
+   (interactive)
+   (setq buffer-face-mode-face '(:family "Courier" :height 130))
+   (buffer-face-mode))
+
 ;; (set-face-attribute 'default nil
 ;;                     :family "PT Mono"
 ;;                     :height 160
