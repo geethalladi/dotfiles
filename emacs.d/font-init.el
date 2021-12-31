@@ -26,7 +26,8 @@
 (defun self/use-terminal-font ()
   "set terminal style font"
    (interactive)
-   (setq buffer-face-mode-face '(:family "Courier" :height 130))
+   (setq buffer-face-mode-face '(:family "Consolas for Powerline" :height 140 :weight bold))
+   (setq visual-fill-column-width 240)
    (buffer-face-mode))
 
 ;; (set-face-attribute 'default nil
