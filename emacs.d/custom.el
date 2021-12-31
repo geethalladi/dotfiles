@@ -43,13 +43,11 @@
 (global-set-key (kbd "M-o")  'mode-line-other-buffer)
 
 ;; Displaying cursors
+
 ;; (setq-default cursor-type 'bar)
+;; (blink-cursor-mode 1)
 
-;; Don't blink the cursor
-(blink-cursor-mode 1)
-
-(setq-default cursor-type 'bar)
-(blink-cursor-mode 1)
+(setq-default cursor-type 'box)
 
 ;; Automatically insert new characters into the selected region
 (pending-delete-mode 1)
