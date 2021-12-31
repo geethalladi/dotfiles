@@ -57,8 +57,7 @@
    ;;  'mode-line '((:foreground "ivory" :background "Green4") mode-line))
 
    ;; helm
-   '(helm-ff-file-extension ((t (:foreground "red"))))
-
+   '(helm-ff-file-extension ((t (:foreground "orange red"))))
 
    ;; rainbow delimiter mode
    '(rainbow-delimiters-depth-1-face ((t (:foreground "blue"))))
