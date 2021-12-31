@@ -26,8 +26,10 @@
 (defun self/use-terminal-font ()
   "set terminal style font"
    (interactive)
-   (setq buffer-face-mode-face '(:family "Consolas for Powerline" :height 140 :weight bold))
+   (setq buffer-face-mode-face '(:family "Inconsolata" :height 150 :weight bold))
    (setq visual-fill-column-width 240)
+   ;; disable truncate lines by default
+   (toggle-truncate-lines)
    (buffer-face-mode))
 
 ;; (set-face-attribute 'default nil
