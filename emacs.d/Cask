@@ -234,6 +234,7 @@
  (depends-on "vagrant")
  (depends-on "vagrant-tramp")
  (depends-on "visual-fill-column")
+ (depends-on "vlf")
  (depends-on "wc-mode")
  (depends-on "web-mode")
  (depends-on "wrap-region")
