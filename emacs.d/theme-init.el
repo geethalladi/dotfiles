@@ -56,6 +56,10 @@
    ;; (face-remap-add-relative
    ;;  'mode-line '((:foreground "ivory" :background "Green4") mode-line))
 
+   ;; helm
+   '(helm-ff-file-extension ((t (:foreground "red"))))
+
+
    ;; rainbow delimiter mode
    '(rainbow-delimiters-depth-1-face ((t (:foreground "blue"))))
    '(rainbow-delimiters-depth-2-face ((t (:foreground "red"))))
