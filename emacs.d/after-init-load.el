@@ -143,6 +143,8 @@
 
   ;; to facilitate the velocity of lectures
   (load "~/.emacs.d/self-lisp/lecture-stats.el")
-  (load "~/.emacs.d/self-lisp/index.el"))
+  (load "~/.emacs.d/self-lisp/index.el")
+  ;; dayjob customizations
+  (load "~/.emacs.d/self-lisp/dayjob.el"))
 
 ;; (self/load-all)
