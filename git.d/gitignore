@@ -49,3 +49,5 @@ eww-bookmarks
 *.beam
 *.class
 javadocs/
+.factorypath
+META-INF
