@@ -12,6 +12,7 @@
   (turn-on-eldoc-mode)
   (rainbow-delimiters-mode)
   (rainbow-identifiers-mode)
+  (flycheck-mode)
   ;; (inf-clojure-minor-mode)
 
   ;; using function style indent for match / matche
