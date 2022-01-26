@@ -74,6 +74,7 @@
  (depends-on "floobits")
  (depends-on "flycheck")
  (depends-on "flycheck-cask")
+ (depends-on "flycheck-clj-kondo")
  (depends-on "flycheck-haskell")
  (depends-on "flycheck-hdevtools")
  (depends-on "flymake-easy")
