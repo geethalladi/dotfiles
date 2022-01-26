@@ -51,3 +51,4 @@ eww-bookmarks
 javadocs/
 .factorypath
 META-INF
+.clj-kondo/
