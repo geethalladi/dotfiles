@@ -1,4 +1,5 @@
 (require 'clojure-mode)
+(require 'flycheck-clj-kondo)
 (require 'cider)
 
 (defun self/-clojure-mode ()
