@@ -2,11 +2,11 @@
 ;; Moving this into its own module
 
 (set-face-attribute 'default nil
-                    :family "JetBrains Mono"
+                    :family "DejaVuSansMono Nerd Font Mono"
                     :height 150
                     :weight 'normal
-                    :width 'expanded
-                    :slant 'normal)
+                    :width  'normal
+                    :slant  'normal)
 
 (defun self/use-variable-width-font ()
   "Use variable width font in current buffer"
