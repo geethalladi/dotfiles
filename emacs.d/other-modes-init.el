@@ -166,7 +166,7 @@
          ((width . 0.75)
           (height . 0.5)
           (alpha . 0.95)
-          (buffer-fns . ("~/Desktop/sticky-notes/scratch.org"
+          (buffer-fns . ("~/Desktop/sticky-notes/notes.org"
                          split-window-horizontally
                          "~/Desktop/sticky-notes/meeting.org"))
           (frame-parameters . ((undecorated . t)))))))
