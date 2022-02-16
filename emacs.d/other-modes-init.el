@@ -160,3 +160,13 @@
 (add-to-list 'zeal-at-point-mode-alist '(sql-mode          . ("sqlite" "mysql")))
 (add-to-list 'zeal-at-point-mode-alist '(dockerfile-mode   . ("docker")))
 (add-to-list 'zeal-at-point-mode-alist '(latex-mode        . ("latex")))
+
+(setq yequake-frames
+      '(("Yequake & scratch" .
+         ((width . 0.75)
+          (height . 0.5)
+          (alpha . 0.95)
+          (buffer-fns . ("~/Desktop/sticky-notes/scratch.org"
+                         split-window-horizontally
+                         "~/Desktop/sticky-notes/meeting.org"))
+          (frame-parameters . ((undecorated . t)))))))

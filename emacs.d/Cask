@@ -248,6 +248,7 @@
  (depends-on "yafolding")
  (depends-on "yasnippet")
  (depends-on "yasnippet-snippets")
+ (depends-on "yequake")
  (depends-on "zeal-at-point")
  (depends-on "zenburn-theme")
 )
