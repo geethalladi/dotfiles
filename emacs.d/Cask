@@ -63,6 +63,7 @@
  (depends-on "enclose")
  (depends-on "enh-ruby-mode")
  (depends-on "epl")
+ (depends-on "ereader")
  (depends-on "erlang")
  (depends-on "ert-runner")
  (depends-on "es-mode")
@@ -156,6 +157,7 @@
  (depends-on "org")
  (depends-on "org-bullets")
  (depends-on "org-mind-map")
+ (depends-on "org-noter")
  (depends-on "org-plus-contrib")
  ;; TODO: migrate to org-v2 later
  ;; Using straight.el to install org-roam package
