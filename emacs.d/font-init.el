@@ -2,7 +2,7 @@
 ;; Moving this into its own module
 
 (set-face-attribute 'default nil
-                    :family "DejaVuSansMono Nerd Font Mono"
+                    :family "JetBrainsMono Nerd Font Mono"
                     :height 150
                     :weight 'normal
                     :width  'normal
@@ -40,12 +40,13 @@
 ;;                     :slant 'normal)
 
 ;; fonts I liked
-;; - JetBrains Mono               :: 15 :: normal
-;; - JetBrainsMono Nerd Font Mono :: 15 :: normal
-;; - Consolas                     :: 14 :: normal
-;; - PT Mono                      :: 16 :: normal
-;; - Haskling                     :: 11 :: semi-bold
-;; - Fira Code                    :: 15 :: normal
+;; - JetBrains Mono                :: 15 :: normal
+;; - JetBrainsMono Nerd Font Mono  :: 15 :: normal
+;; - Consolas                      :: 14 :: normal
+;; - PT Mono                       :: 16 :: normal
+;; - Haskling                      :: 11 :: semi-bold
+;; - Fira Code                     :: 15 :: normal
+;; - DejaVuSansMono Nerd Font Mono :: 15:: normal
 
 ;; (set-face-attribute 'default nil :font "Fira Code:pixelsize=15:spacing=110:weight=normal")
 ;; (load "~/.emacs.d/vendor/fira-code.el")
