@@ -206,19 +206,3 @@
   (self/-dark-theme-custom))
 
 (self/reload-theme)
-
-;; (require 'color-identifiers-mode)
-;; (let ((faces '(font-lock-comment-face
-;;                font-lock-comment-delimiter-face
-;;                font-lock-constant-face
-;;                font-lock-type-face
-;;                font-lock-function-name-face
-;;                font-lock-variable-name-face
-;;                font-lock-keyword-face
-;;                font-lock-string-face
-;;                font-lock-builtin-face
-;;                font-lock-preprocessor-face
-;;                font-lock-warning-face
-;;                font-lock-doc-face)))
-;;   (dolist (face faces)
-;;     (set-face-attribute face nil :foreground nil :weight 'normal :slant 'normal)))
