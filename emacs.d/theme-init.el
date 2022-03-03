@@ -184,6 +184,12 @@
   (and (not (window-system))
        (stringp (getenv "TERMCAP"))))
 
+(defun self/load-dark-theme ()
+  "dark theme"
+  (interactive)
+  (load-theme 'zenburn t)
+  (self/-dark-theme-custom))
+
 (defun self/reload-theme ()
   "Load theme as per the environment"
   (interactive)
@@ -198,11 +204,5 @@
    ((window-system) (self/load-dark-theme))
    ;; fall back to light
    (t (self/load-light-theme))))
-
-(defun self/load-dark-theme ()
-  "dark theme"
-  (interactive)
-  (load-theme 'zenburn t)
-  (self/-dark-theme-custom))
 
 (self/reload-theme)
