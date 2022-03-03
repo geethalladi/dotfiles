@@ -201,7 +201,7 @@
    ;; if dark-mode if true, use it
    ((self/-dark-modep) (self/load-dark-theme))
    ;; else in window system
-   ((window-system) (self/load-dark-theme))
+   ((window-system) (self/load-light-theme))
    ;; fall back to light
    (t (self/load-light-theme))))
 
