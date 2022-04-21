@@ -5,12 +5,23 @@
   :init
   (add-hook #'log4j-mode-hook #'view-mode))
 
+(defun self/use-log-font ()
+  "set terminal style font"
+   (interactive)
+   (setq buffer-face-mode-face '(:family "Inconsolata" :height 180 :weight bold))
+   (setq visual-fill-column-width 240)
+   (setq line-spacing 0.5) ; add 0.5 height between lines
+   ;; disable truncate lines by default
+   (toggle-truncate-lines)
+   (visual-line-mode)
+   (buffer-face-mode))
+
 (defun self/log4j-mode ()
   "Log4j customizations"
   (message "running log4j customizations")
   (view-mode)
   (read-only-mode)
-  (self/use-terminal-font))
+  (self/use-log-font))
 
 (add-hook 'log4j-mode-hook 'self/log4j-mode)
 
@@ -42,3 +53,11 @@
     (when bounds
       (delete-region (car bounds) (cdr bounds))
       (insert (funcall f text)))))
+
+(defun self/delete-unwanted-log-lines ()
+  "delete unwanted log lines"
+  (interactive)
+  (flush-lines "HyperTrailClient")
+  (flush-lines "hypertrail-ci")
+  (flush-lines "/collector")
+  (flush-lines "Doing nothing on node insert"))
