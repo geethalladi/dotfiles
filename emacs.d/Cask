@@ -195,6 +195,7 @@
  (depends-on "rainbow-mode")
  (depends-on "recentf-ext")
  (depends-on "restclient")
+ (depends-on "rg")
  (depends-on "rhtml-mode")
  (depends-on "rinari")
  (depends-on "robe")
