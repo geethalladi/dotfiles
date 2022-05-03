@@ -57,7 +57,8 @@ Captured On: %u"
   (cond
    ((= self/delete-frame-after-capture 0) nil)
    ((> self/delete-frame-after-capture 1)
-    (setq self/delete-frame-after-capture (- self/delete-frame-after-capture 1)))
+    (setq self/delete-frame-after-capture (- self/delete-frame-after-capture 1))
+    (delete-frame))
    (t
     (setq self/delete-frame-after-capture 0)
     (delete-frame))))
