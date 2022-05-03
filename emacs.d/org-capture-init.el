@@ -6,6 +6,7 @@
 ;;         "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
 ;;   ("L" "Protocol Link" entry (file+headline, "~/Desktop/notes.org" "Notes")
 ;;         "* %? [[%:link][%(self/transform-square-brackets-to-round-ones \"%:description\")]]\n")))
+(require 'org-protocol-capture-html)
 
 (setq self--default-capture-file "~/Desktop/captured.org")
 
@@ -26,6 +27,9 @@ Captured On: %u\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n"
             ;;  (file+headline ,capture-file "Captured")
             ;;  "* %a :website:\n\n%U %?\n\n%:initial"
             ;;  :empty-lines 1)
+            ("w" "Web site" entry
+             (file+olp ,capture-file "Captured")
+             "* %c :website:\n%U %?%:initial"
              :empty-lines 1)
             ("L" "Protocol Link" entry (file+headline ,capture-file "Captured")
              "** %?[[%:link][%:description]] %(progn (setq self/delete-frame-after-capture 2) \"\")\n\
