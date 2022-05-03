@@ -199,6 +199,11 @@
 (setq ag-reuse-buffers 't)
 (setq ag-reuse-window 't)
 
+;; rg settings
+(require 'rg)
+(rg-enable-default-bindings)
+(global-set-key (kbd "C-c s") #'rg-menu)
+
 (setq explicit-shell-file-name "/bin/zsh")
 
 (require 'flyspell)

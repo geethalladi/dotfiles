@@ -39,8 +39,9 @@
  ("C-S-f" . sp-forward-symbol)
  ("C-S-b" . sp-backward-symbol)
 
- ("C-c s <right>" . sp-forward-slurp-sexp)
- ("C-c s <left>"  . sp-backward-slurp-sexp)
+ ;; collides with rg grep
+ ;; ("C-c s <right>" . sp-forward-slurp-sexp)
+ ;; ("C-c s <left>"  . sp-backward-slurp-sexp)
 
  ("C-c b <right>" . sp-forward-barf-sexp)
  ("C-c b <left>"  . sp-backward-barf-sexp)
