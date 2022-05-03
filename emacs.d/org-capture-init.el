@@ -19,8 +19,13 @@
 Source: [[%:link][%:description]], %(progn (setq self/delete-frame-after-capture 2) \"\")\n\
 Captured On: %u\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n"
              :empty-lines 1)
-            ("w" "Default template" entry (file+headline ,capture-file "Captured")
-             "* %^{Title}\n\n  Source: %u, %c\n\n  %i"
+            ;; ("w" "Default template" entry (file+headline ,capture-file "Captured")
+            ;;  "* %^{Title}\n\n  Source: %u, %c\n\n  %i"
+            ;;  :empty-lines 1)
+            ;; ("w" "Web site" entry
+            ;;  (file+headline ,capture-file "Captured")
+            ;;  "* %a :website:\n\n%U %?\n\n%:initial"
+            ;;  :empty-lines 1)
              :empty-lines 1)
             ("L" "Protocol Link" entry (file+headline ,capture-file "Captured")
              "** %?[[%:link][%:description]] %(progn (setq self/delete-frame-after-capture 2) \"\")\n\
