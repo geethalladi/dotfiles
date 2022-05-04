@@ -78,6 +78,7 @@
 
   ;; do not truncate lines in org mode
   (toggle-truncate-lines)
+  (visual-line-mode)
 
   ;; Using Shift keys for navigation across windows
   (windmove-default-keybindings)
