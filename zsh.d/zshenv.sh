@@ -70,9 +70,6 @@ export HOMEBREW_NO_ANALYTICS=1
 
 export JAVA_OPTS="-Xms256m -Xmx3000m"
 
-# OPAM configuration (for OCaml)
-# . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-
 ## For Terminal inside emacs
 if [ -n "$INSIDE_EMACS" ]; then
     # USE emacsclient while inside emacs
@@ -104,7 +101,7 @@ export MPLBACKEND="module://itermplot"
 # OCaml / opam configuration
 ########################################################################################
 
-test -r ${OPAM_DIR}/opam-init/init.zsh && . ${OPAM_DIR}/opam-init/init.zsh > /dev/null 2> /dev/null || true
+[[ ! -r ${OPAM_DIR}/opam-init/init.zsh ]] || source ${OPAM_DIR}/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 ########################################################################################
 # Rust / cargo
