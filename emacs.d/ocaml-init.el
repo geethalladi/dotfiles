@@ -2,6 +2,9 @@
 ;; Install the following packages
 ;; $ opam install tuareg merlin ocp-incident utop
 
+;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
+(require 'opam-user-setup "opam-user-setup.el")
+
 (defun self/remove-conflicting-keybindings (mode binding)
   "remove conflicting keybindings"
   (let ((oldmap (cdr (assoc mode minor-mode-map-alist)))
@@ -58,6 +61,7 @@
 
 (add-hook 'tuareg-mode-hook 'self/-ocaml-mode)
 
+;; ## end of OPAM user-setup addition for emacs / base ## keep this line
 ;; (tuareg-imenu-set-imenu)
 
 ;; Enable auto-complete
