@@ -314,3 +314,21 @@
 
 ;; special extensions for markdown_github output
 (setq org-pandoc-format-extensions '(markdown_github+pipe_tables+raw_html))
+
+(defun self/org-extract-link (&optional arg)
+  "Extract URL from org-mode link"
+  (let* ((link (org-element-lineage (org-element-context) '(link) t))
+          (type (org-element-property :type link))
+          (url (org-element-property :path link)))
+    (concat type ":" url)))
+
+(defun self/threadreader-app (url)
+  "Open the twitter URL in threadreader"
+  (browse-url
+   (concat "https://threadreaderapp.com/search?q=" url)))
+
+(defun self/org-open-threadreader (&optional arg)
+  "Open the Twitter thread in threadreader app"
+  (interactive "P")
+  (self/threadreader-app
+   (self/org-extract-link)))
