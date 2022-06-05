@@ -107,7 +107,7 @@ export MPLBACKEND="module://itermplot"
 # Rust / cargo
 ########################################################################################
 
-source $HOME/.cargo/env
+[[ -f ${HOME}/.cargo/env ]] && source $HOME/.cargo/env
 
 source ${DOTFILES}/zsh.d/alias.sh
 source ${DOTFILES}/dayjob.d/*.sh
