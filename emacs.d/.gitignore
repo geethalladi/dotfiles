@@ -1,6 +1,9 @@
 emacs-custom.el
-.cache
+*.cache
 .org-id-locations
 vendor/org-roam-v1
 vendor/bookmark-plus
 dayjob.el
+.mc-lists.el
+nov-places
+recentf
