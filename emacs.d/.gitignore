@@ -7,3 +7,4 @@ dayjob.el
 .mc-lists.el
 nov-places
 recentf
+org-persist
