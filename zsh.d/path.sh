@@ -34,7 +34,7 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
     export PATH="$PATH:$HOME/.rvm/bin"
     export MANPATH="/usr/local/man:$MANPATH"
 
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home
     export PATH=${JAVA_HOME}/bin:${PATH}
     export PATH=${PATH}:${FIREFOX_HOME}
 
