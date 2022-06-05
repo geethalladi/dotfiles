@@ -1,0 +1,3 @@
+* README
+** Linking configuration
+ln -sf ~/dotfiles/karabiner.d/karabiner.json ~/.config/karabiner/karabiner.json
