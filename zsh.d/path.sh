@@ -18,6 +18,8 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
     export PATH=${PATH}:/usr/local/opt/mysql@5.7/bin:/usr/local/opt/mysql-client/bin
     export PATH=${PATH}:${HOME}/Library/Python/3.9/bin
     export PATH=${PATH}:${ZEAL_HOME}/Contents/MacOS
+    export PATH=${PATH}:/opt/homebrew/bin
+
     # export PATH="/usr/local/bin:${PATH}"
 
     # source ${DOTFILE_DIR_AWS}/awsenv.sh
