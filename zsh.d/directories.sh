@@ -64,6 +64,7 @@ export SPARK_HOME=${INSTALL_DIR}/spark/spark-1.6.2-bin-hadoop2.6
 export SPARK_PREFIX=${SPARK_HOME}
 
 export MACPORT_HOME=/opt/local
+export HOMEBREW_HOME=/opt/homebrew
 
 export RUBY_SCRIPTS_HOME=${PROJECT_DIR}/ruby
 export PYTHON_MOD_UTILS=${PROJECT_DIR}/python/modules
