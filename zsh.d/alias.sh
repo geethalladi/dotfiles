@@ -14,6 +14,7 @@ alias rs-start="docker run -d --cap-add sys_resource --name rp -p 8443:8443 -p 9
 # alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
 
 alias e='ec'
+alias ep='emacsplus'
 
 # alias emacsclient to 'ecl'
 alias enw='emacsclient -nw'
