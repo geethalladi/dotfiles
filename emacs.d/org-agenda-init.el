@@ -18,6 +18,12 @@
 (defconst self/agenda-dayjob "~/org/dayjob.org" "Org Agenda Dayjob file")
 (defconst self/agenda-this-week "~/org/this-week.org" "Org Agenda this week file")
 
+(defun self/agenda-sort ()
+  "sort the org agenda items"
+  (interactive)
+  (org-sort-entries t ?s)
+  (org-sort-entries t ?o))
+
 (defun self--add-agenda-templates ()
   "add the templates required for org-agenda"
   (let ((agenda-templates
