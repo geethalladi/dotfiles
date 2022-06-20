@@ -16,9 +16,10 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
     export PATH=${PATH}:${HOME}/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
     export PATH=${PATH}:${INSTALL_DIR}
     export PATH=${PATH}:/usr/local/opt/mysql@5.7/bin:/usr/local/opt/mysql-client/bin
-    export PATH=${PATH}:${HOME}/Library/Python/3.9/bin
+    # export PATH=${PATH}:${HOME}/Library/Python/3.9/bin
     export PATH=${PATH}:${ZEAL_HOME}/Contents/MacOS
-    export PATH=${HOMEBREW_HOME}/bin:${PATH}
+    export PATH=${HOMEBREW_HOME}/bin:${HOMEBREW_HOME}/sbin:${PATH}
+    export PATH=${HOMEBREW_HOME}/opt/python@3.10/bin:${HOMEBREW_HOME}/opt/qt/bin:${PATH}
 
     # export PATH="/usr/local/bin:${PATH}"
 
