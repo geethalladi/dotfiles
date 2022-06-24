@@ -175,6 +175,7 @@
  (depends-on "paxedit")
  (depends-on "pdf-tools")
  (depends-on "persistent-scratch")
+ (depends-on "pipenv")
  (depends-on "pkg-info")
  (depends-on "plantuml-mode")
  (depends-on "popup")
