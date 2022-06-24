@@ -15,5 +15,8 @@ if [ "$?" != 0 ]; then
     # rvm
     source ${DOTFILE_DIR_RVM}/rvm.sh
 
+    # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+    export PATH="$PATH:$HOME/.rvm/bin"
+
     export XVM_INIT_COMPLETE=1
 fi
