@@ -33,6 +33,7 @@
   (smartparens-mode 1)
   (yafolding-mode 1)
   (yas-minor-mode 1)
+  (py-autopep8-mode 1)
   (highlight-indentation-mode 1)
   (self/-use-python)
   (elpy-set-test-runner 'elpy-test-pytest-runner))
@@ -109,8 +110,8 @@
     (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
     (add-hook 'elpy-mode-hook 'flycheck-mode))
 
-  (require 'py-autopep8)
-  (py-autopep8-enable-on-save)
+  ;; (require 'py-autopep8)
+  ;; (py-autopep8-enable-on-save)
   (eval-after-load 'elpy
     '(progn
        (define-key elpy-mode-map (kbd "C-c C-p") nil))))
