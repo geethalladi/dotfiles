@@ -23,9 +23,13 @@
   "Customizations for python mode"
   (setq indent-tabs-mode nil
         python-indent 4
-        tab-width 4)
-  ;; Don't resize the existing window heights
-  (setq even-window-heights nil)
+        tab-width 4
+        elpy-test-pytest-runner-command '("py.test")
+        py-autopep8-options '("--max-line-length=88")
+        elpy-formatter "black"
+        ;; Don't resize the existing window heights
+        even-window-heights nil)
+
   (self/-python-mode-custom-keybindings)
 
   (pyvenv-mode 1)
