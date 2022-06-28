@@ -33,6 +33,7 @@
   (self/-python-mode-custom-keybindings)
 
   (pyvenv-mode 1)
+  ;; (pipenv-mode 1)
   (eldoc-mode 1)
   (smartparens-mode 1)
   (yafolding-mode 1)
