@@ -19,7 +19,7 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
     # export PATH=${PATH}:${HOME}/Library/Python/3.9/bin
     export PATH=${PATH}:${ZEAL_HOME}/Contents/MacOS
     export PATH=${HOMEBREW_HOME}/bin:${HOMEBREW_HOME}/sbin:${PATH}
-    export PATH=${HOMEBREW_HOME}/opt/python@3.10/bin:${HOMEBREW_HOME}/opt/qt/bin:${PATH}
+    export PATH=${HOMEBREW_HOME}/opt/python@3.8/bin:${HOMEBREW_HOME}/opt/qt/bin:${PATH}
 
     # export PATH="/usr/local/bin:${PATH}"
 
