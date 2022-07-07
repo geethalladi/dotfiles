@@ -1,6 +1,9 @@
 [user]
-  name = ${GIT_USER}
-  email = ${GIT_USER_EMAIL}
+  name = geeth
+[include]
+  path = ~/.gitconfig-self
+[includeIf "gitdir:~/work/"]
+  path = ~/.gitconfig-work
 [core]
   editor = emacs
   pager = less -+F
