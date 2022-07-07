@@ -16,20 +16,6 @@
   lg0 = --since=1.month --date=local --pretty=format:\"%h - %an, %ad : %s\"
 [push]
   default = simple
-[diff]
-  prompt = false
-  tool = meld
-  # tool = extDiff
-  # external = extDiff
-[difftool]
-    prompt = false
-[difftool "meld"]
-    cmd = meld "$LOCAL" "$REMOTE"
-[merge]
-  tool = extMerge
-[mergetool "extMerge"]
-  cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-  trustExitCode = false
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
