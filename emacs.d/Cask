@@ -71,6 +71,7 @@
  (depends-on "expand-region")
  (depends-on "f")
  (depends-on "feature-mode")
+ (depends-on "forge")
  (depends-on "findr")
  (depends-on "floobits")
  (depends-on "flycheck")
