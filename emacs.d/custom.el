@@ -216,6 +216,7 @@
       (flyspell-do-correct 'save nil (car word) current-location (cadr word) (caddr word) current-location))))
 
 ;; Enabling googling from emacs
+(require 'google-this)
 (google-this-mode 1)
 
 (setq org-reveal-root "file:///opt/reveal.js")
@@ -223,6 +224,7 @@
 (setq mac-shift-modifier 'meta)
 (setq ns-function-modifier 'hyper)  ; make Fn key do Hyper
 
+(require 'visual-fill-column)
 (setq visual-fill-column-width 185)
 (global-visual-fill-column-mode 1)
 

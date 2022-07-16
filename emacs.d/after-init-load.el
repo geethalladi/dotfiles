@@ -33,6 +33,7 @@
   ;;   (exec-path-from-shell-initialize))
 
   ;; ENABLE PERSISTENT SCRATCH
+  (require 'persistent-scratch)
   (persistent-scratch-setup-default)
   ;; (persistent-scratch-autosave-mode 1)
 
@@ -57,6 +58,7 @@
 (defun self/-diminish-modal-line ()
   "Remove the most used packages from the modal line"
 
+  (require 'diminish)
   ;; Hide from appearing as sub-modes
   (diminish 'google-this-mode)
   (diminish 'helm-mode)
@@ -91,6 +93,7 @@
   ;; ENABLE PALLET
   (require 'pallet)
   (pallet-mode t)
+  (require 'use-package)
 
   ;; Load vendor el files
   (add-to-list 'load-path (expand-file-name "vendor" user-emacs-directory)))

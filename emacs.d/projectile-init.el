@@ -1,6 +1,8 @@
 ;; Projectile
 
 (require 'projectile)
+(require 'helm-projectile)
+
 (define-key projectile-mode-map (kbd "C-x C-p") 'projectile-command-map)
 (projectile-mode +1)
 

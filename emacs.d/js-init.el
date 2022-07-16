@@ -2,6 +2,7 @@
 (require 'smartparens)
 (require 'json-snatcher)
 (require 'tern)
+(require 'tern-context-coloring)
 (require 'js2-refactor)
 (require 'discover-js2-refactor)
 (require 'js-doc)

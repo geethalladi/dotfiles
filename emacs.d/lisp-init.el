@@ -23,8 +23,11 @@
   "Customizations of lisp mode"
   (yafolding-mode)
   (smartparens-mode)
+  (require 'rainbow-delimiters)
   (rainbow-delimiters-mode)
+  (require 'hungry-delete)
   (hungry-delete-mode)
+  (require 'eldoc)
   (eldoc-mode)
   (self/configure-prettify-symbols-alist))
 
