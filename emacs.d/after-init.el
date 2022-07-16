@@ -21,8 +21,11 @@
 (load (expand-file-name "font-init.el" user-emacs-directory))
 
 ;; SAVE BACK TO TEMP FOLDER
-(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
-(setq backup-directory-alist '((".*" . (expand-file-name "saves" user-emacs-directory))))
+(setq auto-save-file-name-transforms `((".*"
+                                        ,(expand-file-name "autosaves/\\1" user-emacs-directory)
+                                        t)))
+(setq backup-directory-alist `((".*" .
+                                ,(expand-file-name "saves" user-emacs-directory))))
 
 ;; save configurations to this file - (but don't load themm :)
 (setq custom-file (expand-file-name "emacs-custom.el" user-emacs-directory))
