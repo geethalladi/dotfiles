@@ -81,6 +81,7 @@ export OPAM_DIR=${HOME}/.opam
 export BABASHKA_CLASSPATH=.
 
 export TMUXP_CONFIGDIR=${PROJECT_DIR}/tmux
+export DOOMDIR=${INSTALL_DIR}/doom-emacs
 
 # Adding GO related paths
 # export GOROOT=/usr/local/opt/go

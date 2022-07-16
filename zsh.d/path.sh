@@ -17,7 +17,7 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
     export PATH=${PATH}:${INSTALL_DIR}
     export PATH=${PATH}:/usr/local/opt/mysql@5.7/bin:/usr/local/opt/mysql-client/bin
     # export PATH=${PATH}:${HOME}/Library/Python/3.9/bin
-    export PATH=${PATH}:${ZEAL_HOME}/Contents/MacOS
+    export PATH=${PATH}:${ZEAL_HOME}/Contents/MacOS:${DOOMDIR}/bin
     export PATH=${HOMEBREW_HOME}/bin:${HOMEBREW_HOME}/sbin:${PATH}
     export PATH=${HOMEBREW_HOME}/opt/python@3.8/bin:${HOMEBREW_HOME}/opt/qt/bin:${PATH}
 
@@ -27,10 +27,10 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
     # source ${ZSHDIR}/macports.sh
 
     if [[ ${TERM_PROGRAM} != "iTerm.app" &&
-              ${TERM_PROGRAM} != "tmux" &&
-              ${TERM} != "eterm-color" &&
-              ${TERM} != "dumb" ]]; then
-        source ${DOTFILE_DIR_ZSH}/xvm.sh
+	      ${TERM_PROGRAM} != "tmux" &&
+	      ${TERM} != "eterm-color" &&
+	      ${TERM} != "dumb" ]]; then
+	source ${DOTFILE_DIR_ZSH}/xvm.sh
     fi
 
     # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
