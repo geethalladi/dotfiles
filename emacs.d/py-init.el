@@ -68,7 +68,7 @@
   (setq python-shell-interpreter "ipython"
         py-shell-name "ipython"
         py-which-bufname "IPython"
-        python-shell-interpreter-args "console --simple-prompt"
+        python-shell-interpreter-args "-i --simple-prompt"
         python-shell-prompt-detect-failure-warning nil
         ;; python is aliased to use python3
         py-python-command "python3"
