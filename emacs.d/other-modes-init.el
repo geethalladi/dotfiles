@@ -144,7 +144,9 @@
   :init
   ;; Must be in the :init section of use-package such that the mode gets
   ;; enabled right away. Note that this forces loading the package.
-  (marginalia-mode))
+  (progn
+    (require 'marginalia)
+    (marginalia-mode)))
 
 ;; bookmark+ for better bookmark UI
 (add-to-list 'load-path
