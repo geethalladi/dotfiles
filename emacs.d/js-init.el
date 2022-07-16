@@ -158,7 +158,7 @@
 ;; TODO
 ;; (global-set-key [f5] 'slime-js-reload)
 
-;; (load-file "~/dotfiles/emacs.d/skewer-coffee.el")
+;; (load-file (expand-file-name "skewer-coffee.el" user-emacs-directory))
 ;; (require 'skewer-coffee)
 ;; (add-hook 'coffee-mode-hook 'skewer-coffee-mode)
 

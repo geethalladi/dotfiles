@@ -1,8 +1,10 @@
 ;; added from http://doc.norang.ca/org-mode.html#PlantUML
 
-(setq org-ditaa-jar-path "~/.emacs.d/vendor/org-mode/contrib/scripts/ditaa.jar")
+(setq org-ditaa-jar-path
+      (expand-file-name "vendor/org-mode/contrib/scripts/ditaa.jar" user-emacs-directory))
 
-(setq org-plantuml-jar-path "~/.emacs.d/vendor/org-mode/contrib/scripts/plantuml.jar")
+(setq org-plantuml-jar-path
+      (expand-file-name "vendor/org-mode/contrib/scripts/plantuml.jar" user-emacs-directory))
 
 (add-hook 'org-babel-after-execute-hook 'bh/display-inline-images 'append)
 

@@ -65,7 +65,8 @@
 ;;  Plantuml Configuration
 ;;
 ;; TODO: PlantUML configurations are in two places. Refactor !
-(setq plantuml-jar-path "~/.emacs.d/vendor/org-mode/contrib/scripts/plantuml.jar")
+(setq plantuml-jar-path
+      (expand-file-name "vendor/org-mode/contrib/scripts/plantuml.jar" user-emacs-directory))
 (setq plantuml-default-exec-mode 'jar)
 
 (defun self/plantuml-mode ()
@@ -76,7 +77,8 @@
 
 ;;
 ;; TLA+ specification mode
-(load-file "~/dotfiles/emacs.d/vendor/tla-pcal-mode.el")
+(load-file
+ (expand-file-name "vendor/tla-pcal-mode.el" user-emacs-directory))
 
 ;; info mode
 (add-hook 'Info-mode-hook 'self/use-variable-width-font)
@@ -145,7 +147,8 @@
   (marginalia-mode))
 
 ;; bookmark+ for better bookmark UI
-(add-to-list 'load-path "~/.emacs.d/vendor/bookmark-plus")
+(add-to-list 'load-path
+             (expand-file-name "vendor/bookmark-plus" user-emacs-directory))
 (require 'bookmark+)
 
 ;; zeal integration

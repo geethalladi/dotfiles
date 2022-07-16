@@ -160,14 +160,15 @@
                 '(("autosize" . "true") ("size" . "20,20")))))
 
 ;; search and replace inside invisible content (like urls) in org mode
-;; (load "~/.emacs.d/vendor/org-mode-search-invisible.el")
+;; (load (expand-file-name "vendor/org-mode-search-invisible.el" user-emacs-directory))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; org-roam configurations
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; clone https://github.com/org-roam/org-roam-v1 into "~/.emacs.d/vendor/org-roam-v1"
-(add-to-list 'load-path "~/.emacs.d/vendor/org-roam-v1")
+;; clone https://github.com/org-roam/org-roam-v1 into
+;;   (expand-file-name "vendor/org-roam-v1" user-emacs-directory)
+(add-to-list 'load-path (expand-file-name "vendor/org-roam-v1" user-emacs-directory))
 (require 'org-roam)
 
 (use-package org-roam

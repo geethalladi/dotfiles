@@ -22,7 +22,7 @@
 (osx-clipboard-mode +1)
 
 ;; load the pbcopy.el file for integrating terminal emacs with clipboard
-;; (load "~/.emacs.d/pbcopy.el")
+;; (load (expand-file-name "pbcopy.el" user-emacs-directory))
 
 ;; Because of the following "kill-line" hangs in the middle
 ;; Commenting out for OPTIMIZATION

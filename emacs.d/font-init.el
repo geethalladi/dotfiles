@@ -49,7 +49,7 @@
 ;; - DejaVuSansMono Nerd Font Mono :: 15:: normal
 
 ;; (set-face-attribute 'default nil :font "Fira Code:pixelsize=15:spacing=110:weight=normal")
-;; (load "~/.emacs.d/vendor/fira-code.el")
+;; (load (expand-file-name "vendor/fira-code.el" user-emacs-directory))
 
 ;; (set-face-attribute 'default nil :font "Consolas:pixelsize=14:weight=normal")
 ;; (set-face-attribute 'default nil :font "Hasklig:pixelsize=13:spacing=110:weight=normal")

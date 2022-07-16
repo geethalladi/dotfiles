@@ -183,7 +183,7 @@
 ;; rfc mode
 
 (require 'irfc)
-(setq irfc-directory "~/dotfiles/emacs.d/.irfc")
+(setq irfc-directory (expand-file-name ".irfc" user-emacs-directory))
 (setq irfc-download-base-url "https://www.ietf.org/rfc/")
 (setq irfc-assoc-mode t)
 
@@ -237,7 +237,8 @@
 ;; (global-set-key (kbd "M-x") 'smex)
 
 ;; [TODO] Update the exact path of the dictinoary
-;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/.cask/24.5.1/elpa/auto-complete-20160710.1544/dict")
+;; (add-to-list 'ac-dictionary-directories
+;;   (expand-file-name ".cask/24.5.1/elpa/auto-complete-20160710.1544/dict" user-emacs-directory))
 
 ;; turning off linum-mode as an experimentation
 ;; (global-linum-mode 1)

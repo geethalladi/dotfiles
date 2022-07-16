@@ -1,6 +1,6 @@
 ;; from https://www.metalevel.at/pceprolog/
 
-(load "~/.emacs.d/vendor/prolog.el")
+(load (expand-file-name "vendor/prolog.el" user-emacs-directory))
 
 (setq prolog-system 'swi
       prolog-program-switches '((swi ("-G128M" "-T128M" "-L128M" "-O"))

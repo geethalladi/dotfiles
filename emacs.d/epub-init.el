@@ -6,7 +6,7 @@
 (add-hook 'nov-mode-hook 'self/nov-font-setup)
 (add-hook 'nov-post-html-render-hook 'self/nov-post-html-render-hook)
 
-(load "~/.emacs.d/vendor/justify-kp.el")
+(load (expand-file-name "vendor/justify-kp.el" user-emacs-directory))
 
 (defun self/nov-font-setup ()
   (message "Setting up nov font")
