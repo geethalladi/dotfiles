@@ -82,13 +82,15 @@
   (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 
   ;; ENABLE CASK
+  (setq cask-filename (expand-file-name "Cask" user-emacs-directory))
   (require 'cask)
+  (setq load-path
+        (append (cask-load-path (cask-initialize)) load-path))
   ;; (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
   ;; (require 'cask
   ;;   (expand-file-name ".cask/26.1/elpa/cask-20180626.1949/cask.el" user-emacs-directory))
-  (cask-initialize)
   ;; Setting the location of the cask file
-  (setq cask-filename (expand-file-name "Cask" user-emacs-directory))
+  (cask-initialize user-emacs-directory)
 
   ;; ENABLE PALLET
   (require 'pallet)
