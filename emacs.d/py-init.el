@@ -65,7 +65,7 @@
   (add-to-list 'python-shell-completion-native-disabled-interpreters "jupyter")
 
   ;; Reference :: https://elpy.readthedocs.io/en/latest/ide.html#interpreter-setup
-  (setq python-shell-interpreter "jupyter"
+  (setq python-shell-interpreter "ipython"
         py-shell-name "ipython"
         py-which-bufname "IPython"
         python-shell-interpreter-args "console --simple-prompt"
