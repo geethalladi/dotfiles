@@ -93,8 +93,9 @@
   (cask-initialize user-emacs-directory)
 
   ;; ENABLE PALLET
-  (require 'pallet)
-  (pallet-mode t)
+  ;; (require 'pallet)
+  ;; (pallet-mode t)
+
   (require 'use-package)
 
   ;; Load vendor el files
