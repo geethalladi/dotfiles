@@ -36,23 +36,23 @@
   (persistent-scratch-setup-default)
   ;; (persistent-scratch-autosave-mode 1)
 
-  (load "~/.emacs.d/helm-init.el")
-  (load "~/.emacs.d/keychord-init.el")
-  (load "~/.emacs.d/vendor/help-fns+.el")
-  (load "~/.emacs.d/vendor/tiddlywiki-mode.el")
+  (load (expand-file-name "helm-init.el" user-emacs-directory))
+  (load (expand-file-name "keychord-init.el" user-emacs-directory))
+  (load (expand-file-name "vendor/help-fns+.el" user-emacs-directory))
+  (load (expand-file-name "vendor/tiddlywiki-mode.el" user-emacs-directory))
 
-  (load "~/.emacs.d/clipboard.el")
+  (load (expand-file-name "clipboard.el" user-emacs-directory))
 
-  (load "~/.emacs.d/tramp-init.el")
-  (load "~/.emacs.d/yas-init.el")
-  (load "~/.emacs.d/tex-init.el")
-  (load "~/.emacs.d/pdf-init.el")
-  (load "~/.emacs.d/epub-init.el")
+  (load (expand-file-name "tramp-init.el" user-emacs-directory))
+  (load (expand-file-name "yas-init.el" user-emacs-directory))
+  (load (expand-file-name "tex-init.el" user-emacs-directory))
+  (load (expand-file-name "pdf-init.el" user-emacs-directory))
+  (load (expand-file-name "epub-init.el" user-emacs-directory))
 
-  (load "~/.emacs.d/custom.el")
-  (load "~/.emacs.d/terminal-key-decode.el")
-  (load "~/.emacs.d/theme-init.el")
-  (load "~/.emacs.d/tamil-font.el"))
+  (load (expand-file-name "custom.el" user-emacs-directory))
+  (load (expand-file-name "terminal-key-decode.el" user-emacs-directory))
+  (load (expand-file-name "theme-init.el" user-emacs-directory))
+  (load (expand-file-name "tamil-font.el" user-emacs-directory)))
 
 (defun self/-diminish-modal-line ()
   "Remove the most used packages from the modal line"
@@ -82,71 +82,72 @@
   ;; ENABLE CASK
   (require 'cask)
   ;; (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
-  ;; (require 'cask "~/.emacs.d/.cask/26.1/elpa/cask-20180626.1949/cask.el")
+  ;; (require 'cask
+  ;;   (expand-file-name ".cask/26.1/elpa/cask-20180626.1949/cask.el" user-emacs-directory))
   (cask-initialize)
   ;; Setting the location of the cask file
-  (setq cask-filename "~/.emacs.d/Cask")
+  (setq cask-filename (expand-file-name "Cask" user-emacs-directory))
 
   ;; ENABLE PALLET
   (require 'pallet)
   (pallet-mode t)
 
   ;; Load vendor el files
-  (add-to-list 'load-path "~/dotfiles/emacs.d/vendor"))
+  (add-to-list 'load-path (expand-file-name "vendor" user-emacs-directory)))
 
 (defun self/load-org-env ()
   "Load the org environment"
 
-  (load "~/.emacs.d/org-mode-init.el")
-  (load "~/.emacs.d/org-agenda-init.el")
-  (load "~/.emacs.d/org-capture-init.el")
-  (load "~/.emacs.d/org-babel-init.el")
-  (load "~/.emacs.d/vendor/org-colored-text.el"))
+  (load (expand-file-name "org-mode-init.el" user-emacs-directory))
+  (load (expand-file-name "org-agenda-init.el" user-emacs-directory))
+  (load (expand-file-name "org-capture-init.el" user-emacs-directory))
+  (load (expand-file-name "org-babel-init.el" user-emacs-directory))
+  (load (expand-file-name "vendor/org-colored-text.el" user-emacs-directory)))
 
 (defun self/load-dev-env ()
   "Load the development environment"
 
-  (load "~/.emacs.d/smartparens.el")
+  (load (expand-file-name "smartparens.el" user-emacs-directory))
 
-  ;; (load "~/.emacs.d/term.el")
-  (load "~/.emacs.d/multi-term.el")
+  ;; (load (expand-file-name "term.el" user-emacs-directory))
+  (load (expand-file-name "multi-term.el" user-emacs-directory))
 
-  (load "~/.emacs.d/py-init.el")
-  (load "~/.emacs.d/rb-init.el")
-  ;; (load "~/.emacs.d/haskell-init.el")
-  (load "~/.emacs.d/ocaml-init.el")
-  ;; (load "~/.emacs.d/erlang-init.el")
-  (load "~/.emacs.d/prolog-init.el")
+  (load (expand-file-name "py-init.el" user-emacs-directory))
+  (load (expand-file-name "rb-init.el" user-emacs-directory))
+  ;; (load (expand-file-name "haskell-init.el" user-emacs-directory))
+  (load (expand-file-name "ocaml-init.el" user-emacs-directory))
+  ;; (load (expand-file-name "erlang-init.el" user-emacs-directory))
+  (load (expand-file-name "prolog-init.el" user-emacs-directory))
 
-  (load "~/.emacs.d/company-init.el")
-  (load "~/.emacs.d/projectile-init.el")
+  (load (expand-file-name "company-init.el" user-emacs-directory))
+  (load (expand-file-name "projectile-init.el" user-emacs-directory))
 
   ;; Loading js init script
-  (load "~/.emacs.d/js-init.el")
-  (load "~/.emacs.d/ts-init.el")
-  (load "~/.emacs.d/web-init.el")
+  (load (expand-file-name "js-init.el" user-emacs-directory))
+  (load (expand-file-name "ts-init.el" user-emacs-directory))
+  (load (expand-file-name "web-init.el" user-emacs-directory))
 
-  ;; (load "~/.emacs.d/elixir-init.el")
-  ;; (load "~/.emacs.d/scala-init.el")
-  (load "~/.emacs.d/go-init.el")
-  (load "~/.emacs.d/c-init.el")
+  ;; (load (expand-file-name "elixir-init.el" user-emacs-directory))
+  ;; (load (expand-file-name "scala-init.el" user-emacs-directory))
+  (load (expand-file-name "go-init.el" user-emacs-directory))
+  (load (expand-file-name "c-init.el" user-emacs-directory))
 
-  (load "~/.emacs.d/clojure-init.el")
-  (load "~/.emacs.d/lisp-init.el")
+  (load (expand-file-name "clojure-init.el" user-emacs-directory))
+  (load (expand-file-name "lisp-init.el" user-emacs-directory))
 
-  (load "~/.emacs.d/other-modes-init.el")
-  (load "~/.emacs.d/log-init.el")
+  (load (expand-file-name "other-modes-init.el" user-emacs-directory))
+  (load (expand-file-name "log-init.el" user-emacs-directory))
 
   ;; Loading font ligatures for development
-  (load "~/.emacs.d/font-ligatures.el"))
+  (load (expand-file-name "font-ligatures.el" user-emacs-directory)))
 
 (defun self/load-self-lisp ()
   "Load my personal lisp extensions"
 
   ;; to facilitate the velocity of lectures
-  (load "~/.emacs.d/self-lisp/lecture-stats.el")
-  (load "~/.emacs.d/self-lisp/index.el")
+  (load (expand-file-name "self-lisp/lecture-stats.el" user-emacs-directory))
+  (load (expand-file-name "self-lisp/index.el" user-emacs-directory))
   ;; dayjob customizations
-  (load "~/.emacs.d/self-lisp/dayjob.el"))
+  (load (expand-file-name "self-lisp/dayjob.el" user-emacs-directory)))
 
 ;; (self/load-all)

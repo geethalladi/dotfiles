@@ -18,14 +18,14 @@
 ;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; eager loading font customizations
-(load "~/.emacs.d/font-init.el")
+(load (expand-file-name "font-init.el" user-emacs-directory))
 
 ;; SAVE BACK TO TEMP FOLDER
-(setq backup-directory-alist '((".*" . "~/.emacs.d/saves")))
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
+(setq backup-directory-alist '((".*" . (expand-file-name "saves" user-emacs-directory))))
 
 ;; save configurations to this file - (but don't load themm :)
-(setq custom-file "~/.emacs.d/emacs-custom.el")
+(setq custom-file (expand-file-name "emacs-custom.el" user-emacs-directory))
 
 ;; Never kill scratch buffer
 (add-hook 'kill-buffer-query-functions
@@ -44,6 +44,6 @@
 (-mac-set-options-command-key)
 
 ;; Start the emacs-server
-(load "~/.emacs.d/emacs-server.el")
+(load (expand-file-name "emacs-server.el" user-emacs-directory))
 
-(load "~/.emacs.d/after-init-load.el")
+(load (expand-file-name "after-init-load.el" user-emacs-directory))
