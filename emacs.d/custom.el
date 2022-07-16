@@ -68,6 +68,7 @@
 ;; (exec-path-from-shell-copy-env "PYTHONPATH")
 (when (memq window-system '(mac ns x))
   (setq exec-path-from-shell-check-startup-files nil)
+  (require 'exec-path-from-shell)
   (exec-path-from-shell-initialize))
 
 ;; Elastic Search mode
