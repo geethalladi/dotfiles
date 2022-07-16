@@ -73,8 +73,8 @@
   ;; PACKAGE ARCHIVE
   (setq package-archives
   '(("gnu" . "http://elpa.gnu.org/packages/")
-    ("marmalade" . "https://marmalade-repo.org/packages/")
-    ("melpa" . "http://melpa.milkbox.net/packages/")))
+    ;; ("marmalade" . "https://marmalade-repo.org/packages/")
+    ("melpa" . "http://melpa.org/packages/")))
 
   ;; Org-mode's repository
   (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
