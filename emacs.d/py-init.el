@@ -40,7 +40,7 @@
   (yas-minor-mode 1)
   (py-autopep8-mode 1)
   (highlight-indentation-mode 1)
-  (self/-use-python)
+  (self/-use-ipython)
   (elpy-set-test-runner 'elpy-test-pytest-runner))
 
 (defun self/inf-python-mode ()
