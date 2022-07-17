@@ -41,7 +41,6 @@
   (py-autopep8-mode 1)
   (highlight-indentation-mode 1)
   (self/-use-ipython)
-  (elpy-enable)
   (elpy-set-test-runner 'elpy-test-pytest-runner))
 
 (defun self/inf-python-mode ()
@@ -138,6 +137,9 @@
 (add-hook 'inferior-python-mode-hook 'self/inf-python-mode)
 
 (add-hook 'elpy-mode-hook 'self/-elpy-configure)
+
+(require 'elpy)
+(elpy-enable)
 
 ;; (add-hook 'python-mode-hook 'anaconda-mode)
 ;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
