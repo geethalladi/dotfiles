@@ -226,7 +226,7 @@
 (setq ns-function-modifier 'hyper)  ; make Fn key do Hyper
 
 (require 'visual-fill-column)
-(setq fill-column 120)
+(setq-default fill-column 120)
 (setq visual-fill-column-width 185)
 (global-visual-fill-column-mode 1)
 
