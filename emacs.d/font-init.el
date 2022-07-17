@@ -3,7 +3,7 @@
 
 (set-face-attribute 'default nil
                     :family "JetBrainsMono Nerd Font Mono"
-                    :height 150
+                    :height 160
                     :weight 'normal
                     :width  'normal
                     :slant  'normal)
