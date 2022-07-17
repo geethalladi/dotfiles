@@ -157,6 +157,8 @@
 (require 'zeal-at-point)
 (global-set-key (kbd "C-c C-d") 'zeal-at-point)
 
+(require 'ag)
+
 (add-to-list 'zeal-at-point-mode-alist
              '(python-mode . ("python3" "scipy" "numpy" "pandas" "sqlalchemy")))
 (add-to-list 'zeal-at-point-mode-alist '(emacs-lisp-mode   . ("elisp")))
