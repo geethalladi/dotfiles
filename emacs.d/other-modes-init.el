@@ -44,6 +44,7 @@
 
 ;; (setq tab-always-indent nil)
 
+(require 'markdown-mode)
 ;;
 ;;  Markdown mode configurations
 ;;
@@ -177,3 +178,5 @@
                          split-window-horizontally
                          "~/Desktop/sticky-notes/meeting.org"))
           (frame-parameters . ((undecorated . t)))))))
+
+(require 'sr-speedbar)
