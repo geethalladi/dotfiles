@@ -1,4 +1,8 @@
 (require 'org)
+(require 'org-bullets)
+(require 'writegood-mode)
+(require 'wc-mode)
+
 
 ;; Required for old org mode templates to work (changed after org mode 9.2)
 ;; templates for source, quote blocks
