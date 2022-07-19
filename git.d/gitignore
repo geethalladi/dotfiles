@@ -44,6 +44,7 @@ dump.rdb
 .irfc
 .ignore
 self.tangential
+self_*.*
 nov-places
 eww-bookmarks
 *.beam
