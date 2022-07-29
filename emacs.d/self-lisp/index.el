@@ -8,3 +8,9 @@
          (new-val (* 1.03 current)))
     ;; "%H:%M:%S" -> Hours required when I go past an hour (I hope I do :)
     (format-time-string "%M:%S" (seconds-to-time new-val) t)))
+
+(defun self/export-to-html-and-open ()
+  "Export to html and open in default browser"
+  (interactive)
+  (browse-url-of-file
+   (org-html-export-to-html)))
