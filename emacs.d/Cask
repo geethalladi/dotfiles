@@ -157,6 +157,7 @@
  (depends-on "nyan-mode")
  (depends-on "org")
  (depends-on "org-bullets")
+ (depends-on "org-mime")
  (depends-on "org-mind-map")
  (depends-on "org-noter")
  (depends-on "org-plus-contrib")
