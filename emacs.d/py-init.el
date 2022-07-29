@@ -21,6 +21,7 @@
 
 (defun self/python-mode ()
   "Customizations for python mode"
+  (message "Python mode customizations")
   (setq indent-tabs-mode nil
         python-indent 4
         tab-width 4
@@ -140,6 +141,7 @@
 
 (require 'elpy)
 (elpy-enable)
+(require 'py-autopep8)
 
 ;; (add-hook 'python-mode-hook 'anaconda-mode)
 ;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)

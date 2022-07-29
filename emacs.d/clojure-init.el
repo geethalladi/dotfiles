@@ -1,6 +1,8 @@
 (require 'clojure-mode)
 (require 'flycheck-clj-kondo)
 (require 'cider)
+(require 'paxedit)
+(require 'rainbow-identifiers)
 
 (defun self/-clojure-mode ()
   "Clojure mode customization"

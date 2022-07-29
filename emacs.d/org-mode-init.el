@@ -1,8 +1,13 @@
 (require 'org)
 (require 'org-bullets)
+(require 'org-mime)
+
 (require 'writegood-mode)
 (require 'wc-mode)
 
+(require 'emmet-mode)
+(require 'htmlize)
+(require 'ox)
 
 ;; Required for old org mode templates to work (changed after org mode 9.2)
 ;; templates for source, quote blocks
