@@ -1,13 +1,12 @@
 # -*- mode: snippet -*-
-# name: init
-# key: init
+# name: feed
+# key: feed
 # --
-#+TITLE: $1
-#+TAGS: $2
+#+TITLE: Feedback for $1
 #+DATE: `(format-time-string "%Y-%m-%d")`
 #+STARTUP: hideblocks
-#+TODO: TODO(t) PROGRESS(p) WAITING(w) | DONE(d) | CANCELLED(c)
 #+OPTIONS: toc:nil
 #+SETUPFILE: ~/org/org-styles/comfy_inline.theme
-#+FILETAGS: :none:
-* $1
+* Feedback for $1
+** Summary
+** About self
