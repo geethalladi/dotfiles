@@ -26,6 +26,7 @@
  (depends-on "bundler")
  (depends-on "calfw")
  (depends-on "cask")
+ (depends-on "centaur-tabs")
  (depends-on "cider")
  (depends-on "clipetty")
  (depends-on "color-identifiers-mode")

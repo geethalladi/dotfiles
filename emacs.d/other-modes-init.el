@@ -180,3 +180,14 @@
           (frame-parameters . ((undecorated . t)))))))
 
 (require 'sr-speedbar)
+
+;; (use-package centaur-tabs
+;;   :demand
+;;   :config
+;;   (setq centaur-tabs-cycle-scope 'tabs)
+;;   (setq centaur-tabs-set-bar 'under)
+;;   (setq centaur-tabs-set-close-button nil)
+;;   (centaur-tabs-mode t)
+;;   :bind
+;;   ("C-c t b" . centaur-tabs-backward)
+;;   ("C-c t n" . centaur-tabs-forward))
