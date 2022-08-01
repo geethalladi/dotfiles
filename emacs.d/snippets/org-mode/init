@@ -7,7 +7,7 @@
 #+DATE: `(format-time-string "%Y-%m-%d")`
 #+STARTUP: hideblocks
 #+TODO: TODO(t) PROGRESS(p) WAITING(w) | DONE(d) | CANCELLED(c)
-#+OPTIONS: toc:nil
+#+OPTIONS: toc:2 num:2 html-postamble:nil
 #+SETUPFILE: ~/org/org-styles/comfy_inline.theme
 #+FILETAGS: :none:
 * $1

@@ -5,7 +5,7 @@
 #+TITLE: Feedback for $1
 #+DATE: `(format-time-string "%Y-%m-%d")`
 #+STARTUP: hideblocks
-#+OPTIONS: toc:nil
+#+OPTIONS: toc:nil num:2 html-postamble:nil
 #+SETUPFILE: ~/org/org-styles/comfy_inline.theme
 * Feedback for $1
 ** Summary
