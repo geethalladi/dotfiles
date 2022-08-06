@@ -18,6 +18,8 @@
   (self/load-dev-env)
   ;; load org mode customizations
   (self/load-org-env)
+  ;; load writing texts
+  (self/load-text-customizations)
   ;; load my own lisp extensions
   (self/load-self-lisp)
   ;; clean up modal line
@@ -109,6 +111,10 @@
   (load (expand-file-name "org-capture-init.el" user-emacs-directory))
   (load (expand-file-name "org-babel-init.el" user-emacs-directory))
   (load (expand-file-name "vendor/org-colored-text.el" user-emacs-directory)))
+
+(defun self/load-text-customizations ()
+  "Load the development environment"
+  (load (expand-file-name "text-mode-init.el" user-emacs-directory)))
 
 (defun self/load-dev-env ()
   "Load the development environment"

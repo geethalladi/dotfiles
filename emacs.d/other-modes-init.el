@@ -84,19 +84,6 @@
 ;; info mode
 (add-hook 'Info-mode-hook 'self/use-variable-width-font)
 
-;;
-;; asciidoc / text mode
-;;
-(defun self/adoc-mode ()
-  "adoc-mode specifications"
-  (self/use-variable-width-font)
-  (smartparens-mode)
-  (flyspell-mode))
-
-(add-hook 'adoc-mode-hook 'self/adoc-mode)
-
-(add-to-list 'auto-mode-alist '("\\.\\(adoc\\|asciidoc\\|txt\\)$" . adoc-mode))
-
 ;; graphviz dot mode customizations
 (use-package graphviz-dot-mode
   :ensure t
