@@ -10,3 +10,4 @@ recentf
 org-persist
 projects
 *.sqlite
+*dicts/
