@@ -191,3 +191,6 @@
 ;;   :bind
 ;;   ("C-c t b" . centaur-tabs-backward)
 ;;   ("C-c t n" . centaur-tabs-forward))
+
+(require 'terraform-mode)
+(require 'terraform-doc)
