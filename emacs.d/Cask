@@ -37,6 +37,7 @@
  (depends-on "company-jedi")
  (depends-on "company-terraform")
  (depends-on "company-restclient")
+ (depends-on "company-wordfreq")
  (depends-on "consult")
  (depends-on "copy-as-format")
  (depends-on "csv-mode")
