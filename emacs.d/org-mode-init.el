@@ -93,6 +93,11 @@
   ;; Using Shift keys for navigation across windows
   (windmove-default-keybindings)
 
+  ;; (require 'comapny-wordfreq)
+  (setq-local company-backends
+              (cons 'company-ispell company-backends))
+  (setq-local company-transformers nil)
+
   (define-key org-mode-map (kbd "<S-right>") 'windmove-right)
   (define-key org-mode-map (kbd "<S-left>") 'windmove-left)
   (define-key org-mode-map (kbd "<S-up>") 'windmove-up)
