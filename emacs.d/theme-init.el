@@ -166,6 +166,7 @@
 (defun self/load-light-theme ()
   "light theme"
   (interactive)
+  (require 'leuven-theme)
   (load-theme 'leuven t)
   (self/-light-theme-custom))
 
@@ -187,6 +188,7 @@
 (defun self/load-dark-theme ()
   "dark theme"
   (interactive)
+  (require 'zenburn-theme)
   (load-theme 'zenburn t)
   (self/-dark-theme-custom))
 
