@@ -8,6 +8,7 @@
 (require 'emmet-mode)
 (require 'htmlize)
 (require 'ox)
+(require 'ox-jira)
 
 ;; Required for old org mode templates to work (changed after org mode 9.2)
 ;; templates for source, quote blocks

@@ -168,6 +168,7 @@
  (depends-on "origami")
  (depends-on "osx-clipboard")
  (depends-on "ov")
+ (depends-on "ox-jira")
  (depends-on "ox-pandoc")
  (depends-on "ox-reveal")
  (depends-on "ox-slack")
