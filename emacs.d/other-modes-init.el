@@ -181,3 +181,5 @@
 
 (require 'terraform-mode)
 (require 'terraform-doc)
+
+(require 'lua-mode)
