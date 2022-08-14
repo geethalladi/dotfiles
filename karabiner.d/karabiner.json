@@ -30,7 +30,7 @@
           },
           "to": [
             {
-            "shell_command": "open '/Applications/Chrome.app'"
+            "shell_command": "open -a 'Google Chrome'"
           }
           ]
         },
@@ -46,7 +46,7 @@
           },
           "to": [
             {
-            "shell_command": "open '/Applications/Emacs.app'"
+            "shell_command": "open -a Emacs"
           }
           ]
         },
