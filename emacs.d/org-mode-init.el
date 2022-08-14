@@ -203,3 +203,15 @@
               :map org-mode-map
               (("C-c r i" . org-roam-insert))
               (("C-c r I" . org-roam-insert-immediate))))
+
+;; org mode for sticky notes
+(require 'yequake)
+(setq yequake-frames
+      '(("Yequake & scratch" .
+         ((width . 0.75)
+          (height . 0.5)
+          (alpha . 0.95)
+          (buffer-fns . ("~/Desktop/sticky-notes/meetings.org"
+                         split-window-horizontally
+                         "~/Desktop/sticky-notes/notes.org"))
+          (frame-parameters . ((undecorated . t)))))))
