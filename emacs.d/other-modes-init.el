@@ -183,3 +183,4 @@
 (require 'terraform-doc)
 
 (require 'lua-mode)
+(setq lua-indent-level 1)
