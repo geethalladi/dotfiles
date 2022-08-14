@@ -156,14 +156,15 @@
 (add-to-list 'zeal-at-point-mode-alist '(dockerfile-mode   . ("docker")))
 (add-to-list 'zeal-at-point-mode-alist '(latex-mode        . ("latex")))
 
+(require 'yequake)
 (setq yequake-frames
       '(("Yequake & scratch" .
          ((width . 0.75)
           (height . 0.5)
           (alpha . 0.95)
-          (buffer-fns . ("~/Desktop/sticky-notes/notes.org"
+          (buffer-fns . ("~/Desktop/sticky-notes/meetings.org"
                          split-window-horizontally
-                         "~/Desktop/sticky-notes/meeting.org"))
+                         "~/Desktop/sticky-notes/notes.org"))
           (frame-parameters . ((undecorated . t)))))))
 
 (require 'sr-speedbar)
