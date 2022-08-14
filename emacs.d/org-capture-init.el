@@ -8,7 +8,7 @@
 ;;         "* %? [[%:link][%(self/transform-square-brackets-to-round-ones \"%:description\")]]\n")))
 (require 'org-protocol-capture-html)
 
-(setq self--default-capture-file "~/Desktop/captured.org")
+(setq self--default-capture-file "~/Desktop/sticky-notes/captured.org")
 
 (defun self--add-capture-templates ()
   "Add the templates needed for org-capture from firefox browser"
