@@ -1,4 +1,5 @@
 (require 'js2-mode)
+(require 'json-mode)
 (require 'smartparens)
 (require 'json-snatcher)
 (require 'tern)
