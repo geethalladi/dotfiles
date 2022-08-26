@@ -16,7 +16,7 @@
   (variable-pitch-mode)
   (setq buffer-face-mode-face
         '(:family "PT Sans"
-          :height 180
+          :height 160
           :width expanded
           :weight normal
           :slant normal))
