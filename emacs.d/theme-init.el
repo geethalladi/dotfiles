@@ -76,6 +76,9 @@
   (set-face-attribute 'helm-selection nil
                       :background "green"
                       :foreground "black")
+  (set-frame-parameter (selected-frame) 'alpha '(85 85))
+  (add-to-list 'default-frame-alist '(alpha 85 85))
+
   (custom-set-faces
    ;; org mode faces
    '(org-level-1 ((t (:foreground "#dfaf8f"))))
