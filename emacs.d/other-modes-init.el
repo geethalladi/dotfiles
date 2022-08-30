@@ -61,21 +61,6 @@
 
 (add-hook 'markdown-mode-hook 'self/markdown-mode)
 
-
-;;
-;;  Plantuml Configuration
-;;
-;; TODO: PlantUML configurations are in two places. Refactor !
-(setq plantuml-jar-path
-      (expand-file-name "vendor/org-mode/contrib/scripts/plantuml.jar" user-emacs-directory))
-(setq plantuml-default-exec-mode 'jar)
-
-(defun self/plantuml-mode ()
-  "Plantuml mode customization"
-  (smartparens-mode 1))
-
-(add-hook 'plantuml-mode-hook 'self/plantuml-mode)
-
 ;;
 ;; TLA+ specification mode
 (load-file

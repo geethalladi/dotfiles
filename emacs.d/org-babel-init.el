@@ -1,10 +1,21 @@
 ;; added from http://doc.norang.ca/org-mode.html#PlantUML
 
+;;
+;;  Plantuml Configuration
+;;
+
+(defun self/plantuml-mode ()
+  "Plantuml mode customization"
+  (smartparens-mode 1))
+(add-hook 'plantuml-mode-hook 'self/plantuml-mode)
+
 (setq org-ditaa-jar-path
       (expand-file-name "vendor/org-mode/contrib/scripts/ditaa.jar" user-emacs-directory))
 
-(setq org-plantuml-jar-path
+(setq plantuml-jar-path
       (expand-file-name "vendor/org-mode/contrib/scripts/plantuml.jar" user-emacs-directory))
+
+(setq plantuml-default-exec-mode 'jar)
 
 (add-hook 'org-babel-after-execute-hook 'bh/display-inline-images 'append)
 
