@@ -119,7 +119,7 @@
 (defun self/load-dev-env ()
   "Load the development environment"
 
-  (load (expand-file-name "smartparens.el" user-emacs-directory))
+  (load (expand-file-name "smartparens-init.el" user-emacs-directory))
 
   ;; (load (expand-file-name "term.el" user-emacs-directory))
   (load (expand-file-name "multi-term.el" user-emacs-directory))
