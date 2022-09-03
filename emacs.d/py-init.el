@@ -145,3 +145,35 @@
 
 ;; (add-hook 'python-mode-hook 'anaconda-mode)
 ;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+
+;; customizations for inf-python mode
+
+(defun self/-pyrepl-output-start ()
+  "Get the starting position of the last REPL output"
+  (save-excursion
+    (search-backward "Out[")
+    (next-line)
+    (beginning-of-line)
+    (point)))
+
+(defun self/-pyrepl-output-end ()
+  "Get the end position of the last REPL output"
+  (save-excursion
+    (previous-line)
+    (point)))
+
+(defun self/extract-repl-output-into-buffer ()
+  "Extract the last REPL output into a separate buffer"
+  (interactive)
+  (let* ((start (self/-pyrepl-output-start))
+         (end (self/-pyrepl-output-end))
+         (buffer (get-buffer-create "*Python-Output*"))
+         (contents (buffer-substring-no-properties start end)))
+    (with-current-buffer buffer
+      (switch-to-buffer buffer)
+      (erase-buffer)
+      (insert contents)
+      (python-mode))))
+
+(define-key inferior-python-mode-map (kbd "C-c p")
+  'self/extract-repl-output-into-buffer)
