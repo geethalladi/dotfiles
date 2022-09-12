@@ -123,6 +123,7 @@
 
   ;; (load (expand-file-name "term-init.el" user-emacs-directory))
   (load (expand-file-name "multi-term-init.el" user-emacs-directory))
+  (load (expand-file-name "eshell-init.el" user-emacs-directory))
 
   (load (expand-file-name "py-init.el" user-emacs-directory))
   (load (expand-file-name "rb-init.el" user-emacs-directory))
