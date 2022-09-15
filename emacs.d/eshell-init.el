@@ -1,5 +1,5 @@
+;;; package --- eshell initialization
 (require 'docker-tramp)
-docker-tramp
 
 ;; reference: https://www.masteringemacs.org/article/complete-guide-mastering-eshell
 
