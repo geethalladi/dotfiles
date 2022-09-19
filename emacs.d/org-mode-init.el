@@ -9,6 +9,7 @@
 (require 'htmlize)
 (require 'ox)
 (require 'ox-jira)
+(require 'ox-slack)
 
 ;; Required for old org mode templates to work (changed after org mode 9.2)
 ;; templates for source, quote blocks
