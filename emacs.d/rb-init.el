@@ -13,6 +13,7 @@
 (require 'rinari)
 (require 'smartparens)
 (require 'yafolding)
+(require 'yard-mode)
 
 (require 'bundler)
 (require 'rubocop)
