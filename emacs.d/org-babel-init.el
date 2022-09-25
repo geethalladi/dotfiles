@@ -15,6 +15,9 @@
 (setq plantuml-jar-path
       (expand-file-name "vendor/org-mode/contrib/scripts/plantuml.jar" user-emacs-directory))
 
+(setq org-plantuml-jar-path
+      (expand-file-name "vendor/org-mode/contrib/scripts/plantuml.jar" user-emacs-directory))
+
 (setq plantuml-default-exec-mode 'jar)
 
 (add-hook 'org-babel-after-execute-hook 'bh/display-inline-images 'append)
