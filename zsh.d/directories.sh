@@ -86,7 +86,8 @@ export DOOMDIR=~/.doom.d
 
 # Adding GO related paths
 # export GOROOT=/usr/local/opt/go
-export GOPATH=~/repo/open-source/goprojects
+export OPEN_SOURCE_DIR=~/repo/open-source
+export GOPATH=${OPEN_SOURCE_DIR}/goprojects
 
 # Enabling EMACS variable disables line editing in zsh
 export EMACS_APP=/Applications/Emacs.app
