@@ -5,6 +5,7 @@
 
 (development
  (depends-on "ansi")
+ (depends-on "auctex")
  (depends-on "shut-up")
  (depends-on "package-build")
  (depends-on "git")
