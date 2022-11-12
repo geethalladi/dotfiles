@@ -23,6 +23,7 @@
 (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 (global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
 
 (setq helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match    t)
