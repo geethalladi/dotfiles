@@ -1,5 +1,4 @@
 * README
-
 ZSH scripts for creating my own development environment. Additions to be expected.
 
 ** Simple PS1 Prompt
@@ -8,18 +7,25 @@ ZSH scripts for creating my own development environment. Additions to be expecte
 #+END_SRC
 
 ** Setup
-
 #+BEGIN_SRC bash
   # Create symlinks to the following files
-  ln -sf ${DOTFILES}/zsh.d/zshrc ~/.zshrc
-  ln -sf ${DOTFILES}/zsh.d/zprofile ~/.zprofile
-  ln -sf ${DOTFILES}/zsh.d/emacs_zsh ~/.emacs_zsh
-  ln -sf ${DOTFILES}/zsh.d/zshenv.sh ~/.zshenv
+
+  ln -sf ${DOTFILES}/zsh.d/zshrc .zshrc
+  ln -sf ${DOTFILES}/zsh.d/zprofile .zprofile
+  ln -sf ${DOTFILES}/zsh.d/zshenv.sh .zshenv
+  ln -sf ${DOTFILES}/zsh.d/emacs_zsh .emacs_zsh
+
+  ln -sf ${DOTFILES}/emacs.d .emacs.default
+  ln -sf ${DOTFILES}/emacs.d/emacs-profiles.el .emacs-profiles.el
+
+  ln -sf ${DOTFILES}/screen.d/screenrc .screenrc
+  ln -sf ${DOTFILES}/tmux.d/tmux.conf .tmux.conf
+
+  ln -sf ${DOTFILES}/git.d/gitignore .gitignore
 
 #+END_SRC
 
 ** Usage
-
 |-----------+------------------------------------------+----------------------------------------------------|
 | File name | Usage                                    | What I use it for                                  |
 |-----------+------------------------------------------+----------------------------------------------------|
