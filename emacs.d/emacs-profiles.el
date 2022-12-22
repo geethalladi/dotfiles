@@ -1,2 +1,2 @@
 (("default"   . ((user-emacs-directory . "~/.emacs.default")))
- ("doom" . ((user-emacs-directory . "~/.doom.d"))))
+ ("doom" . ((user-emacs-directory . "~/doom-emacs"))))
