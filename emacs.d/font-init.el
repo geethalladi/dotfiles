@@ -44,7 +44,7 @@
 ;; - JetBrainsMono Nerd Font Mono  :: 15 :: normal
 ;; - Consolas                      :: 14 :: normal
 ;; - PT Mono                       :: 16 :: normal
-;; - Haskling                      :: 11 :: semi-bold
+;; - Hasklig                      :: 11 :: semi-bold
 ;; - Fira Code                     :: 15 :: normal
 ;; - DejaVuSansMono Nerd Font Mono :: 15:: normal
 
