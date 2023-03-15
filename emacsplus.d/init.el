@@ -95,7 +95,7 @@
        (eval +overlay)     ; run code, run (also, repls)
        gist              ; interacting with github gists
        lookup              ; navigate your code and its documentation
-       ;;lsp               ; M-x vscode
+       lsp               ; M-x vscode
        magit             ; a git porcelain for Emacs
        make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
@@ -103,7 +103,7 @@
        prodigy           ; FIXME managing external services & code builders
        ;;rgb               ; creating color strings
        ;;taskrunner        ; taskrunner for all your projects
-       terraform         ; infrastructure as code
+       ;;terraform         ; infrastructure as code
        tmux              ; an API for interacting with tmux
        ;;tree-sitter       ; syntax and parsing, sitting in a tree...
        ;;upload            ; map local to remote projects via ssh/ftp
@@ -137,7 +137,7 @@
        ;;gdscript          ; the language you waited for
        (go +lsp)         ; the hipster dialect
        (graphql +lsp)    ; Give queries a REST
-       (haskell +lsp)    ; a language that's lazier than I am
+       ;; (haskell +lsp)    ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        idris             ; a language you can depend on
        json              ; At least it ain't XML
@@ -150,8 +150,8 @@
        ledger            ; be audit you can be
        lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
-       nim               ; python + lisp at the speed of c
-       nix               ; I hereby declare "nix geht mehr!"
+       ;;nim               ; python + lisp at the speed of c
+       ;;nix               ; I hereby declare "nix geht mehr!"
        ocaml             ; an objective camel
        org               ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
@@ -159,7 +159,7 @@
        ;;purescript        ; javascript, but functional
        python            ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
-       racket            ; a DSL for DSLs
+       ;;racket            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6
        rest              ; Emacs as a REST client
        ;;rst               ; ReST in peace
