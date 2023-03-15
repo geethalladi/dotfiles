@@ -42,6 +42,10 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
     # export PATH=${JAVA_HOME}/bin:${PATH}
     PATH=${PATH}:${FIREFOX_HOME}
 
+    if [ -d "$(brew --prefix)/opt/grep/libexec/gnubin" ]; then
+        PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
+    fi
+
     export PATH
 
     # Rehash to take care of the PATH variable update
