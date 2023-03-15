@@ -137,7 +137,7 @@
 
   ;; Loading js init script
   (load (expand-file-name "js-init.el" user-emacs-directory))
-  (load (expand-file-name "ts-init.el" user-emacs-directory))
+  ;; (load (expand-file-name "ts-init.el" user-emacs-directory))
   (load (expand-file-name "web-init.el" user-emacs-directory))
 
   ;; (load (expand-file-name "elixir-init.el" user-emacs-directory))
