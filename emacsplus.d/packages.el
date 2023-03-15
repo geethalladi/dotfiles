@@ -50,3 +50,4 @@
 ;(unpin! t)
 (package! doom-themes)
 (package! osx-clipboard)
+(package! undo-fu)
