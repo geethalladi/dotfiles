@@ -64,7 +64,7 @@
   "Customizations for hy-lang"
   (self/lisp-customizations))
 
-(load (expand-file-name "~/installed.d/quicklisp/slime-helper.el"))
+;; (load (expand-file-name "~/installed.d/quicklisp/slime-helper.el"))
 
 (require 'slime)
 (require 'slime-scratch)
