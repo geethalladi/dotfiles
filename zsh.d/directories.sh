@@ -26,6 +26,7 @@ export PROJECT_DIR=${PRIVATE_DIR}/projects
 
 export CELLAR_PATH=/usr/local/Cellar
 export CASK_PATH=~/.cask/bin
+export CARGO_PATH=~/.cargo/bin
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
 export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
