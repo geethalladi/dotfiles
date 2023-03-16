@@ -1,6 +1,9 @@
 ;; No Initial Splash Screen
 (setq inhibit-splash-screen t)
 
+;; show only emergency warnings
+(setq warning-minimum-level :emergency)
+
 ;; setting GC threshold
 (setq gc-cons-threshold
       (if (display-graphic-p)
