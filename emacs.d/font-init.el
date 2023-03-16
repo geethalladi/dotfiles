@@ -2,7 +2,7 @@
 ;; Moving this into its own module
 
 (set-face-attribute 'default nil
-                    :family "Fira Code"
+                    :family "DejaVu Sans Mono"
                     :height 160
                     :weight 'normal
                     :width  'normal
