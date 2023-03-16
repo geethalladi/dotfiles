@@ -2,7 +2,7 @@
 ;; Moving this into its own module
 
 (set-face-attribute 'default nil
-                    :family "JetBrainsMono Nerd Font Mono"
+                    :family "Fira Code"
                     :height 160
                     :weight 'normal
                     :width  'normal

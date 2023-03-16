@@ -4,6 +4,10 @@
 ;; show only emergency warnings
 (setq warning-minimum-level :emergency)
 
+;; for faster cursor movements
+;; https://github.com/doomemacs/doomemacs/issues/2217
+(add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
+
 ;; setting GC threshold
 (setq gc-cons-threshold
       (if (display-graphic-p)
