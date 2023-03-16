@@ -93,6 +93,8 @@
 (osx-clipboard-mode)
 
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
+(setq auto-window-vscroll nil)
+(setq display-line-numbers-type nil)
 
 (defun export-to-html-and-open ()
   "Export to html and open in default browser"

@@ -7,6 +7,10 @@
 ;; for faster cursor movements
 ;; https://github.com/doomemacs/doomemacs/issues/2217
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
+(setq display-line-numbers-type nil)
+
+;; https://emacs.stackexchange.com/questions/28736/emacs-pointcursor-movement-lag/28746
+(setq auto-window-vscroll nil)
 
 ;; setting GC threshold
 (setq gc-cons-threshold
