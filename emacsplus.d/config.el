@@ -33,7 +33,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-font
-      (font-spec :family "JetBrainsMono Nerd Font Mono" :size 16
+      (font-spec :family "Fira Code" :size 16
                  :weight 'normal))
 
 ;; (setq doom-theme 'doom-snazzy)
@@ -91,6 +91,8 @@
 (set-cursor-color "#ffffff")
 
 (osx-clipboard-mode)
+
+(add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
 (defun export-to-html-and-open ()
   "Export to html and open in default browser"
