@@ -152,6 +152,12 @@
 (fset 'pomodoro-table
       [?| ?  ?G ?  ?| ?  ?D ?a ?i ?l ?y ? ?  ?| ?  ?\[ ?  ?\] ?  ?| tab])
 
+(require 'quelpa)
+(quelpa
+ '(emacsql-sqlite3
+   :fetcher url
+   :url "https://raw.githubusercontent.com/cireu/emacsql-sqlite3/master/emacsql-sqlite3.el"))
+
 (require 'ox-confluence)
 
 ;; required for org-reveal mode presentations
