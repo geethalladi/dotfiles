@@ -2,7 +2,10 @@
 ;; asciidoc / text mode
 ;;
 
-(require 'adoc-mode)
+(use-package adoc-mode
+  :init
+  (require 'adoc-mode)
+  :ensure t)
 
 (defun self/adoc-mode ()
   "adoc-mode specifications"
