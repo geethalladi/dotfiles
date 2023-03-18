@@ -1,4 +1,4 @@
-which nvm > /dev/null
+which rvm > /dev/null
 if [ "$?" != 0 ]; then
     echo "Sourcing version managers"
 
