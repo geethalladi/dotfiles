@@ -65,7 +65,8 @@
  (depends-on "elpy")
  (depends-on "emacsql")
  (depends-on "emacsql-sqlite")
- (depends-on "emacsql-sqlite3")
+ ;; TODO: Find out a better way to install the below package
+ ;; (depends-on "emacsql-sqlite3" :fetcher "https://github.com/cireu/emacsql-sqlite3")
  (depends-on "emmet-mode")
  (depends-on "enclose")
  (depends-on "enh-ruby-mode")
@@ -201,6 +202,7 @@
  (depends-on "purescript-mode")
  (depends-on "py-autopep8")
  (depends-on "quack")
+ (depends-on "quelpa")
  (depends-on "racket-mode")
  (depends-on "rainbow-delimiters")
  (depends-on "rainbow-identifiers")
