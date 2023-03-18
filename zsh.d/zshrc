@@ -69,7 +69,7 @@ fi
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-export NVM_LAZY=1
+zstyle ':omz:plugins:nvm' lazy yes
 plugins=(git brew rvm web-search docker docker-compose macos nvm)
 
 # User configuration
