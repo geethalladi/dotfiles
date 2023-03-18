@@ -51,3 +51,4 @@
 (package! doom-themes)
 (package! osx-clipboard)
 (package! undo-fu)
+(package! lsp-sonarlint)
