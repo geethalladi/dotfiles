@@ -5,6 +5,8 @@
   :init
   (add-hook #'log4j-mode-hook #'view-mode))
 
+(require 'log4j-mode)
+
 (defun self/use-log-font ()
   "set terminal style font"
    (interactive)
