@@ -44,3 +44,4 @@ karabiner.d/automatic_backups/
 workspace/
 eclipse.jdt*
 .lsp*
+.settings
