@@ -33,7 +33,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-font
-      (font-spec :family "Fira Code" :size 16
+      (font-spec :family "Fira Code" :size 14
                  :weight 'normal))
 
 ;; (setq doom-theme 'doom-snazzy)
@@ -45,6 +45,8 @@
 ;; (setq doom-theme 'doom-solarized)
 ;; (setq doom-theme 'doom-solarized-light)
 ;; (setq doom-theme 'doom-acario-light)
+
+(setq doom-theme 'doom-spacegrey)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
