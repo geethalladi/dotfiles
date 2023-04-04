@@ -56,3 +56,4 @@ META-INF
 target/
 generated/
 out/
+.settings
