@@ -54,3 +54,5 @@ javadocs/
 META-INF
 .clj-kondo/
 target/
+generated/
+out/
