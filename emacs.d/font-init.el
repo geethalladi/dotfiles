@@ -3,10 +3,11 @@
 
 (set-face-attribute 'default nil
                     :family "Fira Code"
-                    :height 160
+                    :height 140
                     :weight 'normal
                     :width  'normal
                     :slant  'normal)
+(setq-default line-spacing 0.1)
 
 (defun self/use-variable-width-font ()
   "Use variable width font in current buffer"
