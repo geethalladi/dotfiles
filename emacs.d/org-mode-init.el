@@ -20,9 +20,10 @@
 ;; (add-hook 'org-mode-hook 'stripe-table-mode)
 ;; (add-hook 'org-mode-hook 'autopair-mode)
 
-;; org clock sound file
-(setq org-clock-sound
-      (load (expand-file-name "vendor/ding.mp3" user-emacs-directory)))
+;; TODO: Make the org-mode-timer work
+;; ;; org clock sound file
+;; (setq org-clock-sound
+;;       (load (expand-file-name "vendor/ding.mp3" user-emacs-directory)))
 
 (defun self/-org-mode-before-save-hook ()
   "Update the org-statistics in the entire file"
