@@ -238,6 +238,8 @@
  (depends-on "sql-indent")
  (depends-on "soft-morning-theme")
  (depends-on "solarized-theme")
+ (depends-on "spacemacs-theme")
+ (depends-on "spacegray-theme")
  (depends-on "sr-speedbar")
  ;; (depends-on "straight")
  (depends-on "stripe-buffer")
