@@ -1,3 +1,9 @@
+(defun self/java-mode ()
+  "Java mode customizations"
+  (setq line-spacing 0.2))
+
+(add-hook 'java-mode-hook 'self/java-mode)
+
 ;; (condition-case nil
 ;;     (require 'use-package)
 ;;   (file-error
