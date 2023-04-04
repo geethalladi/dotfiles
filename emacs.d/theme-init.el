@@ -9,6 +9,11 @@
 ;; (load-theme 'heroku t)
 ;; (load-theme 'leuven t)
 
+(defun self/-load-spacemacs-theme ()
+  "Load spacemacs theme"
+  (require 'spacemacs-dark-theme)
+  (load-theme 'spacemacs-dark t))
+
 (defun self/-load-heroku-theme ()
   "Customizing heroku theme"
   (load-theme 'heroku t)
@@ -192,9 +197,10 @@
 (defun self/load-dark-theme ()
   "dark theme"
   (interactive)
-  (require 'zenburn-theme)
-  (load-theme 'zenburn t)
-  (self/-dark-theme-custom))
+  ;; (require 'zenburn-theme)
+  ;; (load-theme 'zenburn t)
+  ;; (self/-dark-theme-custom)
+  (self/-load-spacemacs-theme))
 
 (defun self/reload-theme ()
   "Load theme as per the environment"
