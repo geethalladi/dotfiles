@@ -101,7 +101,7 @@
       "https://download.eclipse.org/jdtls/milestones/0.57.0/jdt-language-server-0.57.0-202006172108.tar.gz")
 
 (setq lsp-java-vmargs
-      '("-noverify" "-Xmx1G" "-XX:+UseG1GC" "-XX:+UseStringDeduplication"
+      '("-noverify" "-Xmx3G" "-XX:+UseG1GC" "-XX:+UseStringDeduplication"
         "-javaagent:/Users/galladi/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar"
         "-Xbootclasspath/a:/Users/galladi/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar"))
 
@@ -113,6 +113,8 @@
 
 (global-set-key (kbd "C-c t n") 'centaur-tabs-forward)
 (global-set-key (kbd "C-c t b")  'centaur-tabs-backward)
+
+(setq-default line-spacing 0.12)
 
 (require 'lsp-sonarlint)
 (require 'lsp-sonarlint-java)
