@@ -6,7 +6,8 @@
  '(package-selected-packages '(undo-fu lsp-java))
  '(warning-suppress-log-types '((doom-first-file-hook) (defvaralias)))
  '(warning-suppress-types
-   '((doom-init-ui-hook)
+   '((initialization)
+     (doom-init-ui-hook)
      (doom-first-buffer-hook)
      (doom-first-file-hook)
      (defvaralias))))
