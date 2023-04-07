@@ -52,3 +52,5 @@
 (package! osx-clipboard)
 (package! undo-fu)
 (package! lsp-sonarlint)
+(package! pocket-reader)
+(package! ebuku)
