@@ -356,3 +356,7 @@
   (set-mark-command 1))
 
 (global-set-key (kbd "M-`") 'self/jump-to-mark)
+
+;; requiring the packages
+(require 'pocket-reader)
+(require 'ebuku)
