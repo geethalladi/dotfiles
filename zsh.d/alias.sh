@@ -54,3 +54,7 @@ function open_in_emacs_buffer() {
 
 alias shw='show'
 alias eb='open_in_emacs_buffer'
+# open jacoco code coverage report
+alias jccr='open build/reports/jacoco/html/index.html'
+# alias to git root
+alias gitr='cd $(git root)'
