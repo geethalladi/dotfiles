@@ -54,3 +54,5 @@
 (package! lsp-sonarlint)
 (package! pocket-reader)
 (package! ebuku)
+(package! copilot
+  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
