@@ -25,3 +25,20 @@
           (replaced (replace-regexp-in-string "\\`.+github\\.com:\\(.+\\)\\.git\\'" "\\1" remote))
           (formatted (format github-pr-uri replaced current)))
      formatted)))
+
+(defun self/replace-word-at-point (fn)
+ (let* ((word (thing-at-point 'word))
+     (new-word (funcall fn word)))
+     (delete-region (point) (point-at-eol))
+     (insert new-word)))
+
+(defun self/simplify-java-class-name (class)
+  "Simplify the Java class name of the given the path"
+  (setq class (replace-regexp-in-string "\\.java$" "" class))
+  (let* ((parts (split-string class "/"))
+         (packages (butlast parts))
+         (class-name (car (last parts)))
+         (simplified (mapcar (lambda (s) (substring s 0 1)) packages))
+         (joined (mapconcat 'identity simplified "."))
+         (result (concat joined "." class-name)))
+        result))
