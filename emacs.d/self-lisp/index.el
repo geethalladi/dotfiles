@@ -34,6 +34,7 @@
 
 (defun self/simplify-java-class-name (class)
   "Simplify the Java class name of the given the path"
+  ;; remove the .java extension
   (setq class (replace-regexp-in-string "\\.java$" "" class))
   (let* ((parts (split-string class "/"))
          (packages (butlast parts))
