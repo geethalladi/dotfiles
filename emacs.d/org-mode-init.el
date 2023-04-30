@@ -47,6 +47,20 @@
        (unless (string-match "Cannot move past superior level or buffer limit" err-msg)
          (signal 'user-error (list err-msg)))))))
 
+(defun self/-disable-org-level-height ()
+  "Disabling increasing height in org mode"
+  (dolist (face '(org-level-1
+                  org-level-2))
+    (set-face-attribute face nil :weight 'semi-bold :height 1.1))
+
+  (dolist (face '(org-level-3
+                  org-level-4
+                  org-level-5
+                  org-level-6
+                  org-level-7
+                  org-level-8))
+    (set-face-attribute face nil :weight 'semi-bold :height 1.0)))
+
 (defun self/-org-mode ()
   "org mode customization"
   ;; Always use org indent minor mode
@@ -98,6 +112,9 @@
 
   ;; Using Shift keys for navigation across windows
   (windmove-default-keybindings)
+
+  ;; disable increasing header height
+  (self/-disable-org-level-height)
 
   ;; (require 'comapny-wordfreq)
   (setq-local company-backends
