@@ -57,3 +57,4 @@ target/
 generated/
 out/
 .settings
+venv/
