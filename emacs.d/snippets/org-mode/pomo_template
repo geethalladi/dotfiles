@@ -2,7 +2,7 @@
 # name: pomo_template
 # key: po
 # --
-*** `(format-time-string "%d-%m-%Y")` ()
+**** `(format-time-string "%d-%m-%Y")` ()
 |----+---+---|
 | [] |   |   |
 |----+---+---|
