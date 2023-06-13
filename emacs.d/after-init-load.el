@@ -145,7 +145,7 @@
   (load (expand-file-name "go-init.el" user-emacs-directory))
   (load (expand-file-name "c-init.el" user-emacs-directory))
 
-  (load (expand-file-name "java-init.el" user-emacs-directory))
+  ;; (load (expand-file-name "java-init.el" user-emacs-directory))
   (load (expand-file-name "clojure-init.el" user-emacs-directory))
   (load (expand-file-name "lisp-init.el" user-emacs-directory))
 
