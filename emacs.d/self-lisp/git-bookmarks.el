@@ -36,3 +36,17 @@
 
 (git-bookmark-create "test")
 
+(defun git-bookmark-delete (bookmark)
+  "Delete the bookmark with the given name"
+  ;; if bk-name is empty ask for the name
+  ;; remove the stash reference with the given name
+)
+
+(defun git-bookmark-switch (bookmark)
+  ;; switch to the bookmark
+  (interactive)
+  ;; switch the branch
+  ;; apply the stash
+  ;; remove the stash entry
+  ;; git stash apply stash^{/say-my-name}
+)
