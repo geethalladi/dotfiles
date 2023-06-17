@@ -14,3 +14,14 @@
   (s-replace bookmark-suffix "" stash))
 
 ;; (bookmark-name "test-git-bookmark")
+
+(defun git-bookmark-list ()
+  "List all the created git bookmarks"
+  ;; get all the git stash
+  ;; git reflog  --pretty=format:"%gs" refs/stash --grep=git-bookmark
+  (let* ((output (magit-git-lines "stash" "list" "--format=%gs" (concat "--grep=" bookmark-suffix)))
+         (results (or output '())))
+    (mapcar 'bookmark-name results)))
+
+;; (git-bookmark-list)
+
