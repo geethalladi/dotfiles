@@ -25,3 +25,14 @@
 
 ;; (git-bookmark-list)
 
+(defun git-bookmark-create (bookmark)
+  "Create a bookmark with the current snapshot"
+  ;; append -git-bookmark
+  ;; assert not stash with the given reference exist
+  ;; create a stash (git stash -u) with the given name
+  (interactive)
+  (let* ((name (stash-name bookmark)))
+    (magit-stash-both name t)))
+
+(git-bookmark-create "test")
+
