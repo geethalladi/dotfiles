@@ -27,18 +27,15 @@
 
 (defun git-bookmark-create (bookmark)
   "Create a bookmark with the current snapshot"
-  ;; append -git-bookmark
-  ;; assert not stash with the given reference exist
+  ;; TODO: delete an already existing bookmark
   ;; create a stash (git stash -u) with the given name
-  (interactive)
   (let* ((name (stash-name bookmark)))
     (magit-stash-both name t)))
 
-(git-bookmark-create "test")
+;; (git-bookmark-create "test")
 
 (defun git-bookmark-delete (bookmark)
   "Delete the bookmark with the given name"
-  ;; if bk-name is empty ask for the name
   ;; remove the stash reference with the given name
 )
 
