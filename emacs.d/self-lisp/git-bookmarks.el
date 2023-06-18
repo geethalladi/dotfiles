@@ -25,6 +25,10 @@
 
 ;; (git-bookmark-list)
 
+(defun git-bookmark-ref (bookmark)
+  "Return the stash reference of the given bookmark"
+  nil)
+
 (defun git-bookmark-create (bookmark)
   "Create a bookmark with the current snapshot"
   ;; TODO: delete an already existing bookmark
