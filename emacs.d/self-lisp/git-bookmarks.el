@@ -39,6 +39,18 @@
   ;; remove the stash reference with the given name
 )
 
+(defun has-file-changes-p ()
+  "Check if there are any files changes"
+  t)
+
+(defun git-bookmark-save ()
+  "Save the current state as a bookmark"
+  ;; save only if there are file changes
+  (if (has-file-changes-p)
+      (let* ((branch (magit-get-current-branch))
+             (bookmark (bookmark-name branch)))
+        (git-bookmark-create bookmark))))
+
 (defun git-bookmark-switch (bookmark)
   ;; switch to the bookmark
   (interactive)
