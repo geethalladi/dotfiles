@@ -8,22 +8,15 @@
 (defun stash-name (bookmark)
   (s-concat bookmark "-git-bookmark"))
 
-;; (stash-name "test")
-
 (defun bookmark-name (stash)
   (s-replace bookmark-suffix "" stash))
 
-;; (bookmark-name "test-git-bookmark")
-
 (defun git-bookmark-list ()
   "List all the created git bookmarks"
-  ;; get all the git stash
   ;; git reflog  --pretty=format:"%gs" refs/stash --grep=git-bookmark
   (let* ((output (magit-git-lines "stash" "list" "--format=%gs" (concat "--grep=" bookmark-suffix)))
          (results (or output '())))
     (mapcar 'bookmark-name results)))
-
-;; (git-bookmark-list)
 
 (defun git-bookmark-ref (bookmark)
   "Return the stash reference of the given bookmark"
@@ -35,8 +28,6 @@
   ;; create a stash (git stash -u) with the given name
   (let* ((name (stash-name bookmark)))
     (magit-stash-both name t)))
-
-;; (git-bookmark-create "test")
 
 (defun git-bookmark-delete (bookmark)
   "Delete the bookmark with the given name"
