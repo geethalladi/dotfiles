@@ -59,11 +59,15 @@
 
 ;; creating helm source
 
-(setq git-bookmark-helm-source
-      '((name . "Git bookmarks")
-        (candidates . git-bookmark-list)
-        (volatile)
-        (action . git-bookmark-switch)))
+(defun helm-git-bookmark ()
+  "Invoke helm git bookmark"
+  (interactive)
+  (setq git-bookmark-helm-source
+        '((name . "Git bookmarks")
+          (candidates . git-bookmark-list)
+          (volatile)
+          (action . git-bookmark-switch)))
+  (helm :sources '(git-bookmark-helm-source)))
 
-(helm :sources '(git-bookmark-helm-source))
+(global-set-key (kbd "C-c g b") 'helm-git-bookmark)
 
