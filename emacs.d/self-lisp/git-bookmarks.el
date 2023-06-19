@@ -20,6 +20,7 @@
 
 (defun git-bookmark-ref (bookmark)
   "Return the stash reference of the given bookmark"
+  ;; TODO
   nil)
 
 (defun git-bookmark-create (bookmark)
@@ -31,11 +32,12 @@
 
 (defun git-bookmark-delete (bookmark)
   "Delete the bookmark with the given name"
-  ;; remove the stash reference with the given name
+  ;; TODO: remove the stash reference with the given name
 )
 
 (defun has-file-changes-p ()
   "Check if there are any files changes"
+  ;; TODO
   t)
 
 (defun git-bookmark-save ()
@@ -47,8 +49,7 @@
         (git-bookmark-create bookmark))))
 
 (defun git-bookmark-switch (bookmark)
-  ;; switch to the bookmark
-  (interactive)
+  ;; TODO: switch to the bookmark
   ;; switch the branch
   ;; apply the stash
   ;; remove the stash entry
