@@ -28,6 +28,7 @@
   ;; TODO: delete an already existing bookmark
   ;; create a stash (git stash -u) with the given name
   (let* ((name (stash-name bookmark)))
+    (git-bookmark-delete bookmark)
     (magit-stash-both name t)))
 
 (defun git-bookmark-delete (bookmark)
@@ -54,4 +55,15 @@
   ;; apply the stash
   ;; remove the stash entry
   ;; git stash apply stash^{/say-my-name}
-)
+  (message (format "Switching to git-bookmark %s" bookmark)))
+
+;; creating helm source
+
+(setq git-bookmark-helm-source
+      '((name . "Git bookmarks")
+        (candidates . git-bookmark-list)
+        (volatile)
+        (action . git-bookmark-switch)))
+
+(helm :sources '(git-bookmark-helm-source))
+
