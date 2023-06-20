@@ -47,7 +47,7 @@
 
 (defun git-bookmark-save ()
   "Save the current state as a bookmark"
-  ;; save only if there are file changes
+  (interactive)
   (if (has-file-changes-p)
       (let* ((branch (magit-get-current-branch))
              (bookmark (bookmark-name branch)))
