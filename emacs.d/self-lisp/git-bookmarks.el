@@ -45,6 +45,10 @@
   ;; git status -s
   (not (null (magit-git-lines "status" "-s"))))
 
+(defun switch-to-main-branch ()
+  "Switch the main branch"
+  (magit-branch-checkout (magit-main-branch)))
+
 (defun git-bookmark-save ()
   "Save the current state as a bookmark"
   (interactive)
@@ -52,14 +56,14 @@
       (let* ((branch (magit-get-current-branch))
              (bookmark (bookmark-name branch)))
         (git-bookmark-create bookmark)
-        ;; go to the main branch
-        (magit-git-lines "main"))
+        (switch-to-main-branch))
     (message "No changes to save")))
 
 (defun git-bookmark-switch (bookmark)
   "Switch to the mentioned git-bookmark"
   (if (has-file-changes-p)
       (message "Save the work before switching")
+    ;; else
     ;; switch the branch
     ;; remove the stash entry
     ;; git stash apply stash^{/say-my-name}
@@ -73,7 +77,7 @@
 
 ;; creating helm source
 
-(defun helm-git-bookmark-switch ()
+(defun helm-git-bookmark ()
   "Invoke helm git bookmark"
   (interactive)
   (setq git-bookmark-helm-source
@@ -84,5 +88,9 @@
   (helm :sources '(git-bookmark-helm-source)))
 
 ;; creating key bindings
-(global-set-key (kbd "C-c b w") 'helm-git-bookmark-switch)
+
+(global-unset-key (kbd "C-c b"))
+
+(global-set-key (kbd "C-c b l") 'helm-git-bookmark)
+
 (global-set-key (kbd "C-c b s") 'git-bookmark-save)
