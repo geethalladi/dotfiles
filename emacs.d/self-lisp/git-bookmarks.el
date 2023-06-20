@@ -53,7 +53,8 @@
              (bookmark (bookmark-name branch)))
         (git-bookmark-create bookmark)
         ;; go to the main branch
-        (magit-git-lines "main"))))
+        (magit-git-lines "main"))
+    (message "No changes to save")))
 
 (defun git-bookmark-switch (bookmark)
   "Switch to the mentioned git-bookmark"
