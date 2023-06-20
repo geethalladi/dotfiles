@@ -13,15 +13,17 @@
 
 (defun git-bookmark-list ()
   "List all the created git bookmarks"
-  ;; git reflog  --pretty=format:"%gs" refs/stash --grep=git-bookmark
+  ;; git reflog --pretty=format:"%gs" refs/stash --grep=git-bookmark
   (let* ((output (magit-git-lines "stash" "list" "--format=%gs" (concat "--grep=" bookmark-suffix)))
          (results (or output '())))
     (mapcar 'bookmark-name results)))
 
 (defun git-bookmark-ref (bookmark)
   "Return the stash reference of the given bookmark"
-  ;; TODO
-  nil)
+  (let* ((output (magit-git-lines
+                  "reflog" "--pretty=format:%gD" "refs/stash" (concat "--grep=" bookmark bookmark-suffix)))
+         (results (or output '())))
+    (car results)))
 
 (defun git-bookmark-create (bookmark)
   "Create a bookmark with the current snapshot"
