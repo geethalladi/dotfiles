@@ -42,8 +42,8 @@
 
 (defun has-file-changes-p ()
   "Check if there are any files changes"
-  ;; TODO
-  t)
+  ;; git status -s
+  (not (null (magit-git-lines "status" "-s"))))
 
 (defun git-bookmark-save ()
   "Save the current state as a bookmark"
