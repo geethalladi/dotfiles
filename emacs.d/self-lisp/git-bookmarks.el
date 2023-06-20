@@ -60,17 +60,16 @@
   "Switch to the mentioned git-bookmark"
   (if (has-file-changes-p)
       (message "Save the work before switching")
-    (progn
-      ;; switch the branch
-      ;; remove the stash entry
-      ;; git stash apply stash^{/say-my-name}
-      ;; post switch delete the bookmark
-      (let* ((branch bookmark)
-             (stash (stash-name bookmark)))
-        (message (format "Switching to git-bookmark %s" bookmark))
-        (magit-branch-checkout branch)
-        (magit-git-lines "stash" "apply" (format "stash^{/%s}" stash))
-        (git-bookmark-delete bookmark)))))
+    ;; switch the branch
+    ;; remove the stash entry
+    ;; git stash apply stash^{/say-my-name}
+    ;; post switch delete the bookmark
+    (let* ((branch bookmark)
+           (stash (stash-name bookmark)))
+      (message (format "Switching to git-bookmark %s" bookmark))
+      (magit-branch-checkout branch)
+      (magit-git-lines "stash" "apply" (format "stash^{/%s}" stash))
+      (git-bookmark-delete bookmark))))
 
 ;; creating helm source
 
