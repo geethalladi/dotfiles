@@ -73,7 +73,7 @@
 
 ;; creating helm source
 
-(defun helm-git-bookmark ()
+(defun helm-git-bookmark-switch ()
   "Invoke helm git bookmark"
   (interactive)
   (setq git-bookmark-helm-source
@@ -83,4 +83,6 @@
           (action . git-bookmark-switch)))
   (helm :sources '(git-bookmark-helm-source)))
 
-(global-set-key (kbd "C-c g b") 'helm-git-bookmark)
+;; creating key bindings
+(global-set-key (kbd "C-c b w") 'helm-git-bookmark-switch)
+(global-set-key (kbd "C-c b s") 'git-bookmark-save)

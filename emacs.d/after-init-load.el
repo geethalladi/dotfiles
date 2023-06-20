@@ -161,6 +161,8 @@
   ;; to facilitate the velocity of lectures
   (load (expand-file-name "self-lisp/lecture-stats.el" user-emacs-directory))
   (load (expand-file-name "self-lisp/index.el" user-emacs-directory))
+  ;; for git bookmarks
+  (load (expand-file-name "self-lisp/git-bookmarks.el" user-emacs-directory))
   ;; dayjob customizations
   (load (expand-file-name "self-lisp/dayjob.el" user-emacs-directory)))
 
