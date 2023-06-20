@@ -68,9 +68,8 @@
              (stash (stash-name bookmark)))
         (message (format "Switching to git-bookmark %s" bookmark))
         (magit-branch-checkout branch)
-        (magit-git-lines "stash" "apply" (format "stash^{%s}" stash))
+        (magit-git-lines "stash" "apply" (format "stash^{/%s}" stash))
         (git-bookmark-delete bookmark)))))
-
 
 ;; creating helm source
 
@@ -85,4 +84,3 @@
   (helm :sources '(git-bookmark-helm-source)))
 
 (global-set-key (kbd "C-c g b") 'helm-git-bookmark)
-
