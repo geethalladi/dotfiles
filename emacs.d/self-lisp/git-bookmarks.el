@@ -51,7 +51,9 @@
   (if (has-file-changes-p)
       (let* ((branch (magit-get-current-branch))
              (bookmark (bookmark-name branch)))
-        (git-bookmark-create bookmark))))
+        (git-bookmark-create bookmark)
+        ;; go to the main branch
+        (magit-git-lines "main"))))
 
 (defun git-bookmark-switch (bookmark)
   ;; TODO: switch to the bookmark
