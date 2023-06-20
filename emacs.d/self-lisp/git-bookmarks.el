@@ -35,8 +35,10 @@
 
 (defun git-bookmark-delete (bookmark)
   "Delete the bookmark with the given name"
-  ;; TODO: remove the stash reference with the given name
-)
+  ;; git stash drop refs/stash@{1}
+  (let* ((ref (git-bookmark-ref bookmark)))
+    (if ref
+        (magit-git-lines "stash" "drop" ref))))
 
 (defun has-file-changes-p ()
   "Check if there are any files changes"
