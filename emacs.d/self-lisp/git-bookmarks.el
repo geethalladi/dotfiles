@@ -67,14 +67,12 @@
       (message "Save the work before switching")
     ;; else
     ;; switch the branch
-    ;; remove the stash entry
     ;; git stash apply stash^{/say-my-name}
     ;; post switch delete the bookmark
     (let* ((branch bookmark)
            (stash (stash-name bookmark))
-           (stash-ref (git-bookmark-ref bookmark))
-           (stash-bookmark-name (format "stash^{/%s}" stash)))
-      (message (format "Switching to git-bookmark %s" stash-bookmark-name))
+           (stash-ref (git-bookmark-ref bookmark)))
+      (message (format "Switching to git-bookmark %s" stash))
       (magit-branch-checkout branch)
       (message "output: %s" (magit-git-lines "stash" "apply" stash-ref))
       (git-bookmark-delete bookmark))))
