@@ -47,7 +47,8 @@
 
 (defun switch-to-main-branch ()
   "Switch the main branch"
-  (magit-branch-checkout (magit-main-branch)))
+  ;; (magit-branch-checkout (magit-main-branch))
+  (magit-branch-checkout (magit-git-string "main")))
 
 (defun git-bookmark-save ()
   "Save the current state as a bookmark"
@@ -56,6 +57,7 @@
       (let* ((branch (magit-get-current-branch))
              (bookmark (bookmark-name branch)))
         (git-bookmark-create bookmark)
+        (message "switching to main branch")
         (switch-to-main-branch))
     (message "No changes to save")))
 
