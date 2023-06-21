@@ -119,15 +119,16 @@
   "Load the development environment"
   (load (expand-file-name "text-mode-init.el" user-emacs-directory)))
 
-(defun self/load-dev-env ()
-  "Load the development environment"
-
+(defun self/load-basic-dev-env ()
+  "Load the basic development environment"
   (load (expand-file-name "smartparens-init.el" user-emacs-directory))
 
   ;; (load (expand-file-name "term-init.el" user-emacs-directory))
   (load (expand-file-name "multi-term-init.el" user-emacs-directory))
-  (load (expand-file-name "eshell-init.el" user-emacs-directory))
+  (load (expand-file-name "eshell-init.el" user-emacs-directory)))
 
+(defun self/load-dev-env ()
+  "Load the development environment"
   (load (expand-file-name "py-init.el" user-emacs-directory))
   (load (expand-file-name "rb-init.el" user-emacs-directory))
   ;; (load (expand-file-name "haskell-init.el" user-emacs-directory))
