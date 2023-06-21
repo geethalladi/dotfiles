@@ -61,11 +61,6 @@
 
 (add-hook 'markdown-mode-hook 'self/markdown-mode)
 
-;;
-;; TLA+ specification mode
-(load-file
- (expand-file-name "vendor/tla-pcal-mode.el" user-emacs-directory))
-
 ;; info mode
 (add-hook 'Info-mode-hook 'self/use-variable-width-font)
 
@@ -126,20 +121,7 @@
              (expand-file-name "vendor/bookmark-plus" user-emacs-directory))
 (require 'bookmark+)
 
-;; zeal integration
-(require 'zeal-at-point)
-(global-set-key (kbd "C-c C-d") 'zeal-at-point)
-
 (require 'ag)
-
-(add-to-list 'zeal-at-point-mode-alist
-             '(python-mode . ("python3" "scipy" "numpy" "pandas" "sqlalchemy")))
-(add-to-list 'zeal-at-point-mode-alist '(emacs-lisp-mode   . ("elisp")))
-(add-to-list 'zeal-at-point-mode-alist '(shell-script-mode . ("bash")))
-(add-to-list 'zeal-at-point-mode-alist '(ocaml-mode        . ("ocaml")))
-(add-to-list 'zeal-at-point-mode-alist '(sql-mode          . ("sqlite" "mysql")))
-(add-to-list 'zeal-at-point-mode-alist '(dockerfile-mode   . ("docker")))
-(add-to-list 'zeal-at-point-mode-alist '(latex-mode        . ("latex")))
 
 (require 'sr-speedbar)
 
@@ -160,9 +142,3 @@
   ("C-c t g" . centaur-tabs-switch-group))
 
 (centaur-tabs-mode t)
-
-(require 'terraform-mode)
-(require 'terraform-doc)
-
-(require 'lua-mode)
-(setq lua-indent-level 1)

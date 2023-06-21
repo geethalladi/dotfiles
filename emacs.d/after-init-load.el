@@ -152,8 +152,36 @@
   (load (expand-file-name "other-modes-init.el" user-emacs-directory))
   (load (expand-file-name "log-init.el" user-emacs-directory))
 
+  ;; TLA+ specification mode
+  (load-file
+   (expand-file-name "vendor/tla-pcal-mode.el" user-emacs-directory))
+
+  (self/other-dev-modes)
+  (self/load-zeal)
+
   ;; Loading font ligatures for development
   (load (expand-file-name "font-ligatures.el" user-emacs-directory)))
+
+(defun self/other-dev-modes ()
+  "Other development modes"
+  (require 'terraform-mode)
+  (require 'terraform-doc)
+  (require 'lua-mode)
+  (setq lua-indent-level 1))
+
+(defun self/load-zeal ()
+  "Load Zeal Integration"
+  (require 'zeal-at-point)
+  (global-set-key (kbd "C-c C-d") 'zeal-at-point)
+
+  (add-to-list 'zeal-at-point-mode-alist
+               '(python-mode . ("python3" "scipy" "numpy" "pandas" "sqlalchemy")))
+  (add-to-list 'zeal-at-point-mode-alist '(emacs-lisp-mode   . ("elisp")))
+  (add-to-list 'zeal-at-point-mode-alist '(shell-script-mode . ("bash")))
+  (add-to-list 'zeal-at-point-mode-alist '(ocaml-mode        . ("ocaml")))
+  (add-to-list 'zeal-at-point-mode-alist '(sql-mode          . ("sqlite" "mysql")))
+  (add-to-list 'zeal-at-point-mode-alist '(dockerfile-mode   . ("docker")))
+  (add-to-list 'zeal-at-point-mode-alist '(latex-mode        . ("latex"))))
 
 (defun self/load-self-lisp ()
   "Load my personal lisp extensions"
