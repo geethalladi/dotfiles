@@ -71,10 +71,12 @@
     ;; git stash apply stash^{/say-my-name}
     ;; post switch delete the bookmark
     (let* ((branch bookmark)
-           (stash (stash-name bookmark)))
-      (message (format "Switching to git-bookmark %s" bookmark))
+           (stash (stash-name bookmark))
+           (stash-ref (git-bookmark-ref bookmark))
+           (stash-bookmark-name (format "stash^{/%s}" stash)))
+      (message (format "Switching to git-bookmark %s" stash-bookmark-name))
       (magit-branch-checkout branch)
-      (magit-git-lines "stash" "apply" (format "stash^{/%s}" stash))
+      (message "output: %s" (magit-git-lines "stash" "apply" stash-ref))
       (git-bookmark-delete bookmark))))
 
 ;; creating helm source
