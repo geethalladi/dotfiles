@@ -15,7 +15,7 @@
   ;; load customizations of these packages
   (self/load-customizations)
   ;; load the development environment
-  (self/load-dev-env)
+  ;; (self/load-dev-env)
   ;; load org mode customizations
   (self/load-org-env)
   ;; load writing texts
@@ -145,7 +145,7 @@
 
   ;; (load (expand-file-name "elixir-init.el" user-emacs-directory))
   ;; (load (expand-file-name "scala-init.el" user-emacs-directory))
-  (load (expand-file-name "go-init.el" user-emacs-directory))
+  ;; (load (expand-file-name "go-init.el" user-emacs-directory))
   (load (expand-file-name "c-init.el" user-emacs-directory))
 
   ;; (load (expand-file-name "java-init.el" user-emacs-directory))
