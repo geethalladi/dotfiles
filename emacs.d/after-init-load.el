@@ -55,7 +55,10 @@
   (load (expand-file-name "custom.el" user-emacs-directory))
   (load (expand-file-name "terminal-key-decode.el" user-emacs-directory))
   (load (expand-file-name "theme-init.el" user-emacs-directory))
-  (load (expand-file-name "tamil-font.el" user-emacs-directory)))
+  (load (expand-file-name "tamil-font.el" user-emacs-directory))
+
+  ;; Loading font ligatures for development
+  (load (expand-file-name "font-ligatures.el" user-emacs-directory)))
 
 (defun self/-diminish-modal-line ()
   "Remove the most used packages from the modal line"
@@ -159,8 +162,7 @@
   (self/other-dev-modes)
   (self/load-zeal)
 
-  ;; Loading font ligatures for development
-  (load (expand-file-name "font-ligatures.el" user-emacs-directory)))
+  )
 
 (defun self/other-dev-modes ()
   "Other development modes"
