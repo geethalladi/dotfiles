@@ -15,6 +15,7 @@
   ;; load customizations of these packages
   (self/load-customizations)
   ;; load the development environment
+  (self/load-basic-dev-env)
   ;; (self/load-dev-env)
   ;; load org mode customizations
   (self/load-org-env)
@@ -125,7 +126,14 @@
 
   ;; (load (expand-file-name "term-init.el" user-emacs-directory))
   (load (expand-file-name "multi-term-init.el" user-emacs-directory))
-  (load (expand-file-name "eshell-init.el" user-emacs-directory)))
+  (load (expand-file-name "eshell-init.el" user-emacs-directory))
+
+  (load (expand-file-name "company-init.el" user-emacs-directory))
+  (load (expand-file-name "projectile-init.el" user-emacs-directory))
+
+  (load (expand-file-name "lisp-init.el" user-emacs-directory))
+
+  (load (expand-file-name "other-modes-init.el" user-emacs-directory)))
 
 (defun self/load-dev-env ()
   "Load the development environment"
@@ -135,9 +143,6 @@
   (load (expand-file-name "ocaml-init.el" user-emacs-directory))
   ;; (load (expand-file-name "erlang-init.el" user-emacs-directory))
   (load (expand-file-name "prolog-init.el" user-emacs-directory))
-
-  (load (expand-file-name "company-init.el" user-emacs-directory))
-  (load (expand-file-name "projectile-init.el" user-emacs-directory))
 
   ;; Loading js init script
   (load (expand-file-name "js-init.el" user-emacs-directory))
@@ -151,9 +156,6 @@
 
   ;; (load (expand-file-name "java-init.el" user-emacs-directory))
   (load (expand-file-name "clojure-init.el" user-emacs-directory))
-  (load (expand-file-name "lisp-init.el" user-emacs-directory))
-
-  (load (expand-file-name "other-modes-init.el" user-emacs-directory))
   (load (expand-file-name "log-init.el" user-emacs-directory))
 
   ;; TLA+ specification mode
@@ -161,9 +163,7 @@
    (expand-file-name "vendor/tla-pcal-mode.el" user-emacs-directory))
 
   (self/other-dev-modes)
-  (self/load-zeal)
-
-  )
+  (self/load-zeal))
 
 (defun self/other-dev-modes ()
   "Other development modes"
