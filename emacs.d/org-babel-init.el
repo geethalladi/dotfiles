@@ -51,5 +51,8 @@
 ; of setting this -- see the docstring for details
 (setq org-confirm-babel-evaluate nil)
 
+;; image width in org mode
+(setq org-image-actual-width 900)
+
 ; Use fundamental mode when editing plantuml blocks with C-c '
 (add-to-list 'org-src-lang-modes (quote ("plantuml" . fundamental)))
