@@ -16,7 +16,7 @@
   (self/load-customizations)
   ;; load the development environment
   (self/load-basic-dev-env)
-  ;; (self/load-dev-env)
+  (self/load-dev-env)
   ;; load org mode customizations
   (self/load-org-env)
   ;; load writing texts
