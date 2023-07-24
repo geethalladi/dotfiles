@@ -142,6 +142,27 @@
 
 (defun self/-less-bright-theme-custom ()
   "Custom settings for a less bright theme"
+  (use-package solarized
+    :ensure solarized-theme
+    :defer t
+    :init
+    (defun self/solarized-theme-hook ()
+      (set-face-attribute 'font-lock-constant-face nil :weight 'normal)
+      (set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
+      (set-face-attribute 'which-key-key-face nil :foreground
+                          (face-attribute 'error :foreground)))
+    :config
+    (setq solarized-use-variable-pitch nil
+          solarized-use-less-bold t
+          solarized-use-more-italic nil
+          solarized-distinct-doc-face t
+          solarized-high-contrast-mode-line t
+          solarized-height-minus-1 1.0
+          solarized-height-plus-1 1.0
+          solarized-height-plus-2 1.0
+          solarized-height-plus-3 1.0
+          solarized-height-plus-4 1.0))
+
   (custom-set-faces
    ;; org mode faces theme
    ;; replacing with better variants from
@@ -169,7 +190,8 @@
 (defun self/load-less-bright-theme ()
   "less bright theme"
   (interactive)
-  (load-theme 'solarized-light t)
+  (require 'solarized)
+  (load-theme 'solarized-selenized-light t)
   (self/-less-bright-theme-custom))
 
 (defun self/load-light-theme ()
@@ -215,6 +237,6 @@
    ;; else in window system
    ;; ((window-system) (self/load-light-theme))
    ;; fall back to light
-   (t (self/load-dark-theme))))
+   (t (self/load-less-bright-theme))))
 
 (self/reload-theme)
