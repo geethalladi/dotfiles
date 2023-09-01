@@ -58,3 +58,4 @@ alias eb='open_in_emacs_buffer'
 alias jccr='open build/reports/jacoco/html/index.html'
 # alias to git root
 alias gitr='cd $(git root)'
+alias jutr="find . -name reports -type d -exec open '{}/tests/test/index.html' \;"

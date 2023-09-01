@@ -104,3 +104,6 @@ export DOCS_DIR=${PRIVATE_DIR}/documents
 export WRITING_DIR=${PRIVATE_DIR}/writing
 export MEETING_DIR=${WRITING_DIR}/meeting
 export EMAIL_DIR=${WRITING_DIR}/email
+
+# for elpy
+export WORKON_HOME=$HOME/.local/share/virtualenvs
