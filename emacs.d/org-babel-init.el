@@ -44,6 +44,8 @@
          (ledger . t)
          (org . t)
          (plantuml . t)
+         (scheme . t)
+         (mermaid . t)
          (latex . t))))
 
 ; Do not prompt to confirm evaluation
@@ -56,3 +58,7 @@
 
 ; Use fundamental mode when editing plantuml blocks with C-c '
 (add-to-list 'org-src-lang-modes (quote ("plantuml" . fundamental)))
+
+;; ob-mermaid
+(setq ob-mermaid-cli-path
+      (expand-file-name "~/.nvm/versions/node/v18.14.2/bin/mmdc"))
