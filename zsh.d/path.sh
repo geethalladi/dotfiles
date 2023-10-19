@@ -34,7 +34,7 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
         source ${DOTFILE_DIR_ZSH}/xvm.sh
     fi
 
-    # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+    # Add RVM to PATH for scripting.
     PATH="$PATH:$HOME/.rvm/bin"
     export MANPATH="/usr/local/man:$MANPATH"
 
