@@ -218,10 +218,10 @@
 (defun self/load-dark-theme ()
   "dark theme"
   (interactive)
-  ;; (require 'zenburn-theme)
-  ;; (load-theme 'zenburn t)
+  ;; (self/-load-spacemacs-theme)
   ;; (self/-dark-theme-custom)
-  (self/-load-spacemacs-theme))
+  (require 'zenburn-theme)
+  (load-theme 'zenburn t))
 
 (defun self/reload-theme ()
   "Load theme as per the environment"
@@ -236,6 +236,7 @@
    ;; else in window system
    ;; ((window-system) (self/load-light-theme))
    ;; fall back to light
-   (t (self/load-less-bright-theme))))
+   ;; (t (self/load-less-bright-theme))
+   (t (self/load-dark-theme))))
 
 (self/reload-theme)
