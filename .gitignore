@@ -45,3 +45,4 @@ workspace/
 eclipse.jdt*
 .lsp*
 .settings
+emacs.d/use-package/
