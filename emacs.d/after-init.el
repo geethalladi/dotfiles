@@ -57,6 +57,25 @@
 
 (-mac-set-options-command-key)
 
+(defun self/init-packages ()
+  "Initialise all the dependent packages"
+  (require 'package)
+  (add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/"))
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+  (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+  (package-initialize)
+
+  (add-to-list 'load-path
+               (expand-file-name "use-package" user-emacs-directory))
+  (eval-when-compile
+    ;; Following line is not needed if use-package.el is in ~/.emacs.d
+    (require 'use-package)
+    (require 'use-package-ensure)
+    (setq use-package-always-ensure t
+          use-package-expand-minimally t)))
+
+(self/init-packages)
+
 ;; Start the emacs-server
 (load (expand-file-name "emacs-server.el" user-emacs-directory))
 
