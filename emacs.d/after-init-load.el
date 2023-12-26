@@ -78,7 +78,6 @@
 
 (defun self/use-packages()
   "Load the needed packages"
-  (message "Using packages")
   (use-package package-build)
   (use-package key-chord)
   (use-package osx-clipboard)
@@ -87,7 +86,6 @@
   (use-package pdf-tools)
   (use-package nov) ;; for epub
   (use-package dash)
-  (use-package dash-functional)
   (use-package multiple-cursors)
   (use-package smartparens)
   (use-package exec-path-from-shell)
@@ -329,9 +327,8 @@
   ;; (use-package org-plus-contrib)
   ;; (use-package pallet)
   ;; (use-package auctex)
-
   ;; (use-package straight)
-
+  ;; (use-package dash-functional)
   )
 
 (defun self/load-packages ()
