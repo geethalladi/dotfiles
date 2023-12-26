@@ -5,6 +5,23 @@
 
 ;; ;; (require 'grizzl)
 
+(use-package rhtml-mode)
+(use-package rinari)
+(use-package robe)
+(use-package rspec-mode)
+(use-package rubocop)
+(use-package ruby-compilation)
+(use-package ruby-electric)
+(use-package ruby-refactor)
+(use-package ruby-tools)
+(use-package rake)
+(use-package rspec-mode)
+(use-package ruby-test-mode)
+(use-package rvm)
+(use-package inf-ruby)
+(use-package enh-ruby-mode)
+(use-package bundler)
+
 (add-to-list 'auto-mode-alist '("\\.rb" . ruby-mode))
 
 (require 'rubocop)
