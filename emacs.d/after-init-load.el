@@ -336,33 +336,7 @@
 
 (defun self/load-packages ()
   "Loads all the installed packages"
-
-  ;; PACKAGE ARCHIVE
-  (setq package-archives
-  '(("gnu" . "http://elpa.gnu.org/packages/")
-    ;; ("marmalade" . "https://marmalade-repo.org/packages/")
-    ("melpa" . "http://melpa.org/packages/")))
-
-  ;; Org-mode's repository
-  (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-
-  ;; ENABLE CASK
-  (setq cask-filename (expand-file-name "Cask" user-emacs-directory))
-  (require 'cask)
-  (setq load-path
-        (append (cask-load-path (cask-initialize)) load-path))
-  ;; (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
-  ;; (require 'cask
-  ;;   (expand-file-name ".cask/26.1/elpa/cask-20180626.1949/cask.el" user-emacs-directory))
-  ;; Setting the location of the cask file
-  (cask-initialize user-emacs-directory)
-
-  ;; ENABLE PALLET
-  ;; (require 'pallet)
-  ;; (pallet-mode t)
-
   (require 'use-package)
-
   ;; Load vendor el files
   (add-to-list 'load-path (expand-file-name "vendor" user-emacs-directory)))
 
@@ -437,7 +411,7 @@
   (global-set-key (kbd "C-c C-d") 'zeal-at-point)
 
   (add-to-list 'zeal-at-point-mode-alist
-               '(python-mode . ("python3" "scipy" "numpy" "pandas" "sqlalchemy")))
+	       '(python-mode . ("python3" "scipy" "numpy" "pandas" "sqlalchemy")))
   (add-to-list 'zeal-at-point-mode-alist '(emacs-lisp-mode   . ("elisp")))
   (add-to-list 'zeal-at-point-mode-alist '(shell-script-mode . ("bash")))
   (add-to-list 'zeal-at-point-mode-alist '(ocaml-mode        . ("ocaml")))
