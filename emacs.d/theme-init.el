@@ -1,4 +1,14 @@
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
+(use-package grandshell-theme)
+(use-package soft-morning-theme)
+(use-package solarized-theme)
+(use-package spacemacs-theme)
+(use-package spacegray-theme)
+(use-package idea-darkula-theme)
+(use-package monokai-theme)
+(use-package heroku-theme)
+(use-package twilight-bright-theme)
+(use-package zenburn-theme)
 
 ;; default themes
 ;; (load-theme 'zenburn t)
@@ -222,7 +232,7 @@
   (self/-dark-theme-custom)
   ;; (require 'zenburn-theme)
   ;; (load-theme 'zenburn t)
-)
+  )
 
 (defun self/reload-theme ()
   "Load theme as per the environment"
@@ -240,6 +250,6 @@
    ;; (t (self/load-less-bright-theme))
    (t (self/load-light-theme))
    ;; (t (self/load-dark-theme))
-))
+   ))
 
 (self/reload-theme)
