@@ -46,3 +46,4 @@ eclipse.jdt*
 .lsp*
 .settings
 emacs.d/use-package/
+emacs.d/history
