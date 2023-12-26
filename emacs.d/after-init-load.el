@@ -360,6 +360,7 @@
   ;; (load (expand-file-name "term-init.el" user-emacs-directory))
   (load (expand-file-name "multi-term-init.el" user-emacs-directory))
   (load (expand-file-name "eshell-init.el" user-emacs-directory))
+  (load (expand-file-name "docker-init.el" user-emacs-directory))
 
   (load (expand-file-name "company-init.el" user-emacs-directory))
   (load (expand-file-name "projectile-init.el" user-emacs-directory))
