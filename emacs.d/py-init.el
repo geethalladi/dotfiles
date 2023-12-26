@@ -1,4 +1,5 @@
 ;; python mode hook
+(use-package elpy)
 
 (defun self/-python-mode-custom-keybindings ()
   "Customizing python mode keybindings"
