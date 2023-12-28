@@ -1,14 +1,14 @@
 ;; Load theme after fonts, to override conflicting customisations in favour of theme
-(use-package grandshell-theme)
-(use-package soft-morning-theme)
-(use-package solarized-theme)
-(use-package spacemacs-theme)
-(use-package spacegray-theme)
-(use-package idea-darkula-theme)
+;; (use-package grandshell-theme)
+;; (use-package soft-morning-theme)
+;; (use-package solarized-theme)
+;; (use-package spacemacs-theme)
+;; (use-package spacegray-theme)
+;; (use-package idea-darkula-theme)
 (use-package monokai-theme)
-(use-package heroku-theme)
-(use-package twilight-bright-theme)
-(use-package zenburn-theme)
+;; (use-package heroku-theme)
+;; (use-package twilight-bright-theme)
+;; (use-package zenburn-theme)
 
 ;; default themes
 ;; (load-theme 'zenburn t)
