@@ -58,3 +58,4 @@ generated/
 out/
 .settings
 venv/
+.lsp/
