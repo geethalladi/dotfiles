@@ -180,10 +180,10 @@
    :fetcher url
    :url "https://raw.githubusercontent.com/cireu/emacsql-sqlite3/master/emacsql-sqlite3.el"))
 
-(require 'ox-confluence)
+(use-package 'ox-confluence)
 
 ;; required for org-reveal mode presentations
-(require 'ox-reveal)
+(use-package 'ox-reveal)
 
 ;; configurations for org-mind-map
 ;; taken from its README
