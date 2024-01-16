@@ -253,3 +253,11 @@
    ))
 
 (self/reload-theme)
+
+(setq self/hi-lock-patterns
+      '(("@@" (0 'hi-green t))
+        ("!!" (0 'hi-salmon t))
+        ("??" (0 'hi-yellow t))))
+(font-lock-add-keywords nil self/hi-lock-patterns t)
+(font-lock-flush)
+(global-hi-lock-mode 1)
