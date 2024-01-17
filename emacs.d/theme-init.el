@@ -45,7 +45,8 @@
     (or (and (stringp profile)
              (string-match-p (regexp-quote "dark") profile)) ;; if dark profile
         ;; os-theme-dark
-        (string= (self/-os-theme) "dark"))))
+        ;; (string= (self/-os-theme) "dark")
+        )))
 
 (defun self/-os-theme ()
   "Check the os theme"
@@ -247,8 +248,8 @@
    ;; else in window system
    ;; ((window-system) (self/load-light-theme))
    ;; fall back to light
-   ;; (t (self/load-less-bright-theme))
-   (t (self/load-light-theme))
+   (t (self/load-less-bright-theme))
+   ;; (t (self/load-light-theme))
    ;; (t (self/load-dark-theme))
    ))
 
