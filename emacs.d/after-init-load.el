@@ -371,9 +371,9 @@
   (load (expand-file-name "py-init.el" user-emacs-directory))
   (load (expand-file-name "rb-init.el" user-emacs-directory))
   ;; (load (expand-file-name "haskell-init.el" user-emacs-directory))
-  (load (expand-file-name "ocaml-init.el" user-emacs-directory))
+  ;; (load (expand-file-name "ocaml-init.el" user-emacs-directory))
   ;; (load (expand-file-name "erlang-init.el" user-emacs-directory))
-  (load (expand-file-name "prolog-init.el" user-emacs-directory))
+  ;; (load (expand-file-name "prolog-init.el" user-emacs-directory))
 
   ;; Loading js init script
   (load (expand-file-name "js-init.el" user-emacs-directory))
