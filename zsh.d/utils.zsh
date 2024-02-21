@@ -18,3 +18,14 @@ elasticsearch () {
         ${ES_HOME}/bin/elasticsearch -d -p ${ES_HOME}/pidfile
     fi
 }
+
+emacspipe () {
+    file=$(mktemp)
+
+    while read line; do
+        echo $line >> $file
+    done
+
+    # Open the temporary file in Emacs
+    e $file
+}

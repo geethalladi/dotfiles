@@ -60,3 +60,5 @@ alias jccr='open build/reports/jacoco/html/index.html'
 alias root='cd $(git root)'
 alias main='git co $(git main)'
 alias jutr="find . -name reports -type d -exec open '{}/tests/test/index.html' \;"
+
+alias epipe="emacspipe"
