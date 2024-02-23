@@ -59,3 +59,4 @@ out/
 .settings
 venv/
 .lsp/
+.vscode/
