@@ -114,3 +114,9 @@ fi
 ########################################################################################
 
 [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+
+## teleport
+alias tsh="source /usr/local/bin/tsh $*"
+
+## remove the ls alias set by oh-my-zsh
+unalias ls
