@@ -249,17 +249,17 @@
    ;; else in window system
    ;; ((window-system) (self/load-light-theme))
    ;; fall back to light
-   (t (self/load-less-bright-theme))
+   ;; (t (self/load-less-bright-theme))
    ;; (t (self/load-light-theme))
-   ;; (t (self/load-dark-theme))
+   (t (self/load-dark-theme))
    ))
 
 (self/reload-theme)
 
 (setq self/hi-lock-patterns
       '(("@@" (0 'hi-green t))
-        ("!!" (0 'hi-salmon t))
-        ("??" (0 'hi-yellow t))))
+  ("!!" (0 'hi-salmon t))
+  ("??" (0 'hi-yellow t))))
 (font-lock-add-keywords nil self/hi-lock-patterns t)
 (font-lock-flush)
 (global-hi-lock-mode 1)
