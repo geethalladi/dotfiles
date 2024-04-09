@@ -10,7 +10,7 @@
 (defun self/use-log-font ()
   "set terminal style font"
    (interactive)
-   (setq buffer-face-mode-face '(:family "Inconsolata" :height 180 :weight bold))
+   (setq buffer-face-mode-face '(:family "Inconsolata" :height 160 :weight bold))
    (setq visual-fill-column-width 240)
    (setq line-spacing 0.5) ; add 0.5 height between lines
    ;; disable truncate lines by default
