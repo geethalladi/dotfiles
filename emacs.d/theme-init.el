@@ -6,6 +6,8 @@
 ;; (use-package spacegray-theme)
 ;; (use-package idea-darkula-theme)
 (use-package monokai-theme)
+(use-package zenburn-theme)
+
 ;; (use-package heroku-theme)
 ;; (use-package twilight-bright-theme)
 ;; (use-package zenburn-theme)
@@ -229,10 +231,9 @@
 (defun self/load-dark-theme ()
   "dark theme"
   (interactive)
-  (self/-load-spacemacs-theme)
+  ;; (self/-load-spacemacs-theme)
+  (load-theme 'zenburn t)
   (self/-dark-theme-custom)
-  ;; (require 'zenburn-theme)
-  ;; (load-theme 'zenburn t)
   )
 
 (defun self/reload-theme ()
