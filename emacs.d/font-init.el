@@ -2,8 +2,8 @@
 ;; Moving this into its own module
 
 (set-face-attribute 'default nil
-                    :family "Fira Code"
-                    :height 140
+                    :family "Jetbrains Mono"
+                    :height 160
                     :weight 'normal
                     :width  'normal
                     :slant  'normal)
