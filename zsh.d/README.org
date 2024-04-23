@@ -28,6 +28,15 @@ ZSH scripts for creating my own development environment. Additions to be expecte
 
 #+END_SRC
 
+
+** Installed Java Versions
+Via sdkman
+|---------+------+------------+--------------|
+|  17.0.7 | amzn | local only | 17.0.7-amzn  |
+| 11.0.18 | amzn | local only | 11.0.18-amzn |
+| 8.0.362 | amzn | local only | 8.0.362-amzn |
+|---------+------+------------+--------------|
+
 ** Usage
 |-----------+------------------------------------------+----------------------------------------------------|
 | File name | Usage                                    | What I use it for                                  |
