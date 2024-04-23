@@ -17,11 +17,14 @@ ZSH scripts for creating my own development environment. Additions to be expecte
 
   ln -sf ${DOTFILES}/emacs.d .emacs.default
   ln -sf ${DOTFILES}/emacs.d/emacs-profiles.el .emacs-profiles.el
+  ln -sf ${DOTFILES}/emacsplus.d .doom.d
+
+  ln -sf ${DOTFILES}/git.d/gitignore .gitignore
 
   ln -sf ${DOTFILES}/screen.d/screenrc .screenrc
   ln -sf ${DOTFILES}/tmux.d/tmux.conf .tmux.conf
 
-  ln -sf ${DOTFILES}/git.d/gitignore .gitignore
+  ln -sf ${DOTFILES}/hammerspoon.d .hammerspoon
 
 #+END_SRC
 
