@@ -8,7 +8,7 @@
 
 # Solarized Light theme
 # export PS1="\[\033[0;32m\]\u\[\033[0;32m\]@:\[\033[0;32m\]\w\[\033[m\]\$ "
-# export CLICOLOR=1
+export CLICOLOR=1
 
 ########################################################################################
 # Editor Configuration
