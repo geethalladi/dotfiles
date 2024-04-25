@@ -70,6 +70,15 @@ def rsync_backup_command(directory, source=SOURCE, destination=DEST,
     return 'rsync -apv "%s" "%s" %s' % (src, dest, excluded)
 
 
+def backup_all():
+    """
+    Backup all the artifacts
+    """
+    # create brewfile.lock
+    # backup idea settings
+    backup()  # backup the data folders
+
+
 def backup(directories=ALL, source=SOURCE, dest=DEST, ignored=IGNORE):
     """
     Backup the given directories from source to destination
