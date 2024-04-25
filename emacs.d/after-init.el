@@ -1,6 +1,18 @@
 ;; No Initial Splash Screen
 (setq inhibit-splash-screen t)
 
+(defun self/no-menu-bar-in-terminal ()
+  "No menu bar when running in the terminal"
+  (unless (display-graphic-p)
+    (menu-bar-mode -1)))
+
+;; in standalone (terminal) emacs
+(self/no-menu-bar-in-terminal)
+
+;; in emacsclient
+(add-to-list 'after-make-frame-functions
+             (lambda (frame) (self/no-menu-bar-in-terminal))
+
 ;; show only emergency warnings
 (setq warning-minimum-level :emergency)
 
