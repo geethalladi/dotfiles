@@ -11,7 +11,7 @@
 
 ;; in emacsclient
 (add-to-list 'after-make-frame-functions
-             (lambda (frame) (self/no-menu-bar-in-terminal))
+             (lambda (frame) (self/no-menu-bar-in-terminal)))
 
 ;; show only emergency warnings
 (setq warning-minimum-level :emergency)
