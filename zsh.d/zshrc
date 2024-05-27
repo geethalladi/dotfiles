@@ -16,8 +16,6 @@ export ZSH=~/repo/open-source/oh-my-zsh
 # export ZSH_THEME="Honukai"
 # export ZSH_THEME="ys"
 # export ZSH_THEME="theunraveler"
-# export ZSH_THEME="bullet-train"
-# export ZSH_THEME="agnoster"
 
 # export ZSH_THEME="simple"
 
