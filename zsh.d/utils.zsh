@@ -22,9 +22,9 @@ elasticsearch () {
 emacspipe () {
     file=$(mktemp)
 
-    while read line; do
-        echo $line >> $file
-    done
+    while IFS= read -r line; do
+        printf '%s\n' "$line"
+    done > ${file}
 
     # Open the temporary file in Emacs
     e $file
