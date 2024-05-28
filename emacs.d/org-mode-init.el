@@ -205,6 +205,9 @@
 
 (use-package 'ox-confluence)
 
+(load-file "~/dotfiles/emacs.d/ox-confluence.el")
+(require 'ox-confluence)
+
 ;; required for org-reveal mode presentations
 (use-package 'ox-reveal)
 
