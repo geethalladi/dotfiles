@@ -62,3 +62,4 @@ alias main='git co $(git main)'
 alias jutr="find . -name reports -type d -exec open '{}/tests/test/index.html' \;"
 
 alias epipe="emacspipe"
+alias kc=kubectl

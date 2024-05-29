@@ -118,3 +118,6 @@ alias tsh="source /usr/local/bin/tsh $*"
 
 ## remove the ls alias set by oh-my-zsh
 unalias ls
+
+# kubectl autocompletion
+source <(kubectl completion zsh)
