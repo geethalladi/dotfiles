@@ -22,7 +22,7 @@ elasticsearch () {
 emacspipe () {
     file=$(mktemp)
 
-    while IFS= read -r line; do
+    while IFS= read -r line || [ -n "$line" ]; do
         printf '%s\n' "$line"
     done > ${file}
 
