@@ -14,7 +14,9 @@
 (require 'json-process-client)
 (require 'indium)
 (require 'xref-js2)
+
 (use-package "counsel-jq")
+(use-package "mermaid-mode")
 
 ;; needed for making the tern-server integration
 ;; know this is ugly; A Stop-gap solution for finding node
