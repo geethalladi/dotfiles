@@ -19,6 +19,7 @@ export LOCAL_BIN_DIR=~/.local/bin
 # private / project
 export PRIVATE_DIR=~/private
 export PROJECT_DIR=${PRIVATE_DIR}/projects
+export VOLUME_DIR=${PRIVATE_DIR}/container-volumes
 
 ########################################################################################
 # For PATH Variable
