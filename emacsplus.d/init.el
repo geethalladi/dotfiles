@@ -22,6 +22,7 @@
 
        :completion
        company           ; the ultimate code completion backend
+       ;;(corfu +orderless)  ; complete with cap(f), cape and a flying feather!
        helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        ;;ivy               ; a search engine for love and life
@@ -53,7 +54,7 @@
        zen               ; distraction-free coding or writing
 
        :editor
-       ;; (evil +everywhere); come to the dark side, we have cookies
+       ;;(evil +everywhere); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
        fold              ; (nigh) universal code folding
        (format +onsave)  ; automated prettiness
@@ -62,7 +63,7 @@
        multiple-cursors  ; editing in many places at once
        ;;objed             ; text object editing for the innocent
        ;;parinfer          ; turn lisp into python, sort of
-       rotate-text       ; cycle region at point between text candidates
+       ;;rotate-text       ; cycle region at point between text candidates
        snippets          ; my elves. They type so I don't have to
        word-wrap         ; soft wrapping with language-aware indent
 
@@ -92,20 +93,18 @@
        docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ein               ; tame Jupyter notebooks with emacs
+       ;;collab            ; buffers with friends
        (eval +overlay)     ; run code, run (also, repls)
-       gist              ; interacting with github gists
        lookup              ; navigate your code and its documentation
        (lsp +eglot)               ; M-x vscode
        magit             ; a git porcelain for Emacs
-       make              ; run make tasks from Emacs
+       ;;make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
-       pdf               ; pdf enhancements
-       prodigy           ; FIXME managing external services & code builders
-       ;;rgb               ; creating color strings
-       taskrunner        ; taskrunner for all your projects
-       terraform         ; infrastructure as code
-       tmux              ; an API for interacting with tmux
-       tree-sitter       ; syntax and parsing, sitting in a tree...
+       ;;pdf               ; pdf enhancements
+       ;;prodigy           ; FIXME managing external services & code builders
+       ;;terraform         ; infrastructure as code
+       ;;tmux              ; an API for interacting with tmux
+       ;;tree-sitter       ; syntax and parsing, sitting in a tree...
        ;;upload            ; map local to remote projects via ssh/ftp
 
        :os
