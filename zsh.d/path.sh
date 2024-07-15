@@ -47,7 +47,7 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
     fi
 
     # TODO: remove this hack later
-    export PATH=$PATH:${NVM_DIR}/versions/node/v18.14.2/bin
+    export PATH=$PATH:$HOME/.nvm/versions/node/v18.14.2/bin
 
     # Rehash to take care of the PATH variable update
     # https://stackoverflow.com/questions/36543707/why-does-zsh-ignore-the-path-entry-order
