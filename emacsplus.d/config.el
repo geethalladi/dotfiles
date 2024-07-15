@@ -116,9 +116,9 @@
 
 (setq-default line-spacing 0.12)
 
-(require 'lsp-sonarlint)
-(require 'lsp-sonarlint-java)
-(setq lsp-sonarlint-java-enabled t)
+;; (require 'lsp-sonarlint)
+;; (require 'lsp-sonarlint-java)
+;; (setq lsp-sonarlint-java-enabled t)
 
 ;; (use-package! copilot
 ;;   :hook (prog-mode . copilot-mode)
