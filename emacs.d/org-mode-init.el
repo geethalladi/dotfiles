@@ -203,6 +203,14 @@
    :fetcher url
    :url "https://raw.githubusercontent.com/cireu/emacsql-sqlite3/master/emacsql-sqlite3.el"))
 
+(use-package org-ql
+  :quelpa (org-ql :fetcher github :repo "alphapapa/org-ql"
+            :files (:defaults (:exclude "helm-org-ql.el"))))
+
+(use-package helm-org-ql
+  :quelpa (helm-org-ql :fetcher github :repo "alphapapa/org-ql"
+                       :files ("helm-org-ql.el")))
+
 (use-package 'ox-confluence)
 
 (load-file "~/dotfiles/emacs.d/ox-confluence.el")
