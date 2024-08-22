@@ -1,5 +1,5 @@
-which rvm > /dev/null
-if [ "$?" != 0 ]; then
+# which rvm > /dev/null
+if [ "$XVM_INIT_COMPLETE" != 1 ]; then
     echo "Sourcing version managers"
 
     # Go Version manager
@@ -14,6 +14,7 @@ if [ "$?" != 0 ]; then
 
     # rvm
     source ${DOTFILE_DIR_RVM}/rvm.sh
+    # source ${DOTFILE_DIR_RVM}/scripts/rvm
 
     # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
     export PATH="$PATH:$HOME/.rvm/bin"
