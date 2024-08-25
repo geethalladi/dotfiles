@@ -110,7 +110,51 @@
 
 (require 'projectile-rails)
 (projectile-rails-global-mode)
-(define-key projectile-rails-mode-map (kbd "s-r") 'hydra-projectile-rails/body)
+;; (define-key projectile-rails-mode-map (kbd "s-r") 'hydra-projectile-rails/body)
+
+(defun self/-rails-mode-keybindings (map)
+  "Customizing rails mode keybindings"
+
+  ;; invert find and find-current
+  (define-key map (kbd "M") 'projectile-rails-find-model)
+  (define-key map (kbd "m") 'projectile-rails-find-current-model)
+
+  (define-key map (kbd "C") 'projectile-rails-find-controller)
+  (define-key map (kbd "c") 'projectile-rails-find-current-controller)
+
+  (define-key map (kbd "V") 'projectile-rails-find-view)
+  (define-key map (kbd "v") 'projectile-rails-find-current-view)
+
+  (define-key map (kbd "J") 'projectile-rails-find-javascript)
+  (define-key map (kbd "j") 'projectile-rails-find-current-javascript)
+
+  (define-key map (kbd "S") 'projectile-rails-find-stylesheet)
+  (define-key map (kbd "s") 'projectile-rails-find-current-stylesheet)
+
+  (define-key map (kbd "H") 'projectile-rails-find-helper)
+  (define-key map (kbd "h") 'projectile-rails-find-current-helper)
+
+  (define-key map (kbd "P") 'projectile-rails-find-spec)
+  (define-key map (kbd "p") 'projectile-rails-find-current-spec)
+
+  (define-key map (kbd "T") 'projectile-rails-find-test)
+  (define-key map (kbd "t") 'projectile-rails-find-current-test)
+
+  (define-key map (kbd "N") 'projectile-rails-find-migration)
+  (define-key map (kbd "n") 'projectile-rails-find-current-migration)
+
+  (define-key map (kbd "R") 'projectile-rails-console)
+  (define-key map (kbd "r") 'projectile-rails-server)
+
+  (define-key map (kbd "U") 'projectile-rails-find-fixture)
+  (define-key map (kbd "u") 'projectile-rails-find-current-fixture)
+
+  (define-key map (kbd "Z") 'projectile-rails-find-serializer)
+  (define-key map (kbd "z") 'projectile-rails-find-current-serializer))
+
+;; rails mode map prefix
+(define-key projectile-rails-mode-map (kbd "C-c l") 'projectile-rails-command-map)
+(self/-rails-mode-keybindings 'projectile-rails-mode-map)
 
 ;; (inf-ruby)
 ;; (robe-start)
