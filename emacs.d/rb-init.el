@@ -112,6 +112,7 @@
 (projectile-rails-global-mode)
 ;; (define-key projectile-rails-mode-map (kbd "s-r") 'hydra-projectile-rails/body)
 
+;; TODO: fix the keymap priority
 (defun self/-rails-mode-keybindings (map)
   "Customizing rails mode keybindings"
 
@@ -154,7 +155,8 @@
 
 ;; rails mode map prefix
 (define-key projectile-rails-mode-map (kbd "C-c l") 'projectile-rails-command-map)
-(self/-rails-mode-keybindings 'projectile-rails-mode-map)
+
+;; (self/-rails-mode-keybindings 'projectile-rails-mode-map)
 
 ;; (inf-ruby)
 ;; (robe-start)
