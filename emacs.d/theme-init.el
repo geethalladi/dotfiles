@@ -227,15 +227,14 @@
   ;; TODO: should grep for screen inside TERMCAP
   (and (not (window-system))
        (or (stringp (getenv "TERMCAP"))
-           (stringp (getenv "TMUX)))))
+           (stringp (getenv "TMUX")))))
 
 (defun self/load-dark-theme ()
   "dark theme"
   (interactive)
   ;; (self/-load-spacemacs-theme)
   (load-theme 'zenburn t)
-  (self/-dark-theme-custom)
-  )
+  (self/-dark-theme-custom))
 
 (defun self/reload-theme ()
   "Load theme as per the environment"
