@@ -21,6 +21,7 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
     PATH=${HOMEBREW_HOME}/bin:${HOMEBREW_HOME}/sbin:${PATH}
     PATH=${PATH}:${OPEN_SOURCE_DIR}/powerline/scripts
     PATH=${HOMEBREW_HOME}/opt/python@3.8/bin:${HOMEBREW_HOME}/opt/qt/bin:${PATH}
+    PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
 
     # PATH="/usr/local/bin:${PATH}"
 
