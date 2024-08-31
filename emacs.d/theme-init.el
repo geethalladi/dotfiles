@@ -226,7 +226,8 @@
   "Predicate to check if running inside screen"
   ;; TODO: should grep for screen inside TERMCAP
   (and (not (window-system))
-       (stringp (getenv "TERMCAP"))))
+       (or (stringp (getenv "TERMCAP"))
+           (stringp (getenv "TMUX)))))
 
 (defun self/load-dark-theme ()
   "dark theme"
@@ -250,8 +251,8 @@
    ;; ((window-system) (self/load-light-theme))
    ;; fall back to light
    ;; (t (self/load-less-bright-theme))
-   ;; (t (self/load-light-theme))
-   (t (self/load-dark-theme))
+   (t (self/load-light-theme))
+   ;; (t (self/load-dark-theme))
    ))
 
 (self/reload-theme)
