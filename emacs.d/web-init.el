@@ -21,12 +21,14 @@
 (setq web-mode-style-padding 1)
 (setq web-mode-script-padding 1)
 (setq web-mode-block-padding 0)
+(setq css-indent-offset 2)
 
 (setq web-mode-enable-current-element-highlight t)
 (setq web-mode-enable-current-column-highlight t)
 
 (add-hook 'web-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
 (add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
+(add-hook 'scss-mode-hook 'emmet-mode)
 
 (add-hook 'web-mode-hook 'smartparens-mode)
 (add-hook 'css-mode-hook 'smartparens-mode)
