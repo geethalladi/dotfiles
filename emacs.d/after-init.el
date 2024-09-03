@@ -38,7 +38,7 @@
 ;; no toolbar
 (tool-bar-mode -1)
 
-;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; eager loading font customizations
 (load (expand-file-name "font-init.el" user-emacs-directory))
@@ -71,8 +71,9 @@
 
 (defun self/init-packages ()
   "Initialise all the dependent packages"
+  (message "Init packages")
   (require 'package)
-  (add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/"))
+  ;; (add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/"))
   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
   ;; Removing the org package archive
   ;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
