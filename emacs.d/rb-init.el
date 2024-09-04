@@ -5,56 +5,56 @@
 
 ;; ;; (require 'grizzl)
 
-(use-package rhtml-mode)
-(use-package rinari)
+;; (use-package rhtml-mode)
+;; (use-package rinari)
 (use-package robe)
-(use-package rspec-mode)
-(use-package rubocop)
-(use-package ruby-compilation)
-(use-package ruby-electric)
-(use-package ruby-refactor)
-(use-package ruby-tools)
-(use-package rake)
-(use-package rspec-mode)
-(use-package ruby-test-mode)
+;; (use-package rspec-mode)
+;; (use-package rubocop)
+;; (use-package ruby-compilation)
+;; (use-package ruby-electric)
+;; (use-package ruby-refactor)
+;; (use-package ruby-tools)
+;; (use-package rake)
+;; (use-package rspec-mode)
+;; (use-package ruby-test-mode)
 (use-package rvm)
 (use-package inf-ruby)
-(use-package enh-ruby-mode)
-(use-package bundler)
+;; (use-package enh-ruby-mode)
+;; (use-package bundler)
 
 (add-to-list 'auto-mode-alist '("\\.rb" . ruby-mode))
 
 (require 'rubocop)
-(require 'ruby-tools)
+;; (require 'ruby-tools)
 (require 'robe)
-(require 'rinari)
+;; (require 'rinari)
 (require 'smartparens)
 (require 'yafolding)
 (require 'yard-mode)
 
-(require 'bundler)
-(require 'rubocop)
-(require 'rspec-mode)
-(require 'ruby-test-mode)
-(require 'ruby-tools)
-(require 'rake)
+;; (require 'bundler)
+;; (require 'rubocop)
+;; (require 'rspec-mode)
+;; (require 'ruby-test-mode)
+;; (require 'ruby-tools)
+;; (require 'rake)
 (require 'rvm)
 
-(add-hook 'ruby-mode-hook 'rubocop-mode)
-(add-hook 'ruby-mode-hook 'ruby-tools-mode)
+;; (add-hook 'ruby-mode-hook 'rubocop-mode)
+;; (add-hook 'ruby-mode-hook 'ruby-tools-mode)
 (add-hook 'ruby-mode-hook 'robe-mode)
 (add-hook 'ruby-mode-hook 'smartparens-mode)
-(add-hook 'ruby-mode-hook 'yard-mode)
+;; (add-hook 'ruby-mode-hook 'yard-mode)
 (add-hook 'ruby-mode-hook 'projectile-mode)
-(add-hook 'ruby-mode-hook 'ruby-refactor-mode-launch)
+;; (add-hook 'ruby-mode-hook 'ruby-refactor-mode-launch)
 (add-hook 'ruby-mode-hook 'yafolding-mode)
 ;; (add-hook 'ruby-mode-hook 'flycheck-mode)
 
 (add-hook 'ruby-mode-hook
           (lambda ()
             (rvm-activate-corresponding-ruby)
-            (rspec-mode)
-            (ruby-test-mode)
+            ;; (rspec-mode)
+            ;; (ruby-test-mode)
             (company-mode)))
 
 ;; (add-hook 'ruby-mode-hook 'rubocop-mode)
@@ -66,7 +66,7 @@
 
 ;; (define-key rubocop-mode-map (kbd "s-r") 'rubocop-check-current-file)
 
-(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+;; (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
 
 ;; ;; COMPLETE ANYTHING MODE (COMPANY MODE)
 ;; (autoload 'company-mode "company" nil t)
@@ -93,7 +93,7 @@
 (inf-ruby-switch-setup)
 
 ;; Use the rubocop binary in the default gemset
-(setq flycheck-ruby-rubocop-executable "~/.rvm/gems/ruby-2.1.10@global/bin/rubocop")
+;; (setq flycheck-ruby-rubocop-executable "~/.rvm/gems/ruby-2.1.10@global/bin/rubocop")
 
 ;; ;; (setq enh-ruby-indent-tabs-mode t)
 
@@ -102,7 +102,7 @@
 ;; ;; (defvaralias 'enh-ruby-indent-level 'tab-width)
 ;; ;; (defvaralias 'enh-ruby-hanging-indent-level 'tab-width)
 
-(require 'ruby-refactor)
+;; (require 'ruby-refactor)
 
 (setenv "PAGER" "less")
 ;; (setq rspec-use-rvm t)
