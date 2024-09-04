@@ -29,3 +29,7 @@ emacspipe () {
     # Open the temporary file in Emacs
     e $file
 }
+
+generate_ripper_tags () {
+    ripper-tags -R -f TAGS
+}
