@@ -97,6 +97,8 @@ fi
 # for matplot plots inside iterm
 export MPLBACKEND="module://itermplot"
 
+# for ruby tags
+export RIPPER_TAGS_EMACS=1
 ########################################################################################
 # OCaml / opam configuration
 ########################################################################################
