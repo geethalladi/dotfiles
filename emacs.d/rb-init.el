@@ -7,7 +7,10 @@
 
 ;; (use-package rhtml-mode)
 ;; (use-package rinari)
-(use-package robe)
+(use-package robe
+  :bind
+  ("C-c j" . robe-jump))
+
 ;; (use-package rspec-mode)
 ;; (use-package rubocop)
 ;; (use-package ruby-compilation)
