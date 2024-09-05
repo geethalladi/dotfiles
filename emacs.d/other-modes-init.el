@@ -144,5 +144,7 @@
 (centaur-tabs-mode t)
 
 ;; key bindings for yafolding mode
-(global-set-key (kbd "<M-return>") 'yafolding-toggle-element)
-(global-set-key (kbd "M-RET") 'yafolding-toggle-element)
+(use-package yafolding-mode
+  :bind
+  ("<M-return>" . yafolding-toggle-element)
+  ("M-RET" . yafolding-toggle-element))
