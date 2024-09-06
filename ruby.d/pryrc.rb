@@ -2,6 +2,7 @@
 #   .pryrc
 # ==============================
 
+# needed for emacs pry integration
 Pry.config.auto_indent = false
 
 if Pry::Prompt[:rails]
