@@ -26,6 +26,8 @@ ZSH scripts for creating my own development environment. Additions to be expecte
 
   ln -sf ${DOTFILES}/hammerspoon.d .hammerspoon
 
+  ln -sf ${DOTFILES}/ruby.d/irbrc.rb .irbrc
+  ln -sf ${DOTFILES}/ruby.d/pryrc.rb .pryrc
 #+END_SRC
 
 
