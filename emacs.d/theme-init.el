@@ -243,15 +243,16 @@
    ;; skip inside screen
    ((and (self/-inside-screenp)
          (self/-dark-modep))
-    (message "Skipping loading dark theme inside screen"))
+    ;; (message "Skipping loading dark theme inside screen")
+    (self/load-dark-theme))
    ;; if dark-mode if true, use it
    ((self/-dark-modep) (self/load-dark-theme))
    ;; else in window system
    ;; ((window-system) (self/load-light-theme))
    ;; fall back to light
    ;; (t (self/load-less-bright-theme))
-   ;; (t (self/load-light-theme))
-   (t (self/load-dark-theme))
+   (t (self/load-light-theme))
+   ;; (t (self/load-dark-theme))
    ))
 
 (self/reload-theme)
