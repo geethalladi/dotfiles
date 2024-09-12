@@ -32,6 +32,8 @@ alias ghci="ghci -XNPlusKPatterns"
 alias hivec="hive -hiveconf hive.root.logger=DEBUG,console"
 # alias jnote="jupyter notebook --notebook-dir=~/repo/notebooks"
 
+alias docker=podman
+
 function show() {
     echo "rvm: "`rvm-prompt`
     echo "git branch: "`git_current_branch`
