@@ -410,6 +410,8 @@
 
   (add-to-list 'zeal-at-point-mode-alist
          '(python-mode . ("python3" "scipy" "numpy" "pandas" "sqlalchemy")))
+  (add-to-list 'zeal-at-point-mode-alist
+         '(ruby-mode . ("ruby" "rails")))
   (add-to-list 'zeal-at-point-mode-alist '(emacs-lisp-mode   . ("elisp")))
   (add-to-list 'zeal-at-point-mode-alist '(shell-script-mode . ("bash")))
   (add-to-list 'zeal-at-point-mode-alist '(ocaml-mode        . ("ocaml")))
