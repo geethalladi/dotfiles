@@ -234,6 +234,7 @@
   (interactive)
   ;; (self/-load-spacemacs-theme)
   (load-theme 'zenburn t)
+  ;; (load-them 'heroku t)
   (self/-dark-theme-custom))
 
 (defun self/reload-theme ()
@@ -251,8 +252,8 @@
    ;; ((window-system) (self/load-light-theme))
    ;; fall back to light
    ;; (t (self/load-less-bright-theme))
-   (t (self/load-light-theme))
-   ;; (t (self/load-dark-theme))
+   ;; (t (self/load-light-theme))
+   (t (self/load-dark-theme))
    ))
 
 (self/reload-theme)
