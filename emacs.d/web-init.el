@@ -32,3 +32,6 @@
 
 (add-hook 'web-mode-hook 'smartparens-mode)
 (add-hook 'css-mode-hook 'smartparens-mode)
+
+(add-hook 'web-mode-hook 'yafolding-mode)
+(add-hook 'css-mode-hook 'yafolding-mode)
