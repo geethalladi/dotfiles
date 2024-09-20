@@ -20,7 +20,7 @@
 
 ;; needed for making the tern-server integration
 ;; know this is ugly; A Stop-gap solution for finding node
-(let ((node-exec-path (expand-file-name "~/.nvm/versions/node/v8.9.4/bin")))
+(let ((node-exec-path (expand-file-name "~/.nvm/versions/node/v18.14.2/bin")))
   ;; setting the node-executable path in both the forms of PATH variables
   (setq exec-path
         (append exec-path (list node-exec-path)))
