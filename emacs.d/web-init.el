@@ -35,3 +35,6 @@
 
 (add-hook 'web-mode-hook 'yafolding-mode)
 (add-hook 'css-mode-hook 'yafolding-mode)
+
+(add-hook 'web-mode-hook 'hungry-delete-mode)
+(add-hook 'css-mode-hook 'hungry-delete-mode)
