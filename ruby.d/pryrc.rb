@@ -2,6 +2,17 @@
 #   .pryrc
 # ==============================
 
+require 'rubygems'
+
+require 'pry'
+require 'pry-byebug'
+require 'pry-clipboard'
+require 'pry-doc'
+require 'pry-nav'
+require 'pry-stack_explorer'
+require 'pry-rescue'
+require 'pry-rails'
+
 # needed for emacs pry integration
 Pry.config.auto_indent = false
 
