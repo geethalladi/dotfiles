@@ -5,7 +5,9 @@
          (scratch-buffer
           (elt (seq-filter filter-scratch-p (buffer-list)) 0)))
     (with-current-buffer scratch-buffer
-      (lisp-interaction-mode))))
+      ;; (lisp-interaction-mode)
+      ;; Use org mode for scratch
+      (org-mode))))
 
 (defun self/load-all ()
   "Load the entire environment"
@@ -27,7 +29,8 @@
   ;; clean up modal line
   (self/-diminish-modal-line)
   ;; reload scratch-buffer after loading everything
-  (self/-reload-scratch-buffer))
+  ;; (self/-reload-scratch-buffer)
+  (setq initial-major-mode 'org-mode))
 
 (defun self/load-customizations ()
   "Customize the installed packages"

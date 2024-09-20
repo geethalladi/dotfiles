@@ -57,9 +57,6 @@
 (add-hook 'kill-buffer-query-functions
     (lambda () (not (equal (buffer-name) "*scratch*"))))
 
-;; Use org mode for scratch
-(setq initial-major-mode 'org-mode)
-
 ;; delete trailing white space
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'before-save-hook 'whitespace-cleanup)
