@@ -16,6 +16,6 @@ end
 require "rubygems"
 require 'pry'
 require 'pry-doc'
-require 'pry-rails'
+
 Pry.start
 exit
