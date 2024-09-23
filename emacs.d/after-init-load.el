@@ -29,8 +29,7 @@
   ;; clean up modal line
   (self/-diminish-modal-line)
   ;; reload scratch-buffer after loading everything
-  ;; (self/-reload-scratch-buffer)
-  (setq initial-major-mode 'org-mode))
+  (self/-reload-scratch-buffer))
 
 (defun self/load-customizations ()
   "Customize the installed packages"
@@ -38,6 +37,8 @@
   ;; emacs getting the same path when invoked from GUI
   ;; (when (memq window-system '(mac ns))
   ;;   (exec-path-from-shell-initialize))
+
+  (setq initial-major-mode 'org-mode)
 
   ;; ENABLE PERSISTENT SCRATCH
   (require 'persistent-scratch)
