@@ -5,9 +5,10 @@
          (scratch-buffer
           (elt (seq-filter filter-scratch-p (buffer-list)) 0)))
     (with-current-buffer scratch-buffer
-      ;; (lisp-interaction-mode)
+      (lisp-interaction-mode)
       ;; Use org mode for scratch
-      (org-mode))))
+      ;; (org-mode)
+      )))
 
 (defun self/load-all ()
   "Load the entire environment"
