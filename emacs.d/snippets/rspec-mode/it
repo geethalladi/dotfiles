@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: rspec-init
+# key: it
+# --
+it '$1' do
+  # arrange
+  $2
+  # act
+  $3
+  # assert
+  expect($4).to $5
+end
