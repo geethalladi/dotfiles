@@ -48,7 +48,7 @@
 (defun switch-to-main-branch ()
   "Switch the main branch"
   ;; (magit-branch-checkout (magit-main-branch))
-  (magit-branch-checkout (magit-git-string "main")))
+  (magit-branch-checkout (magit-git-string "staging")))
 
 (defun git-bookmark-save ()
   "Save the current state as a bookmark"
