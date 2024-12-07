@@ -68,7 +68,7 @@ fi
 # Example format: plugins=(git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 zstyle ':omz:plugins:nvm' lazy yes
-plugins=(git brew rvm web-search docker docker-compose macos nvm)
+plugins=(git brew rvm web-search macos nvm) # docker docker-compose
 
 # User configuration
 
