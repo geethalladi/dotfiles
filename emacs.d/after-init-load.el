@@ -387,7 +387,7 @@
 
   ;; (load (expand-file-name "elixir-init.el" user-emacs-directory))
   ;; (load (expand-file-name "scala-init.el" user-emacs-directory))
-  ;; (load (expand-file-name "go-init.el" user-emacs-directory))
+  (load (expand-file-name "go-init.el" user-emacs-directory))
   (load (expand-file-name "c-init.el" user-emacs-directory))
 
   ;; (load (expand-file-name "java-init.el" user-emacs-directory))
