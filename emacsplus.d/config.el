@@ -105,6 +105,15 @@
         "-javaagent:/Users/galladi/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar"
         "-Xbootclasspath/a:/Users/galladi/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar"))
 
+(use-package lsp-mode
+  :commands lsp
+  :ensure t
+  :diminish lsp-mode
+  :hook
+  (elixir-mode . lsp)
+  :init
+  (add-to-list 'exec-path "/Users/galladi/installed.d/lsp/elixir"))
+
 (defun export-to-html-and-open ()
   "Export to html and open in default browser"
   (interactive)
