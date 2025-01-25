@@ -11,14 +11,12 @@
   :bind
   ("C-c j" . robe-jump))
 
-;; (use-package rspec-mode)
 ;; (use-package rubocop)
 ;; (use-package ruby-compilation)
 ;; (use-package ruby-electric)
 ;; (use-package ruby-refactor)
 ;; (use-package ruby-tools)
 ;; (use-package rake)
-;; (use-package rspec-mode)
 ;; (use-package ruby-test-mode)
 (use-package rvm)
 (use-package inf-ruby)
@@ -45,12 +43,8 @@
 
 ;; (add-hook 'ruby-mode-hook 'rubocop-mode)
 ;; (add-hook 'ruby-mode-hook 'ruby-tools-mode)
-(add-hook 'ruby-mode-hook 'robe-mode)
-(add-hook 'ruby-mode-hook 'smartparens-mode)
 ;; (add-hook 'ruby-mode-hook 'yard-mode)
-(add-hook 'ruby-mode-hook 'projectile-mode)
 ;; (add-hook 'ruby-mode-hook 'ruby-refactor-mode-launch)
-(add-hook 'ruby-mode-hook 'yafolding-mode)
 ;; (add-hook 'ruby-mode-hook 'flycheck-mode)
 
 (add-hook 'ruby-mode-hook
