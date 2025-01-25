@@ -50,12 +50,15 @@
 (add-hook 'ruby-mode-hook
           (lambda ()
             (rvm-activate-corresponding-ruby)
-            ;; (rspec-mode)
+            (smartparens-mode)
+            (yafolding-mode)
+            (robe-mode)
+            (projectile-mode)
+            (rspec-mode)
             ;; (ruby-test-mode)
             (company-mode)))
 
 ;; (add-hook 'ruby-mode-hook 'rubocop-mode)
-;; (add-hook 'ruby-mode-hook 'rspec-mode)
 ;; (add-hook 'ruby-mode-hook 'ruby-test-mode)
 
 ;; (eval-after-load 'rubocop-mode
