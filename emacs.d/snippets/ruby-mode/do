@@ -2,5 +2,5 @@
 # name: do
 # key: do
 # --
-do |$1|
+do $1
 end

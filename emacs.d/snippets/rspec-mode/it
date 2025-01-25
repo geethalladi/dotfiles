@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: rspec-init
+# name: it
 # key: it
 # --
 it '$1' do
