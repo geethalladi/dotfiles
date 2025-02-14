@@ -49,7 +49,7 @@
 
 (add-hook 'ruby-mode-hook
           (lambda ()
-            (rvm-activate-corresponding-ruby)
+            ;; (rvm-activate-corresponding-ruby)
             (smartparens-mode)
             (yafolding-mode)
             (robe-mode)
