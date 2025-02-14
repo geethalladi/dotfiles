@@ -33,7 +33,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-font
-      (font-spec :family "Fira Code" :size 16
+      (font-spec :family "Jetbrains Mono" :size 16
                  :weight 'normal))
 
 ;; (setq doom-theme 'doom-snazzy)
@@ -97,22 +97,23 @@
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 (setq auto-window-vscroll nil)
 (setq display-line-numbers-type nil)
-(setq lsp-java-jdt-download-url
-      "https://download.eclipse.org/jdtls/milestones/0.57.0/jdt-language-server-0.57.0-202006172108.tar.gz")
 
-(setq lsp-java-vmargs
-      '("-noverify" "-Xmx3G" "-XX:+UseG1GC" "-XX:+UseStringDeduplication"
-        "-javaagent:/Users/galladi/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar"
-        "-Xbootclasspath/a:/Users/galladi/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar"))
+;; (setq lsp-java-jdt-download-url
+;;       "https://download.eclipse.org/jdtls/milestones/0.57.0/jdt-language-server-0.57.0-202006172108.tar.gz")
 
-(use-package lsp-mode
-  :commands lsp
-  :ensure t
-  :diminish lsp-mode
-  :hook
-  (elixir-mode . lsp)
-  :init
-  (add-to-list 'exec-path "/Users/galladi/installed.d/lsp/elixir"))
+;; (setq lsp-java-vmargs
+;;       '("-noverify" "-Xmx3G" "-XX:+UseG1GC" "-XX:+UseStringDeduplication"
+;;         "-javaagent:/Users/galladi/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar"
+;;         "-Xbootclasspath/a:/Users/galladi/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar"))
+
+;; (use-package lsp-mode
+;;   :commands lsp
+;;   :ensure t
+;;   :diminish lsp-mode
+;;   :hook
+;;   (elixir-mode . lsp)
+;;   :init
+;;   (add-to-list 'exec-path "/Users/galladi/installed.d/lsp/elixir"))
 
 (defun export-to-html-and-open ()
   "Export to html and open in default browser"
