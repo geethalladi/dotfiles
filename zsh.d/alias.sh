@@ -3,6 +3,7 @@
 alias python=python3
 alias pip=pip3
 alias c='clear'
+alias s='bin/rspec'
 alias l='ls -al'
 alias ls='ls -GFh'
 alias jcov="find . -name jacoco -type d -exec open '{}/index.html' \;"
