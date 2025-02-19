@@ -278,3 +278,13 @@
                          split-window-horizontally
                          "~/Desktop/sticky-notes/notes.org"))
           (frame-parameters . ((undecorated . t)))))))
+
+;; org-done face customizations
+(defun self/modify-org-done-face ()
+  (setq org-fontify-done-headline t)
+  (set-face-attribute 'org-done nil :strike-through nil)
+  (set-face-attribute 'org-headline-done nil
+                      :strike-through nil))
+
+(eval-after-load "org"
+  (add-hook 'org-add-hook 'my/modify-org-done-face))
