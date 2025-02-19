@@ -287,4 +287,4 @@
                       :strike-through nil))
 
 (eval-after-load "org"
-  (add-hook 'org-add-hook 'my/modify-org-done-face))
+  (add-hook 'org-add-hook 'self/modify-org-done-face))
