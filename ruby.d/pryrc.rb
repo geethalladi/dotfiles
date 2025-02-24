@@ -7,9 +7,11 @@ require 'rubygems'
 require 'pry'
 require 'pry-doc'
 require 'pry-byebug'
-require 'pry-clipboard'
-require 'pry-rescue'
 require 'pry-rails'
+
+# review later
+# require 'pry-clipboard'
+# require 'pry-rescue'
 
 # not compatible with pry-byebug
 # require 'pry-nav'
@@ -30,7 +32,7 @@ if defined?(PryByebug)
 end
 
 # Hit Enter to repeat last command
-Pry::Commands.command /^$/, "repeat last command" do
+Pry::Commands.command(/^$/, "repeat last command") do
   pry_instance.run_command Pry.history.to_a.last
 end
 
