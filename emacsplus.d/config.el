@@ -121,8 +121,31 @@
   (browse-url-of-file
    (org-html-export-to-html)))
 
+;; centaur tabs
 (global-set-key (kbd "C-c t n") 'centaur-tabs-forward)
 (global-set-key (kbd "C-c t b")  'centaur-tabs-backward)
+
+;; magit
+(global-set-key (kbd "C-c g s")  'magit-status)
+
+;; projectile
+(map! :map 'override "M-p" 'projectile-find-file)
+
+;; code folding
+(map! :map 'override "C-<return>" '+fold/toggle)
+
+;; editor navigation
+(map! :map 'override "M-<right>" 'right-word)
+(map! :map 'override "S-<right>" 'windmove-right)
+(map! :map 'override "S-<left>" 'windmove-left)
+
+;; key chord + file navigation
+(require 'key-chord)
+(key-chord-mode 1)
+(key-chord-define-global "jk" 'switch-to-prev-buffer)
+
+;; neotree
+(global-set-key (kbd "<f8>") #'neotree)
 
 (setq-default line-spacing 0.12)
 
