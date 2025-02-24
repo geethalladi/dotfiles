@@ -18,14 +18,14 @@ function emacsclientWatcher(appName, eventType, appObject)
    -- Bring Emacs to Front
    hs.osascript.applescript('tell application "Emacs" to activate')
   end
-  if (appName == "Emacs") then
-   -- Bring Emacs to Front
-   hs.osascript.applescript('tell application "Emacs" to activate')
-  end
-  if (appName == "emacsclient") then
-   -- Bring Emacs to Front
-   hs.osascript.applescript('tell application "Emacs" to activate')
-  end
+  -- if (appName == "Emacs") then
+  --  -- Bring Emacs to Front
+  --  hs.osascript.applescript('tell application "Emacs" to activate')
+  -- end
+  -- if (appName == "emacsclient") then
+  --  -- Bring Emacs to Front
+  --  hs.osascript.applescript('tell application "Emacs" to activate')
+  -- end
  end
 end
 appWatcher = hs.application.watcher.new(emacsclientWatcher)
