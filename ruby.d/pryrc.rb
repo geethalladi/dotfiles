@@ -10,8 +10,8 @@ require 'pry-byebug'
 require 'pry-rails'
 
 # review later
-# require 'pry-clipboard'
-# require 'pry-rescue'
+require 'pry-clipboard'
+require 'pry-rescue'
 
 # not compatible with pry-byebug
 # require 'pry-nav'
