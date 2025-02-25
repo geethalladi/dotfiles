@@ -132,7 +132,7 @@
 (map! :map 'override "M-p" 'projectile-find-file)
 
 ;; code folding
-(map! :map 'override "C-<return>" '+fold/toggle)
+(map! :map 'override "M-<return>" '+fold/toggle)
 
 ;; editor navigation
 (map! :map 'override "M-<right>" 'right-word)
@@ -149,6 +149,9 @@
 
 (setq-default line-spacing 0.12)
 
+(after! ruby-mode
+  (set-company-backend! 'company-tide 'company-yasnippet))
+
 ;; (require 'lsp-sonarlint)
 ;; (require 'lsp-sonarlint-java)
 ;; (setq lsp-sonarlint-java-enabled t)
@@ -162,3 +165,20 @@
 ;;               ("C-<tab>" . 'copilot-accept-completion-by-word)))
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+(require 'robe)
+(add-hook 'ruby-mode-hook 'robe-mode)
+
+(defadvice inf-ruby-console-auto (before activate-rvm-for-robe activate)
+  (rvm-activate-corresponding-ruby))
+
+(global-company-mode t)
+
+(eval-after-load 'company
+  '(push 'company-ispell company-backends))
+
+(eval-after-load 'company
+  '(push 'company-etags company-backends))
+
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
