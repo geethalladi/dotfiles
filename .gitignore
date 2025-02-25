@@ -47,3 +47,4 @@ eclipse.jdt*
 .settings
 emacs.d/use-package/
 emacs.d/history
+emacs.d/.dap-breakpoints
