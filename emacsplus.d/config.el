@@ -132,7 +132,7 @@
 (map! :map 'override "M-p" 'projectile-find-file)
 
 ;; code folding
-(map! :map 'override "M-<return>" '+fold/toggle)
+(map! :map 'override "M-RET" '+fold/toggle)
 
 ;; editor navigation
 (map! :map 'override "M-<right>" 'right-word)
@@ -151,8 +151,15 @@
 (setq-default line-spacing 0.12)
 
 (after! ruby-mode
-        (set-company-backend! 'company-tide 'company-yasnippet)
-        (map! :map 'override "C-c j" 'robe-jump))
+        (map! :map ruby-mode-map "C-c j" 'robe-jump)
+        (map! :map ruby-mode-map "C-c C-j" 'yas/expand)
+        ;; (map! :map 'override (kbd "TAB") 'tab-indent-or-complete)
+        ;; (global-set-key [tab] 'tab-indent-or-complete)
+        ;; (global-set-key (kbd "TAB") 'tab-indent-or-complete)
+        ;; (global-set-key [(control return)] 'company-complete-common)
+        (map! :map ruby-mode-map [tab] 'tab-indent-or-complete)
+        (map! :map ruby-mode-map [(control return)] 'company-complete-common)
+        (set-company-backend! 'company-yasnippet 'company-robe 'company-etags 'company-ispell))
 
 ;; (require 'lsp-sonarlint)
 ;; (require 'lsp-sonarlint-java)
@@ -169,21 +176,14 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (require 'robe)
+(require 'rspec-mode)
 (add-hook 'ruby-mode-hook 'robe-mode)
+(add-hook 'ruby-mode-hook 'rspec-mode)
 
 (defadvice inf-ruby-console-auto (before activate-rvm-for-robe activate)
   (rvm-activate-corresponding-ruby))
 
 (global-company-mode t)
-
-(eval-after-load 'company
-  '(push 'company-ispell company-backends))
-
-(eval-after-load 'company
-  '(push 'company-etags company-backends))
-
-(eval-after-load 'company
-  '(push 'company-robe company-backends))
 
 (require 'yasnippet)
 (defun check-expansion ()
@@ -243,10 +243,6 @@
       (yas-abort-snippet)
     (company-abort)))
 
-;; (global-set-key [tab] 'tab-indent-or-complete)
-;; (global-set-key (kbd "TAB") 'tab-indent-or-complete)
-;; (global-set-key [(control return)] 'company-complete-common)
-
 (define-key company-active-map [tab] 'expand-snippet-or-complete-selection)
 (define-key company-active-map (kbd "TAB") 'expand-snippet-or-complete-selection)
 
@@ -258,4 +254,5 @@
 (define-key yas-keymap [(control tab)] 'yas-next-field)
 (define-key yas-keymap (kbd "C-g") 'abort-company-or-yas)
 
+(require 'projectile-rails)
 (define-key projectile-rails-mode-map (kbd "C-c r") 'projectile-rails-command-map)
