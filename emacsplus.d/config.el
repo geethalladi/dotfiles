@@ -164,6 +164,7 @@
         ;;             '(company-capf company-yasnippet
         ;;                            company-robe company-etags
         ;;                            company-dabbrev company-dabbrev-code company-ispell))
+        (setq-default tab-width 2)
         (set-company-backend! 'ruby-mode
                               '(company-yasnippet
                                 company-dabbrev-code
