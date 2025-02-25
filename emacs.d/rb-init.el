@@ -35,7 +35,7 @@
 
 ;; (require 'bundler)
 ;; (require 'rubocop)
-;; (require 'rspec-mode)
+(require 'rspec-mode)
 ;; (require 'ruby-test-mode)
 ;; (require 'ruby-tools)
 ;; (require 'rake)
@@ -57,6 +57,12 @@
             (rspec-mode)
             ;; (ruby-test-mode)
             (company-mode)))
+
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
+
+(eval-after-load 'company
+  '(push 'company-etags company-backends))
 
 ;; (add-hook 'ruby-mode-hook 'rubocop-mode)
 ;; (add-hook 'ruby-mode-hook 'ruby-test-mode)
