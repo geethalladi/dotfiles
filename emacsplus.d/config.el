@@ -152,14 +152,24 @@
 
 (after! ruby-mode
         (map! :map ruby-mode-map "C-c j" 'robe-jump)
-        (map! :map ruby-mode-map "C-c C-j" 'yas/expand)
+        (map! :map ruby-mode-map "C-c C-j" 'yas-expand)
         ;; (map! :map 'override (kbd "TAB") 'tab-indent-or-complete)
         ;; (global-set-key [tab] 'tab-indent-or-complete)
         ;; (global-set-key (kbd "TAB") 'tab-indent-or-complete)
         ;; (global-set-key [(control return)] 'company-complete-common)
         (map! :map ruby-mode-map [tab] 'tab-indent-or-complete)
         (map! :map ruby-mode-map [(control return)] 'company-complete-common)
-        (set-company-backend! 'company-yasnippet 'company-robe 'company-etags 'company-ispell))
+        ;; (setq-hook! 'ruby-mode-hook
+        ;;             +lsp-company-backends
+        ;;             '(company-capf company-yasnippet
+        ;;                            company-robe company-etags
+        ;;                            company-dabbrev company-dabbrev-code company-ispell))
+        (set-company-backend! 'ruby-mode
+                              '(company-yasnippet
+                                company-dabbrev-code
+                                company-robe
+                                company-etags
+                                company-capf)))
 
 ;; (require 'lsp-sonarlint)
 ;; (require 'lsp-sonarlint-java)
