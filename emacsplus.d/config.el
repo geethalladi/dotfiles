@@ -149,6 +149,8 @@
 (global-set-key (kbd "<f8>") #'neotree)
 
 (setq-default line-spacing 0.12)
+(setq-default tab-width 2)
+(setq! tab-width 2)
 
 (after! ruby-mode
         (map! :map ruby-mode-map "C-c j" 'robe-jump)
@@ -165,13 +167,13 @@
         ;;                            company-robe company-etags
         ;;                            company-dabbrev company-dabbrev-code company-ispell))
         (setq-default tab-width 2)
+        (setq! tab-width 2)
         (set-company-backend! 'ruby-mode
                               '(company-yasnippet
                                 company-dabbrev-code
                                 company-robe
                                 company-etags
                                 company-capf)))
-
 ;; (require 'lsp-sonarlint)
 ;; (require 'lsp-sonarlint-java)
 ;; (setq lsp-sonarlint-java-enabled t)
