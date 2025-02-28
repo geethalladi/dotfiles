@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: context
-# key: ct
-# --
-context '$1' do
-end
