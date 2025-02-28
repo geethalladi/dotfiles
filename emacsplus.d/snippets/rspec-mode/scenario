@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: scenario
+# key: scen
+# --
+scenario '$1' do
+end
