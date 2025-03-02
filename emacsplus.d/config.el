@@ -196,6 +196,10 @@
 (defadvice inf-ruby-console-auto (before activate-rvm-for-robe activate)
   (rvm-activate-corresponding-ruby))
 
+(after! rspec-mode
+        (setq rspec-use-bundler-when-possible nil)
+        (setq rspec-spec-command "bin/rspec --fail-fast"))
+
 (global-company-mode t)
 
 (require 'yasnippet)
