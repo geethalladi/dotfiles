@@ -122,8 +122,8 @@
    (org-html-export-to-html)))
 
 ;; centaur tabs
-(global-set-key (kbd "C-c t n") 'centaur-tabs-forward)
-(global-set-key (kbd "C-c t b")  'centaur-tabs-backward)
+(global-set-key (kbd "C-x t o") 'centaur-tabs-forward)
+(global-set-key (kbd "C-x t O")  'centaur-tabs-backward)
 
 ;; magit
 (global-set-key (kbd "C-c g s")  'magit-status)
