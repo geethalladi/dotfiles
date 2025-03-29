@@ -260,6 +260,15 @@
       (yas-abort-snippet)
     (company-abort)))
 
+(defun self/init-rails ()
+  "Init a rails project"
+  (interactive)
+  (rvm-activate-corresponding-ruby)
+  (inf-ruby-console-auto)
+  (lsp))
+
+(advice-add 'robe-start :after #'inf-ruby-console-auto)
+
 (define-key company-active-map [tab] 'expand-snippet-or-complete-selection)
 (define-key company-active-map (kbd "TAB") 'expand-snippet-or-complete-selection)
 
