@@ -1,0 +1,67 @@
+# -*- mode: snippet -*-
+# name: system-design
+# key: sdsgn
+# --
+#+DATE: `(format-time-string "%Y-%m-%d")`
+* System Design / $1
+** Use case / Questions
+*** Why
+*** Users / Traffic Volume
+- MAUs
+- Distribution
+- Peak Time / Business Hours
+- Read / Write IOPS
+*** Success Metrics / KPIs
+*** Constraints
+*** Data consistency
+*** Compliance
+*** Back of Envelope Estimates
+#+begin_src elisp
+  ;; computation space
+  ()
+#+end_src
+** High-Level
+*** Core system components
+*** Architecture diagram
+*** Integration Points
+** Details
+*** Mental Model / Algorithms
+- With alternates
+*** API endpoints / Service Communication
+#+begin_src json
+  // JSON schema
+  {
+
+  }
+#+end_src
+*** Data storage
+- SQL / NoSQL
+  - Data model / Schema
+  - Index / Optimization
+- Replication
+- Shard
+*** Caching
+- Distributed / Redis
+- Local
+*** Fault Tolerance
+- Failure Scenarios / Fault Tolerance
+- Mitigation strategies
+** Observability
+- Metrics / Alerts
+- Logging / Debugging
+- Dashboard
+** Scalability
+- Increased Load
+- Provisioning
+** Trade-Offs
+- Cost / Performance
+- Consistency / Availability
+** Security
+- AuthN
+- AuthZ / Rate limiting
+- Rate limiting
+** Characteristics
+- Scalability
+- Availability
+- Reliability
+- Maintainability
