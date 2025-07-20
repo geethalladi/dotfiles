@@ -218,6 +218,9 @@
 
 ;; required for org-reveal mode presentations
 (use-package 'ox-reveal)
+(use-package 'htmlize-el)
+
+(setq org-reveal-root "file:///opt/reveal.js")
 
 ;; configurations for org-mind-map
 ;; taken from its README

@@ -95,7 +95,7 @@ fi
 # source ${CONDA_HOME}/etc/profile.d/conda.sh
 
 # for matplot plots inside iterm
-export MPLBACKEND="module://itermplot"
+# export MPLBACKEND="module://itermplot"
 
 # for ruby tags
 export RIPPER_TAGS_EMACS=1
