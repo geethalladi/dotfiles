@@ -144,7 +144,7 @@
 (centaur-tabs-mode t)
 
 ;; key bindings for yafolding mode
-(use-package yafolding-mode
+(use-package yafolding
   :bind
   (:map yafolding-mode-map
         ("<M-return>" . yafolding-toggle-element)
