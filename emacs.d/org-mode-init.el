@@ -203,6 +203,7 @@
    :fetcher url
    :url "https://raw.githubusercontent.com/cireu/emacsql-sqlite3/master/emacsql-sqlite3.el"))
 
+(use-package quelpa-use-package)
 (use-package org-ql
   :quelpa (org-ql :fetcher github :repo "alphapapa/org-ql"
             :files (:defaults (:exclude "helm-org-ql.el"))))

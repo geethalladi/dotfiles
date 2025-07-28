@@ -70,7 +70,8 @@
   :config
   (setq graphviz-dot-indent-width 4))
 
-(use-package company-graphviz-dot)
+;; TODO: remove stale package
+;; (use-package company-graphviz-dot)
 
 ;; editorconfig-mode
 (use-package editorconfig
