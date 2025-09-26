@@ -1,0 +1,35 @@
+# -*- mode: snippet -*-
+# name: priq
+# key: priq
+# --
+from heapq import heappush, heappop
+from dataclasses import dataclass
+
+REMOVED = '<removed-task>'
+
+
+@dataclass
+class PQ:
+    pq = []
+    # task -> entry
+    entry_finder = {}
+
+    def push(self, task, priority=0):
+        # if max-pq: priority *= -1
+        if task in self.entry_finder:
+            self._remove(task)
+        entry = [priority, task]
+        self.entry_finder[task] = entry
+        heappush(self.pq, entry)
+
+    def _remove(self, task):
+        entry = self.entry_finder.pop(task)
+        entry[-1] = REMOVED
+
+    def pop(self):
+        while self.pq:
+            priority, task = heappop(self.pq)
+            if task is not REMOVED:
+                del self.entry_finder[task]
+                return task
+        raise KeyError("PQ is empty")
