@@ -70,6 +70,10 @@
   :config
   (setq graphviz-dot-indent-width 4))
 
+(use-package transpose-frame
+  :ensure t)
+(global-set-key (kbd "C-c t r") 'transpose-frame)
+
 ;; TODO: remove stale package
 ;; (use-package company-graphviz-dot)
 
