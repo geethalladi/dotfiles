@@ -1,0 +1,10 @@
+* README
+Configuration for ipython / jupyter
+** Create the `default` profile
+  #+begin_src shell
+ipython profile create
+  #+end_src
+** Symlink
+#+begin_src
+ln -sf ipython_config.py ~/.ipython/profile_default/ipython_config.py
+#+end_src
