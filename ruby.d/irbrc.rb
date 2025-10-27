@@ -1,5 +1,4 @@
 # https://lucapette.me/writing/pry-everywhere/
-
 # https://github.com/carlhuda/bundler/issues/183#issuecomment-1149953
 if defined?(::Bundler)
   global_gemset = ENV['GEM_PATH'].split(':').grep(/ruby.*@global/).first
