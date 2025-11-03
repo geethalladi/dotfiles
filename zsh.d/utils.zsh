@@ -50,3 +50,13 @@ conda_init () {
     unset __conda_setup
     # <<< conda initialize <<<
 }
+
+backup_rsync() {
+    dirs=("repo" "work" "org" "dotfiles" "slipbox" "Downloads" "Desktop" "private" "installed.d" "Documents")
+    for d in "${dirs[@]}"; do
+        cd $HOME
+        echo "Syncing ${d}"
+        rsync -avhP --exclude=venv --exclude=node_modules --exclude=.DS_Store --exclude=.class --exclude=tmp/cache \
+              --exclude=.local ${d} /Volumes/Backup/fresh-2025
+    done
+}
