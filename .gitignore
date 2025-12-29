@@ -48,3 +48,4 @@ eclipse.jdt*
 emacs.d/use-package/
 emacs.d/history
 emacs.d/.dap-breakpoints
+emacs.d/eln-cache
