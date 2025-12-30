@@ -194,22 +194,6 @@
   :quelpa (helm-org-ql :fetcher github :repo "alphapapa/org-ql"
                        :files ("helm-org-ql.el")))
 
-;; (use-package 'org-modern
-;;   :hook
-;;   (with-eval-after-load 'org (global-org-modern-mode))
-;;   :config
-;;   (setq org-auto-align-tags nil
-;;         org-tags-column 0
-;;         org-catch-invisible-edits 'show-and-error
-;;         org-special-ctrl-a/e t
-;;         org-insert-heading-respect-content t
-;;         ;; Org styling, hide markup etc.
-;;         org-hide-emphasis-markers t
-;;         org-pretty-entities t
-;;         org-agenda-tags-column 0
-;;         org-modern-star '("◉" "○" "◈" "◇" "*")
-;;         org-ellipsis "…"))
-
 (load-file "~/dotfiles/emacs.d/ox-confluence.el")
 (require 'ox-confluence)
 
