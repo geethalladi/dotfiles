@@ -282,3 +282,94 @@
 
 (require 'projectile-rails)
 (define-key projectile-rails-mode-map (kbd "C-c r") 'projectile-rails-command-map)
+
+;; for better UX
+(setq comp-deferred-compilation t)
+(setq native-comp-speed 2)
+
+;; setting GC thresholds
+(setq gc-cons-threshold
+      (if (display-graphic-p)
+          ;; 64 MB
+          (* 64 (expt 10 6))
+        ;; 10 MB for terminal
+        (* 10 (expt 10 6))))
+
+(with-eval-after-load 'org (global-org-modern-mode))
+
+(use-package org-modern
+  :config
+  (setq org-auto-align-tags nil
+        org-tags-column 0
+        org-catch-invisible-edits 'show-and-error
+        org-special-ctrl-a/e t
+        org-insert-heading-respect-content t
+        ;; Org styling, hide markup etc.
+        org-hide-emphasis-markers t
+        org-pretty-entities t
+        org-agenda-tags-column 0
+        org-modern-star '("◉" "○" "◈" "◇" "*")
+        ;; org-ellipsis "…"
+        ))
+
+(setq ispell-program-name "hunspell"
+      ispell-dictionary "en_US"
+      ispell-library-directory "~/local/share/hunspell")
+
+
+(after! pyvenv
+  (setenv "WORKON_HOME" "~/.local/share/virtualenvs")
+  (pyvenv-mode 1)
+
+  ;; Auto-activate venv
+  (defun self/auto-activate-venv ()
+    (when-let ((root (locate-dominating-file default-directory "venv")))
+      (pyvenv-activate (expand-file-name "venv" root))))
+
+  (add-hook 'python-mode-hook #'self/auto-activate-venv))
+
+(after! lsp-pyright
+  (setq lsp-pyright-venv-path "."
+        lsp-pyright-venv-directory "venv"))
+
+(setq python-shell-interpreter "ipython")
+
+(defun self/python-eval-dwim ()
+  "Evaluate Python code and move to the next logical top-level expression."
+  (interactive)
+  (require 'python)
+
+  (let ((did-defun nil))
+    ;; 1. Evaluate
+    (cond
+     ;; Region
+     ((use-region-p)
+      (python-shell-send-region (region-beginning) (region-end)))
+     ;; Enclosing def or class
+     ((save-excursion
+        (ignore-errors (python-nav-beginning-of-defun))
+        (looking-at-p
+         (rx bol (* space) (or "def" "class") symbol-end)))
+      (setq did-defun t)
+      (python-shell-send-defun))
+     ;; Fallback: statement
+     (t (python-shell-send-statement)))
+
+    ;; 2. Move point correctly
+    (cond
+     ;; After def/class → jump past entire block
+     (did-defun
+      (ignore-errors
+        (python-nav-end-of-defun)
+        (forward-line 1)))
+
+     ;; After statement → next statement
+     (t
+      (ignore-errors (python-nav-forward-statement))))
+
+    ;; 3. Land cleanly
+    (back-to-indentation)))
+
+(map! :map (python-mode-map python-ts-mode-map)
+      :desc "Eval Python DWIM"
+      "C-<return>" #'self/python-eval-dwim)
