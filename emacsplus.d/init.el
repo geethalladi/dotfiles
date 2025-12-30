@@ -155,13 +155,13 @@
        ;;php               ; perl's insecure younger brother
        (plantuml :checkers) ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
-       ;;(python +conda +lsp +poetry +pyenv +pyright +tree-sitter)
+       (python +lsp +pyright +pyenv +pyimport)
        ;;(python +lsp +pyenv +poetry +tree-sitter)            ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6
        rest              ; Emacs as a REST client
-       ;;rst               ; ReST in peace
+       rst               ; ReST in peace
        (ruby +lsp +rvm +rake +bundler
              +inf-ruby +company-inf-ruby
              +rspec-mode +minitest
