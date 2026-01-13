@@ -66,3 +66,4 @@
 (package! org-rich-yank)
 (package! org-super-agenda)
 (package! org-web-tools)
+(package! elpy)
