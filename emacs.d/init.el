@@ -18,3 +18,5 @@
   (load bootstrap-file nil 'nomessage))
 
 (setq package-enable-at-startup nil)
+
+(straight-use-package 'org)
