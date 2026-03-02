@@ -5,7 +5,12 @@ import os
 IGNORE = [
     'node_modules',
     'venv',
+    '.venv',
     '.cache',
+    'eln-cache',
+    'auto-save-list',
+    'tmp',
+    '.cask',
     '.local',
     '.metadata',
     'htmlcov',
@@ -13,6 +18,7 @@ IGNORE = [
     'target',
     '.mypy_cache',
     '__pycache__',
+    '*.log',
     '"*.class"',
     '"*.pyc"',
     '"*.elc"',
@@ -29,9 +35,9 @@ PERSONAL = [
     # 'dotfiles',
     # 'freshworks',
     # 'slipbox',
+    # 'work',
+    # 'org',
     'repo',
-    'work',
-    'org',
     'private',
     'installed.d',
     '.emacs.d',
@@ -42,13 +48,13 @@ PERSONAL = [
     '.gitconfig',
     '.gitconfig-self',
     '.gitconfig-work',
-    'iTerm2',
+    # 'iTerm2',
 ]
 
 ALL = SYSTEM_DIRECTORIES + PERSONAL
 
 SOURCE = '/Users/galladi'
-DEST = '/Volumes/Backup'
+DEST = '/Volumes/Backup/2026'
 
 
 def exclude_switches(ignored=IGNORE):
@@ -118,3 +124,7 @@ def cleanup():
     """
     _cleanup_system(SYSTEM_DIRECTORIES)
     _cleanup(PERSONAL)
+
+
+if __name__ == '__main__':
+    backup_all()
