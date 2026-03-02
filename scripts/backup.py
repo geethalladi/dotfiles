@@ -26,14 +26,14 @@ SYSTEM_DIRECTORIES = [
 ]
 
 PERSONAL = [
+    # 'dotfiles',
+    # 'freshworks',
+    # 'slipbox',
     'repo',
     'work',
-    'dotfiles',
-    'freshworks',
     'org',
     'private',
     'installed.d',
-    'slipbox',
     '.emacs.d',
     '.config',
     '.ssh',
