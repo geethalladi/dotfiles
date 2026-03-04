@@ -36,7 +36,7 @@ PERSONAL = [
     # 'freshworks',
     # 'slipbox',
     # 'work',
-    # 'org',
+    'org',
     'repo',
     'private',
     'installed.d',
