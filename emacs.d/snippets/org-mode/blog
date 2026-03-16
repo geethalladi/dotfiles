@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: blog
+# key: blog
+# --
+#+TITLE: $1
+#+DATE: `(format-time-string "%Y-%m-%d")`
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES:
+#+JEKYLL_TAGS: []
+* $1
