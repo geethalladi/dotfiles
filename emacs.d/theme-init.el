@@ -209,8 +209,10 @@
 (defun self/load-light-theme ()
   "light theme"
   (interactive)
-  (require 'leuven-theme)
-  (load-theme 'leuven t)
+  ;; (require 'leuven-theme)
+  ;; (load-theme 'leuven t)
+  (use-package 'espresso-theme)
+  (load-theme 'espresso t)
   (self/-light-theme-custom))
 
 (defun disable-all-themes ()
@@ -252,8 +254,8 @@
    ;; ((window-system) (self/load-light-theme))
    ;; fall back to light
    ;; (t (self/load-less-bright-theme))
-   ;; (t (self/load-light-theme))
-   (t (self/load-dark-theme))
+   (t (self/load-light-theme))
+   ;; (t (self/load-dark-theme))
    ))
 
 (self/reload-theme)
