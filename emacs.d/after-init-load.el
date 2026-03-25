@@ -113,7 +113,7 @@
   (use-package google-this)
 
   (use-package projectile)
-  (use-package projectile-rails)
+  ;; (use-package projectile-rails)
 
   (use-package git)
   (use-package git-gutter)
@@ -137,7 +137,7 @@
   (use-package flycheck-haskell)
   (use-package flycheck-hdevtools)
   (use-package flymake-easy)
-  (use-package flymake-go)
+  ;; (use-package flymake-go)
   (use-package flymake-json)
 
   (use-package geiser)
