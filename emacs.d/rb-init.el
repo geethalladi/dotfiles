@@ -114,8 +114,8 @@
 ;; (setq rspec-use-rvm t)
 ;; (rvm-use-default)
 
-(require 'projectile-rails)
-(projectile-rails-global-mode)
+;; (require 'projectile-rails)
+;; (projectile-rails-global-mode)
 ;; (define-key projectile-rails-mode-map (kbd "s-r") 'hydra-projectile-rails/body)
 
 ;; TODO: fix the keymap priority
@@ -160,7 +160,7 @@
   (define-key map (kbd "z") 'projectile-rails-find-current-serializer))
 
 ;; rails mode map prefix
-(define-key projectile-rails-mode-map (kbd "C-c l") 'projectile-rails-command-map)
+;; (define-key projectile-rails-mode-map (kbd "C-c l") 'projectile-rails-command-map)
 
 ;; (self/-rails-mode-keybindings 'projectile-rails-mode-map)
 
