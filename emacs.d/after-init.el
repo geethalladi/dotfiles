@@ -90,6 +90,29 @@
 
 (self/init-packages)
 
+(straight-use-package 'f)
+(straight-use-package 'git)
+(straight-use-package 'flymake-go)
+(straight-use-package 'rg)
+(straight-use-package 'ebuku)
+(straight-use-package 'helm-ag)
+(straight-use-package 'github-modern-theme)
+(straight-use-package 'projectile)
+(straight-use-package 'helm-projectile)
+(straight-use-package 'projectile-rails)
+(straight-use-package 'mocha)
+(straight-use-package 'commander)
+(straight-use-package 'anaconda-mode)
+(straight-use-package 'pocket-reader)
+(straight-use-package 'hasklig-mode)
+(straight-use-package 'persistent-scratch)
+(straight-use-package 'dash-functional)
+(straight-use-package 'docker-tramp)
+(straight-use-package 'rubocop)
+(straight-use-package 'rspec-mode)
+
+
+
 ;; Start the emacs-server
 (load (expand-file-name "emacs-server.el" user-emacs-directory))
 
