@@ -247,27 +247,26 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; clone https://github.com/org-roam/org-roam-v1 into
-;;   (expand-file-name "vendor/org-roam-v1" user-emacs-directory)
-(add-to-list 'load-path (expand-file-name "vendor/org-roam-v1" user-emacs-directory))
-(require 'org-roam)
-
-(use-package org-roam
-  ;; do not install the package from elpa
-  :ensure f
-  ;; :straight (:type git :host github :repo "org-roam/org-roam-v1")
-  :hook
-  (after-init . org-roam-mode)
-  :custom
-  ;; slipbox directory
-  (org-roam-directory "~/slipbox")
-  ;; (setq org-roam-v2-ack t)
-  :bind (:map org-roam-mode-map
-              (("C-c r l" . org-roam)
-               ("C-c r f" . org-roam-find-file)
-               ("C-c r g" . org-roam-graph))
-              :map org-mode-map
-              (("C-c r i" . org-roam-insert))
-              (("C-c r I" . org-roam-insert-immediate))))
+;; (expand-file-name "vendor/org-roam-v1" user-emacs-directory)
+;; (add-to-list 'load-path (expand-file-name "vendor/org-roam-v1" user-emacs-directory))
+;; (require 'org-roam)
+;; (use-package org-roam
+;;   ;; do not install the package from elpa
+;;   :ensure f
+;;   ;; :straight (:type git :host github :repo "org-roam/org-roam-v1")
+;;   :hook
+;;   (after-init . org-roam-mode)
+;;   :custom
+;;   ;; slipbox directory
+;;   (org-roam-directory "~/slipbox")
+;;   ;; (setq org-roam-v2-ack t)
+;;   :bind (:map org-roam-mode-map
+;;               (("C-c r l" . org-roam)
+;;                ("C-c r f" . org-roam-find-file)
+;;                ("C-c r g" . org-roam-graph))
+;;               :map org-mode-map
+;;               (("C-c r i" . org-roam-insert))
+;;               (("C-c r I" . org-roam-insert-immediate))))
 
 ;; org mode for sticky notes
 (require 'yequake)
