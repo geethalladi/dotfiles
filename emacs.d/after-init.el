@@ -110,6 +110,7 @@
   (straight-use-package 'rubocop)
   (straight-use-package 'rspec-mode)
   (straight-use-package 'org-roam)
+  (straight-use-package 'modus-themes)
   (straight-use-package 'espresso-theme))
 
 (self/init-packages)

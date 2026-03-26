@@ -211,9 +211,15 @@
   (interactive)
   ;; (require 'leuven-theme)
   ;; (load-theme 'leuven t)
-  (use-package 'espresso-theme)
-  (load-theme 'espresso t)
-  (self/-light-theme-custom))
+  ;; (use-package 'espresso-theme)
+  ;; (load-theme 'espresso t)
+
+  ;; (load-theme 'modus-operandi t)
+  ;; (load-theme 'modus-operandi-tinted t)
+  ;; (load-theme 'modus-operandi-deuteranopia t)
+  (load-theme 'modus-operandi-tritanopia t)
+  ;; (self/-light-theme-custom)
+  )
 
 (defun disable-all-themes ()
   "disable all active themes."
