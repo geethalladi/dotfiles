@@ -23,6 +23,8 @@ IGNORE = [
     '"*.pyc"',
     '"*.elc"',
     '.DS_Store',
+    '.idea',
+    '.mypy_cache',
 ]
 
 SYSTEM_DIRECTORIES = [
