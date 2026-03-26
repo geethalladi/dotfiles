@@ -1,8 +1,5 @@
 ;;; package --- eshell initialization
-(require 'docker-tramp)
-
 ;; reference: https://www.masteringemacs.org/article/complete-guide-mastering-eshell
-
 (defun eshell-here ()
   "Opens up a new shell in the directory associated with the
    current buffer's file. The eshell is renamed to match that

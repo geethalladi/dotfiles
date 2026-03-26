@@ -107,7 +107,6 @@
   (straight-use-package 'hasklig-mode)
   (straight-use-package 'persistent-scratch)
   (straight-use-package 'dash-functional)
-  (straight-use-package 'docker-tramp)
   (straight-use-package 'rubocop)
   (straight-use-package 'rspec-mode)
   (straight-use-package 'org-roam)
