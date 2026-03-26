@@ -110,6 +110,7 @@
   (straight-use-package 'docker-tramp)
   (straight-use-package 'rubocop)
   (straight-use-package 'rspec-mode)
+  (straight-use-package 'org-roam)
   (straight-use-package 'espresso-theme))
 
 (self/init-packages)
