@@ -1,5 +1,6 @@
 ;; No Initial Splash Screen
 (setq inhibit-splash-screen t)
+(setq gnutls-verify-error t)
 
 (defun self/no-menu-bar-in-terminal ()
   "No menu bar when running in the terminal"
@@ -73,11 +74,10 @@
   "Initialise all the dependent packages"
   (message "Init packages")
   (require 'package)
-  ;; (add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/"))
-  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-  ;; Removing the org package archive
-  ;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-  (package-initialize)
+  (setq package-archives
+        '(("gnu"   . "https://elpa.gnu.org/packages/")
+          ("melpa" . "https://melpa.org/packages/")))
+(package-initialize)
 
   (add-to-list 'load-path
                (expand-file-name "use-package" user-emacs-directory))
