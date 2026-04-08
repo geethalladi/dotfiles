@@ -122,9 +122,9 @@
     (marginalia-mode)))
 
 ;; bookmark+ for better bookmark UI
-(add-to-list 'load-path
-             (expand-file-name "vendor/bookmark-plus" user-emacs-directory))
-(require 'bookmark+)
+;; (add-to-list 'load-path
+;;              (expand-file-name "vendor/bookmark-plus" user-emacs-directory))
+;; (require 'bookmark+)
 
 (require 'ag)
 
