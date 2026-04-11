@@ -30,7 +30,7 @@ export CASK_PATH=~/.cask/bin
 export CARGO_PATH=~/.cargo/bin
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
-export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
+# export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 
 # Using sdkman for jvm languages
 # export JDK_7_0_HOME=/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home
@@ -43,10 +43,10 @@ export COREUTIL_PATH=${CELLAR_PATH}/coreutils/8.24
 # export SBT_HOME=${CELLAR_PATH}/sbt/0.13.13
 # export CONSCRIPT_HOME=${INSTALL_DIR}/conscript
 
-export ANT_HOME=${CELLAR_PATH}/ant/1.10.1
+# export ANT_HOME=${CELLAR_PATH}/ant/1.10.1
 # export MAVEN_HOME=${CELLAR_PATH}/maven/3.3.9
 # export M2_HOME=${MAVEN_HOME}
-export GRADLE_HOME=${CELLAR_PATH}/gradle/3.4.1
+# export GRADLE_HOME=${CELLAR_PATH}/gradle/3.4.1
 export CABAL_HOME=~/.cabal
 export SDKMAN_DIR=${HOME}/.sdkman
 
@@ -58,12 +58,11 @@ export SDKMAN_DIR=${HOME}/.sdkman
 # nvm does not like NODE_PATH
 # export NODE_PATH=/usr/local/lib/node_modules
 
-export HADOOP_HOME=${INSTALL_DIR}/hadoop-2.7.3
-export HADOOP_PREFIX=${HADOOP_HOME}
-export HIVE_HOME=${INSTALL_DIR}/apache-hive-2.1.1-bin
-export SPARK_HOME=${INSTALL_DIR}/spark/spark-1.6.2-bin-hadoop2.6
-
-export SPARK_PREFIX=${SPARK_HOME}
+# export HADOOP_HOME=${INSTALL_DIR}/hadoop-2.7.3
+# export HADOOP_PREFIX=${HADOOP_HOME}
+# export HIVE_HOME=${INSTALL_DIR}/apache-hive-2.1.1-bin
+# export SPARK_HOME=${INSTALL_DIR}/spark/spark-1.6.2-bin-hadoop2.6
+# export SPARK_PREFIX=${SPARK_HOME}
 
 export MACPORT_HOME=/opt/local
 export HOMEBREW_HOME=/opt/homebrew
@@ -72,9 +71,9 @@ export RUBY_SCRIPTS_HOME=${PROJECT_DIR}/ruby
 export PYTHON_MOD_UTILS=${PROJECT_DIR}/python/modules
 export PYTHON_PATH_FILE=~/.pythonpath
 
-export ES_HOME=${INSTALL_DIR}/elasticsearch-5.6.16
-export ERLANG_ROOT_DIR=${CELLAR_PATH}/erlang/20.3.4
-export ERLANG_HOME=${ERLANG_ROOT_DIR}
+# export ES_HOME=${INSTALL_DIR}/elasticsearch-5.6.16
+# export ERLANG_ROOT_DIR=${CELLAR_PATH}/erlang/20.3.4
+# export ERLANG_HOME=${ERLANG_ROOT_DIR}
 
 export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
 export FIREFOX_HOME=/Applications/Firefox.app/Contents/MacOS
