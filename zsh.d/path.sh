@@ -15,16 +15,15 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
     PATH=${PATH}:${LOCAL_BIN_DIR}:/usr/local/sbin
     PATH=${PATH}:${HOME}/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
     PATH=${PATH}:${INSTALL_DIR}
-    PATH=${PATH}:/usr/local/opt/mysql@5.7/bin:/usr/local/opt/mysql-client/bin
-    # PATH=${PATH}:${HOME}/Library/Python/3.9/bin
     PATH=${PATH}:${ZEAL_HOME}/Contents/MacOS:${DOOM_EMACS_DIR}/bin
     PATH=${HOMEBREW_HOME}/bin:${HOMEBREW_HOME}/sbin:${PATH}
     PATH=${PATH}:${OPEN_SOURCE_DIR}/powerline/scripts
-    PATH=${HOMEBREW_HOME}/opt/python@3.8/bin:${HOMEBREW_HOME}/opt/qt/bin:${PATH}
-    PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
 
+    # PATH=${PATH}:${HOME}/Library/Python/3.9/bin
+    # PATH=${HOMEBREW_HOME}/opt/python@3.8/bin:${HOMEBREW_HOME}/opt/qt/bin:${PATH}
+    # PATH=${PATH}:/usr/local/opt/mysql@5.7/bin:/usr/local/opt/mysql-client/bin
+    # PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
     # PATH="/usr/local/bin:${PATH}"
-
     # source ${DOTFILE_DIR_AWS}/awsenv.sh
     # source ${ZSHDIR}/macports.sh
 
@@ -48,7 +47,7 @@ if [[ "$PATH_STATE_UPDATED" != "1" || ${TERM_PROGRAM} == "tmux" ]]; then
     fi
 
     # TODO: remove this hack later
-    export PATH=$PATH:$HOME/.nvm/versions/node/v18.14.2/bin
+    # export PATH=$PATH:$HOME/.nvm/versions/node/v18.14.2/bin
 
     # Rehash to take care of the PATH variable update
     # https://stackoverflow.com/questions/36543707/why-does-zsh-ignore-the-path-entry-order
