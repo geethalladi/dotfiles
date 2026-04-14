@@ -123,6 +123,8 @@ unalias ls
 # kubectl autocompletion
 source <(kubectl completion zsh)
 
+# for tmux integration
+export DISABLE_AUTO_TITLE='true'
 ########################################################################################
 
 bindkey "^[^[[C" forward-word
