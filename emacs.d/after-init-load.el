@@ -319,7 +319,6 @@
   (use-package writegood-mode)
   (use-package xkcd)
   (use-package xref-js2)
-  (use-package yaml-mode)
   (use-package yard-mode)
   (use-package yafolding)
   (use-package yequake)
@@ -358,6 +357,7 @@
 (defun self/load-basic-dev-env ()
   "Load the basic development environment"
   (load (expand-file-name "smartparens-init.el" user-emacs-directory))
+  (load (expand-file-name "yaml-init.el" user-emacs-directory))
 
   ;; (load (expand-file-name "term-init.el" user-emacs-directory))
   (load (expand-file-name "multi-term-init.el" user-emacs-directory))
