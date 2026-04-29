@@ -82,6 +82,8 @@
         ;; org-ellipsis "…"
         org-modern-star '("◉" "○" "◈" "◇" "*")))
 
+(straight-use-package 'org-kanban)
+
 (defun self/-org-mode ()
   "org mode customization"
   ;; Always use org indent minor mode
