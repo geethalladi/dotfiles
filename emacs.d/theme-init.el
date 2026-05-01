@@ -62,14 +62,14 @@
   "Custom theme for a light background"
   (custom-set-faces
    ;; Org mode faces
-   '(org-level-1 ((t (:background "#ffffff"))))
-   '(org-level-2 ((t (:background "#ffffff"))))
-   '(org-level-3 ((t (:background "#ffffff"))))
-   '(org-level-4 ((t (:background "#ffffff"))))
-   '(org-level-5 ((t (:background "#ffffff"))))
-   '(org-level-6 ((t (:background "#ffffff"))))
-   '(org-level-7 ((t (:background "#ffffff"))))
-   '(org-level-8 ((t (:background "#ffffff"))))
+   '(org-level-1 ((t (:foreground "black"))))
+   '(org-level-2 ((t (:foreground "blue2"))))
+   '(org-level-3 ((t (:foreground "green4"))))
+   '(org-level-4 ((t (:foreground "brown"))))
+   '(org-level-5 ((t (:foreground "red2"))))
+   '(org-level-6 ((t (:foreground "orange"))))
+   '(org-level-7 ((t (:foreground "violet"))))
+   '(org-level-8 ((t (:foreground "green4"))))
 
    ;; (face-remap-add-relative
    ;;  'mode-line '((:foreground "ivory" :background "Green4") mode-line))
@@ -218,7 +218,7 @@
   ;; (load-theme 'modus-operandi-tinted t)
   ;; (load-theme 'modus-operandi-deuteranopia t)
   (load-theme 'modus-operandi-tritanopia t)
-  ;; (self/-light-theme-custom)
+  (self/-light-theme-custom)
   )
 
 (defun disable-all-themes ()
