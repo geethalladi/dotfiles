@@ -62,7 +62,7 @@
   (load (expand-file-name "custom.el" user-emacs-directory))
   (load (expand-file-name "terminal-key-decode.el" user-emacs-directory))
   (load (expand-file-name "theme-init.el" user-emacs-directory))
-  (load (expand-file-name "tamil-font.el" user-emacs-directory))
+  (load (expand-file-name "india-lang.el" user-emacs-directory))
 
   ;; Loading font ligatures for development
   (load (expand-file-name "font-ligatures.el" user-emacs-directory)))

@@ -1,6 +1,9 @@
 (require 'tamil-phonetic)
 
-(set-fontset-font "fontset-default" 'tamil "Noto Sans Tamil")
+(set-fontset-font "fontset-default" 'devanagari
+                  (font-spec :family "Tiro Devanagari Sanskrit" :size 18))
+(set-fontset-font "fontset-default" 'tamil
+                  (font-spec :family "Tiro Tamil" :size 16))
 
 (custom-set-variables
  '(default-input-method "tamil-phonetic"))
