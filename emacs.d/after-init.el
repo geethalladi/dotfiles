@@ -48,6 +48,8 @@
 (setq auto-save-file-name-transforms `((".*"
                                         ,(expand-file-name "autosaves/\\1" user-emacs-directory)
                                         t)))
+(setq auto-save-silent t)   ; quietly save
+
 (setq backup-directory-alist `((".*" .
                                 ,(expand-file-name "saves" user-emacs-directory))))
 
