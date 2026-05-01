@@ -154,3 +154,9 @@
   (:map yafolding-mode-map
         ("<M-return>" . yafolding-toggle-element)
         ("M-RET" . yafolding-toggle-element)))
+
+;; sanskrit minor mode
+(straight-use-package
+ '(sanskrit :type git
+            :repo "https://github.com/sctb/sanskrit"
+            :local-repo "sanskrit"))
