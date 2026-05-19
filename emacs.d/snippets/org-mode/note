@@ -1,8 +1,5 @@
 # -*- mode: snippet -*-
-# name: note
-# key: note
+# name: ft
+# key: ft
 # --
-#+roam_alias:
-#+roam_tags:
-#+source:
-#+author:
+#+filetags:
