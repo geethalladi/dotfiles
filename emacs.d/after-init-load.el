@@ -348,6 +348,7 @@
   (load (expand-file-name "org-agenda-init.el" user-emacs-directory))
   (load (expand-file-name "org-capture-init.el" user-emacs-directory))
   (load (expand-file-name "org-babel-init.el" user-emacs-directory))
+  (load (expand-file-name "logseq-init.el" user-emacs-directory))
   (load (expand-file-name "vendor/org-colored-text.el" user-emacs-directory)))
 
 (defun self/load-text-customizations ()
