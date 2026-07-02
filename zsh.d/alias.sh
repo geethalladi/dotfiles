@@ -28,6 +28,8 @@ alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,node_modules
 alias pass='openssl rand -base64 16'
 alias rvmg='rvm gemset use'
 alias tssh='tsh ssh'
+# remote psql
+alias rpsql='docker exec -it postgres psql -U postgres'
 
 # alias scheme="rlwrap -r -c -f ~/extn.d/mit_scheme_bindings.txt scheme"
 alias ghci="ghci -XNPlusKPatterns"
