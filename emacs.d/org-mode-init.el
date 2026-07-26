@@ -129,6 +129,9 @@
 
   (setq org-replace-disputed-keys t)
 
+  (setq org-tags-column -80)
+  (setq org-auto-align-tags t)
+
   ;; do not truncate lines in org mode
   (toggle-truncate-lines)
   (visual-line-mode)
