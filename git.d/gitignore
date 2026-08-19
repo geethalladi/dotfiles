@@ -62,3 +62,4 @@ venv/
 .vscode/
 fm-social
 Guardfile
+package-lock.json
