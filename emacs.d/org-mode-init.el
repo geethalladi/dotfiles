@@ -84,6 +84,12 @@
 
 (straight-use-package 'org-kanban)
 
+(straight-use-package 'ox-hugo)
+(use-package ox-hugo
+  :ensure t
+  :pin melpa
+  :after ox)
+
 (defun self/-org-mode ()
   "org mode customization"
   ;; Always use org indent minor mode
