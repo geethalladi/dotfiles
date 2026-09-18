@@ -74,7 +74,7 @@
 (self--add-agenda-templates)
 
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
+      '((sequence "TODO(t)" "PROGRESS(p)" "ACTION(a)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
 
 (define-key global-map "\C-cc" 'org-capture)
 
