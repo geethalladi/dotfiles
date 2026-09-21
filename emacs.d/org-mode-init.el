@@ -90,6 +90,9 @@
   :pin melpa
   :after ox)
 
+(with-eval-after-load 'ox
+  (require 'ox-hugo))
+
 (defun self/-org-mode ()
   "org mode customization"
   ;; Always use org indent minor mode
