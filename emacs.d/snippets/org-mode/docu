@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: docu
+# key: docu
+# --
+#+setupfile: ../hugo-setup.org
+#+hugo_custom_front_matter: :sidebar_position 1
+#+title: $1
+#+hugo_section: $2
