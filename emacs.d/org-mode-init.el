@@ -162,6 +162,7 @@
   (define-key org-mode-map (kbd "<S-left>") 'windmove-left)
   (define-key org-mode-map (kbd "<S-up>") 'windmove-up)
   (define-key org-mode-map (kbd "<S-down>") 'windmove-down)
+  (define-key org-mode-map (kbd "C-c C-x M-w") #'self/org-copy-subtree-with-tags)
   (define-key org-mode-map (kbd "C-c M-w") 'org-refile))
 
 (add-hook 'org-mode-hook 'self/-org-mode)
@@ -296,6 +297,25 @@
   (set-face-attribute 'org-done nil :strike-through nil)
   (set-face-attribute 'org-headline-done nil
                       :strike-through nil))
+
+(defun self/org-copy-subtree-with-tags ()
+  "Copy the current subtree to the kill-ring, making all inherited tags
+   explicit on the root heading without duplicates"
+  (interactive)
+  (save-excursion
+    (org-back-to-heading t)
+    (let* ((beg (point))
+           (end (save-excursion (org-end-of-subtree t t)))
+           ;; Get all inherited + local tags for root, removing duplicates
+           (root-tags (delete-dups (org-get-tags)))
+           (subtree-text (buffer-substring-no-properties beg end)))
+      (with-temp-buffer
+        (org-mode)
+        (insert subtree-text)
+        (goto-char (point-min))
+        (org-set-tags root-tags)
+        (kill-new (buffer-string))
+        (message "Subtree copied with clean inherited tags on root")))))
 
 (eval-after-load "org"
   (add-hook 'org-add-hook 'self/modify-org-done-face))
