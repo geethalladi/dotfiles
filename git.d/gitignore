@@ -65,3 +65,4 @@ Guardfile
 package-lock.json
 
 **/.claude/settings.local.json
+jira_cache/
